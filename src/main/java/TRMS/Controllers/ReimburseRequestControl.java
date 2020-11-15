@@ -5,22 +5,19 @@ import java.util.List;
 
 import TRMS.Pojos.ReimburseRequest;
 import TRMS.Pojos.Enums.*;
+import io.javalin.http.Context;
 
 public interface ReimburseRequestControl {
 
-    public boolean createRequest(int requestId, int employeeId, String location, double cost, EventType type, 
-                                String description, String justification, double projected, boolean urgent,
-                                AppStatus status, AppStage stage, LocalDateTime dateTime);
+    public void createRequest(Context ctx);
 
-    public ReimburseRequest readRequest(int requestId);
+    public void readRequest(Context ctx);
 
-    public List<ReimburseRequest> readAllRequestsFor(int employeeId);
+    public void readAllRequestsFor(Context ctx);
 
-    public List<ReimburseRequest> readAllRequests();
+    public void readAllRequests(Context ctx);
 
-    public boolean updateRequest(int requestId, int employeeId, String location, double cost, EventType type, 
-                                String description, String justification, double projected, boolean urgent,
-                                AppStatus status, AppStage stage, LocalDateTime dateTime);
+    public void updateRequest(Context ctx);
 
-    public boolean deleteRequest(int requestId);
+    public void deleteRequest(Context ctx);
 }

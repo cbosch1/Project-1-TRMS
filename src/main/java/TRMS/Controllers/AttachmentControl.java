@@ -4,16 +4,17 @@ import java.io.FileInputStream;
 import java.util.List;
 
 import TRMS.Pojos.Attachment;
+import io.javalin.http.Context;
 
 public interface AttachmentControl {
 
-    public boolean createAttachment(int attachId, int requestId, String fileType, FileInputStream data);
+    public void createAttachment(Context ctx);
 
-    public Attachment readAttachment(int attachId);
+    public void readAttachment(Context ctx);
 
-    public List<Integer> readRelatedReferences(int requestId);
+    public void readRelatedReferences(Context ctx);
 
-    public boolean updateAttachment(int attachId, int requestId, String fileType, FileInputStream data);
+    public void updateAttachment(Context ctx);
 
-    public boolean deleteAttachment(int attachId);
+    public void deleteAttachment(Context ctx);
 }

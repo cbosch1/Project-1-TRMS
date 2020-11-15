@@ -3,18 +3,17 @@ package TRMS.Controllers;
 import java.util.List;
 
 import TRMS.Pojos.Employee;
+import io.javalin.http.Context;
 
 public interface EmployeeControl {
 
-    public boolean createEmployee(int employeeId, String name, String title, int supervisor, 
-                                    String department, boolean deptHead);
+    public void createEmployee(Context ctx);
 
-    public Employee readEmployee(int employeeId);
+    public void readEmployee(Context ctx);
 
-    public List<Employee> readAllEmployees();
+    public void readAllEmployees(Context ctx);
 
-    public boolean updateEmployee(int employeeId, String name, String title, int supervisor,
-                                    String department, boolean deptHead);
+    public void updateEmployee(Context ctx);
 
-    public boolean deleteEmployee(int employeeId);
+    public void deleteEmployee(Context ctx);
 }

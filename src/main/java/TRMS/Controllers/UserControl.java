@@ -2,14 +2,15 @@ package TRMS.Controllers;
 
 import TRMS.Pojos.User;
 import TRMS.Pojos.Enums.AuthPriv;
+import io.javalin.http.Context;
 
 public interface UserControl {
     
-    public boolean createUser(String username, String password, int employeeId, AuthPriv privilege);
+    public void createUser(Context ctx);
 
-    public User readUser(int userId);
+    public void readUser(Context ctx);
 
-    public boolean updateUser(String username, String password, int employeeId, AuthPriv privilege);
+    public void updateUser(Context ctx);
 
-    public boolean deleteUser(int userId);
+    public void deleteUser(Context ctx);
 }

@@ -4,20 +4,19 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import TRMS.Pojos.InfoRequest;
+import io.javalin.http.Context;
 
 public interface InfoRequestControl {
 
-    public boolean createInfoRequest(int infoId, int relatedId, int destinationId, 
-                                    boolean urgent, String description, LocalDateTime dateTime);
+    public void createInfoRequest(Context ctx);
 
-    public InfoRequest readInfoRequest(int infoId);
+    public void readInfoRequest(Context ctx);
 
-    public List<InfoRequest> readAllInfoFor(int employeeId);
+    public void readAllInfoFor(Context ctx);
 
-    public List<InfoRequest> readAllInfoReq();
+    public void readAllInfoReq(Context ctx);
 
-    public boolean updateInfoRequest(int infoId, int relatedId, int destinationId, 
-                                    boolean urgent, String description, LocalDateTime dateTime);
+    public void updateInfoRequest(Context ctx);
 
-    public boolean deleteInfoRequest(int infoId);
+    public void deleteInfoRequest(Context ctx);
 }
