@@ -1,11 +1,11 @@
-package TRMS.Services;
+package TRMS.Controllers;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 import TRMS.Pojos.InfoRequest;
 
-public interface InfoRequestService {
+public interface InfoRequestControl {
 
     public boolean createInfoRequest(int infoId, int relatedId, int destinationId, 
                                     boolean urgent, String description, LocalDateTime dateTime);

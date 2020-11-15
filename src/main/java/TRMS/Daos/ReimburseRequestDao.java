@@ -13,6 +13,8 @@ public interface ReimburseRequestDao {
 
     public List<ReimburseRequest> readAllRequestsFor(int employeeId) throws SQLException;
 
+    public List<ReimburseRequest> readAllRequests() throws SQLException;
+
     public void updateRequest(ReimburseRequest request) throws SQLException;
 
     public void deleteRequest(int requestId);

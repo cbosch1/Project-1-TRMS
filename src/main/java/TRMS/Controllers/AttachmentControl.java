@@ -1,11 +1,11 @@
-package TRMS.Services;
+package TRMS.Controllers;
 
 import java.io.FileInputStream;
 import java.util.List;
 
 import TRMS.Pojos.Attachment;
 
-public interface AttachmentService {
+public interface AttachmentControl {
 
     public boolean createAttachment(int attachId, int requestId, String fileType, FileInputStream data);
 

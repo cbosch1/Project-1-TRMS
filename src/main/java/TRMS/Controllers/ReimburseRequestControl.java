@@ -1,4 +1,4 @@
-package TRMS.Services;
+package TRMS.Controllers;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import TRMS.Pojos.ReimburseRequest;
 import TRMS.Pojos.Enums.*;
 
-public interface ReimburseRequestService {
+public interface ReimburseRequestControl {
 
     public boolean createRequest(int requestId, int employeeId, String location, double cost, EventType type, 
                                 String description, String justification, double projected, boolean urgent,

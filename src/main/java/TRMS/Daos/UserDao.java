@@ -13,5 +13,4 @@ public interface UserDao {
     public void updateUser(User user) throws SQLException;
 
     public void deleteUser(int userId) throws SQLException;
-
 }

@@ -7,7 +7,7 @@ public class InfoRequest {
     private int infoId;
     private int relatedId;
     private int destinationId;
-    private Boolean urgent;
+    private boolean urgent;
     private String description;
     private LocalDateTime dateTime;
 
@@ -35,11 +35,11 @@ public class InfoRequest {
         this.destinationId = destinationId;
     }
 
-    public Boolean getUrgent() {
+    public boolean getUrgent() {
         return urgent;
     }
 
-    public void setUrgent(Boolean urgent) {
+    public void setUrgent(boolean urgent) {
         this.urgent = urgent;
     }
 

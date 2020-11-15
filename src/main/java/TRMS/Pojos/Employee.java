@@ -6,7 +6,7 @@ public class Employee {
     private String title;
     private int supervisor;
     private String department;
-    private Boolean deptHead;
+    private boolean deptHead;
 
     public int getEmployeeId() {
         return employeeId;
@@ -48,11 +48,11 @@ public class Employee {
         this.department = department;
     }
 
-    public Boolean getDeptHead() {
+    public boolean getDeptHead() {
         return deptHead;
     }
 
-    public void setDeptHead(Boolean deptHead) {
+    public void setDeptHead(boolean deptHead) {
         this.deptHead = deptHead;
     }
 }

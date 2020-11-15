@@ -8,7 +8,7 @@ public class ReimburseRequest {
     
     private int requestId;
     private int employeeId;
-    private int location;
+    private String location;
     private double cost;
     private EventType type;
     private String description;
@@ -44,11 +44,11 @@ public class ReimburseRequest {
         this.dateTime = dateTime;
     }
 
-    public int getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    public void setLocation(int location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
