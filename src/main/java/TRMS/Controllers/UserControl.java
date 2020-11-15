@@ -1,7 +1,5 @@
 package TRMS.controllers;
 
-import TRMS.pojos.User;
-import TRMS.enums.AuthPriv;
 import io.javalin.http.Context;
 
 public interface UserControl {

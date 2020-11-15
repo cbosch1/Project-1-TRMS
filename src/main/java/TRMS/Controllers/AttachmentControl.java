@@ -1,9 +1,5 @@
 package TRMS.controllers;
 
-import java.io.FileInputStream;
-import java.util.List;
-
-import TRMS.pojos.Attachment;
 import io.javalin.http.Context;
 
 public interface AttachmentControl {

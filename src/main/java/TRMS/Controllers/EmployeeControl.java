@@ -1,8 +1,5 @@
 package TRMS.controllers;
 
-import java.util.List;
-
-import TRMS.pojos.Employee;
 import io.javalin.http.Context;
 
 public interface EmployeeControl {
