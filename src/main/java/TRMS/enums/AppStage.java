@@ -1,4 +1,4 @@
-package TRMS.Pojos.Enums;
+package TRMS.enums;
 
 public enum AppStage {
     UPLOAD,

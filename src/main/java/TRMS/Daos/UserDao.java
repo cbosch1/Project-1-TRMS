@@ -1,8 +1,8 @@
-package TRMS.Daos;
+package TRMS.daos;
 
 import java.sql.SQLException;
 
-import TRMS.Pojos.User;
+import TRMS.pojos.User;
 
 public interface UserDao {
     

@@ -1,4 +1,4 @@
-package TRMS.Pojos;
+package TRMS.pojos;
 
 import java.time.LocalDateTime;
 

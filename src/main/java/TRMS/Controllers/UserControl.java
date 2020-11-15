@@ -1,7 +1,7 @@
-package TRMS.Controllers;
+package TRMS.controllers;
 
-import TRMS.Pojos.User;
-import TRMS.Pojos.Enums.AuthPriv;
+import TRMS.pojos.User;
+import TRMS.enums.AuthPriv;
 import io.javalin.http.Context;
 
 public interface UserControl {

@@ -1,9 +1,9 @@
-package TRMS.Daos;
+package TRMS.daos;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import TRMS.Pojos.Employee;
+import TRMS.pojos.Employee;
 
 public interface EmployeeDao {
     

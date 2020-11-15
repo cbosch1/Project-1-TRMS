@@ -1,4 +1,4 @@
-package TRMS.Javalin;
+package TRMS.javalin;
 
 import io.javalin.Javalin;
 

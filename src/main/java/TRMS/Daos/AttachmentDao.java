@@ -1,9 +1,9 @@
-package TRMS.Daos;
+package TRMS.daos;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import TRMS.Pojos.Attachment;
+import TRMS.pojos.Attachment;
 
 public interface AttachmentDao {
     

@@ -1,9 +1,9 @@
-package TRMS.Daos;
+package TRMS.daos;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import TRMS.Pojos.InfoRequest;
+import TRMS.pojos.InfoRequest;
 
 public interface InfoRequestDao {
     

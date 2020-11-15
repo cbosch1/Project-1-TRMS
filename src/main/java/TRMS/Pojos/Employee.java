@@ -1,4 +1,4 @@
-package TRMS.Pojos;
+package TRMS.pojos;
 
 public class Employee {
     private int employeeId;

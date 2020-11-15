@@ -1,9 +1,9 @@
-package TRMS.Services;
+package TRMS.services;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import TRMS.Pojos.InfoRequest;
+import TRMS.pojos.InfoRequest;
 
 public interface InfoRequestService {
 

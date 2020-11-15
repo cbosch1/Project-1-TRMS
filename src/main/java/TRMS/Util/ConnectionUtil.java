@@ -1,4 +1,4 @@
-package TRMS.Util;
+package TRMS.util;
 
 public class ConnectionUtil {
     

@@ -1,6 +1,6 @@
-package TRMS.Pojos;
+package TRMS.pojos;
 
-import TRMS.Pojos.Enums.AuthPriv;
+import TRMS.enums.AuthPriv;
 
 public class User {
     private String username;

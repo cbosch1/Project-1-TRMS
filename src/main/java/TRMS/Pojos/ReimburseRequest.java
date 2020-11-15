@@ -1,8 +1,8 @@
-package TRMS.Pojos;
+package TRMS.pojos;
 
 import java.time.LocalDateTime;
 
-import TRMS.Pojos.Enums.*;
+import TRMS.enums.*;
 
 public class ReimburseRequest {
     

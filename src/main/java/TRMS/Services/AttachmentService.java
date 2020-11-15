@@ -1,9 +1,9 @@
-package TRMS.Services;
+package TRMS.services;
 
 import java.io.FileInputStream;
 import java.util.List;
 
-import TRMS.Pojos.Attachment;
+import TRMS.pojos.Attachment;
 
 public interface AttachmentService {
 

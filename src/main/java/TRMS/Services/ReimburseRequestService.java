@@ -1,10 +1,10 @@
-package TRMS.Services;
+package TRMS.services;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import TRMS.Pojos.ReimburseRequest;
-import TRMS.Pojos.Enums.*;
+import TRMS.pojos.ReimburseRequest;
+import TRMS.enums.*;
 
 public interface ReimburseRequestService {
 

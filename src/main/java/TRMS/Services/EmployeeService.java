@@ -1,8 +1,8 @@
-package TRMS.Services;
+package TRMS.services;
 
 import java.util.List;
 
-import TRMS.Pojos.Employee;
+import TRMS.pojos.Employee;
 
 public interface EmployeeService {
 
