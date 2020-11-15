@@ -30,8 +30,32 @@ public class ReimburseControlTest {
 	}
 
 	@Test
-	public void test() {
+	public void createRequestTest() {
 		fail("Not yet implemented");
 	}
 
+	@Test
+	public void readRequestTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readAllRequestsForTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readAllRequestsTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void updateRequestTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void deleteRequestTest() {
+		fail("Not yet implemented");
+	}
 }

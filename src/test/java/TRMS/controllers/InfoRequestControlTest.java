@@ -30,8 +30,32 @@ public class InfoRequestControlTest {
 	}
 
 	@Test
-	public void test() {
+	public void createInfoRequestTest() {
 		fail("Not yet implemented");
 	}
 
+	@Test
+	public void readInfoRequestTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readAllInfoForTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readAllInfoReqTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void updateInfoRequestTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void deleteInfoRequestTest() {
+		fail("Not yet implemented");
+	}
 }

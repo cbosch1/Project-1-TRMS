@@ -30,7 +30,22 @@ public class UserServiceTest {
 	}
 
 	@Test
-	public void test() {
+	public void createUserTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readUserTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void updateUserTest() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void deleteUserTest() {
 		fail("Not yet implemented");
 	}
 }

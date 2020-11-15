@@ -30,7 +30,27 @@ public class AttachmentServiceTest {
 	}
 
 	@Test
-	public void test() {
+	public void createAttachmentTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readAttachmentTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readRelatedReferencesTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void updateAttachmentTest() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void deleteAttachmentTest() {
 		fail("Not yet implemented");
 	}
 }

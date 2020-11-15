@@ -30,7 +30,7 @@ public class ConnectionUtilTest {
 	}
 
 	@Test
-	public void test() {
+	public void createConnectionTest() {
 		fail("Not yet implemented");
 	}
 }

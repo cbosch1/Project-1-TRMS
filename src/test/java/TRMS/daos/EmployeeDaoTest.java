@@ -30,7 +30,27 @@ public class EmployeeDaoTest {
 	}
 
 	@Test
-	public void test() {
+	public void createEmployeeTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readEmployeeTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void readAllEmployeesTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void updateEmployeeTest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void deleteEmployeeTest() {
 		fail("Not yet implemented");
 	}
 }
