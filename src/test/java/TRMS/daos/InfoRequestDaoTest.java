@@ -145,7 +145,7 @@ public class InfoRequestDaoTest {
 				verify(spy).executeQuery();
 
 				assertTrue("Object returned does not match expected object", info.equals(resultInfo));
-				
+
 			} catch(SQLException e) {
 				fail("SQLException thrown while attempting to retrieve object: " + e);
 			}
@@ -163,7 +163,49 @@ public class InfoRequestDaoTest {
 
 	@Test
 	public void readAllInfoForTest() {
-		fail("Not yet implemented");
+
+		Integer numRelated = -1;
+
+		//Get current num of related infos in Database for Verification
+		String sql = "SELECT COUNT(*) FROM info_request WHERE destination_id = ?;";
+		try{
+			testStmt = realConn.prepareStatement(sql);
+			testStmt.setInt(1, info.getDestinationId());
+			ResultSet rs = testStmt.executeQuery();
+			rs.next();
+			numRelated = rs.getInt(1);
+		} catch (SQLException e) {
+			fail("SQLException thrown in test setup: " + e);
+		}
+
+		//Prep statement with proper SQL
+		sql = "SELECT * FROM info_request WHERE destination_id = ?;";
+		try {
+			initStmtHelper(sql);
+		} catch (SQLException e) {
+			fail("SQLException thrown: " + e);
+		}
+
+		//Test readRelatedReference functionality
+		try {
+			List<InfoRequest> related = infoDao.readAllInfoFor(info.getDestinationId());
+
+			//Verify statement was excuted properly
+			verify(spy).setInt(1, info.getDestinationId());
+			verify(spy).executeQuery();
+
+			//Verify result set returned proper data
+			assertTrue("Returned set is not the same size as expected", numRelated == related.size());
+			for (InfoRequest i : related){
+				assertFalse("info_id returned 0 for InfoRequest with description: "+ i.getDescription(), 0 == i.getInfoId());
+				assertFalse("related_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getRelatedId());
+				assertFalse("destination_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getDestinationId());
+				assertFalse("description returned empty for InfoRequest: "+ i.getInfoId(), "".equals(i.getDescription()));
+				assertFalse("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
+			}
+		} catch (SQLException e) {
+			fail("SQLException thrown while reading all employees");
+		}
 	}
 
 	@Test
