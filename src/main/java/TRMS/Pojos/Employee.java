@@ -8,6 +8,19 @@ public class Employee {
     private String department;
     private boolean deptHead;
 
+    public Employee() {
+        super();
+    }
+    
+    public Employee(int employeeId, String name, String title, int supervisor, String department, boolean deptHead) {
+		this.employeeId = employeeId;
+		this.name = name;
+		this.title = title;
+		this.supervisor = supervisor;
+		this.department = department;
+		this.deptHead = deptHead;
+	}
+
     public int getEmployeeId() {
         return employeeId;
     }

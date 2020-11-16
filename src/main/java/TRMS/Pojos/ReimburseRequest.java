@@ -19,7 +19,43 @@ public class ReimburseRequest {
     private AppStage stage;
     private LocalDateTime dateTime;
 
+    public ReimburseRequest(){
+        super();
+    }
 
+    public ReimburseRequest(int requestId, int employeeId, String location, double cost, EventType type,
+            String description, String justificiation) {
+        this.requestId = requestId;
+        this.employeeId = employeeId;
+        this.location = location;
+        this.cost = cost;
+        this.type = type;
+        this.description = description;
+        this.justificiation = justificiation;
+        this.projected = 00.00;
+        this.urgent = false;
+        this.status = AppStatus.PENDING;
+        this.stage = AppStage.UPLOAD;
+        this.dateTime = LocalDateTime.now();
+        }
+
+	public ReimburseRequest(int requestId, int employeeId, String location, double cost, EventType type,
+			String description, String justificiation, double projected, boolean urgent, AppStatus status,
+			AppStage stage, LocalDateTime dateTime) {
+		this.requestId = requestId;
+		this.employeeId = employeeId;
+		this.location = location;
+		this.cost = cost;
+		this.type = type;
+		this.description = description;
+		this.justificiation = justificiation;
+		this.projected = projected;
+		this.urgent = urgent;
+		this.status = status;
+		this.stage = stage;
+		this.dateTime = dateTime;
+	}
+    
     public int getRequestId() {
         return requestId;
     }

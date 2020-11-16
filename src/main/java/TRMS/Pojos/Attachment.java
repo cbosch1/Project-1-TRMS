@@ -8,6 +8,17 @@ public class Attachment {
     private String fileType;
     private FileInputStream data;
 
+    public Attachment(){
+        super();
+    }
+
+	public Attachment(int attachId, int requestId, String fileType) {
+        super();
+		this.attachId = attachId;
+		this.requestId = requestId;
+		this.fileType = fileType;
+    }
+    
     public int getAttachId() {
         return attachId;
     }

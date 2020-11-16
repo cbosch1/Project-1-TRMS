@@ -11,6 +11,29 @@ public class InfoRequest {
     private String description;
     private LocalDateTime dateTime;
 
+    public InfoRequest(){
+        super();
+    }
+
+	public InfoRequest(int infoId, int relatedId, int destinationId, String description) {
+		this.infoId = infoId;
+		this.relatedId = relatedId;
+		this.destinationId = destinationId;
+		this.urgent = false;
+		this.description = description;
+		this.dateTime = LocalDateTime.now();
+    }
+
+	public InfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,
+			LocalDateTime dateTime) {
+		this.infoId = infoId;
+		this.relatedId = relatedId;
+		this.destinationId = destinationId;
+		this.urgent = urgent;
+		this.description = description;
+		this.dateTime = dateTime;
+    }
+    
     public int getInfoId() {
         return infoId;
     }

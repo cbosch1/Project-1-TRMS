@@ -8,6 +8,17 @@ public class User {
     private int employeeId;
     private AuthPriv privilege;
 
+    public User() {
+        super();
+    }
+
+    public User(String username, String password, int employeeId, AuthPriv privilege) {
+		this.username = username;
+		this.password = password;
+		this.employeeId = employeeId;
+		this.privilege = privilege;
+	}
+
     public String getUsername() {
         return username;
     }
