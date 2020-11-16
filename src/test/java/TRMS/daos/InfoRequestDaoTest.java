@@ -111,7 +111,54 @@ public class InfoRequestDaoTest {
 
 	@Test
 	public void readInfoRequestTest() {
-		fail("Not yet implemented");
+		try {
+			//Insert test info request to be read
+			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, info.getInfoId());
+				testStmt.setInt(2, info.getRelatedId());
+				testStmt.setInt(3, info.getDestinationId());
+				testStmt.setBoolean(4, info.getUrgent());
+				testStmt.setString(5, info.getDescription());
+				testStmt.setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
+				testStmt.setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+				assertTrue("Error in inserting info request", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "SELECT * FROM info_request WHERE info_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			try {
+				InfoRequest resultInfo = infoDao.readInfoRequest(info.getInfoId());
+
+				//Verify statement was prepared and executed properly
+				verify(spy).setInt(1, info.getInfoId());
+				verify(spy).executeQuery();
+
+				assertTrue("Object returned does not match expected object", info.equals(resultInfo));
+				
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to retrieve object: " + e);
+			}
+		} finally {
+			//Removal process, post-test
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM info_request WHERE info_id = ?;");
+				testStmt.setInt(1, info.getInfoId());
+				testStmt.executeUpdate();
+			} catch (SQLException e) {
+				fail("TEST ERROR, could not properly remove info request: " + e);
+			}
+		}
 	}
 
 	@Test
