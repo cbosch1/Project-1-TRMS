@@ -103,7 +103,52 @@ public class EmployeeDaoTest {
 
 	@Test
 	public void readEmployeeTest() {
-		fail("Not yet implemented");
+		try {
+			//Insert test employee to be read
+			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, employee.getEmployeeId());
+				testStmt.setString(2, employee.getName());
+				testStmt.setString(3, employee.getTitle());
+				testStmt.setInt(4, employee.getSupervisor());
+				testStmt.setString(5, employee.getDepartment());
+				testStmt.setBoolean(6, employee.getDeptHead());
+				assertTrue("Error in inserting employee", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "SELECT * FROM employee WHERE emp_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			try {
+				Employee resultEmp = employeeDao.readEmployee(employee.getEmployeeId());
+
+				//Verify statement was prepared and executed properly
+				verify(spy).setInt(1, employee.getEmployeeId());
+				verify(spy).executeQuery();
+
+				assertTrue("Object returned does not match expected object", employee.equals(resultEmp));
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to retrieve object: " + e);
+			}
+		} finally {
+			//Removal process, post-test
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM employee WHERE emp_id = ?;");
+				testStmt.setInt(1, employee.getEmployeeId());
+				testStmt.executeUpdate();
+			} catch (SQLException e) {
+				fail("TEST ERROR, could not properly remove employee: " + e);
+			}
+		}
 	}
 
 	@Test
