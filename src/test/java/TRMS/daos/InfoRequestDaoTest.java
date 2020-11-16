@@ -4,10 +4,14 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 import org.junit.After;
@@ -64,7 +68,45 @@ public class InfoRequestDaoTest {
 
 	@Test
 	public void createInfoRequestTest() {
-		fail("Not yet implemented");
+		try {
+			//Prep statement with proper SQL
+			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?);";
+
+			//Call helper method to initilize mockito spy with test-unique sql
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e) {
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Test createEmployee
+			try {
+				infoDao.createInfoRequest(info);
+
+				verify(spy).setInt(1, info.getInfoId());
+				verify(spy).setInt(2, info.getRelatedId());
+				verify(spy).setInt(3, info.getDestinationId());
+				verify(spy).setBoolean(4, info.getUrgent());
+				verify(spy).setString(5, info.getDescription());
+				verify(spy).setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
+				verify(spy).setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+
+				verify(spy).executeUpdate();
+
+			} catch (SQLException e) {
+				fail("SQLException thrown in creation process: " + e);
+			} 
+
+		} finally {
+			//Removal process, post-test
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM info_request WHERE info_id = ?;");
+				testStmt.setInt(1, info.getInfoId());
+				testStmt.executeUpdate();
+			} catch (SQLException e) {
+				fail("TEST ERROR, could not properly remove info request: " + e);
+			}
+		}
 	}
 
 	@Test
