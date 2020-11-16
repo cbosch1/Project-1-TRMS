@@ -1,9 +1,22 @@
 package TRMS.services;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import TRMS.daos.UserDao;
 import TRMS.enums.AuthPriv;
 import TRMS.pojos.User;
 
 public class UserServiceImpl implements UserService {
+
+    private static Logger Log = LogManager.getLogger("Service");
+
+    private UserDao userDao;
+
+    public UserServiceImpl(UserDao userDao){
+        super();
+        this.userDao = userDao;
+    }
 
     @Override
     public boolean createUser(String username, String password, int employeeId, AuthPriv privilege) {

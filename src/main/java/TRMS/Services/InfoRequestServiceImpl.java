@@ -3,9 +3,22 @@ package TRMS.services;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import TRMS.daos.InfoRequestDao;
 import TRMS.pojos.InfoRequest;
 
 public class InfoRequestServiceImpl implements InfoRequestService {
+
+    private static Logger Log = LogManager.getLogger("Service");
+
+    private InfoRequestDao infoRequestDao;
+
+    public InfoRequestServiceImpl(InfoRequestDao infoRequestDao){
+        super();
+        this.infoRequestDao = infoRequestDao;
+    }
 
     @Override
     public boolean createInfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,

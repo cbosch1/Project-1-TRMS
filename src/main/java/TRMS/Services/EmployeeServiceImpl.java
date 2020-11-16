@@ -2,9 +2,22 @@ package TRMS.services;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import TRMS.daos.EmployeeDao;
 import TRMS.pojos.Employee;
 
 public class EmployeeServiceImpl implements EmployeeService {
+
+    private static Logger Log = LogManager.getLogger("Service");
+
+    private EmployeeDao employeeDao;
+
+    public EmployeeServiceImpl(EmployeeDao employeeDao){
+        super();
+        this.employeeDao = employeeDao;
+    }
 
     @Override
     public boolean createEmployee(int employeeId, String name, String title, int supervisor, String department,
