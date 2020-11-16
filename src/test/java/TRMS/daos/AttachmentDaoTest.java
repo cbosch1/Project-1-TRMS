@@ -151,8 +151,46 @@ public class AttachmentDaoTest {
 	}
 
 	@Test
-	public void readRelatedReferencesTest() {
-		fail("Not yet implemented");
+	public void readRelatedReferenceTest() {
+		
+		Integer numRelated = -1;
+
+		//Get current num of related References in Database for Verification
+		String sql = "SELECT COUNT(*) FROM attachment WHERE request_id = ?;";
+		try{
+			testStmt = realConn.prepareStatement(sql);
+			testStmt.setInt(1, attach.getRequestId());
+			ResultSet rs = testStmt.executeQuery();
+			rs.next();
+			numRelated = rs.getInt(1);
+		} catch (SQLException e) {
+			fail("SQLException thrown in test setup: " + e);
+		}
+
+		//Prep statement with proper SQL
+		sql = "SELECT * FROM attachment WHERE request_id = ?;";
+		try {
+			initStmtHelper(sql);
+		} catch (SQLException e) {
+			fail("SQLException thrown: " + e);
+		}
+
+		//Test readRelatedReference functionality
+		try {
+			List<Integer> related = attachDao.readRelatedReference(attach.getRequestId());
+
+			//Verify statement was excuted properly
+			verify(spy).setInt(1, attach.getRequestId());
+			verify(spy).executeQuery();
+
+			//Verify result set returned proper data
+			assertTrue("Returned set is not the same size as expected", numRelated == related.size());
+			for (Integer r : related){
+				assertFalse("Id returned 0 for related atttachment ", 0 == r);
+			}
+		} catch (SQLException e) {
+			fail("SQLException thrown while reading all employees");
+		}
 	}
 	
 	@Test
