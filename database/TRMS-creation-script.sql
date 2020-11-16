@@ -9,9 +9,9 @@ CREATE TABLE employee
 	lastname varchar(25) NOT NULL,
 	firstname varchar(25) NOT NULL,
 	title varchar(50),
-	supervisor integer,
-	department varchar(50),
-	dept_head boolean
+	supervisor integer NOT NULL,
+	department varchar(50) NOT NUll,
+	dept_head boolean NOT NULL
 );
 
 CREATE TABLE userbase
@@ -19,54 +19,54 @@ CREATE TABLE userbase
 	emp_id integer primary key,
 	username varchar(50) NOT NULL,
 	passphrase varchar(50) NOT NULL,
-	privilege auth_priv
+	privilege auth_priv NOT NULL
 );
 
 CREATE TABLE benco_processing
 (
-	emp_id integer,
-	request_id integer,
+	emp_id integer NOT NULL,
+	request_id integer NOT NULL,
 	PRIMARY KEY(emp_id, request_id)
 );
 
 CREATE TABLE info_request
 (
 	info_id serial PRIMARY KEY,
-	related_id integer,
-	destination_id integer,
+	related_id integer NOT NULL,
+	destination_id integer NOT NULL,
 	urgent boolean,
-	description text,
-	request_date date,
-	request_time time
+	description text NOT NULL,
+	request_date date NOT NULL,
+	request_time time NOT NULL
 );
 
 CREATE TABLE reimbursement
 (
 	request_id serial PRIMARY KEY,
-	emp_id integer,
-	ev_location varchar(100),
-	ev_cost numeric(10,2),
-	ev_type event_type,
-	description text,
-	justification text
+	emp_id integer NOT NULL,
+	ev_location varchar(100) NOT NULL,
+	ev_cost numeric(10,2) NOT NULL,
+	ev_type event_type NOT NULL,
+	description text NOT NULL,
+	justification text NOT NULL
 );
 
 CREATE TABLE reimburse_status
 (
 	request_id integer PRIMARY KEY,
 	projected_award numeric(10, 2),
-	urgent boolean,
-	status app_status,
-	stage app_stage,
-	request_date date,
-	request_time time
+	urgent boolean NOT NULL,
+	status app_status NOT NULL,
+	stage app_stage NOT NULL,
+	request_date date NOT NULL,
+	request_time time NOT NULL
 );
 
 CREATE TABLE attachment
 (
 	attach_id serial PRIMARY KEY,
-	request_id integer,
-	file_type varchar(25),
+	request_id integer NOT NULL,
+	file_type varchar(25) NOT NULL,
 	file bytea
 );
 
