@@ -5,7 +5,9 @@ import static org.mockito.Mockito.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -48,7 +50,7 @@ public class EmployeeDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		employeeDao = new EmployeeDaoPostgres(connUtil);
-		employee = new Employee(1, "Billy Bob", "Highest of the Hunters", 0, "Hunting", false);
+		employee = new Employee(2, "Billy Bob", "Highest of the Hunters", 1, "Hunting", false);
 	}
 
 	@After
@@ -153,7 +155,46 @@ public class EmployeeDaoTest {
 
 	@Test
 	public void readAllEmployeesTest() {
-		fail("Not yet implemented");
+
+		Integer numEmployees = -1;
+
+		//Get current num of employees in Database for verification
+		String sql = "SELECT COUNT(*) FROM employee;";
+		try{
+			testStmt = realConn.prepareStatement(sql);
+			ResultSet rs = testStmt.executeQuery();
+			rs.next();
+			numEmployees = rs.getInt(1);
+		} catch (SQLException e) {
+			fail("SQLException thrown in test setup: " + e);
+		}
+
+		//Prep statement with proper SQL
+		sql = "SELECT * FROM employee;";
+		try {
+			initStmtHelper(sql);
+		} catch (SQLException e) {
+			fail("SQLException thrown: " + e);
+		}
+
+		//Test readAllEmployees functionality
+		try {
+			List<Employee> allEmployees = employeeDao.readAllEmployees();
+
+			//Verify statement was excuted properly
+			verify(spy).executeQuery();
+
+			//Verify result set returned proper data
+			assertTrue("Returned set is not the same size as expected", numEmployees == allEmployees.size());
+			for (Employee e : allEmployees){
+				assertFalse("Id returned 0 for employee: " + e.getName(), 0 == e.getEmployeeId());
+				assertFalse("Name returned blank for employee number: " + e.getEmployeeId(), "".equals(e.getName()));
+				assertFalse("Title returned blank for employee: " + e.getName(), "".equals(e.getTitle()));
+				assertFalse("Department returned blank for employee: " + e.getName(), "".equals(e.getDepartment()));
+			}
+		} catch (SQLException e) {
+			fail("SQLException thrown while reading all employees");
+		}
 	}
 
 	@Test
