@@ -6,7 +6,7 @@
                 <Pattern>%highlight{%d [%t] %-5level: %c - %msg%n%throwable}</Pattern>
             </PatternLayout>
             <Policies>
-                <SizedBasedTriggeringPolicy size="50 MB" />
+                <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
@@ -16,7 +16,7 @@
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
             <Policies>
-                <SizedBasedTriggeringPolicy size="50 MB" />
+                <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
@@ -26,7 +26,7 @@
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
             <Policies>
-                <SizedBasedTriggeringPolicy size="50 MB" />
+                <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
@@ -36,7 +36,7 @@
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
             <Policies>
-                <SizedBasedTriggeringPolicy size="50 MB" />
+                <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
@@ -46,7 +46,7 @@
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
             <Policies>
-                <SizedBasedTriggeringPolicy size="50 MB" />
+                <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
@@ -56,7 +56,7 @@
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
             <Policies>
-                <SizedBasedTriggeringPolicy size="50 MB" />
+                <SizeBasedTriggeringPolicy size="50 MB" />
             </Policies>
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
