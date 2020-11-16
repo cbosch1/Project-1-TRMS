@@ -1,11 +1,27 @@
 package TRMS.daos;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import TRMS.pojos.InfoRequest;
+import TRMS.util.ConnectionUtil;
 
 public class InfoRequestDaoPostgres implements InfoRequestDao {
+
+    private PreparedStatement stmt;
+
+    private static Logger Log = LogManager.getLogger("Dao");
+
+    private ConnectionUtil connUtil;
+
+    public InfoRequestDaoPostgres(ConnectionUtil connectionUtil){
+        super();
+        connUtil = connectionUtil;
+    }
 
     @Override
     public void createInfoRequest(InfoRequest info) throws SQLException {

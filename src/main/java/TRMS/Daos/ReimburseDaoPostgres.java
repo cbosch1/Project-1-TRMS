@@ -1,12 +1,28 @@
 package TRMS.daos;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import TRMS.pojos.ReimburseRequest;
+import TRMS.util.ConnectionUtil;
 
 public class ReimburseDaoPostgres implements ReimburseRequestDao {
 
+    private PreparedStatement stmt;
+
+    private static Logger Log = LogManager.getLogger("Dao");
+
+    private ConnectionUtil connUtil;
+
+    public ReimburseDaoPostgres(ConnectionUtil connectionUtil){
+        super();
+        connUtil = connectionUtil;
+    }
+    
     @Override
     public void createRequest(ReimburseRequest request) throws SQLException {
         // TODO Auto-generated method stub

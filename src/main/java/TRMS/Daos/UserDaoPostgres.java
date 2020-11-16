@@ -1,10 +1,26 @@
 package TRMS.daos;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import TRMS.pojos.User;
+import TRMS.util.ConnectionUtil;
 
 public class UserDaoPostgres implements UserDao {
+
+    private PreparedStatement stmt;
+
+    private static Logger Log = LogManager.getLogger("Dao");
+
+    private ConnectionUtil connUtil;
+
+    public UserDaoPostgres(ConnectionUtil connectionUtil){
+        super();
+        connUtil = connectionUtil;
+    }
 
     @Override
     public void createUser(User user) throws SQLException {
