@@ -82,7 +82,7 @@ public class AttachmentDaoTest {
 				verify(spy).setInt(1, attach.getAttachId());
 				verify(spy).setInt(2, attach.getRequestId());
 				verify(spy).setString(3, attach.getFileType());
-				//TODO: Figure out how to test stored files
+				verify(spy).setBinaryStream(4, attach.getData());
 
 				verify(spy).executeUpdate();
 
@@ -104,7 +104,50 @@ public class AttachmentDaoTest {
 
 	@Test
 	public void readAttachmentTest() {
-		fail("Not yet implemented");
+		try {
+			//Insert test attachment to be read
+			String sql = "INSERT INTO attachment VALUES (?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, attach.getAttachId());
+				testStmt.setInt(2, attach.getRequestId());
+				testStmt.setString(3, attach.getFileType());
+				testStmt.setBinaryStream(4, attach.getData());
+				assertTrue("Error in inserting attachment", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "SELECT * FROM attachment WHERE attach_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			try {
+				Attachment resultAtt = attachDao.readAttachment(attach.getAttachId());
+
+				//Verify statement was prepared and executed properly
+				verify(spy).setInt(1, attach.getAttachId());
+				verify(spy).executeQuery();
+
+				assertTrue("Object returned does not match expected object", attach.equals(resultAtt));
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to retrieve object: " + e);
+			}
+		} finally {
+			//Removal process, post-test
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM attachment WHERE attach_id = ?;");
+				testStmt.setInt(1, attach.getAttachId());
+				testStmt.executeUpdate();
+			} catch (SQLException e) {
+				fail("TEST ERROR, could not properly remove attachment: " + e);
+			}
+		}
 	}
 
 	@Test
