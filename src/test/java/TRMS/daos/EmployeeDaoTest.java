@@ -50,7 +50,7 @@ public class EmployeeDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		employeeDao = new EmployeeDaoPostgres(connUtil);
-		employee = new Employee(2, "Billy Bob", "Highest of the Hunters", 1, "Hunting", false);
+		employee = new Employee(2010, "Billy Bob", "Highest of the Hunters", 1, "Hunting", false);
 	}
 
 	@After
@@ -65,7 +65,7 @@ public class EmployeeDaoTest {
 	public void createEmployeeTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?);";
+			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?,?);";
 
 			//Call helper method to initilize mockito spy with test-unique sql
 			try {
@@ -79,11 +79,12 @@ public class EmployeeDaoTest {
 				employeeDao.createEmployee(employee);
 
 				verify(spy).setInt(1, employee.getEmployeeId());
-				verify(spy).setString(2, employee.getName());
-				verify(spy).setString(3, employee.getTitle());
-				verify(spy).setInt(4, employee.getSupervisor());
-				verify(spy).setString(5, employee.getDepartment());
-				verify(spy).setBoolean(6, employee.getDeptHead());
+				verify(spy).setString(2, employee.getName().split(" ")[1]);
+				verify(spy).setString(3, employee.getName().split(" ")[0]);
+				verify(spy).setString(4, employee.getTitle());
+				verify(spy).setInt(5, employee.getSupervisor());
+				verify(spy).setString(6, employee.getDepartment());
+				verify(spy).setBoolean(7, employee.getDeptHead());
 
 				verify(spy).executeUpdate();
 
@@ -107,16 +108,17 @@ public class EmployeeDaoTest {
 	public void readEmployeeTest() {
 		try {
 			//Insert test employee to be read
-			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?);";
+			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?,?);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
 				testStmt.setInt(1, employee.getEmployeeId());
-				testStmt.setString(2, employee.getName());
-				testStmt.setString(3, employee.getTitle());
-				testStmt.setInt(4, employee.getSupervisor());
-				testStmt.setString(5, employee.getDepartment());
-				testStmt.setBoolean(6, employee.getDeptHead());
+				testStmt.setString(2, employee.getName().split(" ")[1]);
+				testStmt.setString(3, employee.getName().split(" ")[0]);
+				testStmt.setString(4, employee.getTitle());
+				testStmt.setInt(5, employee.getSupervisor());
+				testStmt.setString(6, employee.getDepartment());
+				testStmt.setBoolean(7, employee.getDeptHead());
 				assertTrue("Error in inserting employee", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
@@ -199,12 +201,128 @@ public class EmployeeDaoTest {
 
 	@Test
 	public void updateEmployeeTest() {
-		fail("Not yet implemented");
+		try {
+			//Insert test employee to be read
+			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, employee.getEmployeeId());
+				testStmt.setString(2, employee.getName().split(" ")[1]);
+				testStmt.setString(3, employee.getName().split(" ")[0]);
+				testStmt.setString(4, employee.getTitle());
+				testStmt.setInt(5, employee.getSupervisor());
+				testStmt.setString(6, employee.getDepartment());
+				testStmt.setBoolean(7, employee.getDeptHead());
+				assertTrue("Error in inserting employee", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "UPDATE employee SET lastname=?, firstname=?, title=?, supervisor=?, "
+									+ "department=?, dept_head=? WHERE emp_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			//Test updateEmployee
+			try {
+				//Modify values
+				employee.setName("Doug Judy");
+				employee.setTitle("The Poniac Bandit");
+				employee.setSupervisor(0);
+				employee.setDepartment("Rogue");
+				employee.setDeptHead(true);
+
+				employeeDao.updateEmployee(employee);
+				
+				//Verify statement was prepared and executed properly
+				verify(spy).setString(1, employee.getName().split(" ")[1]);
+				verify(spy).setString(2, employee.getName().split(" ")[0]);
+				verify(spy).setString(3, employee.getTitle());
+				verify(spy).setInt(4, employee.getSupervisor());
+				verify(spy).setString(5, employee.getDepartment());
+				verify(spy).setBoolean(6, employee.getDeptHead());
+				verify(spy).setInt(7, employee.getEmployeeId());
+
+				verify(spy).executeUpdate();
+
+				//Pull modified employee object from database for comparison
+				testStmt = realConn.prepareStatement("SELECT * FROM employee WHERE emp_id = ?;");
+				testStmt.setInt(1, employee.getEmployeeId());
+				ResultSet rs = testStmt.executeQuery();
+
+				rs.next();
+				Employee modEmployee = new Employee(rs.getInt(1), rs.getString(3)+" "+rs.getString(2), 
+													rs.getString(4), rs.getInt(5), rs.getString(6), rs.getBoolean(7));
+
+				assertTrue("Database object does not match as modified", employee.equals(modEmployee));
+
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to update object: " + e);
+			}
+		} finally {
+			//Removal process, post-test
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM employee WHERE emp_id = ?;");
+				testStmt.setInt(1, employee.getEmployeeId());
+				testStmt.executeUpdate();
+			} catch (SQLException e) {
+				fail("TEST ERROR, could not properly remove employee: " + e);
+			}
+		}
 	}
 
 	@Test
 	public void deleteEmployeeTest() {
-		fail("Not yet implemented");
+try {
+			//Insert test employee to be deleted
+			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, employee.getEmployeeId());
+				testStmt.setString(2, employee.getName().split(" ")[1]);
+				testStmt.setString(3, employee.getName().split(" ")[0]);
+				testStmt.setString(4, employee.getTitle());
+				testStmt.setInt(5, employee.getSupervisor());
+				testStmt.setString(6, employee.getDepartment());
+				testStmt.setBoolean(7, employee.getDeptHead());
+				assertTrue("Error in inserting employee", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "DELETE FROM employee WHERE emp_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			//Test deleteEmployee
+			try {
+				employeeDao.deleteEmployee(employee.getEmployeeId());
+
+				//Verify statement was prepared and executed properly
+				verify(spy).setInt(1, employee.getEmployeeId());
+				verify(spy).executeUpdate();
+				
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to delete object: " + e);
+			}
+		} finally {
+			//Attempt to delete object that was already deleted (Should throw exception)
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM employee WHERE emp_id = ?;");
+				testStmt.setInt(1, employee.getEmployeeId());
+				assertEquals("Object was not deleted properly", 0, testStmt.executeUpdate());
+			} catch (SQLException e) {}
+		}
 	}
 
 	/**
