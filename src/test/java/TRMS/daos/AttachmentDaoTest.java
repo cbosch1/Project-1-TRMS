@@ -3,6 +3,7 @@ package TRMS.daos;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.security.KeyStore.Entry.Attribute;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -195,7 +196,47 @@ public class AttachmentDaoTest {
 	
 	@Test
 	public void deleteAttachmentTest() {
-		fail("Not yet implemented");
+		try {
+			//Insert test attachment to be read
+			String sql = "INSERT INTO attachment VALUES (?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, attach.getAttachId());
+				testStmt.setInt(2, attach.getRequestId());
+				testStmt.setString(3, attach.getFileType());
+				testStmt.setBinaryStream(4, attach.getData());
+				assertTrue("Error in inserting attachment", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "DELETE FROM attachment WHERE attach_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			try {
+				attachDao.deleteAttachment(attach.getAttachId());
+
+				//Verify statement was prepared and executed properly
+				verify(spy).setInt(1, attach.getAttachId());
+				verify(spy).executeUpdate();
+
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to delete object: " + e);
+			}
+		} finally {
+			//Attempt to delete object that was already deleted (Should throw exception)
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM attachment WHERE attach_id = ?;");
+				testStmt.setInt(1, attach.getAttachId());
+				assertEquals("Object was not deleted properly", 0, testStmt.executeUpdate());
+			} catch (SQLException e) {}
+		}
 	}
 
 	/**
