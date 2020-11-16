@@ -3,7 +3,6 @@ package TRMS.daos;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-import java.security.KeyStore.Entry.Attribute;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
