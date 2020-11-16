@@ -51,7 +51,7 @@ public class AttachmentDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		attachDao = new AttachmentDaoPostgres(connUtil);
-		attach = new Attachment(2010), 2010, "College Transcripts");
+		attach = new Attachment(2010, 2010, "College Transcripts");
 	}
 
 	@After
@@ -64,7 +64,42 @@ public class AttachmentDaoTest {
 
 	@Test
 	public void createAttachmentTest() {
-		fail("Not yet implemented");
+		try {
+			//Prep statement with proper SQL
+			String sql = "INSERT INTO attachment VALUES (?,?,?,?);";
+
+			//Call helper method to initilize mockito spy with test-unique sql
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e) {
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Test createEmployee
+			try {
+				attachDao.createAttachment(attach);
+
+				verify(spy).setInt(1, attach.getAttachId());
+				verify(spy).setInt(2, attach.getRequestId());
+				verify(spy).setString(3, attach.getFileType());
+				//TODO: Figure out how to test stored files
+
+				verify(spy).executeUpdate();
+
+			} catch (SQLException e) {
+				fail("SQLException thrown in creation process: " + e);
+			} 
+
+		} finally {
+			//Removal process, post-test
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM attachment WHERE attach_id = ?;");
+				testStmt.setInt(1, attach.getAttachId());
+				testStmt.executeUpdate();
+			} catch (SQLException e) {
+				fail("TEST ERROR, could not properly remove attachment: " + e);
+			}
+		}
 	}
 
 	@Test
