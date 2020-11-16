@@ -68,4 +68,50 @@ public class Employee {
     public void setDeptHead(boolean deptHead) {
         this.deptHead = deptHead;
     }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((department == null) ? 0 : department.hashCode());
+		result = prime * result + (deptHead ? 1231 : 1237);
+		result = prime * result + employeeId;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + supervisor;
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (department == null) {
+			if (other.department != null)
+				return false;
+		} else if (!department.equals(other.department))
+			return false;
+		if (deptHead != other.deptHead)
+			return false;
+		if (employeeId != other.employeeId)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (supervisor != other.supervisor)
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
+	}
 }

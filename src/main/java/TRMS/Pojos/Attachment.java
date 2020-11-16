@@ -50,4 +50,35 @@ public class Attachment {
     public void setData(FileInputStream data) {
         this.data = data;
     }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + attachId;
+		result = prime * result + ((fileType == null) ? 0 : fileType.hashCode());
+		result = prime * result + requestId;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Attachment other = (Attachment) obj;
+		if (attachId != other.attachId)
+			return false;
+		if (fileType == null) {
+			if (other.fileType != null)
+				return false;
+		} else if (!fileType.equals(other.fileType))
+			return false;
+		if (requestId != other.requestId)
+			return false;
+		return true;
+	}
 }

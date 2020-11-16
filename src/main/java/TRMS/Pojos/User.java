@@ -50,4 +50,35 @@ public class User {
     public void setPrivilege(AuthPriv privilege) {
         this.privilege = privilege;
     }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + employeeId;
+		result = prime * result + ((privilege == null) ? 0 : privilege.hashCode());
+		result = prime * result + ((username == null) ? 0 : username.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (employeeId != other.employeeId)
+			return false;
+		if (privilege != other.privilege)
+			return false;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		return true;
+	}
 }

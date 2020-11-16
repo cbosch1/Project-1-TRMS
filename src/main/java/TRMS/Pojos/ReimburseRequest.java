@@ -151,4 +151,58 @@ public class ReimburseRequest {
     public void setStage(AppStage stage) {
         this.stage = stage;
     }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(cost);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((dateTime == null) ? 0 : dateTime.hashCode());
+		result = prime * result + employeeId;
+		result = prime * result + ((justificiation == null) ? 0 : justificiation.hashCode());
+		result = prime * result + ((location == null) ? 0 : location.hashCode());
+		result = prime * result + requestId;
+		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		result = prime * result + (urgent ? 1231 : 1237);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ReimburseRequest other = (ReimburseRequest) obj;
+		if (Double.doubleToLongBits(cost) != Double.doubleToLongBits(other.cost))
+			return false;
+		if (dateTime == null) {
+			if (other.dateTime != null)
+				return false;
+		} else if (!dateTime.equals(other.dateTime))
+			return false;
+		if (employeeId != other.employeeId)
+			return false;
+		if (justificiation == null) {
+			if (other.justificiation != null)
+				return false;
+		} else if (!justificiation.equals(other.justificiation))
+			return false;
+		if (location == null) {
+			if (other.location != null)
+				return false;
+		} else if (!location.equals(other.location))
+			return false;
+		if (requestId != other.requestId)
+			return false;
+		if (type != other.type)
+			return false;
+		if (urgent != other.urgent)
+			return false;
+		return true;
+	}
 }
