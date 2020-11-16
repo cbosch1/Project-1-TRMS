@@ -24,3 +24,9 @@
 2020-11-15 20:11:19,605 [main] ERROR: Controller - This is an error message
 2020-11-15 20:12:17,742 [main] INFO : Controller - This is an error message
 2020-11-15 20:12:17,747 [main] ERROR: Controller - This is an error message
+2020-11-15 20:26:51,761 [main] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-15 20:27:21,638 [main] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-15 20:30:46,118 [main] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "postgres/TRMS" does not exist
+2020-11-15 20:31:13,220 [main] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-15 20:31:36,710 [main] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-15 20:33:29,609 [main] INFO : Util - Successfully retrieved connection to database.

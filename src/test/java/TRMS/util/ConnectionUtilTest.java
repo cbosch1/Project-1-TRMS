@@ -15,6 +15,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ConnectionUtilTest {
+
+	private ConnectionUtil ConnectionUtil;
             
     @BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -26,6 +28,7 @@ public class ConnectionUtilTest {
 
 	@Before
 	public void setUp() throws Exception {
+		ConnectionUtil = new ConnectionUtil();
 	}
 
 	@After
