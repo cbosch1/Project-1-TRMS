@@ -11,7 +11,7 @@ public interface AttachmentDao {
 
     public Attachment readAttachment(int attachId) throws SQLException;
 
-    public List<Integer> readRelatedReferences(int requestId) throws SQLException;
+    public List<Integer> readRelatedReference(int requestId) throws SQLException;
 
     public void deleteAttachment(int attachId) throws SQLException;
 }

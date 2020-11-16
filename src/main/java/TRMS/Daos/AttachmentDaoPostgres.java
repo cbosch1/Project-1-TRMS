@@ -42,7 +42,7 @@ public class AttachmentDaoPostgres implements AttachmentDao {
     }
 
     @Override
-    public List<Integer> readRelatedReferences(int requestId) throws SQLException {
+    public List<Integer> readRelatedReference(int requestId) throws SQLException {
         // TODO Auto-generated method stub
         return null;
     }
