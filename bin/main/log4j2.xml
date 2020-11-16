@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <RollingFile name="RootRolling" fileName="logs/TRMS.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%highlight{%d [%t] %-5level: %c - %msg%n%throwable}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizedBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="ControlRolling" fileName="logs/TRMS-Control.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizedBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="DaoRolling" fileName="logs/TRMS-Dao.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizedBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="ServiceRolling" fileName="logs/TRMS-Service.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizedBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="UtilRolling" fileName="logs/TRMS-Util.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizedBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="JavalinRolling" fileName="logs/TRMS-Javalin.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizedBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="RootRolling" />
+        </Root>
+
+        <Logger name="Controller" level="INFO">
+            <AppenderRef ref="ControlRolling" />
+        </Logger>
+
+        <Logger name="Dao" level="INFO">
+            <AppenderRef ref="DaoRolling" />
+        </Logger>
+
+        <Logger name="Service" level="INFO">
+            <AppenderRef ref="ServiceRolling" />
+        </Logger>
+
+        <Logger name="Util" level="INFO">
+            <AppenderRef ref="UtilRolling" />
+        </Logger>
+
+        <Logger name="Javalin" level="INFO">
+            <AppenderRef ref="JavalinRolling" />
+        </Logger>
+    </Loggers>
+</Configuration>
