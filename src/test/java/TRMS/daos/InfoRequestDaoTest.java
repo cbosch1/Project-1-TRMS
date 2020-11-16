@@ -204,13 +204,53 @@ public class InfoRequestDaoTest {
 				assertFalse("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
 			}
 		} catch (SQLException e) {
-			fail("SQLException thrown while reading all employees");
+			fail("SQLException thrown while reading related InfoRequests");
 		}
 	}
 
 	@Test
 	public void readAllInfoReqTest() {
-		fail("Not yet implemented");
+
+		Integer numInfo = -1;
+
+		//Get current num of related infos in Database for Verification
+		String sql = "SELECT COUNT(*) FROM info_request;";
+		try{
+			testStmt = realConn.prepareStatement(sql);
+			ResultSet rs = testStmt.executeQuery();
+			rs.next();
+			numInfo = rs.getInt(1);
+		} catch (SQLException e) {
+			fail("SQLException thrown in test setup: " + e);
+		}
+
+		//Prep statement with proper SQL
+		sql = "SELECT * FROM info_request;";
+		try {
+			initStmtHelper(sql);
+		} catch (SQLException e) {
+			fail("SQLException thrown: " + e);
+		}
+
+		//Test readRelatedReference functionality
+		try {
+			List<InfoRequest> infos = infoDao.readAllInfoFor(info.getDestinationId());
+
+			//Verify statement was excuted properly
+			verify(spy).executeQuery();
+
+			//Verify result set returned proper data
+			assertTrue("Returned set is not the same size as expected", numInfo == infos.size());
+			for (InfoRequest i : infos){
+				assertFalse("info_id returned 0 for InfoRequest with description: "+ i.getDescription(), 0 == i.getInfoId());
+				assertFalse("related_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getRelatedId());
+				assertFalse("destination_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getDestinationId());
+				assertFalse("description returned empty for InfoRequest: "+ i.getInfoId(), "".equals(i.getDescription()));
+				assertFalse("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
+			}
+		} catch (SQLException e) {
+			fail("SQLException thrown while reading all InfoRequests");
+		}
 	}
 
 	@Test
