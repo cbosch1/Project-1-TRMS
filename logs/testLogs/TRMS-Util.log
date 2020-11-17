@@ -4,3 +4,115 @@
 2020-11-15 20:31:13,220 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
 2020-11-15 20:31:36,710 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
 2020-11-15 20:33:29,609 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:08:43,484 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:30,379 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:30,695 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:30,737 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:30,879 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:30,922 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:30,964 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,006 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,050 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,089 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,136 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,179 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,328 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,371 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,413 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,454 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,497 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,542 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,585 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,624 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,664 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,706 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,746 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,785 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,826 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:10:31,865 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:11:42,566 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:12:14,410 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:12:14,594 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:12:14,646 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:12:14,970 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:12:49,141 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:12:49,195 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:12:49,233 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:12:49,273 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:13:01,595 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:13:21,417 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:13:25,899 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:15:12,505 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:15:17,377 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:15:54,288 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:15:58,221 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:15:58,308 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:15:58,353 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:15:58,682 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:16:42,178 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:16:42,258 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:16:42,308 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:16:42,642 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:17:00,418 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:17:00,471 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:17:00,515 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:17:00,590 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "TRMS" does not exist
+2020-11-16 23:17:14,792 [main] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: database "trms" does not exist
+2020-11-16 23:21:36,808 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:21:41,815 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:21:42,335 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:21:42,412 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:21:42,452 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:22:46,608 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:22:46,964 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:22:47,002 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:22:47,037 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:23:26,144 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:23:26,584 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:23:26,625 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:23:26,662 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:23:26,700 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:00,989 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:01,063 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:01,109 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:01,515 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:01,653 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:01,699 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:32,187 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:32,598 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:32,636 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:32,675 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:32,722 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:32,763 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:50,288 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:50,674 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:50,726 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:50,767 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:50,809 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:24:50,846 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:29:02,442 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:29:02,889 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:29:02,947 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:29:03,097 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:29:03,251 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:29:03,300 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:31:42,900 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:31:43,311 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:31:43,370 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:31:43,415 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:31:43,460 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:31:43,496 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:33:51,565 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:33:52,073 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:33:52,224 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:33:52,271 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:33:52,314 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:33:52,451 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:34:09,631 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:34:09,706 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:34:09,747 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:34:10,044 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:35:03,556 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:35:03,900 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:35:04,037 [main] INFO : Successfully retrieved connection to database.
+2020-11-16 23:35:04,072 [main] INFO : Successfully retrieved connection to database.
