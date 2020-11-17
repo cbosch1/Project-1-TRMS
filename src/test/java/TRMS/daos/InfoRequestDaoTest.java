@@ -274,7 +274,7 @@ public class InfoRequestDaoTest {
 			}
 
 			//Prep statement with proper SQL
-			sql = "SELECT * FROM info_request WHERE info_id = ?;";
+			sql = "UPDATE info_request SET urgent = ?, description = ?, request_date = ?, request_time = ? WHERE info_id = ?;";
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e){
@@ -291,13 +291,11 @@ public class InfoRequestDaoTest {
 				infoDao.updateInfoRequest(info);
 				
 				//Verify statement was prepared and executed properly
-				verify(spy).setInt(1, info.getInfoId());
-				verify(spy).setInt(2, info.getRelatedId());
-				verify(spy).setInt(3, info.getDestinationId());
-				verify(spy).setBoolean(4, info.getUrgent());
-				verify(spy).setString(5, info.getDescription());
-				verify(spy).setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
-				verify(spy).setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+				verify(spy).setBoolean(1, info.getUrgent());
+				verify(spy).setString(2, info.getDescription());
+				verify(spy).setDate(3, Date.valueOf(LocalDate.from(info.getDateTime())));
+				verify(spy).setTime(4, Time.valueOf(LocalTime.from(info.getDateTime())));
+				verify(spy).setInt(5, info.getInfoId());
 
 				verify(spy).executeUpdate();
 
