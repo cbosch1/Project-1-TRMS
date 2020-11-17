@@ -55,7 +55,7 @@ public class InfoRequestDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		infoDao = new InfoRequestDaoPostgres(connUtil);
-		info = new InfoRequest(2010, 2010, 2010, true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
+		info = new InfoRequest(2010, 1, 0, true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
 	}
 
 	@After

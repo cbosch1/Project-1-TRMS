@@ -79,8 +79,8 @@ public class ReimburseDaoTest {
 	public void createRequestTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?,?,?);";
-			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?::event_type,?,?);";
+			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?::app_status,?::app_stage,?,?);";
 
 			//Call helper method to initilize mockito spy with test-unique sql
 			try {
@@ -138,8 +138,8 @@ public class ReimburseDaoTest {
 	public void readRequestTest() {
 		try {
 			//Insert test reimbursement request to be read
-			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?,?,?);";
-			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?::event_type,?,?);";
+			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?::app_status,?::app_stage,?,?);";
 
 			try {
 				realConn.setAutoCommit(false);
@@ -351,8 +351,8 @@ public class ReimburseDaoTest {
 	public void updateRequestTest() {
 		try {
 			//Insert test reimbursement request to be updated
-			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?,?,?);";
-			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?::event_type,?,?);";
+			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?::app_status,?::app_stage,?,?);";
 
 			try {
 				realConn.setAutoCommit(false);
@@ -385,9 +385,9 @@ public class ReimburseDaoTest {
 			}
 
 			//Call helper method to initilize mockito spy with test-unique sql
-			sql = "UPDATE reimbursement SET ev_location = ?, ev_cost = ?, ev_type = ?, description = ?, "
+			sql = "UPDATE reimbursement SET ev_location = ?, ev_cost = ?, ev_type = ?::event_type, description = ?, "
 										  + "justification = ? WHERE request_id = ?;";
-			sql2 ="UPDATE reimburse_status SET projected_award = ?, urgent = ?, status = ?, stage = ?, "
+			sql2 ="UPDATE reimburse_status SET projected_award = ?, urgent = ?, status = ?::app_status, stage::app_stage = ?, "
 											 + "request_date = ?, request_time = ? WHERE request_id = ?;";
 			try {
 				initStmtHelper(sql);
@@ -477,8 +477,8 @@ public class ReimburseDaoTest {
 	public void deleteRequestTest() {
 		try {
 			//Insert test reimbursement request to be deleted
-			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?,?,?);";
-			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO reimbursement VALUES (?,?,?,?,?::event_type,?,?);";
+			String sql2 ="INSERT INTO reimburse_status VALUES (?,?,?,?::app_status,?::app_stage,?,?);";
 
 			try {
 				realConn.setAutoCommit(false);

@@ -65,7 +65,7 @@ public class UserDaoTest {
 	public void createUserTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?);";
+			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
 
 			//Call helper method to initilize mockito spy with test-unique sql
 			try {
@@ -105,7 +105,7 @@ public class UserDaoTest {
 	public void readUserTest() {
 		try {
 			//Insert test user to be read
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?);";
+			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
@@ -153,7 +153,7 @@ public class UserDaoTest {
 	public void updateUserTest() {
 		try {
 			//Insert test user to be updated
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?);";
+			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
@@ -218,7 +218,7 @@ public class UserDaoTest {
 	public void deleteUserTest() {
 		try {
 			//Insert test user to be updated
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?);";
+			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);

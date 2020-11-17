@@ -50,7 +50,7 @@ public class AttachmentDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		attachDao = new AttachmentDaoPostgres(connUtil);
-		attach = new Attachment(2010, 2010, "College Transcripts");
+		attach = new Attachment(2010, 1, "College Transcripts");
 	}
 
 	@After
