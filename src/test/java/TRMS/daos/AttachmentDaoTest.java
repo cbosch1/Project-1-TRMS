@@ -38,7 +38,6 @@ public class AttachmentDaoTest {
 	private AttachmentDaoPostgres attachDao;
 	private Attachment attach;
 
-    
     @BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
