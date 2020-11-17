@@ -327,7 +327,51 @@ public class InfoRequestDaoTest {
 
 	@Test
 	public void deleteInfoRequestTest() {
-		fail("Not yet implemented");
+		try {
+			//Insert test info request to be deleted
+			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, info.getInfoId());
+				testStmt.setInt(2, info.getRelatedId());
+				testStmt.setInt(3, info.getDestinationId());
+				testStmt.setBoolean(4, info.getUrgent());
+				testStmt.setString(5, info.getDescription());
+				testStmt.setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
+				testStmt.setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+				assertTrue("Error in inserting info request", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "DELETE FROM info_request WHERE info_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			//Test deleteEmployee
+			try {
+				infoDao.deleteInfoRequest(info.getInfoId());
+
+				verify(spy).setInt(1, info.getInfoId());
+				verify(spy).executeUpdate();
+
+
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to delete object: " + e);
+			}
+		} finally {
+			//Attempt to delete object that was already deleted (Should throw exception)
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM info_request WHERE info_id = ?;");
+				testStmt.setInt(1, info.getInfoId());
+				assertEquals("Object was not deleted properly", 0, testStmt.executeUpdate());
+			} catch (SQLException e) {}
+		}
 	}
 
 	/**
