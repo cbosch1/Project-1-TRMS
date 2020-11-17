@@ -16,7 +16,7 @@ public class ConnectionUtil {
 	public Connection createConnection() {
 
         try {
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=TRMS", "postgres", "password");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/TRMS?", "postgres", "password");
             Log.info("Successfully retrieved connection to database.");
             return conn;
 
