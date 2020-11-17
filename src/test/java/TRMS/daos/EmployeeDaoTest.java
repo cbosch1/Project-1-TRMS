@@ -202,7 +202,7 @@ public class EmployeeDaoTest {
 	@Test
 	public void updateEmployeeTest() {
 		try {
-			//Insert test employee to be read
+			//Insert test employee to be updated
 			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?,?);";
 			
 			try {
