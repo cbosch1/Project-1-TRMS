@@ -65,9 +65,9 @@ public class UserDaoTest {
 	public void createUserTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
+			String sql = "INSERT INTO userbase VALUES (Default,?,?,?::auth_priv) RETURNING emp_id;";
 
-			//Call helper method to initilize mockito spy with test-unique sql
+			//Call helper method to initialize mockito spy with test-unique sql
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e) {
@@ -76,14 +76,15 @@ public class UserDaoTest {
 
 			//Test createEmployee
 			try {
-				userDao.createUser(user);
+				int returnId = userDao.createUser(user);
 
-				verify(spy).setInt(1, user.getEmployeeId());
-				verify(spy).setString(2, user.getUsername());
-				verify(spy).setString(3, user.getPassword());
-				verify(spy).setString(4, user.getPrivilege().toString());
+				verify(spy).setString(1, user.getUsername());
+				verify(spy).setString(2, user.getPassword());
+				verify(spy).setString(3, user.getPrivilege().toString());
 
 				verify(spy).executeUpdate();
+
+				assertEquals("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);
@@ -96,7 +97,7 @@ public class UserDaoTest {
 				testStmt.setInt(1, user.getEmployeeId());
 				testStmt.executeUpdate();
 			} catch (SQLException e) {
-				fail("TEST ERROR, could not properly remove auser: " + e);
+				fail("TEST ERROR, could not properly remove user: " + e);
 			}
 		}
 	}

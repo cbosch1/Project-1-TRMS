@@ -70,9 +70,9 @@ public class InfoRequestDaoTest {
 	public void createInfoRequestTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO info_request VALUES (Default,?,?,?,?,?,?) RETURNING info_id;";
 
-			//Call helper method to initilize mockito spy with test-unique sql
+			//Call helper method to initialize mockito spy with test-unique sql
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e) {
@@ -81,17 +81,18 @@ public class InfoRequestDaoTest {
 
 			//Test createEmployee
 			try {
-				infoDao.createInfoRequest(info);
+				int returnId = infoDao.createInfoRequest(info);
 
-				verify(spy).setInt(1, info.getInfoId());
-				verify(spy).setInt(2, info.getRelatedId());
-				verify(spy).setInt(3, info.getDestinationId());
-				verify(spy).setBoolean(4, info.getUrgent());
-				verify(spy).setString(5, info.getDescription());
-				verify(spy).setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
-				verify(spy).setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+				verify(spy).setInt(1, info.getRelatedId());
+				verify(spy).setInt(2, info.getDestinationId());
+				verify(spy).setBoolean(3, info.getUrgent());
+				verify(spy).setString(4, info.getDescription());
+				verify(spy).setDate(5, Date.valueOf(LocalDate.from(info.getDateTime())));
+				verify(spy).setTime(6, Time.valueOf(LocalTime.from(info.getDateTime())));
 
 				verify(spy).executeUpdate();
+
+				assertEquals("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);
@@ -190,7 +191,7 @@ public class InfoRequestDaoTest {
 		try {
 			List<InfoRequest> related = infoDao.readAllInfoFor(info.getDestinationId());
 
-			//Verify statement was excuted properly
+			//Verify statement was executed properly
 			verify(spy).setInt(1, info.getDestinationId());
 			verify(spy).executeQuery();
 
@@ -236,7 +237,7 @@ public class InfoRequestDaoTest {
 		try {
 			List<InfoRequest> infos = infoDao.readAllInfoFor(info.getDestinationId());
 
-			//Verify statement was excuted properly
+			//Verify statement was executed properly
 			verify(spy).executeQuery();
 
 			//Verify result set returned proper data
@@ -285,7 +286,7 @@ public class InfoRequestDaoTest {
 			try {
 				//Modify values
 				info.setUrgent(false);
-				info.setDescription("This info actually wasn't that urgrent");
+				info.setDescription("This info actually wasn't that urgent");
 				info.setDateTime(LocalDateTime.of(2019, 10, 18, 20, 0));
 
 				infoDao.updateInfoRequest(info);

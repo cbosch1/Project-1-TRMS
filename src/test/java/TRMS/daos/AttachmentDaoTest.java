@@ -65,9 +65,9 @@ public class AttachmentDaoTest {
 	public void createAttachmentTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO attachment VALUES (?,?,?,?);";
+			String sql = "INSERT INTO attachment VALUES (Default,?,?,?) RETURNING attach_id;";
 
-			//Call helper method to initilize mockito spy with test-unique sql
+			//Call helper method to initialize mockito spy with test-unique sql
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e) {
@@ -76,14 +76,15 @@ public class AttachmentDaoTest {
 
 			//Test createEmployee
 			try {
-				attachDao.createAttachment(attach);
+				int returnId = attachDao.createAttachment(attach);
 
-				verify(spy).setInt(1, attach.getAttachId());
-				verify(spy).setInt(2, attach.getRequestId());
-				verify(spy).setString(3, attach.getFileType());
-				verify(spy).setBinaryStream(4, attach.getData());
+				verify(spy).setInt(1, attach.getRequestId());
+				verify(spy).setString(2, attach.getFileType());
+				verify(spy).setBinaryStream(3, attach.getData());
 
-				verify(spy).executeUpdate();
+				verify(spy).executeQuery();
+
+				assertEquals("returned id does not match expected", returnId == attach.getAttachId());
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);
@@ -178,14 +179,14 @@ public class AttachmentDaoTest {
 		try {
 			List<Integer> related = attachDao.readRelatedReference(attach.getRequestId());
 
-			//Verify statement was excuted properly
+			//Verify statement was executed properly
 			verify(spy).setInt(1, attach.getRequestId());
 			verify(spy).executeQuery();
 
 			//Verify result set returned proper data
 			assertTrue("Returned set is not the same size as expected", numRelated == related.size());
 			for (Integer r : related){
-				assertFalse("Id returned 0 for related atttachment ", 0 == r);
+				assertFalse("Id returned 0 for related attachment ", 0 == r);
 			}
 		} catch (SQLException e) {
 			fail("SQLException thrown while reading all employees");

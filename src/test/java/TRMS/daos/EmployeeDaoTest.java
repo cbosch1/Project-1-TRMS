@@ -65,9 +65,9 @@ public class EmployeeDaoTest {
 	public void createEmployeeTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO employee VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO employee VALUES (Default,?,?,?,?,?,?) RETURNING emp_id;";
 
-			//Call helper method to initilize mockito spy with test-unique sql
+			//Call helper method to initialize mockito spy with test-unique sql
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e) {
@@ -76,17 +76,18 @@ public class EmployeeDaoTest {
 
 			//Test createEmployee
 			try {
-				employeeDao.createEmployee(employee);
+				int returnId = employeeDao.createEmployee(employee);
 
-				verify(spy).setInt(1, employee.getEmployeeId());
-				verify(spy).setString(2, employee.getName().split(" ")[1]);
-				verify(spy).setString(3, employee.getName().split(" ")[0]);
-				verify(spy).setString(4, employee.getTitle());
-				verify(spy).setInt(5, employee.getSupervisor());
-				verify(spy).setString(6, employee.getDepartment());
-				verify(spy).setBoolean(7, employee.getDeptHead());
+				verify(spy).setString(1, employee.getName().split(" ")[1]);
+				verify(spy).setString(2, employee.getName().split(" ")[0]);
+				verify(spy).setString(3, employee.getTitle());
+				verify(spy).setInt(4, employee.getSupervisor());
+				verify(spy).setString(5, employee.getDepartment());
+				verify(spy).setBoolean(6, employee.getDeptHead());
 
 				verify(spy).executeUpdate();
+
+				assertEquals("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);
@@ -183,7 +184,7 @@ public class EmployeeDaoTest {
 		try {
 			List<Employee> allEmployees = employeeDao.readAllEmployees();
 
-			//Verify statement was excuted properly
+			//Verify statement was executed properly
 			verify(spy).executeQuery();
 
 			//Verify result set returned proper data
@@ -232,7 +233,7 @@ public class EmployeeDaoTest {
 			try {
 				//Modify values
 				employee.setName("Doug Judy");
-				employee.setTitle("The Poniac Bandit");
+				employee.setTitle("The Pontiac Bandit");
 				employee.setSupervisor(0);
 				employee.setDepartment("Rogue");
 				employee.setDeptHead(true);

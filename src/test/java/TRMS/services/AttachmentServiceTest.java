@@ -52,7 +52,7 @@ public class AttachmentServiceTest {
 		try {
 			assertTrue("createAttachment returned false", 
 						attachServ.createAttachment(attach.getAttachId(), attach.getRequestId(), 
-														attach.getFileType(), attach.getData()));
+													attach.getFileType(), attach.getData()) == attach.getAttachId());
 
 			verify(mockDao).createAttachment(attach);
 
@@ -101,7 +101,19 @@ public class AttachmentServiceTest {
 
 	@Test
 	public void updateAttachmentTest() {
-		fail("Not yet implemented");
+		try {
+			assertTrue("updateAttachment returned false", 
+						attachServ.updateAttachment(attach.getAttachId(), attach.getRequestId(), 
+														attach.getFileType(), attach.getData()));
+
+			verify(mockDao).deleteAttachment(attach.getAttachId());
+			verify(mockDao).createAttachment(attach);
+
+		} catch (SQLException e) {
+			fail("SQLException thrown by createAttachment: " + e);
+		} catch (Exception e) {
+			fail("Exception thrown by createAttachment: " + e);
+		}
 	}
 	
 	@Test
