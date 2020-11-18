@@ -6,11 +6,11 @@ import TRMS.pojos.User;
 
 public interface UserDao {
     
-    public void createUser(User user) throws SQLException;
+    public int createUser(User user) throws SQLException;
 
     public User readUser(int userId) throws SQLException;
 
-    public void updateUser(User user) throws SQLException;
+    public boolean updateUser(User user) throws SQLException;
 
-    public void deleteUser(int userId) throws SQLException;
+    public boolean deleteUser(int userId) throws SQLException;
 }

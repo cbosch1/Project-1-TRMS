@@ -8,7 +8,7 @@ import TRMS.enums.*;
 
 public interface ReimburseRequestService {
 
-    public boolean createRequest(int requestId, int employeeId, String location, double cost, EventType type, 
+    public int createRequest(int requestId, int employeeId, String location, double cost, EventType type, 
                                 String description, String justification, double projected, boolean urgent,
                                 AppStatus status, AppStage stage, LocalDateTime dateTime);
 

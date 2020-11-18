@@ -21,9 +21,9 @@ public class AttachmentServiceImpl implements AttachmentService {
     }
 
     @Override
-    public boolean createAttachment(int attachId, int requestId, String fileType, FileInputStream data) {
+    public int createAttachment(int attachId, int requestId, String fileType, FileInputStream data) {
         // TODO Auto-generated method stub
-        return false;
+        return 0;
     }
 
     @Override

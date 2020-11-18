@@ -7,7 +7,7 @@ import TRMS.pojos.InfoRequest;
 
 public interface InfoRequestDao {
     
-    public void createInfoRequest(InfoRequest info) throws SQLException;
+    public int createInfoRequest(InfoRequest info) throws SQLException;
 
     public InfoRequest readInfoRequest(int infoId) throws SQLException;
 
@@ -15,7 +15,7 @@ public interface InfoRequestDao {
 
     public List<InfoRequest> readAllInfoReq() throws SQLException;
 
-    public void updateInfoRequest(InfoRequest info) throws SQLException;
+    public boolean updateInfoRequest(InfoRequest info) throws SQLException;
 
-    public void deleteInfoRequest(int infoId) throws SQLException;
+    public boolean deleteInfoRequest(int infoId) throws SQLException;
 }

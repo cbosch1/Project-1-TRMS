@@ -24,14 +24,15 @@ public class EmployeeDaoPostgres implements EmployeeDao {
     }
 
     @Override
-    public void createEmployee(Employee employee) throws SQLException {
+    public int createEmployee(Employee employee) throws SQLException {
         // TODO Auto-generated method stub
-
+        return 0;
     }
 
     @Override
-    public void deleteEmployee(int employeeId) throws SQLException {
+    public boolean deleteEmployee(int employeeId) throws SQLException {
         // TODO Auto-generated method stub
+        return false;
 
     }
 
@@ -48,9 +49,9 @@ public class EmployeeDaoPostgres implements EmployeeDao {
     }
 
     @Override
-    public void updateEmployee(Employee employee) throws SQLException {
+    public boolean updateEmployee(Employee employee) throws SQLException {
         // TODO Auto-generated method stub
-
+        return false;
     }
     
 }

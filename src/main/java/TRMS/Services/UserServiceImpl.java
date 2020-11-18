@@ -19,9 +19,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean createUser(String username, String password, int employeeId, AuthPriv privilege) {
+    public int createUser(String username, String password, int employeeId, AuthPriv privilege) {
         // TODO Auto-generated method stub
-        return false;
+        return 0;
     }
 
     @Override

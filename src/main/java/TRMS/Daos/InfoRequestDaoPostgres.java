@@ -24,15 +24,15 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
     }
 
     @Override
-    public void createInfoRequest(InfoRequest info) throws SQLException {
+    public int createInfoRequest(InfoRequest info) throws SQLException {
         // TODO Auto-generated method stub
-
+        return 0;
     }
 
     @Override
-    public void deleteInfoRequest(int infoId) throws SQLException {
+    public boolean deleteInfoRequest(int infoId) throws SQLException {
         // TODO Auto-generated method stub
-
+        return false;
     }
 
     @Override
@@ -54,9 +54,9 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
     }
 
     @Override
-    public void updateInfoRequest(InfoRequest info) throws SQLException {
+    public boolean updateInfoRequest(InfoRequest info) throws SQLException {
         // TODO Auto-generated method stub
-
+        return false;
     }
     
 }

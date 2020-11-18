@@ -7,7 +7,7 @@ import TRMS.pojos.Attachment;
 
 public interface AttachmentService {
 
-    public boolean createAttachment(int attachId, int requestId, String fileType, FileInputStream data);
+    public int createAttachment(int attachId, int requestId, String fileType, FileInputStream data);
 
     public Attachment readAttachment(int attachId);
 

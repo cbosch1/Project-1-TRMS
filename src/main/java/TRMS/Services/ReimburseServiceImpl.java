@@ -24,11 +24,11 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
     }
 
     @Override
-    public boolean createRequest(int requestId, int employeeId, String location, double cost, EventType type,
+    public int createRequest(int requestId, int employeeId, String location, double cost, EventType type,
             String description, String justification, double projected, boolean urgent, AppStatus status,
             AppStage stage, LocalDateTime dateTime) {
         // TODO Auto-generated method stub
-        return false;
+        return 0;
     }
 
     @Override

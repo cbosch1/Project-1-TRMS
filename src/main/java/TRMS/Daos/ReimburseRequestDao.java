@@ -7,7 +7,7 @@ import TRMS.pojos.ReimburseRequest;
 
 public interface ReimburseRequestDao {
     
-    public void createRequest(ReimburseRequest request) throws SQLException;
+    public int createRequest(ReimburseRequest request) throws SQLException;
 
     public ReimburseRequest readRequest(int requestId) throws SQLException;
 
@@ -15,7 +15,7 @@ public interface ReimburseRequestDao {
 
     public List<ReimburseRequest> readAllRequests() throws SQLException;
 
-    public void updateRequest(ReimburseRequest request) throws SQLException;
+    public boolean updateRequest(ReimburseRequest request) throws SQLException;
 
-    public void deleteRequest(int requestId);
+    public boolean deleteRequest(int requestId);
 }

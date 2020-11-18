@@ -24,15 +24,15 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
     }
     
     @Override
-    public void createRequest(ReimburseRequest request) throws SQLException {
+    public int createRequest(ReimburseRequest request) throws SQLException {
         // TODO Auto-generated method stub
-
+        return 0;
     }
 
     @Override
-    public void deleteRequest(int requestId) {
+    public boolean deleteRequest(int requestId) {
         // TODO Auto-generated method stub
-
+        return false;
     }
 
     @Override
@@ -54,9 +54,9 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
     }
 
     @Override
-    public void updateRequest(ReimburseRequest request) throws SQLException {
+    public boolean updateRequest(ReimburseRequest request) throws SQLException {
         // TODO Auto-generated method stub
-
+        return false;
     }
     
 }

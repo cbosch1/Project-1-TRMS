@@ -21,10 +21,10 @@ public class InfoRequestServiceImpl implements InfoRequestService {
     }
 
     @Override
-    public boolean createInfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,
+    public int createInfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,
             LocalDateTime dateTime) {
         // TODO Auto-generated method stub
-        return false;
+        return 0;
     }
 
     @Override

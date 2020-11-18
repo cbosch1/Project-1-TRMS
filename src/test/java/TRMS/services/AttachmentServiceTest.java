@@ -50,8 +50,9 @@ public class AttachmentServiceTest {
 	@Test
 	public void createAttachmentTest() {
 		try {
-			attachServ.createAttachment(attach.getAttachId(), attach.getRequestId(), 
-										attach.getFileType(), attach.getData());
+			assertTrue("createAttachment returned false", 
+						attachServ.createAttachment(attach.getAttachId(), attach.getRequestId(), 
+														attach.getFileType(), attach.getData()));
 
 			verify(mockDao).createAttachment(attach);
 
@@ -89,7 +90,7 @@ public class AttachmentServiceTest {
 
 			List<Integer> foundRefs = attachServ.readRelatedReferences(attach.getRequestId());
 
-			assertTrue("Object read does not match expected", references.equals(foundRefs));
+			assertTrue("Objects read do not match expected", references.equals(foundRefs));
 
 		} catch (SQLException e) {
 			fail("SQLException thrown by createAttachment: " + e);

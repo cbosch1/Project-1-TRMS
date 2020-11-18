@@ -24,15 +24,15 @@ public class AttachmentDaoPostgres implements AttachmentDao {
     }
 
     @Override
-    public void createAttachment(Attachment file) throws SQLException {
+    public int createAttachment(Attachment file) throws SQLException {
         // TODO Auto-generated method stub
-
+        return 0;
     }
 
     @Override
-    public void deleteAttachment(int attachId) throws SQLException {
+    public boolean deleteAttachment(int attachId) throws SQLException {
         // TODO Auto-generated method stub
-
+        return false;
     }
 
     @Override

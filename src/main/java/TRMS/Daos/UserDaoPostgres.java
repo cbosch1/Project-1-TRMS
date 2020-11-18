@@ -23,15 +23,15 @@ public class UserDaoPostgres implements UserDao {
     }
 
     @Override
-    public void createUser(User user) throws SQLException {
+    public int createUser(User user) throws SQLException {
         // TODO Auto-generated method stub
-
+        return 0;
     }
 
     @Override
-    public void deleteUser(int userId) throws SQLException {
+    public boolean deleteUser(int userId) throws SQLException {
         // TODO Auto-generated method stub
-
+        return false;
     }
 
     @Override
@@ -41,9 +41,9 @@ public class UserDaoPostgres implements UserDao {
     }
 
     @Override
-    public void updateUser(User user) throws SQLException {
+    public boolean updateUser(User user) throws SQLException {
         // TODO Auto-generated method stub
-
+        return false;
     }
     
 }
