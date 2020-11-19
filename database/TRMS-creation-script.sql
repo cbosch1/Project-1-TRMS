@@ -103,17 +103,20 @@ FOREIGN KEY (emp_id) REFERENCES employee (emp_id)
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- Procedure used by JDBC to insert into the reimbursement and reimburse_status list properly
-CREATE or REPLACE PROCEDURE insert_reimbursement(emp_id int4, ev_location varchar(100), ev_cost numeric(10,2), ev_type varchar(10), 
-												description text, justification text, projected_award numeric(10,2), urgent boolean,
-												status varchar(10), stage varchar(10), request_date date, request_time time)
+CREATE or REPLACE FUNCTION insert_reimbursement(emp_id int4, ev_location varchar(100), ev_cost double precision, ev_type varchar(10), 
+												description text, justification text, projected_award double precision, urgent boolean,
+												status varchar(10), stage varchar(10), request_date varchar(15), request_time varchar(15))
+	RETURNS integer
 	LANGUAGE plpgsql 
 	AS $$
 	DECLARE
-		reimburseId int4;
+		reimburseId integer;
 	BEGIN 
 		
 		INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification) returning request_id into reimburseId;
 		
-		INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, stage::app_stage, request_date, request_time);
+		INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, stage::app_stage, request_date::date, request_time::time);
+	
+		RETURN reimburseId;
 	
 	END;$$
