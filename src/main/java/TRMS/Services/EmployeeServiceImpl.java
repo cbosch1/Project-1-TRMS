@@ -20,8 +20,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public int createEmployee(int employeeId, String name, String title, int supervisor, String department,
-            boolean deptHead) {
+    public int createEmployee(String name, String title, int supervisor, String department, boolean deptHead) {
         // TODO Auto-generated method stub
         return 0;
     }
@@ -46,7 +45,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public boolean updateEmployee(int employeeId, String name, String title, int supervisor, String department,
-            boolean deptHead) {
+                                    boolean deptHead) {
         // TODO Auto-generated method stub
         return false;
     }

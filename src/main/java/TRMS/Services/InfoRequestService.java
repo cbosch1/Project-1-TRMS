@@ -7,8 +7,8 @@ import TRMS.pojos.InfoRequest;
 
 public interface InfoRequestService {
 
-    public int createInfoRequest(int infoId, int relatedId, int destinationId, 
-                                    boolean urgent, String description, LocalDateTime dateTime);
+    public int createInfoRequest(int relatedId, int destinationId, boolean urgent, 
+                                    String description, LocalDateTime dateTime);
 
     public InfoRequest readInfoRequest(int infoId);
 

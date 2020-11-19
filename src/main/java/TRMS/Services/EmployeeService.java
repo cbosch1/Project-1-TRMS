@@ -6,8 +6,8 @@ import TRMS.pojos.Employee;
 
 public interface EmployeeService {
 
-    public int createEmployee(int employeeId, String name, String title, int supervisor, 
-                                    String department, boolean deptHead);
+    public int createEmployee(String name, String title, int supervisor, 
+                                    String department, boolean deptHead);                                    
 
     public Employee readEmployee(int employeeId);
 
