@@ -1,5 +1,8 @@
 package TRMS.pojos;
 
+/**
+ * Object designed to hold employee related data for the TRMS.
+ */
 public class Employee {
     private int employeeId;
     private String name;
@@ -11,7 +14,16 @@ public class Employee {
     public Employee() {
         super();
     }
-    
+	
+	/**
+	 * Construct employee object with applicable parameters
+	 * @param employeeId Numeric assigned from the database
+	 * @param name First and Last with one space in between
+	 * @param title This employee's official work title
+	 * @param supervisor employeeId of this employee's supervisor
+	 * @param department under which the employee works
+	 * @param deptHead True if employee is the department head
+	 */
     public Employee(int employeeId, String name, String title, int supervisor, String department, boolean deptHead) {
 		this.employeeId = employeeId;
 		this.name = name;
