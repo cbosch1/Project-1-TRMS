@@ -9,6 +9,8 @@ public interface AttachmentService {
 
     public int createAttachment(int attachId, int requestId, String fileType, FileInputStream data);
 
+    public int createAttachment(int requestId, String fileType, FileInputStream data);
+
     public Attachment readAttachment(int attachId);
 
     public List<Integer> readRelatedReferences(int requestId);
