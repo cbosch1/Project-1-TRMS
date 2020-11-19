@@ -118,6 +118,15 @@ public class AttachmentServiceTest {
 	
 	@Test
 	public void deleteAttachmentTest() {
-		fail("Not yet implemented");
+		try {
+			assertTrue("deleteAttachment returned false", attachServ.deleteAttachment(attach.getAttachId()));
+
+			verify(mockDao).deleteAttachment(attach.getAttachId());
+			
+		} catch (SQLException e) {
+			fail("SQLException thrown by createAttachment: " + e);
+		} catch (Exception e) {
+			fail("Exception thrown by createAttachment: " + e);
+		}
 	}
 }
