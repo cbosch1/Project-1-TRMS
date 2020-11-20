@@ -45,7 +45,7 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
      * @return true if request was successful
      */
     @Override
-    public boolean deleteRequest(int requestId) {
+    public boolean deleteRequest(int requestId)  throws SQLException {
         // TODO Auto-generated method stub
         return false;
     }
