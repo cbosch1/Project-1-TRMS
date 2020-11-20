@@ -63,7 +63,7 @@ public class UserDaoTest {
 
 	@Test
 	public void createUserTest() {
-		try {
+		try { 			//TODO: Refactor for userId
 			//Prep statement with proper SQL
 			String sql = "INSERT INTO userbase VALUES (Default,?,?,?::auth_priv) RETURNING emp_id;";
 
@@ -153,6 +153,7 @@ public class UserDaoTest {
 	@Test
 	public void updateUserTest() {
 		try {
+			//TODO: Refactor for userId
 			//Insert test user to be updated
 			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
 			
