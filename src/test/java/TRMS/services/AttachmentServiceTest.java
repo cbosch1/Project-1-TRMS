@@ -50,6 +50,8 @@ public class AttachmentServiceTest {
 	@Test
 	public void createAttachmentTest() {
 		try {
+			when(mockDao.createAttachment(attach)).thenReturn(attach.getAttachId());
+
 			assertTrue("createAttachment returned false", 
 						attachServ.createAttachment(attach.getAttachId(), attach.getRequestId(), 
 													attach.getFileType(), attach.getData()) == attach.getAttachId());
@@ -70,12 +72,14 @@ public class AttachmentServiceTest {
 
 			Attachment readAtt = attachServ.readAttachment(attach.getAttachId());
 
+			verify(mockDao).readAttachment(attach.getAttachId());
+
 			assertTrue("Object read does not match expected", attach.equals(readAtt));
 
 		} catch (SQLException e) {
-			fail("SQLException thrown by createAttachment: " + e);
+			fail("SQLException thrown by read method: " + e);
 		} catch (Exception e) {
-			fail("Exception thrown by createAttachment: " + e);
+			fail("Exception thrown by read method: " + e);
 		}
 	}
 
@@ -90,18 +94,23 @@ public class AttachmentServiceTest {
 
 			List<Integer> foundRefs = attachServ.readRelatedReferences(attach.getRequestId());
 
+			verify(mockDao.readRelatedReference(attach.getRequestId()));
+
 			assertTrue("Objects read do not match expected", references.equals(foundRefs));
 
 		} catch (SQLException e) {
-			fail("SQLException thrown by createAttachment: " + e);
+			fail("SQLException thrown by read related method: " + e);
 		} catch (Exception e) {
-			fail("Exception thrown by createAttachment: " + e);
+			fail("Exception thrown by read related method: " + e);
 		}
 	}
 
 	@Test
 	public void updateAttachmentTest() {
 		try {
+			when(mockDao.deleteAttachment(attach.getAttachId())).thenReturn(true);
+			when(mockDao.createAttachment(attach)).thenReturn(attach.getAttachId());
+
 			assertTrue("updateAttachment returned false", 
 						attachServ.updateAttachment(attach.getAttachId(), attach.getRequestId(), 
 														attach.getFileType(), attach.getData()));
@@ -110,23 +119,25 @@ public class AttachmentServiceTest {
 			verify(mockDao).createAttachment(attach);
 
 		} catch (SQLException e) {
-			fail("SQLException thrown by createAttachment: " + e);
+			fail("SQLException thrown by update method: " + e);
 		} catch (Exception e) {
-			fail("Exception thrown by createAttachment: " + e);
+			fail("Exception thrown by update method: " + e);
 		}
 	}
 	
 	@Test
 	public void deleteAttachmentTest() {
 		try {
+			when(mockDao.deleteAttachment(attach.getAttachId())).thenReturn(true);
+
 			assertTrue("deleteAttachment returned false", attachServ.deleteAttachment(attach.getAttachId()));
 
 			verify(mockDao).deleteAttachment(attach.getAttachId());
 			
 		} catch (SQLException e) {
-			fail("SQLException thrown by createAttachment: " + e);
+			fail("SQLException thrown by delete method: " + e);
 		} catch (Exception e) {
-			fail("Exception thrown by createAttachment: " + e);
+			fail("Exception thrown by delete method: " + e);
 		}
 	}
 }
