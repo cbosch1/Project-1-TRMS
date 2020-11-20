@@ -1,7 +1,6 @@
 package TRMS.services;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -131,7 +130,7 @@ public class EmployeeServiceTest {
 			assertTrue("deleteEmployee returned false", serviceToTest.deleteEmployee(employee.getEmployeeId()));
 
 			verify(mockDao).deleteEmployee(employee.getEmployeeId());
-			
+
 		} catch (SQLException e) {
 			fail("SQLException thrown by delete method: " + e);
 		} catch (Exception e) {
