@@ -3,6 +3,7 @@ package TRMS.pojos;
 import TRMS.enums.AuthPriv;
 
 public class User {
+	private int userId;
     private String username;
     private String password;
     private int employeeId;
@@ -13,6 +14,14 @@ public class User {
     }
 
     public User(String username, String password, int employeeId, AuthPriv privilege) {
+		this.username = username;
+		this.password = password;
+		this.employeeId = employeeId;
+		this.privilege = privilege;
+	}
+
+	public User(int userId, String username, String password, int employeeId, AuthPriv privilege) {
+		this.userId = userId;
 		this.username = username;
 		this.password = password;
 		this.employeeId = employeeId;
@@ -80,5 +89,13 @@ public class User {
 		} else if (!username.equals(other.username))
 			return false;
 		return true;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 }

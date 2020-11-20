@@ -14,9 +14,12 @@ CREATE TABLE employee
 	dept_head boolean NOT NULL
 );
 
+DROP TABLE userbase;
+
 CREATE TABLE userbase
 (
-	emp_id integer primary key,
+	user_id serial PRIMARY KEY,
+	emp_id integer NOT NULL,
 	username varchar(50) NOT NULL,
 	passphrase varchar(50) NOT NULL,
 	privilege auth_priv NOT NULL

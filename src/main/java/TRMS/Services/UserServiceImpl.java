@@ -63,6 +63,7 @@ public class UserServiceImpl implements UserService {
     /**
      * Calls the Dao to update a user with given id. The input fields
      * should be given the updated information.
+     * @param userId the Id of the user to update
      * @param username of the user to update
      * @param password the Hashed/Unhashed password corresponding to the user
      * @param employeeId the id of the employee who this user represents
@@ -70,7 +71,7 @@ public class UserServiceImpl implements UserService {
      * @return True if the update was successful
      */
     @Override
-    public boolean updateUser(String username, String password, int employeeId, AuthPriv privilege) {
+    public boolean updateUser(int userId, String username, String password, int employeeId, AuthPriv privilege) {
         // TODO Auto-generated method stub
         return false;
     }
