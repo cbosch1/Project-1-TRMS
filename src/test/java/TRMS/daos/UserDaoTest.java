@@ -63,9 +63,9 @@ public class UserDaoTest {
 
 	@Test
 	public void createUserTest() {
-		try { 			//TODO: Refactor for userId
+		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO userbase VALUES (Default,?,?,?::auth_priv) RETURNING emp_id;";
+			String sql = "INSERT INTO userbase VALUES (Default,?,?,?,?::auth_priv) RETURNING user_id;";
 
 			//Call helper method to initialize mockito spy with test-unique sql
 			try {
@@ -78,9 +78,10 @@ public class UserDaoTest {
 			try {
 				int returnId = userDao.createUser(user);
 
-				verify(spy).setString(1, user.getUsername());
-				verify(spy).setString(2, user.getPassword());
-				verify(spy).setString(3, user.getPrivilege().toString());
+				verify(spy).setInt(1, user.getEmployeeId());
+				verify(spy).setString(2, user.getUsername());
+				verify(spy).setString(3, user.getPassword());
+				verify(spy).setString(4, user.getPrivilege().toString());
 
 				verify(spy).executeUpdate();
 
@@ -93,8 +94,8 @@ public class UserDaoTest {
 		} finally {
 			//Removal process, post-test
 			try {
-				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE emp_id = ?;");
-				testStmt.setInt(1, user.getEmployeeId());
+				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE user_id = ?;");
+				testStmt.setInt(1, user.getUserId());
 				testStmt.executeUpdate();
 			} catch (SQLException e) {
 				fail("TEST ERROR, could not properly remove user: " + e);
@@ -106,21 +107,22 @@ public class UserDaoTest {
 	public void readUserTest() {
 		try {
 			//Insert test user to be read
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
+			String sql = "INSERT INTO userbase VALUES (?,?,?,?,?::auth_priv);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
-				testStmt.setInt(1, user.getEmployeeId());
-				testStmt.setString(2, user.getUsername());
-				testStmt.setString(3, user.getPassword());
-				testStmt.setString(4, user.getPrivilege().toString());
+				testStmt.setInt(1, user.getUserId());
+				testStmt.setInt(2, user.getEmployeeId());
+				testStmt.setString(3, user.getUsername());
+				testStmt.setString(4, user.getPassword());
+				testStmt.setString(5, user.getPrivilege().toString());
 				assertTrue("Error in inserting user", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
 			}
 
 			//Prep statement with proper SQL
-			sql = "SELECT * FROM userbase WHERE emp_id = ?;";
+			sql = "SELECT * FROM userbase WHERE user_id = ?;";
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e){
@@ -128,10 +130,10 @@ public class UserDaoTest {
 			}
 
 			try {
-				User resultUser = userDao.readUser(user.getEmployeeId());
+				User resultUser = userDao.readUser(user.getUserId());
 
 				//Verify statement was prepared and executed properly
-				verify(spy).setInt(1, user.getEmployeeId());
+				verify(spy).setInt(1, user.getUserId());
 				verify(spy).executeQuery();
 
 				assertTrue("Object returned does not match expected object", user.equals(resultUser));
@@ -141,8 +143,8 @@ public class UserDaoTest {
 		} finally {
 			//Removal process, post-test
 			try {
-				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE emp_id = ?;");
-				testStmt.setInt(1, user.getEmployeeId());
+				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE user_id = ?;");
+				testStmt.setInt(1, user.getUserId());
 				testStmt.executeUpdate();
 			} catch (SQLException e) {
 				fail("TEST ERROR, could not properly remove user: " + e);
@@ -153,23 +155,23 @@ public class UserDaoTest {
 	@Test
 	public void updateUserTest() {
 		try {
-			//TODO: Refactor for userId
 			//Insert test user to be updated
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
+			String sql = "INSERT INTO userbase VALUES (?,?,?,?,?::auth_priv);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
-				testStmt.setInt(1, user.getEmployeeId());
-				testStmt.setString(2, user.getUsername());
-				testStmt.setString(3, user.getPassword());
-				testStmt.setString(4, user.getPrivilege().toString());
+				testStmt.setInt(1, user.getUserId());
+				testStmt.setInt(2, user.getEmployeeId());
+				testStmt.setString(3, user.getUsername());
+				testStmt.setString(4, user.getPassword());
+				testStmt.setString(5, user.getPrivilege().toString());
 				assertTrue("Error in inserting user", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
 			}
 
 			//Prep statement with proper SQL
-			sql = "UPDATE userbase SET username = ?, passphrase = ?, privilege = ? WHERE emp_id = ?;";
+			sql = "UPDATE userbase SET emp_id = ?, username = ?, passphrase = ?, privilege = ? WHERE user_id = ?;";
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e){
@@ -187,17 +189,19 @@ public class UserDaoTest {
 				verify(spy).setInt(1, user.getEmployeeId());
 				verify(spy).setString(2, user.getUsername());
 				verify(spy).setString(3, user.getPassword());
-				verify(spy).setInt(4, user.getEmployeeId());
+				verify(spy).setString(4, user.getPrivilege().toString());
+				verify(spy).setInt(5, user.getUserId());
 
 				verify(spy).executeUpdate();
 
-				testStmt = realConn.prepareStatement("SELECT * FROM userbase WHERE emp_id = ?;");
-				testStmt.setInt(1, user.getEmployeeId());
+				testStmt = realConn.prepareStatement("SELECT * FROM userbase WHERE user_id = ?;");
+				testStmt.setInt(1, user.getUserId());
 				ResultSet rs = testStmt.executeQuery();
 
 				rs.next();
 
-				User modUser = new User(rs.getString(2), rs.getString(3), rs.getInt(1), AuthPriv.valueOf(rs.getString(4)));
+				User modUser = new User(rs.getInt(1), rs.getString(2), rs.getString(3),
+										rs.getInt(4), AuthPriv.valueOf(rs.getString(5)));
 
 				assertTrue("Database object does not match as modified", user.equals(modUser));
 
@@ -207,8 +211,8 @@ public class UserDaoTest {
 		} finally {
 			//Removal process, post-test
 			try {
-				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE emp_id = ?;");
-				testStmt.setInt(1, user.getEmployeeId());
+				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE user_id = ?;");
+				testStmt.setInt(1, user.getUserId());
 				testStmt.executeUpdate();
 			} catch (SQLException e) {
 				fail("TEST ERROR, could not properly remove user: " + e);
@@ -220,21 +224,22 @@ public class UserDaoTest {
 	public void deleteUserTest() {
 		try {
 			//Insert test user to be updated
-			String sql = "INSERT INTO userbase VALUES (?,?,?,?::auth_priv);";
+			String sql = "INSERT INTO userbase VALUES (?,?,?,?,?::auth_priv);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
-				testStmt.setInt(1, user.getEmployeeId());
-				testStmt.setString(2, user.getUsername());
-				testStmt.setString(3, user.getPassword());
-				testStmt.setString(4, user.getPrivilege().toString());
+				testStmt.setInt(1, user.getUserId());
+				testStmt.setInt(2, user.getEmployeeId());
+				testStmt.setString(3, user.getUsername());
+				testStmt.setString(4, user.getPassword());
+				testStmt.setString(5, user.getPrivilege().toString());
 				assertTrue("Error in inserting user", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
 			}
 
 			//Prep statement with proper SQL
-			sql = "DELETE FROM userbase WHERE emp_id = ?;";
+			sql = "DELETE FROM userbase WHERE user_id = ?;";
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e){
@@ -243,10 +248,10 @@ public class UserDaoTest {
 
 			try {
 				
-				userDao.deleteUser(user.getEmployeeId());
+				userDao.deleteUser(user.getUserId());
 
 				//Verify statement was prepared and executed properly
-				verify(spy).setInt(1, user.getEmployeeId());
+				verify(spy).setInt(1, user.getUserId());
 				verify(spy).executeUpdate();
 
 			} catch(SQLException e) {
@@ -255,8 +260,8 @@ public class UserDaoTest {
 		} finally {
 			//Attempt to delete object that was already deleted (Should throw exception)
 			try {
-				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE emp_id = ?;");
-				testStmt.setInt(1, user.getEmployeeId());
+				testStmt = realConn.prepareStatement("DELETE FROM userbase WHERE user_id = ?;");
+				testStmt.setInt(1, user.getUserId());
 				assertEquals("Object was not deleted properly", 0, testStmt.executeUpdate());
 			} catch (SQLException e) {}
 		}
