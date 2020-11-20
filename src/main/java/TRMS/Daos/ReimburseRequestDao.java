@@ -17,5 +17,5 @@ public interface ReimburseRequestDao {
 
     public boolean updateRequest(ReimburseRequest request) throws SQLException;
 
-    public boolean deleteRequest(int requestId);
+    public boolean deleteRequest(int requestId) throws SQLException;
 }
