@@ -2,7 +2,9 @@ package TRMS.pojos;
 
 import java.time.LocalDateTime;
 
-import TRMS.enums.*;
+import TRMS.enums.AppStage;
+import TRMS.enums.AppStatus;
+import TRMS.enums.EventType;
 
 public class ReimburseRequest {
     
@@ -12,7 +14,7 @@ public class ReimburseRequest {
     private double cost;
     private EventType type;
     private String description;
-    private String justificiation;
+    private String justification;
     private double projected;
     private boolean urgent;
     private AppStatus status;
@@ -23,15 +25,26 @@ public class ReimburseRequest {
         super();
     }
 
+    /**
+     * Constructor for the Reimbursement Request object. Sets default values: projected = 00.00, 
+     * urgent = false, status = AppStatus.PENDING, stage = AppStatus.UPLOAD, dateTime = LocalDateTime.now()
+     * @param requestId the id of this reimbursement request.
+     * @param employeeId the id of the employee making the request for reimbursement
+     * @param location the location where the event will take place
+     * @param cost the cost of event participation the employee will have to pay (if the reimbursement is not approved)
+     * @param type the type of event, and EventType enum: (UNI_COURSE, SEMINAR, CERT_PREP_CLASS, CERTIFICATION, TECHNICAL_TRAINING, OTHER)
+     * @param description a description of the event and what it entails
+     * @param justification the work related justification for this event
+     */
     public ReimburseRequest(int requestId, int employeeId, String location, double cost, EventType type,
-            String description, String justificiation) {
+            String description, String justification) {
         this.requestId = requestId;
         this.employeeId = employeeId;
         this.location = location;
         this.cost = cost;
         this.type = type;
         this.description = description;
-        this.justificiation = justificiation;
+        this.justification = justification;
         this.projected = 00.00;
         this.urgent = false;
         this.status = AppStatus.PENDING;
@@ -39,8 +52,23 @@ public class ReimburseRequest {
         this.dateTime = LocalDateTime.now();
         }
 
+    /**
+     * Constructor for the Reimbursement Request object. No default values are used.   
+     * @param requestId the id of this reimbursement request.
+     * @param employeeId the id of the employee making the request for reimbursement
+     * @param location the location where the event will take place
+     * @param cost the cost of event participation the employee will have to pay (if the reimbursement is not approved)
+     * @param type the type of event (UNI_COURSE, SEMINAR, CERT_PREP_CLASS, CERTIFICATION, TECHNICAL_TRAINING, OTHER)
+     * @param description a description of the event and what it entails
+     * @param justification the work related justification for this event
+     * @param projected the projected reimbursement amount
+     * @param urgent if the request is urgent or not
+     * @param status AppStatus enum, what status the request current has (PENDING, APPROVED, DENIED, CANCELLED)
+     * @param stage AppStage enum, what stage the request is currently in (UPLOAD, SUPERVISOR, DEPT_HEAD, BENCO, EVENT, END)
+     * @param dateTime a DateTime object representing when the request was made
+     */
 	public ReimburseRequest(int requestId, int employeeId, String location, double cost, EventType type,
-			String description, String justificiation, double projected, boolean urgent, AppStatus status,
+			String description, String justification, double projected, boolean urgent, AppStatus status,
 			AppStage stage, LocalDateTime dateTime) {
 		this.requestId = requestId;
 		this.employeeId = employeeId;
@@ -48,7 +76,7 @@ public class ReimburseRequest {
 		this.cost = cost;
 		this.type = type;
 		this.description = description;
-		this.justificiation = justificiation;
+		this.justification = justification;
 		this.projected = projected;
 		this.urgent = urgent;
 		this.status = status;
@@ -112,12 +140,12 @@ public class ReimburseRequest {
         this.description = description;
     }
 
-    public String getJustificiation() {
-        return justificiation;
+    public String getJustification() {
+        return justification;
     }
 
-    public void setJustificiation(String justificiation) {
-        this.justificiation = justificiation;
+    public void setJustification(String justification) {
+        this.justification = justification;
     }
 
     public double getProjected() {
@@ -161,7 +189,7 @@ public class ReimburseRequest {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((dateTime == null) ? 0 : dateTime.hashCode());
 		result = prime * result + employeeId;
-		result = prime * result + ((justificiation == null) ? 0 : justificiation.hashCode());
+		result = prime * result + ((justification == null) ? 0 : justification.hashCode());
 		result = prime * result + ((location == null) ? 0 : location.hashCode());
 		result = prime * result + requestId;
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
@@ -187,10 +215,10 @@ public class ReimburseRequest {
 			return false;
 		if (employeeId != other.employeeId)
 			return false;
-		if (justificiation == null) {
-			if (other.justificiation != null)
+		if (justification == null) {
+			if (other.justification != null)
 				return false;
-		} else if (!justificiation.equals(other.justificiation))
+		} else if (!justification.equals(other.justification))
 			return false;
 		if (location == null) {
 			if (other.location != null)
