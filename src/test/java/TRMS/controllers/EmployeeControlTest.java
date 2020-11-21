@@ -12,12 +12,15 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import TRMS.pojos.Employee;
 import TRMS.services.EmployeeService;
 import io.javalin.http.Context;
 
+@RunWith(MockitoJUnitRunner.class)
 public class EmployeeControlTest {
 
 	@Mock
