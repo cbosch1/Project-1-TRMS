@@ -1,12 +1,12 @@
 package TRMS.pojos;
 
-import java.io.FileInputStream;
+import java.io.InputStream;
 
 public class Attachment {
     private int attachId;
     private int requestId;
     private String fileType;
-    private FileInputStream data;
+    private InputStream data;
 
     public Attachment(){
         super();
@@ -43,11 +43,11 @@ public class Attachment {
         this.fileType = fileType;
     }
 
-    public FileInputStream getData() {
+    public InputStream getData() {
         return data;
     }
 
-    public void setData(FileInputStream data) {
+    public void setData(InputStream data) {
         this.data = data;
     }
 
