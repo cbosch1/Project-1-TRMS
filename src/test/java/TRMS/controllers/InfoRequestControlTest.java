@@ -19,14 +19,13 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import TRMS.pojos.InfoRequest;
 import TRMS.services.InfoRequestService;
-import TRMS.services.InfoRequestServiceImpl;
 import io.javalin.http.Context;
 
 @RunWith(MockitoJUnitRunner.class)
 public class InfoRequestControlTest {
 
 	@Mock
-	private InfoRequestServiceImpl mockService;
+	private InfoRequestService mockService;
 	@Mock
 	private Context mockCtx;
 
