@@ -108,7 +108,6 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("requestId");
 			verify(mockCtx).formParam("fileType");
 			verify(mockCtx).uploadedFile("file");
-
 			verify(mockService).createAttachment(attach.getRequestId(), attach.getFileType(), stream);
 			
 			verify(mockCtx).status(200);
@@ -124,7 +123,6 @@ public class AttachmentControlTest {
 			controlToTest.readAttachment(mockCtx);
 
 			verify(mockCtx).formParam("attachId");
-
 			verify(mockService).readAttachment(attach.getAttachId());
 
 			verify(mockCtx).status(200);
@@ -140,7 +138,6 @@ public class AttachmentControlTest {
 			controlToTest.readRelatedReferences(mockCtx);
 
 			verify(mockCtx).formParam("requestId");
-
 			verify(mockService).readRelatedReferences(attach.getRequestId());
 
 			verify(mockCtx).status(200);
@@ -159,7 +156,6 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("requestId");
 			verify(mockCtx).formParam("fileType");
 			verify(mockCtx).uploadedFile("file");
-
 			verify(mockService).updateAttachment(attach.getAttachId(), attach.getRequestId(), 
 												attach.getFileType(), stream);
 
@@ -176,7 +172,6 @@ public class AttachmentControlTest {
 			controlToTest.deleteAttachment(mockCtx);
 
 			verify(mockCtx).formParam("attachId");
-
 			verify(mockService).deleteAttachment(attach.getAttachId());
 
 			verify(mockCtx).status(200);
