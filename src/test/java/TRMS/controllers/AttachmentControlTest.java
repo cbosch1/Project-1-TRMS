@@ -89,6 +89,8 @@ public class AttachmentControlTest {
 
 			verify(mockService).createAttachment(attach.getAttachId(), attach.getRequestId(), 
 												attach.getFileType(), stream);
+
+			//TODO verify ctx being given proper inputs.
 			
 			verify(mockCtx).status(200);
 
@@ -109,6 +111,8 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("fileType");
 			verify(mockCtx).uploadedFile("file");
 			verify(mockService).createAttachment(attach.getRequestId(), attach.getFileType(), stream);
+
+			//TODO verify ctx being given proper inputs.
 			
 			verify(mockCtx).status(200);
 
@@ -125,6 +129,8 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("attachId");
 			verify(mockService).readAttachment(attach.getAttachId());
 
+			//TODO verify ctx being given proper inputs.
+
 			verify(mockCtx).status(200);
 
 		} catch (Exception e) {
@@ -139,6 +145,8 @@ public class AttachmentControlTest {
 
 			verify(mockCtx).formParam("requestId");
 			verify(mockService).readRelatedReferences(attach.getRequestId());
+
+			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 
@@ -159,10 +167,12 @@ public class AttachmentControlTest {
 			verify(mockService).updateAttachment(attach.getAttachId(), attach.getRequestId(), 
 												attach.getFileType(), stream);
 
+			//TODO verify ctx being given proper inputs.
+
 			verify(mockCtx).status(200);
 
 		} catch (Exception e) {
-			fail("Exception thrown during read test: " + e);
+			fail("Exception thrown during update test: " + e);
 		}
 	}
 	
@@ -174,10 +184,12 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("attachId");
 			verify(mockService).deleteAttachment(attach.getAttachId());
 
+			//TODO verify ctx being given proper inputs.
+
 			verify(mockCtx).status(200);
 
 		} catch (Exception e) {
-			fail("Exception thrown during read test: " + e);
+			fail("Exception thrown during delete test: " + e);
 		}
 	}
 }
