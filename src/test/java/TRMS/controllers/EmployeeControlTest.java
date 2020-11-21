@@ -1,14 +1,32 @@
 package TRMS.controllers;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
+
+import TRMS.pojos.Employee;
+import TRMS.services.EmployeeService;
+import io.javalin.http.Context;
 
 public class EmployeeControlTest {
+
+	@Mock
+	private EmployeeService mockService;
+	@Mock
+	private Context mockCtx;
+
+	private EmployeeControl controlToTest;
+	private Employee employee;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -20,6 +38,16 @@ public class EmployeeControlTest {
 
 	@Before
 	public void setUp() throws Exception {
+		controlToTest = new EmployeeControl(mockService);
+		employee = new Employee(2010, "Billy Bob", "Highest of the Hunters", 1, "Hunting", false);
+
+		when(mockCtx.formParam("employeeId")).thenReturn(Integer.toString(employee.getEmployeeId()));
+		when(mockCtx.formParam("name")).thenReturn(employee.getName());
+		when(mockCtx.formParam("title")).thenReturn(employee.getTitle());
+		when(mockCtx.formParam("supervisor")).thenReturn(Integer.toString(employee.getSupervisor()));
+		when(mockCtx.formParam("department")).thenReturn(employee.getDepartment());
+		when(mockCtx.formParam("deptHead")).thenReturn(Boolean.toString(employee.getDeptHead()));
+
 	}
 
 	@After
@@ -28,26 +56,102 @@ public class EmployeeControlTest {
 
 	@Test
 	public void createEmployeeTest() {
-		fail("Not yet implemented");
+		try {
+			controlToTest.createEmployee(mockCtx);
+
+			verify(mockCtx).formParam("name");
+			verify(mockCtx).formParam("title");
+			verify(mockCtx).formParam("supervisor");
+			verify(mockCtx).formParam("department");
+			verify(mockCtx).formParam("deptHead");
+
+			verify(mockService).createEmployee(employee.getName(), employee.getTitle(), employee.getSupervisor(),
+												employee.getDepartment(), employee.getDeptHead());
+
+			//TODO verify ctx being given proper inputs.
+			
+			verify(mockCtx).status(200);
+
+		} catch (Exception e) {
+			fail("Exception thrown during create test: " + e);
+		}
 	}
 
 	@Test
 	public void readEmployeeTest() {
-		fail("Not yet implemented");
+		try {
+			controlToTest.readEmployee(mockCtx);
+
+			verify(mockCtx).formParam("employeeId");
+			verify(mockService).readEmployee(employee.getEmployeeId());
+
+			//TODO verify ctx being given proper inputs.
+
+			verify(mockCtx).status(200);
+		
+		} catch (Exception e) {
+			fail("Exception thrown during read test: " + e);
+		}
 	}
 
 	@Test
 	public void readAllEmployeesTest() {
-		fail("Not yet implemented");
+		try {
+			List<Employee> employees = new ArrayList<>();
+			employees.add(employee);
+
+			when(mockService.readAllEmployees()).thenReturn(employees);
+
+			controlToTest.readAllEmployees(mockCtx);
+			verify(mockService).readAllEmployees();
+
+			//TODO verify ctx being given proper inputs.
+
+			verify(mockCtx).status(200);
+		
+		} catch (Exception e) {
+			fail("Exception thrown during read all test: " + e);
+		}
 	}
 
 	@Test
 	public void updateEmployeeTest() {
-		fail("Not yet implemented");
+		try {
+			controlToTest.updateEmployee(mockCtx);
+	
+			verify(mockCtx).formParam("employeeId");
+			verify(mockCtx).formParam("name");
+			verify(mockCtx).formParam("title");
+			verify(mockCtx).formParam("supervisor");
+			verify(mockCtx).formParam("department");
+			verify(mockCtx).formParam("deptHead");
+	
+			verify(mockService).updateEmployee(employee.getEmployeeId(), employee.getName(), employee.getTitle(), 
+												employee.getSupervisor(), employee.getDepartment(), employee.getDeptHead());
+			
+			//TODO verify ctx being given proper inputs.
+
+			verify(mockCtx).status(200);
+	
+			} catch (Exception e) {
+				fail("Exception thrown during update test: " + e);
+			}
 	}
 
 	@Test
 	public void deleteEmployeeTest() {
-		fail("Not yet implemented");
+		try {
+			controlToTest.deleteEmployee(mockCtx);
+
+			verify(mockCtx).formParam("employeeId");
+			verify(mockService).deleteEmployee(employee.getEmployeeId());
+
+			//TODO verify ctx being given proper inputs.
+
+			verify(mockCtx).status(200);
+		
+		} catch (Exception e) {
+			fail("Exception thrown during delete test: " + e);
+		}
 	}
 }
