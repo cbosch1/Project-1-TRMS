@@ -86,7 +86,7 @@ public class EmployeeDaoTest {
 				verify(spy).setString(5, employee.getDepartment());
 				verify(spy).setBoolean(6, employee.getDeptHead());
 
-				verify(spy).executeUpdate();
+				verify(spy).executeQuery();
 
 				assertTrue("returned id does not match expected", returnId > 0);
 
@@ -191,7 +191,7 @@ public class EmployeeDaoTest {
 			//Verify result set returned proper data
 			assertTrue("Returned set is not the same size as expected", numEmployees == allEmployees.size());
 			for (Employee e : allEmployees){
-				assertFalse("Id returned 0 for employee: " + e.getName(), 0 == e.getEmployeeId());
+				assertFalse("Id returned less than 0 for employee: " + e.getName(), 0 > e.getEmployeeId());
 				assertFalse("Name returned blank for employee number: " + e.getEmployeeId(), "".equals(e.getName()));
 				assertFalse("Title returned blank for employee: " + e.getName(), "".equals(e.getTitle()));
 				assertFalse("Department returned blank for employee: " + e.getName(), "".equals(e.getDepartment()));
