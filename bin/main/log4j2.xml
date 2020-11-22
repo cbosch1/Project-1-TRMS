@@ -11,7 +11,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="ControlRolling" fileName="logs/TRMS-Control.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="ControlRolling" fileName="logs/TRMS-Control.log" filePattern="logs/$${date:yyyy-MM}/control-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
@@ -21,7 +21,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="DaoRolling" fileName="logs/TRMS-Dao.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="DaoRolling" fileName="logs/TRMS-Dao.log" filePattern="logs/$${date:yyyy-MM}/dao-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
@@ -31,7 +31,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="ServiceRolling" fileName="logs/TRMS-Service.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="ServiceRolling" fileName="logs/TRMS-Service.log" filePattern="logs/$${date:yyyy-MM}/service-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
@@ -41,7 +41,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="UtilRolling" fileName="logs/TRMS-Util.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="UtilRolling" fileName="logs/TRMS-Util.log" filePattern="logs/$${date:yyyy-MM}/util-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
@@ -51,7 +51,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="JavalinRolling" fileName="logs/TRMS-Javalin.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="JavalinRolling" fileName="logs/TRMS-Javalin.log" filePattern="logs/$${date:yyyy-MM}/javalin-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>

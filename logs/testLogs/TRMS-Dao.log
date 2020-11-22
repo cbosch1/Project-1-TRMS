@@ -1,0 +1,27 @@
+2020-11-22 17:02:55,709 [main] INFO : Request completed, attachment id: 12
+2020-11-22 17:04:53,688 [main] INFO : Received request to insert file for request: 1
+2020-11-22 17:04:53,728 [main] INFO : Request completed, attachment id: 13
+2020-11-22 17:05:11,305 [main] INFO : Received request to insert file for request: 1
+2020-11-22 17:05:11,349 [main] INFO : Request completed, attachment id: 14
+2020-11-22 17:10:29,344 [main] INFO : Received request to delete file with id: 2010
+2020-11-22 17:10:29,370 [main] INFO : Request completed, attachment id: 2010 was deleted.
+2020-11-22 17:19:24,165 [main] INFO : Received request to retrieve files related to request with id: 1
+2020-11-22 17:19:24,192 [main] INFO : Request completed, retrieved attachments, count: 0
+2020-11-22 17:19:24,259 [main] INFO : Received request to retrieve file with id: 2010
+2020-11-22 17:19:24,264 [main] INFO : Request completed, retrieved attachment id: 2010
+2020-11-22 17:19:24,295 [main] INFO : Received request to insert file for request: 1
+2020-11-22 17:19:24,310 [main] INFO : Request completed, generated attachment id: 15
+2020-11-22 17:19:24,454 [main] INFO : Received request to delete file with id: 2010
+2020-11-22 17:19:24,458 [main] INFO : Request completed, attachment id: 2010 was deleted.
+2020-11-22 17:20:24,360 [main] INFO : Received request to retrieve files related to request with id: 1
+2020-11-22 17:20:24,386 [main] INFO : Request completed, retrieved attachments, count: 0
+2020-11-22 17:20:56,977 [main] INFO : Received request to retrieve files related to request with id: 1
+2020-11-22 17:20:57,005 [main] INFO : Request completed, retrieved attachments, count: 1
+2020-11-22 17:24:43,605 [main] INFO : Received request to retrieve files related to request with id: 1
+2020-11-22 17:24:43,634 [main] INFO : Request completed, retrieved attachments, count: 1
+2020-11-22 17:24:43,696 [main] INFO : Received request to retrieve file with id: 2010
+2020-11-22 17:24:43,701 [main] INFO : Request completed, retrieved attachment id: 2010
+2020-11-22 17:24:43,735 [main] INFO : Received request to insert file for request: 1
+2020-11-22 17:24:43,750 [main] INFO : Request completed, generated attachment id: 16
+2020-11-22 17:24:43,793 [main] INFO : Received request to delete file with id: 2010
+2020-11-22 17:24:43,796 [main] INFO : Request completed, attachment id: 2010 was deleted.

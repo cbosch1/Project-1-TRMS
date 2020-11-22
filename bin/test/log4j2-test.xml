@@ -15,7 +15,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="ControlRollingTest" fileName="logs/testLogs/TRMS-Control.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="ControlRollingTest" fileName="logs/testLogs/TRMS-Control.log" filePattern="logs/$${date:yyyy-MM}/control-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
@@ -25,17 +25,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="DaoRollingTest" fileName="logs/testLogs/TRMS-Dao.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
-            <PatternLayout>
-                <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
-            </PatternLayout>
-            <Policies>
-                <SizeBasedTriggeringPolicy size="50" />
-            </Policies>
-            <DefaultRolloverStrategy max="20" />
-        </RollingFile>
-
-        <RollingFile name="ServiceRollingTest" fileName="logs/testLogs/TRMS-Service.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="DaoRollingTest" fileName="logs/testLogs/TRMS-Dao.log" filePattern="logs/$${date:yyyy-MM}/dao-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
@@ -45,7 +35,7 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="UtilRollingTest" fileName="logs/testLogs/TRMS-Util.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="ServiceRollingTest" fileName="logs/testLogs/TRMS-Service.log" filePattern="logs/$${date:yyyy-MM}/service-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
@@ -55,7 +45,17 @@
             <DefaultRolloverStrategy max="20" />
         </RollingFile>
 
-        <RollingFile name="JavalinRollingTest" fileName="logs/testLogs/TRMS-Javalin.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+        <RollingFile name="UtilRollingTest" fileName="logs/testLogs/TRMS-Util.log" filePattern="logs/$${date:yyyy-MM}/util-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+        <RollingFile name="JavalinRollingTest" fileName="logs/testLogs/TRMS-Javalin.log" filePattern="logs/$${date:yyyy-MM}/javalin-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%highlight{%d [%t] %-5level: %msg%n%throwable}</Pattern>
             </PatternLayout>
