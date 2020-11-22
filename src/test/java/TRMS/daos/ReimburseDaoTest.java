@@ -91,6 +91,7 @@ public class ReimburseDaoTest {
 			//Test createRequest
 			try {
 				int returnId = reimburseDao.createRequest(reimburse);
+				reimburse.setRequestId(returnId);
 
 				//Verify properly updated reimbursement table
 				verify(callSpy).setInt(1, reimburse.getEmployeeId());
@@ -107,7 +108,7 @@ public class ReimburseDaoTest {
 				verify(callSpy).setTime(12, Time.valueOf(LocalTime.from(reimburse.getDateTime())));
 				verify(callSpy).execute();
 
-				assertEquals("returned id does not match expected", returnId > 0);
+				assertTrue("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);

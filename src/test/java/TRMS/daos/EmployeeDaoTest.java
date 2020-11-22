@@ -77,6 +77,7 @@ public class EmployeeDaoTest {
 			//Test createEmployee
 			try {
 				int returnId = employeeDao.createEmployee(employee);
+				employee.setEmployeeId(returnId);
 
 				verify(spy).setString(1, employee.getName().split(" ")[1]);
 				verify(spy).setString(2, employee.getName().split(" ")[0]);
@@ -87,7 +88,7 @@ public class EmployeeDaoTest {
 
 				verify(spy).executeUpdate();
 
-				assertEquals("returned id does not match expected", returnId > 0);
+				assertTrue("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);

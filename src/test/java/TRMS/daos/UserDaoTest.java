@@ -77,6 +77,7 @@ public class UserDaoTest {
 			//Test createEmployee
 			try {
 				int returnId = userDao.createUser(user);
+				user.setUserId(returnId);
 
 				verify(spy).setInt(1, user.getEmployeeId());
 				verify(spy).setString(2, user.getUsername());
@@ -85,7 +86,7 @@ public class UserDaoTest {
 
 				verify(spy).executeUpdate();
 
-				assertEquals("returned id does not match expected", returnId > 0);
+				assertTrue("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);

@@ -82,6 +82,7 @@ public class InfoRequestDaoTest {
 			//Test createEmployee
 			try {
 				int returnId = infoDao.createInfoRequest(info);
+				info.setInfoId(returnId);
 
 				verify(spy).setInt(1, info.getRelatedId());
 				verify(spy).setInt(2, info.getDestinationId());
@@ -92,7 +93,7 @@ public class InfoRequestDaoTest {
 
 				verify(spy).executeUpdate();
 
-				assertEquals("returned id does not match expected", returnId > 0);
+				assertTrue("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);

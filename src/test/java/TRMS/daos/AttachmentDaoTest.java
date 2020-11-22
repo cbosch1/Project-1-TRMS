@@ -77,14 +77,15 @@ public class AttachmentDaoTest {
 			//Test createEmployee
 			try {
 				int returnId = attachDao.createAttachment(attach);
-
+				attach.setAttachId(returnId);
+				
 				verify(spy).setInt(1, attach.getRequestId());
 				verify(spy).setString(2, attach.getFileType());
 				verify(spy).setBinaryStream(3, attach.getData());
 
 				verify(spy).executeQuery();
 
-				assertEquals("returned id does not match expected", returnId == attach.getAttachId());
+				assertTrue("returned id does not match expected", returnId > 0);
 
 			} catch (SQLException e) {
 				fail("SQLException thrown in creation process: " + e);
