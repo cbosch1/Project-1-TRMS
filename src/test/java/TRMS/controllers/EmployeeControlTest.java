@@ -136,9 +136,9 @@ public class EmployeeControlTest {
 
 			verify(mockCtx).status(200);
 	
-			} catch (Exception e) {
-				fail("Exception thrown during update test: " + e);
-			}
+		} catch (Exception e) {
+			fail("Exception thrown during update test: " + e);
+		}
 	}
 
 	@Test

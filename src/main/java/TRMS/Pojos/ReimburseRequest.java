@@ -6,6 +6,10 @@ import TRMS.enums.AppStage;
 import TRMS.enums.AppStatus;
 import TRMS.enums.EventType;
 
+/**
+ * A java representation of a reimbursement request made
+ * with the TRMS.
+ */
 public class ReimburseRequest {
     
     private int requestId;
@@ -65,7 +69,7 @@ public class ReimburseRequest {
      * @param urgent if the request is urgent or not
      * @param status AppStatus enum, what status the request current has (PENDING, APPROVED, DENIED, CANCELLED)
      * @param stage AppStage enum, what stage the request is currently in (UPLOAD, SUPERVISOR, DEPT_HEAD, BENCO, EVENT, END)
-     * @param dateTime a DateTime object representing when the request was made
+     * @param dateTime a LocalDateTime object representing when the request was made
      */
 	public ReimburseRequest(int requestId, int employeeId, String location, double cost, EventType type,
 			String description, String justification, double projected, boolean urgent, AppStatus status,
@@ -84,100 +88,172 @@ public class ReimburseRequest {
 		this.dateTime = dateTime;
 	}
     
+    /**
+     * @return the id of this reimbursement request.
+     */
     public int getRequestId() {
         return requestId;
     }
 
+    /**
+     * @param requestId the id of this reimbursement request.
+     */
     public void setRequestId(int requestId) {
         this.requestId = requestId;
     }
 
+    /**
+     * @return the id of the employee making the request for reimbursement
+     */
     public int getEmployeeId() {
         return employeeId;
     }
 
+    /**
+     * @param employeeId the id of the employee making the request for reimbursement
+     */
     public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
-    }
-
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
-    }
-
+    /**
+     * @return the location where the event will take place
+     */
     public String getLocation() {
         return location;
     }
 
+    /**
+     * @param location the location where the event will take place
+     */
     public void setLocation(String location) {
         this.location = location;
     }
 
+    /**
+     * @return the cost of event participation the employee will have to pay (if the reimbursement is not approved)
+     */
     public double getCost() {
         return cost;
     }
 
+    /**
+     * @param cost the cost of event participation the employee will have to pay (if the reimbursement is not approved)
+     */
     public void setCost(double cost) {
         this.cost = cost;
     }
 
+    /**
+     * @return the type of event (UNI_COURSE, SEMINAR, CERT_PREP_CLASS, CERTIFICATION, TECHNICAL_TRAINING, OTHER)
+     */
     public EventType getType() {
         return type;
     }
 
+    /**
+     * @param type the type of event (UNI_COURSE, SEMINAR, CERT_PREP_CLASS, CERTIFICATION, TECHNICAL_TRAINING, OTHER)
+     */
     public void setType(EventType type) {
         this.type = type;
     }
 
+    /**
+     * @return a description of the event and what it entails
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * @param description a description of the event and what it entails
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    /**
+     * @return the work related justification for this event
+     */
     public String getJustification() {
         return justification;
     }
 
+    /**
+     * @param justification the work related justification for this event
+     */
     public void setJustification(String justification) {
         this.justification = justification;
     }
 
+    /**
+     * @return the projected reimbursement amount
+     */
     public double getProjected() {
         return projected;
     }
 
+    /**
+     * @param projected the projected reimbursement amount
+     */
     public void setProjected(double projected) {
         this.projected = projected;
     }
 
+    /**
+     * @return if the request is urgent or not
+     */
     public boolean isUrgent() {
         return urgent;
     }
 
+    /**
+     * @param urgent if the request is urgent or not
+     */
     public void setUrgent(boolean urgent) {
         this.urgent = urgent;
     }
 
+    /**
+     * @return AppStatus enum, what status the request current has (PENDING, APPROVED, DENIED, CANCELLED)
+     */
     public AppStatus getStatus() {
         return status;
     }
 
+    /**
+     * @param status AppStatus enum, what status the request current has (PENDING, APPROVED, DENIED, CANCELLED)
+     */
     public void setStatus(AppStatus status) {
         this.status = status;
     }
 
+    /**
+     * @return AppStage enum, what stage the request is currently in (UPLOAD, SUPERVISOR, DEPT_HEAD, BENCO, EVENT, END)
+     */
     public AppStage getStage() {
         return stage;
     }
 
+    /**
+     * @param stage AppStage enum, what stage the request is currently in (UPLOAD, SUPERVISOR, DEPT_HEAD, BENCO, EVENT, END)
+     */
     public void setStage(AppStage stage) {
         this.stage = stage;
+    }
+    
+    /**
+     * @return a LocalDateTime object representing when the request was made
+     */
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    /**
+     * @param dateTime a LocalDateTime object representing when the request was made
+     */
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 
 	@Override

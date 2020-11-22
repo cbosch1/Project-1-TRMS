@@ -60,6 +60,7 @@ public class UserServiceImpl implements UserService {
         // TODO Auto-generated method stub
         return null;
     }
+    
     /**
      * Calls the Dao to update a user with given id. The input fields
      * should be given the updated information.

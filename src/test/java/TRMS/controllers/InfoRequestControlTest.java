@@ -106,6 +106,8 @@ public class InfoRequestControlTest {
 			when(mockService.readAllInfoFor(request.getDestinationId())).thenReturn(requests);
 
 			controlToTest.readAllInfoFor(mockCtx);
+
+			verify(mockCtx).formParam("empId");
 			verify(mockService).readAllInfoFor(request.getDestinationId());
 
 			//TODO verify ctx being given proper inputs.
@@ -142,6 +144,7 @@ public class InfoRequestControlTest {
 		try {
 			controlToTest.updateInfoRequest(mockCtx);
 	
+			verify(mockCtx).formParam("infoId");
 			verify(mockCtx).formParam("relatedId");
 			verify(mockCtx).formParam("destinationId");
 			verify(mockCtx).formParam("urgent");

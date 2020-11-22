@@ -1,7 +1,7 @@
 package TRMS.pojos;
 
 /**
- * Object designed to hold employee related data for the TRMS.
+ * A java representation of an employee within the TRMS
  */
 public class Employee {
     private int employeeId;
@@ -17,12 +17,12 @@ public class Employee {
 	
 	/**
 	 * Construct employee object with applicable parameters
-	 * @param employeeId Numeric assigned from the database
-	 * @param name First and Last with one space in between
+	 * @param employeeId The unique identifier for this employee.
+	 * @param name The employee's first and last name with one space in between
 	 * @param title This employee's official work title
 	 * @param supervisor employeeId of this employee's supervisor
-	 * @param department under which the employee works
-	 * @param deptHead True if employee is the department head
+	 * @param department The department under which the employee works
+	 * @param deptHead If employee is the department head
 	 */
     public Employee(int employeeId, String name, String title, int supervisor, String department, boolean deptHead) {
 		this.employeeId = employeeId;
@@ -33,50 +33,86 @@ public class Employee {
 		this.deptHead = deptHead;
 	}
 
+	/**
+	 * @return The unique identifier for this employee.
+	 */
     public int getEmployeeId() {
         return employeeId;
     }
 
+	/**
+	 * @param employeeId the unique identifier for this employee.
+	 */
     public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
+	/**
+	 * @return The employee's first and last name with one space in between
+	 */
     public String getName() {
         return name;
     }
 
+	/**
+	 * @param name The employee's first and last name with one space in between
+	 */
     public void setName(String name) {
         this.name = name;
     }
 
+	/**
+	 * @return This employee's official work title
+	 */
     public String getTitle() {
         return title;
     }
 
+	/**
+	 * @param title This employee's official work title
+	 */
     public void setTitle(String title) {
         this.title = title;
     }
 
+	/**
+	 * @return employeeId of this employee's supervisor
+	 */
     public int getSupervisor() {
         return supervisor;
     }
 
+	/**
+	 * @param supervisor employeeId of this employee's supervisor
+	 */
     public void setSupervisor(int supervisor) {
         this.supervisor = supervisor;
     }
 
+	/**
+	 * @return The department under which the employee works
+	 */
     public String getDepartment() {
         return department;
     }
 
+	/**
+	 * @param department The department under which the employee works
+	 */
     public void setDepartment(String department) {
         this.department = department;
     }
 
+	/**
+	 * @return True if employee is the department head
+	 */
     public boolean getDeptHead() {
         return deptHead;
     }
 
+	/**
+	 * @param deptHead If employee is the department head
+	 */
     public void setDeptHead(boolean deptHead) {
         this.deptHead = deptHead;
     }

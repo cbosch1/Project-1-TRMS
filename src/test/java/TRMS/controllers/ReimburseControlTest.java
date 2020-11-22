@@ -123,6 +123,8 @@ public class ReimburseControlTest {
 			when(mockService.readAllRequestsFor(request.getEmployeeId())).thenReturn(requests);
 
 			controlToTest.readAllRequestsFor(mockCtx);
+
+			verify(mockCtx).formParam("empId");
 			verify(mockService).readAllRequestsFor(request.getEmployeeId());
 
 			//TODO verify ctx being given proper inputs.

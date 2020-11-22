@@ -2,6 +2,10 @@ package TRMS.pojos;
 
 import java.io.InputStream;
 
+/**
+ * A java representation of a file uploaded to the system
+ * with specific relation to a reimbursement request.
+ */
 public class Attachment {
     private int attachId;
     private int requestId;
@@ -12,6 +16,12 @@ public class Attachment {
         super();
     }
 
+    /**
+     * Construct attachment object with applicable parameters
+     * @param attachId the unique identifier for this attachment.
+     * @param requestId the id of the reimbursement request to which this attachment relates.
+     * @param fileType what is this file for? Pre-Approval Email, Grades, Presentation Files, etc.
+     */
 	public Attachment(int attachId, int requestId, String fileType) {
         super();
 		this.attachId = attachId;
@@ -19,34 +29,58 @@ public class Attachment {
 		this.fileType = fileType;
     }
     
+    /**
+     * @return attachId the unique identifier for this attachment.
+     */
     public int getAttachId() {
         return attachId;
     }
 
+    /**
+     * @param attachId the unique identifier for this attachment.
+     */
     public void setAttachId(int attachId) {
         this.attachId = attachId;
     }
 
+    /**
+     * @return requestId the id of the reimbursement request to which this attachment relates.
+     */
     public int getRequestId() {
         return requestId;
     }
 
+    /**
+     * @param requestId requestId the id of the reimbursement request to which this attachment relates.
+     */
     public void setRequestId(int requestId) {
         this.requestId = requestId;
     }
 
+    /**
+     * @return what is this file for? Pre-Approval Email, Grades, Presentation Files, etc.
+     */
     public String getFileType() {
         return fileType;
     }
 
+    /**
+     * @param fileType what is this file for? Pre-Approval Email, Grades, Presentation Files, etc.
+     */
     public void setFileType(String fileType) {
         this.fileType = fileType;
     }
 
+    /**
+     * @return data the byte stream of the file to be uploaded
+     */
     public InputStream getData() {
         return data;
     }
 
+    /**
+     * @param data the byte stream of the file to be uploaded
+     */
     public void setData(InputStream data) {
         this.data = data;
     }

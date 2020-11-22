@@ -2,6 +2,10 @@ package TRMS.pojos;
 
 import java.time.LocalDateTime;
 
+/**
+ * A java representation of an information request inside
+ * of the TRMS.
+ */
 public class InfoRequest {
     
     private int infoId;
@@ -15,6 +19,14 @@ public class InfoRequest {
         super();
     }
 
+	/**
+	 * Construct an information request object with the following parameters, the
+	 * urgency is default set to false and dateTime is default set to LocalDateTime.now()
+	 * @param infoId the unique identifier for this information request.
+     * @param relatedId the id of the reimbursement request that this info request is related to.
+     * @param destinationId the id of the employee that is to receive this info request.
+     * @param description the main body of this request.
+	 */
 	public InfoRequest(int infoId, int relatedId, int destinationId, String description) {
 		this.infoId = infoId;
 		this.relatedId = relatedId;
@@ -24,6 +36,15 @@ public class InfoRequest {
 		this.dateTime = LocalDateTime.now();
     }
 
+	/**
+	 * Construct an information request object with the following parameters
+	 * @param infoId the unique identifier for this information request.
+	 * @param relatedId the id of the reimbursement request that this info request is related to.
+	 * @param destinationId the id of the employee that is to receive this info request.
+	 * @param urgent a boolean representing if this request should be marked as urgent or not.
+	 * @param description the main body of this request.
+	 * @param dateTime a LocalDateTime object representing when the request was made.
+	 */
 	public InfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,
 			LocalDateTime dateTime) {
 		this.infoId = infoId;
@@ -33,51 +54,87 @@ public class InfoRequest {
 		this.description = description;
 		this.dateTime = dateTime;
     }
-    
+
+	/**
+	 * @return the unique identifier for this information request.
+	 */
     public int getInfoId() {
         return infoId;
     }
 
+	/**
+	 * @param infoId the unique identifier for this information request.
+	 */
     public void setInfoId(int infoId) {
         this.infoId = infoId;
     }
 
+	/**
+	 * @return the id of the reimbursement request that this info request is related to.
+	 */
     public int getRelatedId() {
         return relatedId;
     }
 
+	/**
+	 * @param relatedId the id of the reimbursement request that this info request is related to.
+	 */
     public void setRelatedId(int relatedId) {
         this.relatedId = relatedId;
     }
 
+	/**
+	 * @return the id of the employee that is to receive this info request.
+	 */
     public int getDestinationId() {
         return destinationId;
-    }
-
+	}
+	
+	/**
+	 * @param destinationId the id of the employee that is to receive this info request.
+	 */
     public void setDestinationId(int destinationId) {
         this.destinationId = destinationId;
     }
 
+	/**
+	 * @return a boolean representing if this request should be marked as urgent or not.
+	 */
     public boolean getUrgent() {
         return urgent;
     }
 
+	/**
+	 * @param urgent a boolean representing if this request should be marked as urgent or not.
+	 */
     public void setUrgent(boolean urgent) {
         this.urgent = urgent;
     }
 
+	/**
+	 * @return the main body of this request.
+	 */
     public String getDescription() {
         return description;
     }
 
+	/**
+	 * @param description the main body of this request.
+	 */
     public void setDescription(String description) {
         this.description = description;
-    }
-
+	}
+	
+	/**
+	 * @return a LocalDateTime object representing when the request was made.
+	 */
     public LocalDateTime getDateTime() {
         return dateTime;
     }
 
+	/**
+	 * @param dateTime a LocalDateTime object representing when the request was made.
+	 */
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }

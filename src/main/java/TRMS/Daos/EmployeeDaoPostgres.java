@@ -12,7 +12,7 @@ import TRMS.util.ConnectionUtil;
 
 
 /**
- * Employee Dao that connects to the employee table in the postgres database.
+ * Employee Dao that connects to the employee table in a postgres database.
  */
 public class EmployeeDaoPostgres implements EmployeeDao {
 
