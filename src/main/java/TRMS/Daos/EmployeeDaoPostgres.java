@@ -1,7 +1,10 @@
 package TRMS.daos;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -35,8 +38,32 @@ public class EmployeeDaoPostgres implements EmployeeDao {
      */
     @Override
     public int createEmployee(Employee employee) throws SQLException {
-        // TODO Auto-generated method stub
-        return 0;
+        int result; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to insert employee: " + employee.getName());
+
+            String sql = "INSERT INTO employee VALUES (Default,?,?,?,?,?,?) RETURNING emp_id;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, employee.getName().split(" ")[1]);
+            stmt.setString(2, employee.getName().split(" ")[0]);
+            stmt.setString(3, employee.getTitle());
+            stmt.setInt(4, employee.getSupervisor());
+            stmt.setString(5, employee.getDepartment());
+            stmt.setBoolean(6, employee.getDeptHead());
+
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            result = rs.getInt(1);
+            Log.info("Request completed, generated employee id: " + result);
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in create related to employee: " + employee.getName(), e);
+            throw e;
+        }
+
+        return result;
     }
 
     /**
@@ -46,9 +73,26 @@ public class EmployeeDaoPostgres implements EmployeeDao {
      */
     @Override
     public boolean deleteEmployee(int employeeId) throws SQLException {
-        // TODO Auto-generated method stub
-        return false;
+        boolean result = false; 
 
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to delete employee with id: " + employeeId);
+
+            String sql = "DELETE FROM employee WHERE emp_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, employeeId);
+
+            result = (1 == stmt.executeUpdate());
+
+            Log.info("Request completed, employee with id: " + employeeId + " was deleted.");
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in employee delete for id: " + employeeId, e);
+            throw e;
+        }
+
+        return result;
     }
 
     /**
@@ -57,8 +101,28 @@ public class EmployeeDaoPostgres implements EmployeeDao {
      */
     @Override
     public List<Employee> readAllEmployees() throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
+        List<Employee> result = new ArrayList<>(); 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to retrieve all employees");
+
+            String sql = "SELECT * FROM employee;";
+            stmt = conn.prepareStatement(sql);
+
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+                Employee e = new Employee(rs.getInt(1), rs.getString(3) +" "+ rs.getString(2), rs.getString(4), 
+                                            rs.getInt(5), rs.getString(6), rs.getBoolean(7));
+                result.add(e);
+            }
+            Log.info("Request completed, retrieved " + result.size() + " employees");
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in read all employees", e);
+            throw e;
+        }
+
+        return result;
     }
 
     /**
@@ -68,8 +132,29 @@ public class EmployeeDaoPostgres implements EmployeeDao {
      */
     @Override
     public Employee readEmployee(int employeeId) throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
+        Employee result = null; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to retrieve employee with id: " + employeeId);
+
+            String sql = "SELECT * FROM employee WHERE emp_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, employeeId);
+
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            result = new Employee(rs.getInt(1), rs.getString(3) +" "+ rs.getString(2), rs.getString(4), 
+                                    rs.getInt(5), rs.getString(6), rs.getBoolean(7));
+
+            Log.info("Request completed, retrieved employee: " + result.getName());
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in read for employee with id: " + employeeId, e);
+            throw e;
+        }
+
+        return result;
     }
 
     /**
@@ -80,8 +165,33 @@ public class EmployeeDaoPostgres implements EmployeeDao {
      */
     @Override
     public boolean updateEmployee(Employee employee) throws SQLException {
-        // TODO Auto-generated method stub
-        return false;
+        boolean result = false; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to update employee with id: " + employee.getEmployeeId());
+
+            String sql = "UPDATE employee SET lastname=?, firstname=?, title=?, supervisor=?, "
+                                                + "department=?, dept_head=? WHERE emp_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, employee.getName().split(" ")[1]);
+            stmt.setString(2, employee.getName().split(" ")[0]);
+            stmt.setString(3, employee.getTitle());
+            stmt.setInt(4, employee.getSupervisor());
+            stmt.setString(5, employee.getDepartment());
+            stmt.setBoolean(6, employee.getDeptHead());
+            stmt.setInt(7, employee.getEmployeeId());
+
+            result = (1 == stmt.executeUpdate());
+
+            Log.info("Request completed, updated employee with id: " + employee.getEmployeeId());
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in updated related to employee: " + employee.getEmployeeId(), e);
+            throw e;
+        }
+
+        return result;
     }
     
 }
