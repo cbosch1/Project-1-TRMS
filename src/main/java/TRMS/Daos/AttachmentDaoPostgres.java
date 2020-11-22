@@ -1,7 +1,10 @@
 package TRMS.daos;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -36,8 +39,30 @@ public class AttachmentDaoPostgres implements AttachmentDao {
      */
     @Override
     public int createAttachment(Attachment file) throws SQLException {
-        // TODO Auto-generated method stub
-        return 0;
+
+        int result; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to insert file for request: " + file.getRequestId());
+
+            String sql = "INSERT INTO attachment VALUES (Default,?,?,?) RETURNING attach_id;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, file.getRequestId());
+            stmt.setString(2, file.getFileType());
+            stmt.setBinaryStream(3, file.getData());
+
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            result = rs.getInt(1);
+            Log.info("Request completed, generated attachment id: " + result);
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in create for attachment related to request: " + file.getRequestId(), e);
+            throw e;
+        }
+
+        return result;
     }
 
     /**
@@ -47,8 +72,26 @@ public class AttachmentDaoPostgres implements AttachmentDao {
      */
     @Override
     public boolean deleteAttachment(int attachId) throws SQLException {
-        // TODO Auto-generated method stub
-        return false;
+        boolean success = false; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to delete file with id: " + attachId);
+
+            String sql = "DELETE FROM attachment WHERE attach_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, attachId);
+
+            success = (1 == stmt.executeUpdate());
+
+            Log.info("Request completed, attachment id: " + attachId + " was deleted.");
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in delete for id: " + attachId, e);
+            throw e;
+        }
+
+        return success;
     }
 
     /**
@@ -58,8 +101,29 @@ public class AttachmentDaoPostgres implements AttachmentDao {
      */
     @Override
     public Attachment readAttachment(int attachId) throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
+        Attachment result = null; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to retrieve file with id: " + attachId);
+
+            String sql = "SELECT * FROM attachment WHERE attach_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, attachId);
+
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            result = new Attachment(attachId, rs.getInt(2), rs.getString(3)); 
+            result.setData(rs.getBinaryStream(4));
+
+            Log.info("Request completed, retrieved attachment id: " + attachId);
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in read for attachment with id: " + attachId, e);
+            throw e;
+        }
+
+        return result;
     }
 
     /**
@@ -70,8 +134,29 @@ public class AttachmentDaoPostgres implements AttachmentDao {
      */
     @Override
     public List<Integer> readRelatedReference(int requestId) throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
+        List<Integer> result = new ArrayList<>(); 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to retrieve files related to request with id: " + requestId);
+
+            String sql = "SELECT * FROM attachment WHERE request_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, requestId);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+                result.add(rs.getInt(1));
+            }
+
+            Log.info("Request completed, retrieved attachments, count: " + result.size());
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in read for files related to request with id: " + requestId, e);
+            throw e;
+        }
+
+        return result;
     }
     
 }
