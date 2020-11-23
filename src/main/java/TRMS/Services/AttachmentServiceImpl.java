@@ -1,6 +1,7 @@
 package TRMS.services;
 
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -39,8 +40,19 @@ public class AttachmentServiceImpl implements AttachmentService {
      */
     @Override
     public int createAttachment(int attachId, int requestId, String fileType, InputStream data) {
-        // TODO Auto-generated method stub
-        return 0;
+        Log.info("Responding to create attachment with id...");
+        int result = -1;
+
+        Attachment file = new Attachment(attachId, requestId, fileType);
+        file.setData(data);
+
+        try {
+            result = attachDao.createAttachment(file);
+            Log.info("Successfully created attachment");
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -53,8 +65,19 @@ public class AttachmentServiceImpl implements AttachmentService {
      */
     @Override
     public int createAttachment(int requestId, String fileType, InputStream data) {
-        // TODO Auto-generated method stub
-        return 0;
+        Log.info("Responding to create attachment...");
+        int result = -1;
+
+        Attachment file = new Attachment(1, requestId, fileType);
+        file.setData(data);
+
+        try {
+            result = attachDao.createAttachment(file);
+            Log.info("Successfully created attachment");
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -64,8 +87,20 @@ public class AttachmentServiceImpl implements AttachmentService {
      */
     @Override
     public boolean deleteAttachment(int attachId) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to delete attachment...");
+        boolean result = false;
+
+        try {
+            result = attachDao.deleteAttachment(attachId);
+            if(result) {
+                Log.info("Successfully deleted attachment");
+            } else {
+                Log.warn("Attachment was not successfully deleted");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -75,8 +110,17 @@ public class AttachmentServiceImpl implements AttachmentService {
      */
     @Override
     public Attachment readAttachment(int attachId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read attachment...");
+        Attachment result = null;
+
+        try {
+            result = attachDao.readAttachment(attachId);
+            Log.info("Successfully retrieved attachment");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -87,8 +131,17 @@ public class AttachmentServiceImpl implements AttachmentService {
      */
     @Override
     public List<Integer> readRelatedReferences(int requestId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read related attachments...");
+        List<Integer> result = null;
+
+        try {
+            result = attachDao.readRelatedReference(requestId);
+            Log.info("Successfully retrieved attachments");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -102,8 +155,23 @@ public class AttachmentServiceImpl implements AttachmentService {
      */
     @Override
     public boolean updateAttachment(int attachId, int requestId, String fileType, InputStream data) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to update attachment...");
+        boolean result = false;
+
+        Attachment file = new Attachment(attachId, requestId, fileType);
+        file.setData(data);
+
+        try {
+            result = attachDao.updateAttachment(file);
+            if(result) {
+                Log.info("Successfully updated attachment");
+            } else {
+                Log.info("Something went wrong, attachment not updated properly");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
     
 }
