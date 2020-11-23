@@ -85,7 +85,10 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 
             result = (1 == stmt.executeUpdate());
 
-            Log.info("Request completed, employee with id: " + employeeId + " was deleted.");
+            if (result){
+                Log.info("Request completed, employee with id: " + employeeId + " was deleted.");
+            } else
+                Log.warn("Request to delete employee with id: " + employeeId +" was NOT completed");
 
         } catch (SQLException e){
             Log.warn("SQLException thrown in employee delete for id: " + employeeId, e);
@@ -184,7 +187,10 @@ public class EmployeeDaoPostgres implements EmployeeDao {
 
             result = (1 == stmt.executeUpdate());
 
-            Log.info("Request completed, updated employee with id: " + employee.getEmployeeId());
+            if (result){
+                Log.info("Request completed, employee with id: " + employee.getEmployeeId() + " was updated.");
+            } else
+                Log.warn("Request to update employee with id: " + employee.getEmployeeId() +" was NOT completed");
 
         } catch (SQLException e){
             Log.warn("SQLException thrown in updated related to employee: " + employee.getEmployeeId(), e);
