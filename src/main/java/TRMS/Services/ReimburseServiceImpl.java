@@ -1,5 +1,6 @@
 package TRMS.services;
 
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -49,8 +50,18 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
     public int createRequest(int employeeId, String location, double cost, EventType type, String description, 
                             String justification, double projected, boolean urgent, AppStatus status,
                             AppStage stage, LocalDateTime dateTime) {
-        // TODO Auto-generated method stub
-        return 0;
+        Log.info("Responding to create reimbursement request...");
+        int result = -1;
+
+        ReimburseRequest request = new ReimburseRequest(0, employeeId, location, cost, type, description, 
+                                                        justification, projected, urgent, status, stage, dateTime);
+        try {
+            result = reimburseDao.createRequest(request);
+            Log.info("Successfully created reimbursement request");
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -60,8 +71,20 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
      */
     @Override
     public boolean deleteRequest(int requestId) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to delete reimbursement request...");
+        boolean result = false;
+
+        try {
+            result = reimburseDao.deleteRequest(requestId);
+            if(result) {
+                Log.info("Successfully deleted reimbursement request");
+            } else {
+                Log.warn("Reimbursement request was not successfully deleted");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -70,8 +93,17 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
      */
     @Override
     public List<ReimburseRequest> readAllRequests() {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read all reimbursement requests...");
+        List<ReimburseRequest> result = null;
+
+        try {
+            result = reimburseDao.readAllRequests();
+            Log.info("Successfully retrieved reimbursement requests");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -82,8 +114,17 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
      */
     @Override
     public List<ReimburseRequest> readAllRequestsFor(int employeeId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read all reimbursement requests for employee " +employeeId+ "...");
+        List<ReimburseRequest> result = null;
+
+        try {
+            result = reimburseDao.readAllRequestsFor(employeeId);
+            Log.info("Successfully retrieved reimbursement requests");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -94,8 +135,17 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
      */
     @Override
     public ReimburseRequest readRequest(int requestId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read reimbursement request...");
+        ReimburseRequest result = null;
+
+        try {
+            result = reimburseDao.readRequest(requestId);
+            Log.info("Successfully retrieved reimbursement request");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -118,8 +168,23 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
     public boolean updateRequest(int requestId, int employeeId, String location, double cost, EventType type,
             String description, String justification, double projected, boolean urgent, AppStatus status,
             AppStage stage, LocalDateTime dateTime) {
-        // TODO Auto-generated method stub
-        return false;
+
+                Log.info("Responding to update reimbursement request...");
+                boolean result = false;
+        
+                ReimburseRequest request = new ReimburseRequest(requestId, employeeId, location, cost, type, description, 
+                                                                justification, projected, urgent, status, stage, dateTime);
+                try {
+                    result = reimburseDao.updateRequest(request);
+        
+                    if(result) {
+                        Log.info("Successfully updated reimbursement request");
+                    } else {
+                        Log.info("Something went wrong, reimbursement request not updated properly");
+                    }
+                } catch (SQLException e) {
+                    Log.warn("Error thrown in dao call: ", e);
+                }
+                return result;
     }
-    
 }
