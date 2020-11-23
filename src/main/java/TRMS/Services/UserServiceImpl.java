@@ -1,5 +1,7 @@
 package TRMS.services;
 
+import java.sql.SQLException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,8 +37,18 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public int createUser(String username, String password, int employeeId, AuthPriv privilege) {
-        // TODO Auto-generated method stub
-        return 0;
+        Log.info("Responding to create user...");
+        int result = -1;
+
+        User user = new User(username, password, employeeId, privilege);
+
+        try {
+            result = userDao.createUser(user);
+            Log.info("Successfully created user");
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -46,8 +58,20 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public boolean deleteUser(int userId) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to delete user...");
+        boolean result = false;
+
+        try {
+            result = userDao.deleteUser(userId);
+            if(result) {
+                Log.info("Successfully deleted user");
+            } else {
+                Log.warn("user was not successfully deleted");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -57,8 +81,17 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User readUser(int userId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read user...");
+        User result = null;
+
+        try {
+            result = userDao.readUser(userId);
+            Log.info("Successfully retrieved user");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
     
     /**
@@ -73,8 +106,22 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public boolean updateUser(int userId, String username, String password, int employeeId, AuthPriv privilege) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to update user...");
+        boolean result = false;
+
+        User user = new User(userId, username, password, employeeId, privilege);
+
+        try {
+            result = userDao.updateUser(user);
+            if(result) {
+                Log.info("Successfully updated user");
+            } else {
+                Log.info("Something went wrong, user not updated properly");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
     
 }
