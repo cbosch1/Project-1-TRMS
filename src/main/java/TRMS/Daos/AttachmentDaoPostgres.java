@@ -72,7 +72,7 @@ public class AttachmentDaoPostgres implements AttachmentDao {
      */
     @Override
     public boolean deleteAttachment(int attachId) throws SQLException {
-        boolean success = false; 
+        boolean result = false; 
 
         try(Connection conn = connUtil.createConnection()) {
             Log.info("Received request to delete file with id: " + attachId);
@@ -82,16 +82,19 @@ public class AttachmentDaoPostgres implements AttachmentDao {
 
             stmt.setInt(1, attachId);
 
-            success = (1 == stmt.executeUpdate());
+            result = (1 == stmt.executeUpdate());
 
-            Log.info("Request completed, attachment id: " + attachId + " was deleted.");
+            if (result){
+                Log.info("Request completed, attachment with id: " + attachId + " was deleted.");
+            } else
+                Log.warn("Request to delete attachment with id: " + attachId +" was NOT completed");
 
         } catch (SQLException e){
             Log.warn("SQLException thrown in delete for id: " + attachId, e);
             throw e;
         }
 
-        return success;
+        return result;
     }
 
     /**
