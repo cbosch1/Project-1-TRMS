@@ -166,25 +166,25 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
      */
     @Override
     public boolean updateRequest(int requestId, int employeeId, String location, double cost, EventType type,
-            String description, String justification, double projected, boolean urgent, AppStatus status,
-            AppStage stage, LocalDateTime dateTime) {
+                                String description, String justification, double projected, boolean urgent, AppStatus status,
+                                AppStage stage, LocalDateTime dateTime) {
 
-                Log.info("Responding to update reimbursement request...");
-                boolean result = false;
-        
-                ReimburseRequest request = new ReimburseRequest(requestId, employeeId, location, cost, type, description, 
-                                                                justification, projected, urgent, status, stage, dateTime);
-                try {
-                    result = reimburseDao.updateRequest(request);
-        
-                    if(result) {
-                        Log.info("Successfully updated reimbursement request");
-                    } else {
-                        Log.info("Something went wrong, reimbursement request not updated properly");
-                    }
-                } catch (SQLException e) {
-                    Log.warn("Error thrown in dao call: ", e);
-                }
-                return result;
+        Log.info("Responding to update reimbursement request...");
+        boolean result = false;
+
+        ReimburseRequest request = new ReimburseRequest(requestId, employeeId, location, cost, type, description, 
+                                                        justification, projected, urgent, status, stage, dateTime);
+        try {
+            result = reimburseDao.updateRequest(request);
+
+            if(result) {
+                Log.info("Successfully updated reimbursement request");
+            } else {
+                Log.warn("Something went wrong, reimbursement request not updated properly");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 }

@@ -116,7 +116,7 @@ public class UserServiceImpl implements UserService {
             if(result) {
                 Log.info("Successfully updated user");
             } else {
-                Log.info("Something went wrong, user not updated properly");
+                Log.warn("Something went wrong, user not updated properly");
             }
         } catch (SQLException e) {
             Log.warn("Error thrown in dao call: ", e);

@@ -162,7 +162,7 @@ public class InfoRequestServiceImpl implements InfoRequestService {
             if(result) {
                 Log.info("Successfully updated information request");
             } else {
-                Log.info("Something went wrong, information request not updated properly");
+                Log.warn("Something went wrong, information request not updated properly");
             }
         } catch (SQLException e) {
             Log.warn("Error thrown in dao call: ", e);

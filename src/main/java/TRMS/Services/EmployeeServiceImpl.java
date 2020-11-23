@@ -138,7 +138,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             if(result) {
                 Log.info("Successfully updated employee");
             } else {
-                Log.info("Something went wrong, employee not updated properly");
+                Log.warn("Something went wrong, employee not updated properly");
             }
         } catch (SQLException e) {
             Log.warn("Error thrown in dao call: ", e);

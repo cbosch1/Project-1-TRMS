@@ -166,7 +166,7 @@ public class AttachmentServiceImpl implements AttachmentService {
             if(result) {
                 Log.info("Successfully updated attachment");
             } else {
-                Log.info("Something went wrong, attachment not updated properly");
+                Log.warn("Something went wrong, attachment not updated properly");
             }
         } catch (SQLException e) {
             Log.warn("Error thrown in dao call: ", e);
