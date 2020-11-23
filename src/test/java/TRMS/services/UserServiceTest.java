@@ -71,7 +71,7 @@ public class UserServiceTest {
 
 			User returned = serviceToTest.readUser(user.getUserId());
 
-			verify(mockDao).readUser(user.getUserId()));
+			verify(mockDao).readUser(user.getUserId());
 
 			assertTrue("Object read does not match expected", user.equals(returned));
 
