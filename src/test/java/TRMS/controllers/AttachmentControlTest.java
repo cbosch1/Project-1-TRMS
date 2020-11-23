@@ -158,6 +158,9 @@ public class AttachmentControlTest {
 	@Test
 	public void updateAttachmentTest() {
 		try {
+			when(mockService.updateAttachment(attach.getAttachId(), attach.getRequestId(), 
+												attach.getFileType(), stream)).thenReturn(true);
+
 			controlToTest.updateAttachment(mockCtx);
 
 			verify(mockCtx).formParam("attachId");
@@ -179,6 +182,8 @@ public class AttachmentControlTest {
 	@Test
 	public void deleteAttachmentTest() {
 		try {
+			when(mockService.deleteAttachment(attach.getAttachId())).thenReturn(true);
+
 			controlToTest.deleteAttachment(mockCtx);
 
 			verify(mockCtx).formParam("attachId");
