@@ -50,11 +50,12 @@ public class EmployeeServiceTest {
 	@Test
 	public void createEmployeeTest() {
 		try {
+			employee.setEmployeeId(0);
 			when(mockDao.createEmployee(employee)).thenReturn(employee.getEmployeeId());
 
 			assertTrue("createEmployee returned false", 
 				serviceToTest.createEmployee(employee.getName(), employee.getTitle(), employee.getSupervisor(),
-				employee.getDepartment(), employee.getDeptHead()) == employee.getEmployeeId());
+								employee.getDepartment(), employee.getDeptHead()) == employee.getEmployeeId());
 
 			verify(mockDao).createEmployee(employee);
 
@@ -72,7 +73,7 @@ public class EmployeeServiceTest {
 
 			Employee returned = serviceToTest.readEmployee(employee.getEmployeeId());
 
-			verify(mockDao.readEmployee(employee.getEmployeeId()));
+			verify(mockDao).readEmployee(employee.getEmployeeId());
 
 			assertTrue("Object read does not match expected", employee.equals(returned));
 
