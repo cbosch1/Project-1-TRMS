@@ -55,6 +55,7 @@ public class ReimburseServiceTest {
 	@Test
 	public void createRequestTest() {
 		try {
+			reimburse.setRequestId(0);
 			when(mockDao.createRequest(reimburse)).thenReturn(reimburse.getRequestId());
 
 			assertTrue("createInfoRequest returned false", 
@@ -79,7 +80,7 @@ public class ReimburseServiceTest {
 
 			ReimburseRequest returned = serviceToTest.readRequest(reimburse.getRequestId());
 
-			verify(mockDao.readRequest(reimburse.getRequestId()));
+			verify(mockDao).readRequest(reimburse.getRequestId());
 
 			assertTrue("Object read does not match expected", reimburse.equals(returned));
 

@@ -48,6 +48,7 @@ public class UserServiceTest {
 	@Test
 	public void createUserTest() {
 		try {
+			user.setUserId(0);
 			when(mockDao.createUser(user)).thenReturn(user.getUserId());
 
 			assertTrue("createUser returned false", 
@@ -70,7 +71,7 @@ public class UserServiceTest {
 
 			User returned = serviceToTest.readUser(user.getUserId());
 
-			verify(mockDao.readUser(user.getUserId()));
+			verify(mockDao).readUser(user.getUserId()));
 
 			assertTrue("Object read does not match expected", user.equals(returned));
 
