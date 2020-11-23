@@ -1,5 +1,6 @@
 package TRMS.services;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -37,8 +38,18 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     @Override
     public int createEmployee(String name, String title, int supervisor, String department, boolean deptHead) {
-        // TODO Auto-generated method stub
-        return 0;
+        Log.info("Responding to create employee...");
+        int result = -1;
+
+        Employee employee = new Employee(0, name, title, supervisor, department, deptHead);
+
+        try {
+            result = employeeDao.createEmployee(employee);
+            Log.info("Successfully created employee");
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -48,8 +59,20 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     @Override
     public boolean deleteEmployee(int employeeId) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to delete employee...");
+        boolean result = false;
+
+        try {
+            result = employeeDao.deleteEmployee(employeeId);
+            if(result) {
+                Log.info("Successfully deleted employee");
+            } else {
+                Log.warn("Employee was not successfully deleted");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
     
     /**
@@ -58,8 +81,17 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     @Override
     public List<Employee> readAllEmployees() {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read all employees...");
+        List<Employee> result = null;
+
+        try {
+            result = employeeDao.readAllEmployees();
+            Log.info("Successfully retrieved employees");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -69,8 +101,17 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     @Override
     public Employee readEmployee(int employeeId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read employee...");
+        Employee result = null;
+
+        try {
+            result = employeeDao.readEmployee(employeeId);
+            Log.info("Successfully retrieved employee");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -87,7 +128,21 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public boolean updateEmployee(int employeeId, String name, String title, int supervisor, String department,
                                     boolean deptHead) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to update employee...");
+        boolean result = false;
+
+        Employee employee = new Employee(employeeId, name, title, supervisor, department, deptHead);
+
+        try {
+            result = employeeDao.updateEmployee(employee);
+            if(result) {
+                Log.info("Successfully updated employee");
+            } else {
+                Log.info("Something went wrong, employee not updated properly");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 }
