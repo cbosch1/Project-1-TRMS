@@ -197,7 +197,7 @@ public class AttachmentDaoTest {
 	@Test
 	public void deleteAttachmentTest() {
 		try {
-			//Insert test attachment to be read
+			//Insert test attachment to be deleted
 			String sql = "INSERT INTO attachment VALUES (?,?,?,?);";
 			
 			try {
@@ -239,6 +239,72 @@ public class AttachmentDaoTest {
 		}
 	}
 
+	@Test
+	public void updateAttachmentTest(){
+		try {
+			//Insert test attachment to be deleted
+			String sql = "INSERT INTO attachment VALUES (?,?,?,?);";
+			
+			try {
+				testStmt = realConn.prepareStatement(sql);
+				testStmt.setInt(1, attach.getAttachId());
+				testStmt.setInt(2, attach.getRequestId());
+				testStmt.setString(3, attach.getFileType());
+				testStmt.setBinaryStream(4, attach.getData());
+				assertTrue("Error in inserting attachment", 1 == testStmt.executeUpdate());
+			} catch (SQLException e){
+				fail("SQLException thrown in test setup: " + e);
+			}
+
+			//Prep statement with proper SQL
+			sql = "UPDATE attachment SET request_id=?, file_type=?, file=? WHERE attach_id = ?;";
+			try {
+				initStmtHelper(sql);
+			} catch (SQLException e){
+				fail("SQLException thrown while utilizing helper method");
+			}
+
+			//Test updateAttachment
+			try {
+				//Modify values
+				attach.setRequestId(7);
+				attach.setFileType("This file sux");
+
+				assertTrue("Dao returned false", attachDao.updateAttachment(attach));
+				
+				//Verify statement was prepared and executed properly
+				verify(spy).setInt(1, attach.getRequestId());
+				verify(spy).setString(2, attach.getFileType());
+				verify(spy).setBinaryStream(3, attach.getData());
+				verify(spy).setInt(4, attach.getAttachId());
+
+				verify(spy).executeUpdate();
+
+				//Pull modified attachment object from database for comparison
+				testStmt = realConn.prepareStatement("SELECT * FROM attachment WHERE attach_id = ?;");
+				testStmt.setInt(1, attach.getAttachId());
+				ResultSet rs = testStmt.executeQuery();
+
+				rs.next();
+				Attachment modAttach = new Attachment(rs.getInt(1), rs.getInt(2), rs.getString(3));
+				modAttach.setData(rs.getBinaryStream(4));
+
+				assertTrue("Database object does not match as modified", attach.equals(modAttach));
+
+			} catch(SQLException e) {
+				fail("SQLException thrown while attempting to update object: " + e);
+			}
+		} finally {
+			//Removal process, post-test
+			try {
+				testStmt = realConn.prepareStatement("DELETE FROM attachment WHERE attach_id = ?;");
+				testStmt.setInt(1, attach.getAttachId());
+				testStmt.executeUpdate();
+			} catch (SQLException e) {
+				fail("TEST ERROR, could not properly remove attachment: " + e);
+			}
+		}
+	}
 	/**
 	 * Helper method that initializes mock and spy variables using the prepared sql string provided
 	 * @param sql -Prepared SQL String

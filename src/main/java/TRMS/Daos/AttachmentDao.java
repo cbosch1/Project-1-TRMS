@@ -40,4 +40,12 @@ public interface AttachmentDao {
      * @return true if request was successful
      */
     public boolean deleteAttachment(int attachId) throws SQLException;
+
+    /**
+     * Updates attachment data inside storage, pulls the object's id number
+     * and will update all information except the id number.
+     * @param attach The attachment object with updated fields
+     * @return true if request was successful
+     */
+    public boolean updateAttachment(Attachment attach) throws SQLException;
 }

@@ -161,5 +161,40 @@ public class AttachmentDaoPostgres implements AttachmentDao {
 
         return result;
     }
+
+    /**
+     * Updates attachment data inside the database, pulls the object's id number
+     * and will update all information except the id number.
+     * @param attach The attachment object with updated fields
+     * @return true if request was successful
+     */
+    public boolean updateAttachment(Attachment attach) throws SQLException {
+        boolean result = false; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to update attachment with id: " + attach.getAttachId());
+
+            String sql = "UPDATE attachment SET request_id=?, file_type=?, file=? WHERE attach_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, attach.getRequestId());
+            stmt.setString(2, attach.getFileType());
+            stmt.setBinaryStream(3, attach.getData());
+            stmt.setInt(4, attach.getAttachId());
+
+            result = (1 == stmt.executeUpdate());
+
+            if (result){
+                Log.info("Request completed, attachment with id: " + attach.getAttachId() + " was updated.");
+            } else
+                Log.warn("Request to update attachment with id: " + attach.getAttachId() +" was NOT completed");
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in updated related to attachment: " + attach.getAttachId(), e);
+            throw e;
+        }
+
+        return result;
+    }
     
 }
