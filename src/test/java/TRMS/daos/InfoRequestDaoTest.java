@@ -91,7 +91,7 @@ public class InfoRequestDaoTest {
 				verify(spy).setDate(5, Date.valueOf(LocalDate.from(info.getDateTime())));
 				verify(spy).setTime(6, Time.valueOf(LocalTime.from(info.getDateTime())));
 
-				verify(spy).executeUpdate();
+				verify(spy).executeQuery();
 
 				assertTrue("returned id does not match expected", returnId > 0);
 
@@ -234,9 +234,9 @@ public class InfoRequestDaoTest {
 			fail("SQLException thrown: " + e);
 		}
 
-		//Test readRelatedReference functionality
+		//Test readAllInfoReq functionality
 		try {
-			List<InfoRequest> infos = infoDao.readAllInfoFor(info.getDestinationId());
+			List<InfoRequest> infos = infoDao.readAllInfoReq();
 
 			//Verify statement was executed properly
 			verify(spy).executeQuery();
@@ -248,7 +248,7 @@ public class InfoRequestDaoTest {
 				assertFalse("related_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getRelatedId());
 				assertFalse("destination_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getDestinationId());
 				assertFalse("description returned empty for InfoRequest: "+ i.getInfoId(), "".equals(i.getDescription()));
-				assertFalse("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
+				assertTrue("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
 			}
 		} catch (SQLException e) {
 			fail("SQLException thrown while reading all InfoRequests");

@@ -84,7 +84,7 @@ public class UserDaoTest {
 				verify(spy).setString(3, user.getPassword());
 				verify(spy).setString(4, user.getPrivilege().toString());
 
-				verify(spy).executeUpdate();
+				verify(spy).executeQuery();
 
 				assertTrue("returned id does not match expected", returnId > 0);
 
@@ -172,7 +172,7 @@ public class UserDaoTest {
 			}
 
 			//Prep statement with proper SQL
-			sql = "UPDATE userbase SET emp_id = ?, username = ?, passphrase = ?, privilege = ? WHERE user_id = ?;";
+			sql = "UPDATE userbase SET emp_id = ?, username = ?, passphrase = ?, privilege = ?::auth_priv WHERE user_id = ?;";
 			try {
 				initStmtHelper(sql);
 			} catch (SQLException e){
@@ -201,8 +201,8 @@ public class UserDaoTest {
 
 				rs.next();
 
-				User modUser = new User(rs.getInt(1), rs.getString(2), rs.getString(3),
-										rs.getInt(4), AuthPriv.valueOf(rs.getString(5)));
+				User modUser = new User(rs.getInt(1), rs.getString(3), rs.getString(4),
+										rs.getInt(2), AuthPriv.valueOf(rs.getString(5)));
 
 				assertTrue("Database object does not match as modified", user.equals(modUser));
 
