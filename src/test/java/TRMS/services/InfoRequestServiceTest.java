@@ -50,6 +50,7 @@ public class InfoRequestServiceTest {
 	@Test
 	public void createInfoRequestTest() {
 		try {
+			info.setInfoId(0);
 			when(mockDao.createInfoRequest(info)).thenReturn(info.getInfoId());
 
 			assertTrue("createInfoRequest returned false", 
@@ -72,7 +73,7 @@ public class InfoRequestServiceTest {
 
 			InfoRequest returned = serviceToTest.readInfoRequest(info.getInfoId());
 
-			verify(mockDao.readInfoRequest(info.getInfoId()));
+			verify(mockDao).readInfoRequest(info.getInfoId());
 
 			assertTrue("Object read does not match expected", info.equals(returned));
 
