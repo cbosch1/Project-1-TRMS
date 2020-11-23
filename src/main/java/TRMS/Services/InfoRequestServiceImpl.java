@@ -1,5 +1,6 @@
 package TRMS.services;
 
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -19,11 +20,11 @@ public class InfoRequestServiceImpl implements InfoRequestService {
 
     private static Logger Log = LogManager.getLogger("Service");
 
-    private InfoRequestDao infoRequestDao;
+    private InfoRequestDao infoDao;
 
     public InfoRequestServiceImpl(InfoRequestDao infoRequestDao){
         super();
-        this.infoRequestDao = infoRequestDao;
+        this.infoDao = infoRequestDao;
     }
 
     /**
@@ -39,8 +40,18 @@ public class InfoRequestServiceImpl implements InfoRequestService {
     @Override
     public int createInfoRequest(int relatedId, int destinationId, boolean urgent, String description,
             LocalDateTime dateTime) {
-        // TODO Auto-generated method stub
-        return 0;
+        Log.info("Responding to create information request...");
+        int result = -1;
+
+        InfoRequest info = new InfoRequest(0, relatedId, destinationId, urgent, description, dateTime);
+
+        try {
+            result = infoDao.createInfoRequest(info);
+            Log.info("Successfully created information request");
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -50,8 +61,20 @@ public class InfoRequestServiceImpl implements InfoRequestService {
      */
     @Override
     public boolean deleteInfoRequest(int infoId) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to delete information request...");
+        boolean result = false;
+
+        try {
+            result = infoDao.deleteInfoRequest(infoId);
+            if(result) {
+                Log.info("Successfully deleted information request");
+            } else {
+                Log.warn("Information request was not successfully deleted");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -62,8 +85,17 @@ public class InfoRequestServiceImpl implements InfoRequestService {
      */
     @Override
     public List<InfoRequest> readAllInfoFor(int employeeId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read all information requests for employee " +employeeId+ "...");
+        List<InfoRequest> result = null;
+
+        try {
+            result = infoDao.readAllInfoFor(employeeId);
+            Log.info("Successfully retrieved information requests");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -72,8 +104,17 @@ public class InfoRequestServiceImpl implements InfoRequestService {
      */
     @Override
     public List<InfoRequest> readAllInfoReq() {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read all information requests...");
+        List<InfoRequest> result = null;
+
+        try {
+            result = infoDao.readAllInfoReq();
+            Log.info("Successfully retrieved information requests");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -83,8 +124,17 @@ public class InfoRequestServiceImpl implements InfoRequestService {
      */
     @Override
     public InfoRequest readInfoRequest(int infoId) {
-        // TODO Auto-generated method stub
-        return null;
+        Log.info("Responding to read information request...");
+        InfoRequest result = null;
+
+        try {
+            result = infoDao.readInfoRequest(infoId);
+            Log.info("Successfully retrieved information request");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
 
     /**
@@ -101,8 +151,23 @@ public class InfoRequestServiceImpl implements InfoRequestService {
     @Override
     public boolean updateInfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,
             LocalDateTime dateTime) {
-        // TODO Auto-generated method stub
-        return false;
+        Log.info("Responding to update information request...");
+        boolean result = false;
+
+        InfoRequest info = new InfoRequest(infoId, relatedId, destinationId, urgent, description, dateTime);
+
+        try {
+            result = infoDao.updateInfoRequest(info);
+
+            if(result) {
+                Log.info("Successfully updated information request");
+            } else {
+                Log.info("Something went wrong, information request not updated properly");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
     }
     
 }
