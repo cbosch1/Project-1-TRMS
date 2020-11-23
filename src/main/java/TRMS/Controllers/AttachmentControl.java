@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import TRMS.services.AttachmentService;
 import io.javalin.http.Context;
+import io.javalin.http.UploadedFile;
 
 /**
  * AttachmentControl implementation, dependency is an object that implements
@@ -37,7 +38,32 @@ public class AttachmentControl {
      * <li>file</li></ul>
      */
     public void createAttachment(Context ctx){
+        try {
+            String attachNum = ctx.formParam("attachId");
+            int requestId = Integer.parseInt(ctx.formParam("requestId"));
+            String fileType = ctx.formParam("fileType");
+            UploadedFile file = ctx.uploadedFile("file");
+            int returnId;
+    
+            if (attachNum.equals("")){
+                returnId = service.createAttachment(requestId, fileType, file.getContent());
+            } else {
+                returnId = service.createAttachment(Integer.parseInt(attachNum), requestId, fileType, file.getContent());
+            }
+            ctx.json(returnId);
+            ctx.status(200);
+            Log.info("Successfully inserted attachment, id returned: " + returnId);
 
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while creating attachment: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while creating attachment: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -51,7 +77,22 @@ public class AttachmentControl {
      * <ul><li>attachId</li></ul>
      */
     public void readAttachment(Context ctx){
+        try {
+            int attachId = Integer.parseInt(ctx.formParam("attachId"));
+            ctx.json(service.readAttachment(attachId));
+            ctx.status(200);
+            Log.info("Successfully read attachment");
 
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while reading attachment: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while reading attachment: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -65,7 +106,25 @@ public class AttachmentControl {
      * <ul><li>requestId</li></ul>
      */
     public void readRelatedReferences(Context ctx){
+        int requestId = -1;
+        try {
+            requestId = Integer.parseInt(ctx.formParam("requestId"));
 
+            ctx.json(service.readRelatedReferences(requestId));
+
+            ctx.status(200);
+            Log.info("Successfully read attachments related to: " + requestId);
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while reading attachments related to: " + requestId + " Exception: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+         } catch (Exception e) {
+            Log.warn("Exception thrown while reading attachments related to: " + requestId + " Exception: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -81,7 +140,28 @@ public class AttachmentControl {
      * <li>file</li></ul>
      */
     public void updateAttachment(Context ctx){
+        try {
+            int attachId = Integer.parseInt(ctx.formParam("attachId"));
+            int requestId = Integer.parseInt(ctx.formParam("requestId"));
+            String fileType = ctx.formParam("fileType");
+            UploadedFile file = ctx.uploadedFile("file");
+    
+            if (service.updateAttachment(attachId, requestId, fileType, file.getContent())){
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while updating attachment");
+                ctx.status(500);
+            }
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while updating attachment: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
 
+        } catch (Exception e) {
+            Log.warn("Exception thrown while updating attachment: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -94,6 +174,24 @@ public class AttachmentControl {
      * <ul><li>attachId</li></ul>
      */
     public void deleteAttachment(Context ctx){
-        
+        try {
+            int attachId = Integer.parseInt(ctx.formParam("attachId"));
+
+            if (service.deleteAttachment(attachId)){
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while deleting attachment");
+                ctx.status(500);
+            }
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while deleting attachment: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while deleting attachment: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 }
