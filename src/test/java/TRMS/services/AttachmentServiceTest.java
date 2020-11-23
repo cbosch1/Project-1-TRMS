@@ -94,7 +94,7 @@ public class AttachmentServiceTest {
 
 			List<Integer> foundRefs = attachServ.readRelatedReferences(attach.getRequestId());
 
-			verify(mockDao.readRelatedReference(attach.getRequestId()));
+			verify(mockDao).readRelatedReference(attach.getRequestId());
 
 			assertTrue("Objects read do not match expected", references.equals(foundRefs));
 
@@ -108,15 +108,13 @@ public class AttachmentServiceTest {
 	@Test
 	public void updateAttachmentTest() {
 		try {
-			when(mockDao.deleteAttachment(attach.getAttachId())).thenReturn(true);
-			when(mockDao.createAttachment(attach)).thenReturn(attach.getAttachId());
+			when(mockDao.updateAttachment(attach)).thenReturn(true);
 
 			assertTrue("updateAttachment returned false", 
 						attachServ.updateAttachment(attach.getAttachId(), attach.getRequestId(), 
 														attach.getFileType(), attach.getData()));
 
-			verify(mockDao).deleteAttachment(attach.getAttachId());
-			verify(mockDao).createAttachment(attach);
+			verify(mockDao).updateAttachment(attach);
 
 		} catch (SQLException e) {
 			fail("SQLException thrown by update method: " + e);
