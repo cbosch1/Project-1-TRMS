@@ -124,7 +124,7 @@ public class ReimburseControlTest {
 
 			controlToTest.readAllRequestsFor(mockCtx);
 
-			verify(mockCtx).formParam("empId");
+			verify(mockCtx).formParam("employeeId");
 			verify(mockService).readAllRequestsFor(request.getEmployeeId());
 
 			//TODO verify ctx being given proper inputs.
@@ -159,6 +159,11 @@ public class ReimburseControlTest {
 	@Test
 	public void updateRequestTest() {
 		try {
+			when(mockService.updateRequest(request.getRequestId(), request.getEmployeeId(), request.getLocation(), 
+											request.getCost(), request.getType(), request.getDescription(), 
+											request.getJustification(), request.getProjected(), request.isUrgent(), 
+											request.getStatus(), request.getStage(), request.getDateTime())).thenReturn(true);
+
 			controlToTest.updateRequest(mockCtx);
 	
 			verify(mockCtx).formParam("requestId");
@@ -191,6 +196,8 @@ public class ReimburseControlTest {
 	@Test
 	public void deleteRequestTest() {
 		try {
+			when(mockService.deleteRequest(request.getRequestId())).thenReturn(true);
+
 			controlToTest.deleteRequest(mockCtx);
 
 			verify(mockCtx).formParam("requestId");
