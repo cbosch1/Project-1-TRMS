@@ -39,7 +39,29 @@ public class EmployeeControl {
      * <li>deptHead</li></ul>
      */
     public void createEmployee(Context ctx){
+        try {
+            String name = ctx.formParam("name");
+            String title = ctx.formParam("title");
+            int supervisor = Integer.parseInt(ctx.formParam("supervisor"));
+            String department = ctx.formParam("department");
+            Boolean deptHead = Boolean.parseBoolean(ctx.formParam("deptHead"));
+            
+            int returnId = service.createEmployee(name, title, supervisor, department, deptHead);
 
+            ctx.json(returnId);
+            ctx.status(200);
+            Log.info("Successfully inserted employee, id returned: " + returnId);
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while creating employee: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while creating employee: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -53,7 +75,23 @@ public class EmployeeControl {
      * <ul><li>employeeId</li></ul>
      */
     public void readEmployee(Context ctx){
+        try {
+            int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
+            ctx.json(service.readEmployee(employeeId));
 
+            ctx.status(200);
+            Log.info("Successfully read employee");
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while reading employee: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while reading employee: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -62,7 +100,17 @@ public class EmployeeControl {
      * status code to the ctx
      */
     public void readAllEmployees(Context ctx){
+        try {
+            ctx.json(service.readAllEmployees());
 
+            ctx.status(200);
+            Log.info("Successfully read all employees");
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while reading all employees: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -80,7 +128,32 @@ public class EmployeeControl {
      * <li>deptHead</li></ul>
      */
     public void updateEmployee(Context ctx){
+        try {
+            int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
+            String name = ctx.formParam("name");
+            String title = ctx.formParam("title");
+            int supervisor = Integer.parseInt(ctx.formParam("supervisor"));
+            String department = ctx.formParam("department");
+            Boolean deptHead = Boolean.parseBoolean(ctx.formParam("deptHead"));
+    
+            if (service.updateEmployee(employeeId, name, title, supervisor, department, deptHead)){
+                Log.info("Employee successfully updated");
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while updating employee");
+                ctx.status(500);
+            }
 
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while updating employee: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while updating employee: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -93,6 +166,25 @@ public class EmployeeControl {
      * <ul><li>employeeId</li></ul>
      */
     public void deleteEmployee(Context ctx){
-        
+        try {
+            int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
+
+            if (service.deleteEmployee(employeeId)){
+                Log.info("Employee successfully deleted");
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while deleting employee");
+                ctx.status(500);
+            }
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while deleting employee: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while deleting employee: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 }
