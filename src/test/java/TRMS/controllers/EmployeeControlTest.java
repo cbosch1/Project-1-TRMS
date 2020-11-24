@@ -120,6 +120,10 @@ public class EmployeeControlTest {
 	@Test
 	public void updateEmployeeTest() {
 		try {
+			when(mockService.updateEmployee(employee.getEmployeeId(), employee.getName(), employee.getTitle(), 
+											employee.getSupervisor(), employee.getDepartment(), 
+											employee.getDeptHead())).thenReturn(true);
+
 			controlToTest.updateEmployee(mockCtx);
 	
 			verify(mockCtx).formParam("employeeId");
@@ -144,6 +148,8 @@ public class EmployeeControlTest {
 	@Test
 	public void deleteEmployeeTest() {
 		try {
+			when(mockService.deleteEmployee(employee.getEmployeeId())).thenReturn(true);
+
 			controlToTest.deleteEmployee(mockCtx);
 
 			verify(mockCtx).formParam("employeeId");
