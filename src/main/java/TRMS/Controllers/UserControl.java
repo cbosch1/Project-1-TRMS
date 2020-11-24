@@ -3,6 +3,7 @@ package TRMS.controllers;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import TRMS.enums.AuthPriv;
 import TRMS.services.UserService;
 import io.javalin.http.Context;
 
@@ -38,7 +39,28 @@ public class UserControl {
      * <li>privilege</li></ul>
      */
     public void createUser(Context ctx){
-        
+        try {
+            String username = ctx.formParam("username");
+            String password = ctx.formParam("password");
+            int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
+            AuthPriv privilege = AuthPriv.valueOf(ctx.formParam("privilege"));
+            
+            int returnId = service.createUser(username, password, employeeId, privilege);
+
+            ctx.json(returnId);
+            ctx.status(200);
+            Log.info("Successfully inserted user, id returned: " + returnId);
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while creating user: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while creating user: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -52,7 +74,23 @@ public class UserControl {
      * <ul><li>userId</li></ul>
      */
     public void readUser(Context ctx){
-        
+        try {
+            int userId = Integer.parseInt(ctx.formParam("userId"));
+            ctx.json(service.readUser(userId));
+
+            ctx.status(200);
+            Log.info("Successfully read user");
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while reading user: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while reading user: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -69,7 +107,31 @@ public class UserControl {
      * <li>privilege</li></ul>
      */
     public void updateUser(Context ctx){
-        
+        try {
+            int userId = Integer.parseInt(ctx.formParam("userId"));
+            String username = ctx.formParam("username");
+            String password = ctx.formParam("password");
+            int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
+            AuthPriv privilege = AuthPriv.valueOf(ctx.formParam("privilege"));
+    
+            if (service.updateUser(userId, username, password, employeeId, privilege)){
+                Log.info("User successfully updated");
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while updating user");
+                ctx.status(500);
+            }
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while updating user: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while updating user: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -82,6 +144,25 @@ public class UserControl {
      * <ul><li>userId</li></ul>
      */
     public void deleteUser(Context ctx){
-        
+        try {
+            int userId = Integer.parseInt(ctx.formParam("userId"));
+
+            if (service.deleteUser(userId)){
+                Log.info("User successfully deleted");
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while deleting user");
+                ctx.status(500);
+            }
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while deleting user: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while deleting user: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 }
