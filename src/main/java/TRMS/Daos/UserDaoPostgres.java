@@ -162,4 +162,29 @@ public class UserDaoPostgres implements UserDao {
         return result;
     }
     
+    public User loginUser(String username, String password) throws SQLException {
+        User result = null; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to login user: " + username);
+
+            String sql = "SELECT * FROM userbase WHERE username = ? AND passphrase = ?";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            result = new User(rs.getInt(1), rs.getString(3), rs.getString(4), rs.getInt(2), AuthPriv.valueOf(rs.getString(5)));
+
+            Log.info("Request completed, logged in user: " + result.getUsername());
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in user login: " + username, e);
+            throw e;
+        }
+
+        return result;
+    }
 }

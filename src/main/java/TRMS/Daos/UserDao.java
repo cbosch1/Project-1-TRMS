@@ -39,4 +39,6 @@ public interface UserDao {
      * @return true if request was successful
      */
     public boolean deleteUser(int userId) throws SQLException;
+
+    public User loginUser(String username, String password) throws SQLException;
 }
