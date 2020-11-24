@@ -107,7 +107,7 @@ public class InfoRequestControlTest {
 
 			controlToTest.readAllInfoFor(mockCtx);
 
-			verify(mockCtx).formParam("empId");
+			verify(mockCtx).formParam("destinationId");
 			verify(mockService).readAllInfoFor(request.getDestinationId());
 
 			//TODO verify ctx being given proper inputs.
@@ -142,6 +142,9 @@ public class InfoRequestControlTest {
 	@Test
 	public void updateInfoRequestTest() {
 		try {
+			when(mockService.updateInfoRequest(request.getInfoId(), request.getRelatedId(), request.getDestinationId(), 
+										request.getUrgent(), request.getDescription(), request.getDateTime())).thenReturn(true);
+
 			controlToTest.updateInfoRequest(mockCtx);
 	
 			verify(mockCtx).formParam("infoId");
@@ -166,9 +169,11 @@ public class InfoRequestControlTest {
 	@Test
 	public void deleteInfoRequestTest() {
 		try {
+			when(mockService.deleteInfoRequest(request.getInfoId())).thenReturn(true);
+
 			controlToTest.deleteInfoRequest(mockCtx);
 
-			verify(mockCtx).formParam("requestId");
+			verify(mockCtx).formParam("infoId");
 			verify(mockService).deleteInfoRequest(request.getInfoId());
 
 			//TODO verify ctx being given proper inputs.
