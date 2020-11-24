@@ -94,6 +94,9 @@ public class UserControlTest {
 	@Test
 	public void updateUserTest() {
 		try {
+			when(mockService.updateUser(user.getUserId(), user.getUsername(), user.getPassword(), 
+										user.getEmployeeId(), user.getPrivilege())).thenReturn(true);
+
 			controlToTest.updateUser(mockCtx);
 	
 			verify(mockCtx).formParam("userId");
@@ -117,6 +120,8 @@ public class UserControlTest {
 	@Test
 	public void deleteUserTest() {
 		try {
+			when(mockService.deleteUser(user.getUserId())).thenReturn(true);
+
 			controlToTest.deleteUser(mockCtx);
 
 			verify(mockCtx).formParam("userId");
