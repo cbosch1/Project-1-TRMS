@@ -147,6 +147,7 @@ public class AttachmentControl {
             UploadedFile file = ctx.uploadedFile("file");
     
             if (service.updateAttachment(attachId, requestId, fileType, file.getContent())){
+                Log.info("Attachment successfully updated");
                 ctx.status(200);
             } else {
                 Log.warn("Service returned false while updating attachment");
@@ -178,6 +179,7 @@ public class AttachmentControl {
             int attachId = Integer.parseInt(ctx.formParam("attachId"));
 
             if (service.deleteAttachment(attachId)){
+                Log.info("Attachment successfully deleted");
                 ctx.status(200);
             } else {
                 Log.warn("Service returned false while deleting attachment");
