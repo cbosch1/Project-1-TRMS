@@ -21,7 +21,7 @@ CREATE TABLE userbase
 	user_id serial PRIMARY KEY,
 	emp_id integer NOT NULL,
 	username varchar(50) NOT NULL,
-	passphrase varchar(50) NOT NULL,
+	passphrase varchar(200) NOT NULL,
 	privilege auth_priv NOT NULL
 );
 
