@@ -16,12 +16,12 @@ public class AuthControl {
 
     private static final String TOKEN_NAME = "TRMS-CB-Security-Token";
 
-    private AuthService service;
+    private AuthService authService;
     private UserService userService;
 
     public AuthControl(AuthService authService, UserService userService){
         super();
-        this.service = authService;
+        this.authService = authService;
         this.userService = userService;
     }
 
@@ -32,7 +32,7 @@ public class AuthControl {
         User user = userService.loginUser(username, password);
 
         if(Objects.nonNull(user)) {
-            ctx.cookieStore(TOKEN_NAME, service.createToken(user));
+            ctx.cookieStore(TOKEN_NAME, authService.createToken(user));
             ctx.redirect("employee-overview.html");
         } else {
             ctx.redirect("index.html?error=failed-login");
@@ -40,10 +40,10 @@ public class AuthControl {
     }
 
     public void checkUser(Context ctx) {
-        ctx.html(Boolean.toString(service.validateToken(ctx.cookieStore(TOKEN_NAME))));
+        ctx.html(Boolean.toString(authService.validateToken(ctx.cookieStore(TOKEN_NAME))));
     }
 
     public void getPrivilege(Context ctx) {
-        ctx.html(service.readTokenPrivilege(ctx.cookieStore(TOKEN_NAME)));
+        ctx.html(authService.readTokenPrivilege(ctx.cookieStore(TOKEN_NAME)));
     }
 }
