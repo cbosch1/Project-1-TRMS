@@ -1,5 +1,7 @@
 package TRMS.controllers;
 
+import java.time.LocalDateTime;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,21 +41,59 @@ public class InfoRequestControl {
      * <li>dateTime - optional</li></ul>
      */
     public void createInfoRequest(Context ctx){
+        try {
+            int relatedId = Integer.parseInt(ctx.formParam("relatedId"));
+            int destinationId = Integer.parseInt(ctx.formParam("destinationId"));
+            boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
+            String description = ctx.formParam("description");
+            LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
+            
+            int returnId = service.createInfoRequest(relatedId, destinationId, urgent, description, dateTime);
 
+            ctx.json(returnId);
+            ctx.status(200);
+            Log.info("Successfully inserted info request, id returned: " + returnId);
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while creating info request: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while creating info request: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
-     * For reading the information request with the given requestId.
+     * For reading the information request with the given infoId.
      * Parses form parameters out of the context object and passes them
      * to the proper Service method. The ctx will have values set to the 
      * returned information request object. Then this method will apply 
      * the correct status code to the ctx.
      * 
      * @param ctx A context object that has at least the following formParams:
-     * <ul><li>requestId</li></ul>
+     * <ul><li>infoId</li></ul>
      */
     public void readInfoRequest(Context ctx){
-        
+        try {
+            int infoId = Integer.parseInt(ctx.formParam("infoId"));
+            ctx.json(service.readInfoRequest(infoId));
+
+            ctx.status(200);
+            Log.info("Successfully read information request");
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while reading information request: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while reading information request: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -67,7 +107,19 @@ public class InfoRequestControl {
      * <ul><li>empId</li></ul>
      */
     public void readAllInfoFor(Context ctx){
-        
+        int employeeId = -1;
+        try {
+            employeeId = Integer.parseInt(ctx.formParam("destinationId"));
+            ctx.json(service.readAllInfoFor(employeeId));
+
+            ctx.status(200);
+            Log.info("Successfully read all info requests for employee: " + employeeId);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while reading all info requests for employee: " + employeeId + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -76,7 +128,17 @@ public class InfoRequestControl {
      * apply the correct status code to the ctx.
      */
     public void readAllInfoReq(Context ctx){
-        
+        try {
+            ctx.json(service.readAllInfoReq());
+
+            ctx.status(200);
+            Log.info("Successfully read all information requests");
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while reading all information requests: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -94,7 +156,32 @@ public class InfoRequestControl {
      * <li>dateTime</li></ul>
      */
     public void updateInfoRequest(Context ctx){
-        
+        try {
+            int infoId = Integer.parseInt(ctx.formParam("infoId"));
+            int relatedId = Integer.parseInt(ctx.formParam("relatedId"));
+            int destinationId = Integer.parseInt(ctx.formParam("destinationId"));
+            boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
+            String description = ctx.formParam("description");
+            LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
+    
+            if (service.updateInfoRequest(infoId, relatedId, destinationId, urgent, description, dateTime)){
+                Log.info("Info request successfully updated");
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while updating information request");
+                ctx.status(500);
+            }
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while updating information request: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while updating information request: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 
     /**
@@ -107,6 +194,25 @@ public class InfoRequestControl {
      * <ul><li>infoId</li></ul>
      */
     public void deleteInfoRequest(Context ctx){
-        
+        try {
+            int infoId = Integer.parseInt(ctx.formParam("infoId"));
+
+            if (service.deleteInfoRequest(infoId)){
+                Log.info("Information Request successfully deleted");
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while deleting information request");
+                ctx.status(500);
+            }
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while deleting information request: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while deleting information request: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
     }
 }
