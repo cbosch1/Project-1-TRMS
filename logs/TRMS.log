@@ -1,0 +1,393 @@
+2020-11-24 13:49:33,922 [qtp541698497-20] INFO : Control - Received request to log in user: myGuy
+2020-11-24 13:49:33,928 [qtp541698497-20] INFO : Service - Responding to login user...
+2020-11-24 13:49:34,205 [qtp541698497-20] INFO : Util - Successfully retrieved connection to database.
+2020-11-24 13:49:34,205 [qtp541698497-20] INFO : Dao - Received request to login user: myGuy
+2020-11-24 13:49:34,292 [qtp541698497-20] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-24 13:49:34,293 [qtp541698497-20] INFO : Service - Successfully logged in user
+2020-11-24 14:06:57,285 [qtp541698497-32] INFO : Control - Received request to log in user: myGuy
+2020-11-24 14:06:57,286 [qtp541698497-32] INFO : Service - Responding to login user...
+2020-11-24 14:06:57,334 [qtp541698497-32] INFO : Util - Successfully retrieved connection to database.
+2020-11-24 14:06:57,335 [qtp541698497-32] INFO : Dao - Received request to login user: myGuy
+2020-11-24 14:06:57,340 [qtp541698497-32] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-24 14:06:57,341 [qtp541698497-32] INFO : Service - Successfully logged in user
+2020-11-25 20:35:03,405 [qtp1550228904-18] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:35:03,409 [qtp1550228904-18] INFO : Service - Responding to login user...
+2020-11-25 20:35:03,566 [qtp1550228904-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:35:03,566 [qtp1550228904-18] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:35:03,643 [qtp1550228904-18] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:35:03,643 [qtp1550228904-18] INFO : Service - Successfully logged in user
+2020-11-25 20:35:13,225 [qtp1550228904-18] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:35:13,226 [qtp1550228904-18] INFO : Service - Responding to login user...
+2020-11-25 20:35:13,267 [qtp1550228904-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:35:13,267 [qtp1550228904-18] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:35:13,272 [qtp1550228904-18] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:35:13,273 [qtp1550228904-18] INFO : Service - Successfully logged in user
+2020-11-25 20:35:49,900 [qtp1550228904-18] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:35:49,900 [qtp1550228904-18] INFO : Service - Responding to login user...
+2020-11-25 20:35:49,941 [qtp1550228904-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:35:49,941 [qtp1550228904-18] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:35:49,944 [qtp1550228904-18] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:35:49,945 [qtp1550228904-18] INFO : Service - Successfully logged in user
+2020-11-25 20:38:42,930 [qtp1550228904-18] INFO : Control - Access approved
+2020-11-25 20:39:09,980 [qtp1550228904-19] WARN : Control - Access denied due to login verification
+2020-11-25 20:39:21,204 [qtp1550228904-24] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:39:21,204 [qtp1550228904-24] INFO : Service - Responding to login user...
+2020-11-25 20:39:21,327 [qtp1550228904-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:39:21,327 [qtp1550228904-24] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:39:21,357 [qtp1550228904-24] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:39:21,357 [qtp1550228904-24] INFO : Service - Successfully logged in user
+2020-11-25 20:39:25,415 [qtp1550228904-24] INFO : Control - Access approved
+2020-11-25 20:51:50,503 [qtp1550228904-20] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:51:50,509 [qtp1550228904-20] INFO : Service - Responding to login user...
+2020-11-25 20:51:50,635 [qtp1550228904-20] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:51:50,636 [qtp1550228904-20] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:51:50,671 [qtp1550228904-20] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:51:50,672 [qtp1550228904-20] INFO : Service - Successfully logged in user
+2020-11-25 20:51:55,188 [qtp1550228904-22] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:51:55,188 [qtp1550228904-22] INFO : Service - Responding to login user...
+2020-11-25 20:51:55,233 [qtp1550228904-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:51:55,233 [qtp1550228904-22] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:51:55,237 [qtp1550228904-22] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:51:55,237 [qtp1550228904-22] INFO : Service - Successfully logged in user
+2020-11-25 20:52:01,580 [qtp1550228904-19] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:52:01,580 [qtp1550228904-19] INFO : Service - Responding to login user...
+2020-11-25 20:52:01,614 [qtp1550228904-19] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:52:01,614 [qtp1550228904-19] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:52:01,617 [qtp1550228904-19] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:52:01,617 [qtp1550228904-19] INFO : Service - Successfully logged in user
+2020-11-25 20:52:13,078 [qtp1550228904-22] INFO : Control - Received request to log in user: myGuy
+2020-11-25 20:52:13,079 [qtp1550228904-22] INFO : Service - Responding to login user...
+2020-11-25 20:52:13,120 [qtp1550228904-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 20:52:13,121 [qtp1550228904-22] INFO : Dao - Received request to login user: myGuy
+2020-11-25 20:52:13,125 [qtp1550228904-22] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 20:52:13,126 [qtp1550228904-22] INFO : Service - Successfully logged in user
+2020-11-25 20:52:18,022 [qtp1550228904-22] INFO : Control - Access approved
+2020-11-25 20:52:36,221 [qtp1550228904-22] INFO : Control - Access approved
+2020-11-25 20:53:48,484 [qtp1550228904-29] INFO : Control - Access approved
+2020-11-25 20:53:56,370 [qtp1550228904-22] INFO : Control - Access approved
+2020-11-25 20:54:16,478 [qtp1550228904-22] INFO : Control - Access approved
+2020-11-25 20:55:08,131 [qtp1550228904-20] INFO : Control - Access approved
+2020-11-25 20:55:43,876 [qtp1550228904-29] INFO : Control - Access approved
+2020-11-25 20:56:55,297 [qtp1550228904-29] INFO : Control - Access approved
+2020-11-25 20:56:57,627 [qtp1550228904-18] INFO : Control - Access approved
+2020-11-25 20:56:58,657 [qtp1550228904-24] INFO : Control - Access approved
+2020-11-25 20:57:43,175 [qtp1550228904-17] INFO : Control - Access approved
+2020-11-25 21:19:20,608 [qtp1550228904-24] WARN : Control - Access denied due to login verification
+2020-11-25 21:19:30,092 [qtp1550228904-17] INFO : Control - Access approved
+2020-11-25 21:28:00,307 [qtp1550228904-19] INFO : Control - Access approved
+2020-11-25 21:35:50,844 [qtp1550228904-29] INFO : Control - Access approved
+2020-11-25 21:36:31,379 [qtp1550228904-23] INFO : Control - Access approved
+2020-11-25 21:36:32,902 [qtp1550228904-19] INFO : Control - Access approved
+2020-11-25 21:37:12,296 [qtp1550228904-29] INFO : Control - Access approved
+2020-11-25 21:41:31,107 [qtp1550228904-23] INFO : Control - Access approved
+2020-11-25 21:41:59,671 [qtp1550228904-23] INFO : Control - Access approved
+2020-11-25 21:42:48,915 [qtp1550228904-23] INFO : Control - Access approved
+2020-11-25 22:01:53,424 [qtp1550228904-19] INFO : Control - Received request to log in user: asd
+2020-11-25 22:01:53,429 [qtp1550228904-19] INFO : Service - Responding to login user...
+2020-11-25 22:01:53,575 [qtp1550228904-19] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 22:01:53,576 [qtp1550228904-19] INFO : Dao - Received request to login user: asd
+2020-11-25 22:01:53,623 [qtp1550228904-19] WARN : Dao - SQLException thrown in user login: asd
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$6(WebDriver.java:40)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-25 22:01:53,627 [qtp1550228904-19] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$6(WebDriver.java:40)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-25 22:01:53,627 [qtp1550228904-19] WARN : Control - Login attempt failed
+2020-11-25 22:02:00,748 [qtp1550228904-19] INFO : Control - Received request to log in user: 
+2020-11-25 22:02:00,748 [qtp1550228904-19] INFO : Service - Responding to login user...
+2020-11-25 22:02:00,782 [qtp1550228904-19] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 22:02:00,782 [qtp1550228904-19] INFO : Dao - Received request to login user: 
+2020-11-25 22:02:00,785 [qtp1550228904-19] WARN : Dao - SQLException thrown in user login: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$6(WebDriver.java:40)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-25 22:02:00,786 [qtp1550228904-19] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$6(WebDriver.java:40)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-25 22:02:00,787 [qtp1550228904-19] WARN : Control - Login attempt failed
+2020-11-25 22:02:17,690 [qtp1550228904-20] INFO : Control - Received request to log in user: myGuy
+2020-11-25 22:02:17,691 [qtp1550228904-20] INFO : Service - Responding to login user...
+2020-11-25 22:02:17,729 [qtp1550228904-20] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 22:02:17,729 [qtp1550228904-20] INFO : Dao - Received request to login user: myGuy
+2020-11-25 22:02:17,736 [qtp1550228904-20] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 22:02:17,736 [qtp1550228904-20] INFO : Service - Successfully logged in user
+2020-11-25 22:03:38,798 [qtp1550228904-19] INFO : Control - Received request to log in user: myGuy
+2020-11-25 22:03:38,802 [qtp1550228904-19] INFO : Service - Responding to login user...
+2020-11-25 22:03:38,885 [qtp1550228904-19] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 22:03:38,885 [qtp1550228904-19] INFO : Dao - Received request to login user: myGuy
+2020-11-25 22:03:38,901 [qtp1550228904-19] WARN : Dao - SQLException thrown in user login: myGuy
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$6(WebDriver.java:40)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-25 22:03:38,903 [qtp1550228904-19] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$6(WebDriver.java:40)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-25 22:03:38,903 [qtp1550228904-19] WARN : Control - Login attempt failed
+2020-11-25 22:03:46,786 [qtp1550228904-29] INFO : Control - Received request to log in user: myGuy
+2020-11-25 22:03:46,786 [qtp1550228904-29] INFO : Service - Responding to login user...
+2020-11-25 22:03:46,824 [qtp1550228904-29] INFO : Util - Successfully retrieved connection to database.
+2020-11-25 22:03:46,824 [qtp1550228904-29] INFO : Dao - Received request to login user: myGuy
+2020-11-25 22:03:46,830 [qtp1550228904-29] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-25 22:03:46,830 [qtp1550228904-29] INFO : Service - Successfully logged in user
+2020-11-25 22:03:47,074 [qtp1550228904-29] INFO : Control - Access approved
+2020-11-25 22:04:05,034 [qtp1550228904-24] INFO : Control - Access approved
+2020-11-25 22:05:21,081 [qtp1550228904-29] INFO : Control - Access approved
+2020-11-25 22:07:37,659 [qtp1550228904-17] WARN : Control - Access denied due to login verification

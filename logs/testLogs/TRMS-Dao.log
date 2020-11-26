@@ -25,3 +25,55 @@
 2020-11-22 17:24:43,750 [main] INFO : Request completed, generated attachment id: 16
 2020-11-22 17:24:43,793 [main] INFO : Received request to delete file with id: 2010
 2020-11-22 17:24:43,796 [main] INFO : Request completed, attachment id: 2010 was deleted.
+2020-11-24 14:33:03,172 [main] INFO : Received request to insert employee: Billy Bob
+2020-11-24 14:33:03,233 [main] INFO : Request completed, generated employee id: 6
+2020-11-24 14:33:03,417 [main] INFO : Received request to retrieve employee with id: 2010
+2020-11-24 14:33:03,425 [main] INFO : Request completed, retrieved employee: Billy Bob
+2020-11-24 14:33:03,478 [main] INFO : Received request to delete employee with id: 2010
+2020-11-24 14:33:03,488 [main] INFO : Request completed, employee with id: 2010 was deleted.
+2020-11-24 14:33:03,540 [main] INFO : Received request to update employee with id: 2010
+2020-11-24 14:33:03,548 [main] INFO : Request completed, employee with id: 2010 was updated.
+2020-11-24 14:33:03,610 [main] INFO : Received request to retrieve all employees
+2020-11-24 14:33:03,614 [main] INFO : Request completed, retrieved 2 employees
+2020-11-24 14:33:03,856 [main] INFO : Received request to retrieve user with id: 0
+2020-11-24 14:33:03,862 [main] INFO : Request completed, retrieved user: bigbad1
+2020-11-24 14:33:03,926 [main] INFO : Received request to update user with id: 0
+2020-11-24 14:33:03,933 [main] INFO : Request completed, user with id: 0 was updated.
+2020-11-24 14:33:03,980 [main] INFO : Received request to insert user: bigbad1
+2020-11-24 14:33:03,988 [main] INFO : Request completed, generated user id: 3
+2020-11-24 14:33:04,036 [main] INFO : Received request to delete user with id: 0
+2020-11-24 14:33:04,039 [main] INFO : Request completed, user with id: 0 was deleted.
+2020-11-24 14:33:04,194 [main] INFO : Received request to retrieve all reimbursement requests
+2020-11-24 14:33:04,208 [main] INFO : Request completed, retrieved reimbursement requests, count: 2
+2020-11-24 14:33:04,282 [main] INFO : Received request to update reimbursement request with id: 44
+2020-11-24 14:33:04,296 [main] INFO : Request completed, reimbursement with id: 44 was updated.
+2020-11-24 14:33:04,411 [main] INFO : Received request to retrieve reimbursement request with id: 45
+2020-11-24 14:33:04,432 [main] INFO : Request completed, retrieved reimbursement request with id: 45
+2020-11-24 14:33:04,548 [main] INFO : Received request to delete reimbursement with id: 46
+2020-11-24 14:33:04,570 [main] INFO : Request completed, reimbursement with id: 46 was deleted.
+2020-11-24 14:33:04,653 [main] INFO : Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-24 14:33:04,662 [main] INFO : Request completed, retrieved reimbursement requests related to employee with id: 0, count: 0
+2020-11-24 14:33:04,834 [main] INFO : Received request to insert reimbursement for employee with id: 0
+2020-11-24 14:33:04,877 [main] INFO : Request completed, generated reimbursement request id: 47
+2020-11-24 14:33:05,116 [main] INFO : Received request to retrieve all info requests
+2020-11-24 14:33:05,120 [main] INFO : Request completed, retrieved info request with id: 2010
+2020-11-24 14:33:05,169 [main] INFO : Received request to delete info request with id: 2010
+2020-11-24 14:33:05,176 [main] INFO : Request completed, info request with id: 2010 was deleted.
+2020-11-24 14:33:05,321 [main] INFO : Received request to insert info request related to reimbursement: 1
+2020-11-24 14:33:05,333 [main] INFO : Request completed, generated info request id: 4
+2020-11-24 14:33:05,385 [main] INFO : Received request to retrieve info requests related to employee with id: 0
+2020-11-24 14:33:05,388 [main] INFO : Request completed, retrieved info requests, count: 0
+2020-11-24 14:33:05,440 [main] INFO : Received request to update info request with id: 2010
+2020-11-24 14:33:05,444 [main] INFO : Request completed, info request with id: 2010 was updated.
+2020-11-24 14:33:05,493 [main] INFO : Received request to retrieve all info requests
+2020-11-24 14:33:05,498 [main] INFO : Request completed, retrieved info requests, count: 1
+2020-11-24 14:33:05,541 [main] INFO : Received request to retrieve files related to request with id: 1
+2020-11-24 14:33:05,544 [main] INFO : Request completed, retrieved attachments, count: 1
+2020-11-24 14:33:05,587 [main] INFO : Received request to update attachment with id: 2010
+2020-11-24 14:33:05,591 [main] INFO : Request completed, attachment with id: 2010 was updated.
+2020-11-24 14:33:05,634 [main] INFO : Received request to retrieve file with id: 2010
+2020-11-24 14:33:05,638 [main] INFO : Request completed, retrieved attachment id: 2010
+2020-11-24 14:33:05,676 [main] INFO : Received request to insert file for request: 1
+2020-11-24 14:33:05,683 [main] INFO : Request completed, generated attachment id: 19
+2020-11-24 14:33:05,726 [main] INFO : Received request to delete file with id: 2010
+2020-11-24 14:33:05,729 [main] INFO : Request completed, attachment with id: 2010 was deleted.

@@ -70,7 +70,7 @@
             <AppenderRef ref="RootRollingTest" />
         </Root>
 
-        <Logger name="Controller" level="INFO">
+        <Logger name="Control" level="INFO">
             <AppenderRef ref="ControlRollingTest" />
         </Logger>
 
