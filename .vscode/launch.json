@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WebDriver",
+            "request": "launch",
+            "mainClass": "TRMS.javalin.WebDriver",
+            "projectName": "TRMS"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": "",
+            "env": {
+                "HOTEL_URL": "jdbc:postgresql://localhost:5432/postgres?",
+                "HOTEL_USERNAME": "postgres",
+                "HOTEL_PASSWORD": "password"
+            }
+        }
+    ]
+}

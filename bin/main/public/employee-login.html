@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Employee Login</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
-    <div class="grid-container">
-        <div class="TitleArea">
-            Welcome to employee login!
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse fixed-top container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">TRMS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="employee"><span class="glyphicon glyphicon-log-in"></span> Employee Login</a>
+        </li>
+        <li>
+          <a href="manager"><span class="glyphicon glyphicon-log-in"></span> Manager Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <h1 style="text-align: center">Welcome to the Employee Portal</h1>
+            <form id="employee-login-form" method="POST" action="employee" class="login-form">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" id="username" name="username" placeholder="username" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" id="password" name="password" placeholder="password" />
+              </div>
+              <div class="form-actions">
+                <button id="loginButton" type="submit">Login</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-3" style="text-align: right">
+            <form id="first-time-user-form" method="GET" action="first-time-user">
+              <button id="first-time-user-btn" type="submit" class="btn-block">First time user?</button>
+            </form>
+            <br />
+            <form id="forgot-username-form" method="GET" action="forgot-username">
+              <button id="forgot-username-btn" type="button" class="btn-block">Forgot Username?</button>
+            </form>
+            <form id="forgot-password-form" method="GET" action="forgot-password">
+              <button id="forgot-password-btn" type="button" class="btn-block">Forgot Password?</button>
+            </form>
+          </div>
         </div>
-        <div class="LeftBody"></div>
-        <div class="CenterBody"></div>
-        <div class="RightBody"></div>
-        <div class="Footer"></div>
-    </div>
-</body>
+      </div>
+    </main>
+    <footer class="page-footer col-md-12">
+      © 2020 Copyright: <a href="index.html">TRMS Owning Company</a>
+    </footer>
+  </body>
 </html>

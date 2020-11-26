@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>TRMS - Tuition Reimbursement Management System</title>
+    <title>Employee Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="../main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
@@ -14,18 +14,18 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">TRMS</a>
+          <a class="navbar-brand" href="../index.html">TRMS</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="../index.html">Home</a></li>
           <li><a href="">About us</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="employee"><span class="glyphicon glyphicon-log-in"></span> Employee Login</a>
+            <a href="../Employee/employee-login.html"><span class="glyphicon glyphicon-log-in"></span> Employee Login</a>
           </li>
           <li>
-            <a href="manager"><span class="glyphicon glyphicon-log-in"></span> Manager Login</a>
+            <a href="../Manager/manager-login.html"><span class="glyphicon glyphicon-log-in"></span> Manager Login</a>
           </li>
         </ul>
       </div>
@@ -33,8 +33,14 @@
     <div class="row" style="margin-top: 50px;">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <h1>Welcome to the Tuition Reimbursement Management System!</h1>
-        <p>Welcome and information content, maybe relating to the company utilizing this application.</p>
+        <h1>Welcome to the Employee Portal</h1>
+        <form id="employeeLoginForm" method="POST" action="./employee-overview">
+            <label id="usernameLabel" for="username">Username: </label>
+            <input type="text" id="usernameInput" name="username">
+            <label id="passwordLabel" for="password">Password: </label>
+            <input type="password" id="passwordInput" name="password">
+            <button id="loginButton" type="submit">Login</button>
+        </form>
       </div>
       <div class="col-md-3">
       </div>

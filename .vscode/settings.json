@@ -2,5 +2,6 @@
     "java.configuration.updateBuildConfiguration": "interactive",
     "cSpell.words": [
         "TRMS"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

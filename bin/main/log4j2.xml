@@ -66,7 +66,7 @@
             <AppenderRef ref="RootRolling" />
         </Root>
 
-        <Logger name="Controller" level="INFO">
+        <Logger name="Control" level="INFO">
             <AppenderRef ref="ControlRolling" />
         </Logger>
 
