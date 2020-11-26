@@ -4,3 +4,64 @@
 2020-11-26 15:48:23,656 [qtp2129821055-29] INFO : User successfully logged out
 2020-11-26 15:48:47,272 [qtp2129821055-29] WARN : Token's privilege was not able to be cast: java.lang.IllegalArgumentException: No enum constant TRMS.enums.AuthPriv.
 2020-11-26 15:48:55,454 [qtp2129821055-19] INFO : Received request to log in user: myGuy
+2020-11-26 17:40:57,084 [qtp1664598529-23] INFO : Received request to log in user: asdfasd
+2020-11-26 17:40:57,421 [qtp1664598529-23] WARN : Login attempt failed
+2020-11-26 17:41:18,598 [qtp1664598529-23] INFO : Received request to log in user: myGuy
+2020-11-26 17:41:19,183 [qtp1664598529-23] INFO : Access approved
+2020-11-26 17:42:28,142 [qtp1664598529-24] INFO : Access approved
+2020-11-26 17:42:49,900 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:42:53,405 [qtp1664598529-23] INFO : Access approved
+2020-11-26 17:44:02,121 [qtp1664598529-26] INFO : Received request to log in user: myGuy
+2020-11-26 17:44:02,177 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:44:35,930 [qtp1664598529-26] INFO : Received request to log in user: 
+2020-11-26 17:44:35,968 [qtp1664598529-26] WARN : Login attempt failed
+2020-11-26 17:45:07,441 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:45:10,707 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:45:11,429 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:45:11,794 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:45:11,978 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:45:12,162 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:45:12,360 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:45:22,904 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:46:00,351 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:46:17,184 [qtp1664598529-26] INFO : Access approved
+2020-11-26 17:46:53,551 [qtp1664598529-24] INFO : Received request to log in user: myGuy
+2020-11-26 17:46:53,592 [qtp1664598529-24] INFO : Access approved
+2020-11-26 17:46:59,284 [qtp1664598529-23] INFO : Access approved
+2020-11-26 17:47:16,135 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:47:43,726 [qtp1664598529-24] INFO : Access approved
+2020-11-26 17:47:45,759 [qtp1664598529-24] INFO : Access approved
+2020-11-26 17:47:46,264 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:47:46,451 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:47:46,640 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:48:38,350 [qtp1664598529-25] INFO : Access approved
+2020-11-26 17:48:38,959 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:48:39,169 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:48:39,353 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:48:39,537 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:48:39,710 [qtp1664598529-21] INFO : Access approved
+2020-11-26 17:49:35,814 [qtp1225568095-20] INFO : Received request to log in user: myGuy
+2020-11-26 17:49:36,146 [qtp1225568095-20] INFO : Access approved
+2020-11-26 17:49:38,745 [qtp1225568095-18] INFO : Access approved
+2020-11-26 17:49:43,413 [qtp1225568095-21] INFO : Received request to log in user: myGuy
+2020-11-26 17:49:43,462 [qtp1225568095-21] INFO : Access approved
+2020-11-26 17:50:16,969 [qtp1225568095-21] INFO : Received request to log in user: 
+2020-11-26 17:50:17,013 [qtp1225568095-21] WARN : Login attempt failed
+2020-11-26 17:52:19,785 [qtp1225568095-29] INFO : Received request to log in user: myGuy
+2020-11-26 17:52:19,829 [qtp1225568095-29] INFO : Access approved
+2020-11-26 17:54:34,949 [qtp1225568095-24] INFO : Received request to log in user: null
+2020-11-26 17:54:35,333 [qtp1225568095-24] WARN : Login attempt failed
+2020-11-26 17:55:27,762 [qtp1225568095-21] INFO : Access approved
+2020-11-26 17:55:34,030 [qtp1225568095-22] INFO : Access approved
+2020-11-26 17:55:48,829 [qtp1225568095-22] INFO : Access approved
+2020-11-26 17:56:47,916 [qtp1225568095-20] INFO : Access approved
+2020-11-26 17:57:00,550 [qtp1225568095-23] INFO : Access approved
+2020-11-26 17:58:06,217 [qtp1225568095-22] INFO : Access approved
+2020-11-26 17:58:07,468 [qtp1225568095-24] INFO : User successfully logged out
+2020-11-26 17:58:30,169 [qtp1225568095-24] INFO : Received request to log in user: myGuy
+2020-11-26 17:58:30,322 [qtp1225568095-24] INFO : Access approved
+2020-11-26 17:58:32,213 [qtp1225568095-24] INFO : Access approved
+2020-11-26 17:58:37,580 [qtp1225568095-24] INFO : Access approved
+2020-11-26 17:58:41,092 [qtp1225568095-22] INFO : Access approved
+2020-11-26 17:58:43,996 [qtp1225568095-24] INFO : Access approved
+2020-11-26 17:58:45,381 [qtp1225568095-24] INFO : User successfully logged out

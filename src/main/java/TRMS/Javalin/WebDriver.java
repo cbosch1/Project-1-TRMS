@@ -10,8 +10,8 @@ import TRMS.services.UserService;
 import TRMS.services.UserServiceImpl;
 import TRMS.util.ConnectionUtil;
 import TRMS.webControllers.EmployeeWebControl;
+import TRMS.webControllers.ManagerWebControl;
 import io.javalin.Javalin;
-import io.javalin.http.JavalinServlet;
 
 public class WebDriver {
 
@@ -25,6 +25,8 @@ public class WebDriver {
     private static AuthControl authControl = new AuthControl(authService, userService);
 
     private static EmployeeWebControl eWebControl = new EmployeeWebControl(authControl);
+    private static ManagerWebControl mWebControl = new ManagerWebControl(authControl);
+
 
     private static final String EMPLOYEE_URL = "employee";
     private static final String MANAGER_URL = "manager";
@@ -41,15 +43,15 @@ public class WebDriver {
         app.get("/forgot-username", ctx -> ctx.redirect("forgot-username.html"));
         app.post("/forgot-password", ctx -> userControl.forgotPassword(ctx));
         app.post("/forgot-username", ctx -> userControl.forgotUsername(ctx));
-        app.post("/logout", ctx -> authControl.logout(ctx));
+        app.get("logout", ctx -> {authControl.logout(ctx); ctx.redirect("index.html");});
 
         //Authorized only endpoints - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         //Employee only endpoints
-        app.get(EMPLOYEE_URL, ctx -> ctx.redirect("employee-login.html"));
+        app.get(EMPLOYEE_URL, ctx -> { if(authControl.checkUser(ctx)) { eWebControl.getOverview(ctx); } 
+                                        else ctx.redirect("employee-login.html");});
         app.post(EMPLOYEE_URL, ctx -> { if(authControl.login(ctx)) { eWebControl.getOverview(ctx); } 
                                         else ctx.redirect("index.html?error=index.html?error=failed-login");});
-        app.get(EMPLOYEE_URL+"/portal", ctx -> eWebControl.getOverview(ctx));
         app.get(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.getNewReimbursement(ctx));
         app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.postNewReimbursement(ctx));
         app.get(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> eWebControl.getViewReimbursement(ctx));
