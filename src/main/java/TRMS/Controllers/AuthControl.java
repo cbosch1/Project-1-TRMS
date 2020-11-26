@@ -5,6 +5,7 @@ import java.util.Objects;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import TRMS.enums.AuthPriv;
 import TRMS.pojos.User;
 import TRMS.services.AuthService;
 import TRMS.services.UserService;
@@ -25,7 +26,7 @@ public class AuthControl {
         this.userService = userService;
     }
 
-    public void login(Context ctx) {
+    public boolean login(Context ctx) {
         String username = ctx.formParam("username");
         String password = ctx.formParam("password");
         Log.info("Received request to log in user: " + username);
@@ -33,17 +34,32 @@ public class AuthControl {
 
         if(Objects.nonNull(user)) {
             ctx.cookieStore(TOKEN_NAME, authService.createToken(user));
-            ctx.redirect("employee-overview.html");
+            return true;
         } else {
-            ctx.redirect("index.html?error=failed-login");
+            Log.warn("Login attempt failed");
+            return false;
         }
     }
 
-    public void checkUser(Context ctx) {
-        ctx.html(Boolean.toString(authService.validateToken(ctx.cookieStore(TOKEN_NAME))));
+    public boolean checkUser(Context ctx) {
+        boolean auth = false;
+        try {
+            auth = authService.validateToken(ctx.cookieStore(TOKEN_NAME));
+        } catch (NullPointerException e) {
+            Log.warn("No cookie found on user device: " + e);
+        }
+        return auth;
     }
 
-    public void getPrivilege(Context ctx) {
-        ctx.html(authService.readTokenPrivilege(ctx.cookieStore(TOKEN_NAME)));
+    public AuthPriv getPrivilege(Context ctx) {
+        AuthPriv priv = null;
+        try {
+            priv = AuthPriv.valueOf(authService.readTokenPrivilege(ctx.cookieStore(TOKEN_NAME)));
+        } catch (IllegalArgumentException e) {
+            Log.warn("Token's privilege was not able to be cast: " + e);
+        } catch (NullPointerException e) {
+            Log.warn("Token's privilege was not able to be found: " + e);
+        }
+        return priv;
     }
 }
