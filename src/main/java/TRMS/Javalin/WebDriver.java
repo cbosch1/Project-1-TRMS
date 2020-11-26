@@ -52,6 +52,7 @@ public class WebDriver {
         app.get(EMPLOYEE_URL+"/portal", ctx -> eWebControl.getOverview(ctx));
         app.get(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.getNewReimbursement(ctx));
         app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.postNewReimbursement(ctx));
+        app.get(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> eWebControl.getViewReimbursement(ctx));
 
         //Manager only endpoints
         app.get(MANAGER_URL, ctx -> ctx.redirect("manager-login.html"));
