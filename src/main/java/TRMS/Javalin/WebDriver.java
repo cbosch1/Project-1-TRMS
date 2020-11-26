@@ -34,6 +34,8 @@ public class WebDriver {
 
         //Open access endpoints
         app.get("", ctx -> ctx.redirect("index.html"));
+        app.get("index", ctx -> ctx.redirect("index.html"));
+        app.get("home", ctx -> ctx.redirect("index.html"));
         app.get("/first-time-user", ctx -> ctx.redirect("first-time-user.html"));
         app.get("/forgot-password", ctx -> ctx.redirect("forgot-password.html"));
         app.get("/forgot-username", ctx -> ctx.redirect("forgot-username.html"));
