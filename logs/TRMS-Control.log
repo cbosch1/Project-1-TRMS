@@ -1,2 +1,6 @@
 2020-11-26 15:26:30,229 [qtp2129821055-20] INFO : Received request to log in user: 
 2020-11-26 15:26:32,050 [qtp2129821055-20] WARN : Login attempt failed
+2020-11-26 15:47:43,056 [qtp2129821055-21] INFO : Received request to log in user: myGuy
+2020-11-26 15:48:23,656 [qtp2129821055-29] INFO : User successfully logged out
+2020-11-26 15:48:47,272 [qtp2129821055-29] WARN : Token's privilege was not able to be cast: java.lang.IllegalArgumentException: No enum constant TRMS.enums.AuthPriv.
+2020-11-26 15:48:55,454 [qtp2129821055-19] INFO : Received request to log in user: myGuy

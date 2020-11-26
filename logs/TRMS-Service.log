@@ -213,3 +213,7 @@ org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps yo
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-26 15:47:43,063 [qtp2129821055-21] INFO : Responding to login user...
+2020-11-26 15:47:43,278 [qtp2129821055-21] INFO : Successfully logged in user
+2020-11-26 15:48:55,454 [qtp2129821055-19] INFO : Responding to login user...
+2020-11-26 15:48:55,545 [qtp2129821055-19] INFO : Successfully logged in user
