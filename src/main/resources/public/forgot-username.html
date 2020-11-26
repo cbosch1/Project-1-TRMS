@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TRMS - Forgot Username</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse fixed-top container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">TRMS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="employee"><span class="glyphicon glyphicon-log-in"></span> Employee Login</a>
+        </li>
+        <li>
+          <a href="manager"><span class="glyphicon glyphicon-log-in"></span> Manager Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 column-left"></div>
+        <div class="col-md-6 column-center" style="text-align: center;">
+          <h2>Username Recovery</h2>
+          <hr />
+          <p>Please enter your email registered in the TRMS below to recover your username.</p>
+          <p>
+            If the email is present in our system, the username associated with that email will be sent to you.
+          </p>
+          <br />
+          <form id="username-request-form" method="POST" action="forgot-username" class="login-form">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <input type="email" id="requester-email" name="email" placeholder="myEmail@domain.com" />
+            </div>
+            <br />
+            <div class="form-actions">
+              <button id="username-request-btn" type="submit">Recover Username</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3 column-right"></div>
+      </div>
+    </main>
+
+    <footer class="page-footer col-md-12">
+      © 2020 Copyright: <a href="index.html">TRMS Owning Company</a>
+    </footer>
+  </body>
+</html>

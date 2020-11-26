@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>TRMS - Tuition Reimbursement Management System</title>
+    <title>TRMS - Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="main.css" />
@@ -11,34 +11,71 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">TRMS</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="">About us</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="employee"><span class="glyphicon glyphicon-log-in"></span> Employee Login</a>
-          </li>
-          <li>
-            <a href="manager"><span class="glyphicon glyphicon-log-in"></span> Manager Login</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-inverse fixed-top container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">TRMS</a>
       </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="employee"><span class="glyphicon glyphicon-log-in"></span> Employee Login</a>
+        </li>
+        <li>
+          <a href="manager"><span class="glyphicon glyphicon-log-in"></span> Manager Login</a>
+        </li>
+      </ul>
     </nav>
-    <div class="row" style="margin-top: 50px;">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <h1>Welcome to the Tuition Reimbursement Management System!</h1>
-        <p>Welcome and information content, maybe relating to the company utilizing this application.</p>
+
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 column-left"></div>
+        <div class="col-md-6 column-center">
+          <h1>Welcome to the <br />Tuition Reimbursement System!</h1>
+          <hr />
+
+          <h3 style="text-align: center">Would you like to login to make a request?</h3>
+
+          <form id="employee-login-access-form" method="GET" action="employee" class="login-form">
+            <button id="employee-login-access-btn" type="submit">Employee Login</button>
+          </form>
+
+          <h3 style="text-align: center">Do you need to manage your employee's requests?</h3>
+
+          <form id="manager-login-access-form" method="GET" action="manager" class="login-form">
+            <button id="manager-login-access-btn" type="submit">Manager Login</button>
+          </form>
+
+          <hr />
+
+          <h3>About the Tuition Reimbursement System:</h3>
+          <p>
+            Cheese and biscuits cheese and biscuits babybel. Caerphilly halloumi cheesecake fromage manchego
+            babybel rubber cheese cut the cheese. Cauliflower cheese red leicester edam dolcelatte emmental
+            everyone loves babybel smelly cheese. When the cheese comes out everybody's happy fondue blue
+            castello cheese triangles cheese on toast port-salut fromage frais.
+          </p>
+
+          <p>
+            Hard cheese cheese strings airedale. Cheesy grin roquefort fondue brie who moved my cheese goat
+            emmental cow. Taleggio cheese and biscuits blue castello feta macaroni cheese macaroni cheese
+            cheese slices dolcelatte. Parmesan paneer cheese strings.
+          </p>
+
+          <p>
+            Cut the cheese goat smelly cheese. Stilton st. agur blue cheese cow melted cheese goat manchego
+            hard cheese cheesy grin. Lancashire who moved my cheese fromage frais cheese on toast queso
+            lancashire hard cheese boursin. Rubber cheese smelly cheese cheesecake cheese and wine rubber
+            cheese.
+          </p>
+        </div>
+        <div class="col-md-3 column-right"></div>
       </div>
-      <div class="col-md-3">
-      </div>
-    </div>
-    <div class="row"></div>
+    </main>
+
+    <footer class="page-footer col-md-12">
+      © 2020 Copyright: <a href="index.html">TRMS Owning Company</a>
+    </footer>
   </body>
 </html>

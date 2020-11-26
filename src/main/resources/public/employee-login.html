@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Employee Login</title>
+    <title>TRMS - Employee Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="main.css" />
@@ -31,9 +31,11 @@
     <main>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
+          <div class="col-md-3 column-left"></div>
+          <div class="col-md-6 column-center">
             <h1 style="text-align: center">Welcome to the Employee Portal</h1>
+            <br />
+            <span id="login-error" class="error-log">Error: </span>
             <form id="employee-login-form" method="POST" action="employee" class="login-form">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -43,21 +45,22 @@
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                 <input type="password" id="password" name="password" placeholder="password" />
               </div>
+              <br />
               <div class="form-actions">
                 <button id="loginButton" type="submit">Login</button>
               </div>
             </form>
           </div>
-          <div class="col-md-3" style="text-align: right">
+          <div class="col-md-3 column-right" style="text-align: right">
             <form id="first-time-user-form" method="GET" action="first-time-user">
               <button id="first-time-user-btn" type="submit" class="btn-block">First time user?</button>
             </form>
             <br />
             <form id="forgot-username-form" method="GET" action="forgot-username">
-              <button id="forgot-username-btn" type="button" class="btn-block">Forgot Username?</button>
+              <button id="forgot-username-btn" type="submit" class="btn-block">Forgot Username?</button>
             </form>
             <form id="forgot-password-form" method="GET" action="forgot-password">
-              <button id="forgot-password-btn" type="button" class="btn-block">Forgot Password?</button>
+              <button id="forgot-password-btn" type="submit" class="btn-block">Forgot Password?</button>
             </form>
           </div>
         </div>

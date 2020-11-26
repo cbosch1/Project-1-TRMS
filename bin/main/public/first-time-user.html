@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TRMS - First Time User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse fixed-top container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">TRMS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="employee"><span class="glyphicon glyphicon-log-in"></span> Employee Login</a>
+        </li>
+        <li>
+          <a href="manager"><span class="glyphicon glyphicon-log-in"></span> Manager Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 column-left"></div>
+        <div class="col-md-6 column-center">
+          <h2>Welcome new user!</h2>
+          <hr />
+          <p>
+            We are delighted that you will soon be utilizing the Tuition Reimbursement Management System. If
+            you are an employee who hasn't received your temporary username and password, please get in
+            contact with your supervisor to ensure your account has been set up properly.
+          </p>
+          <br />
+          <p>
+            If you are a manager who never received your login information or the information is not properly
+            granting access, please click below to get in contact with the Tuition Reimbursement System team
+            so that we can properly process your request.
+          </p>
+          <br />
+          <form
+            id="admin-requester-form"
+            action="mailto:trms-support-team@company.com"
+            method="POST"
+            enctype="multipart/form-data"
+            class="email-form"
+          >
+            <div class="form-actions">
+              <button id="admin-requester-btn" type="submit">Contact Us</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3 column-right"></div>
+      </div>
+    </main>
+
+    <footer class="page-footer col-md-12">
+      © 2020 Copyright: <a href="index.html">TRMS Owning Company</a>
+    </footer>
+  </body>
+</html>
