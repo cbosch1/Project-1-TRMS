@@ -41,14 +41,24 @@ public class WebDriver {
         app.get("/forgot-username", ctx -> ctx.redirect("forgot-username.html"));
         app.post("/forgot-password", ctx -> userControl.forgotPassword(ctx));
         app.post("/forgot-username", ctx -> userControl.forgotUsername(ctx));
+        app.post("/logout", ctx -> authControl.logout(ctx));
 
-        //Authorized only endpoints
+        //Authorized only endpoints - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        //Employee only endpoints
         app.get(EMPLOYEE_URL, ctx -> ctx.redirect("employee-login.html"));
         app.post(EMPLOYEE_URL, ctx -> { if(authControl.login(ctx)) { eWebControl.getOverview(ctx); } 
                                         else ctx.redirect("index.html?error=index.html?error=failed-login");});
-        app.get(MANAGER_URL, ctx -> ctx.redirect("manager-login.html"));
         app.get(EMPLOYEE_URL+"/portal", ctx -> eWebControl.getOverview(ctx));
+        app.get(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.getNewReimbursement(ctx));
+        app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.postNewReimbursement(ctx));
+
+        //Manager only endpoints
+        app.get(MANAGER_URL, ctx -> ctx.redirect("manager-login.html"));
+        app.post(MANAGER_URL, ctx -> { if(authControl.login(ctx)) { mWebControl.getOverview(ctx); } 
+                                        else ctx.redirect("index.html?error=index.html?error=failed-login");});
         app.get(MANAGER_URL+"/portal", ctx -> ctx.redirect("hidden/Manager/manager-overview.html"));
+
 
         //Admin only endpoints
         app.post("/login", ctx -> authControl.login(ctx));

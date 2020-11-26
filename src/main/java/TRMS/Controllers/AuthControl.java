@@ -41,6 +41,17 @@ public class AuthControl {
         }
     }
 
+    public boolean logout(Context ctx){
+        try {
+            ctx.cookieStore(TOKEN_NAME, "");
+            Log.info("User successfully logged out");
+            return true;
+        } catch (Exception e) {
+            Log.warn("Log out failed: " + e);
+            return false;
+        }
+    }
+
     public boolean checkUser(Context ctx) {
         boolean auth = false;
         try {

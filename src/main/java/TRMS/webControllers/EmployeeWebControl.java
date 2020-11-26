@@ -1,13 +1,9 @@
 package TRMS.webControllers;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
-
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,9 +20,9 @@ public class EmployeeWebControl {
 
     private static AuthControl auth;
 
-    public EmployeeWebControl(AuthControl auth){
+    public EmployeeWebControl(AuthControl authC){
         super();
-        this.auth = auth;
+        auth = authC;
     }
     
     public void getOverview(Context ctx){
@@ -54,6 +50,20 @@ public class EmployeeWebControl {
         
         } else {
             servePage(ctx, "new-reimbursement.html");
+        }
+    }
+
+    public void postNewReimbursement(Context ctx){
+        if (!auth.checkUser(ctx)){
+            ctx.redirect("index.html?error=failed-login-verification");
+            Log.warn("Access denied due to login verification");
+
+        } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
+            ctx.redirect("index.html?error=failed-login-privilege");
+            Log.warn("Access denied due to login privilege");
+        
+        } else {
+            //TODO: Add implementation for adding a reimbursement request
         }
     }
 
