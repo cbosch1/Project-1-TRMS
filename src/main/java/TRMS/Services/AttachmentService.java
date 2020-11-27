@@ -48,7 +48,7 @@ public interface AttachmentService {
      * @param attachId the id of the attachment file to read
      * @return attachment, the file with given id
      */
-    public List<Integer> readRelatedReferences(int requestId);
+    public List<Attachment> readRelatedReferences(int requestId);
 
     /**
      * Calls the Dao to read the attachment files that relate to the 

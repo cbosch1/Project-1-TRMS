@@ -27,6 +27,8 @@ public class AttachmentControlTest {
 	@Mock
 	private AttachmentService mockService;
 	@Mock
+	private AuthControl mockAuth;
+	@Mock
 	private Context mockCtx;
 	@Mock
 	private UploadedFile mockFile;
@@ -46,7 +48,7 @@ public class AttachmentControlTest {
 
 	@Before
 	public void setUp() throws Exception {
-		controlToTest = new AttachmentControl(mockService);
+		controlToTest = new AttachmentControl(mockService, mockAuth);
 		attach = new Attachment(2010, 1, "College Transcripts");
 		file = new File("src\\test\\resources\\fileTest.txt");
 		stream = new FileInputStream(file);

@@ -32,7 +32,7 @@ public interface AttachmentDao {
      * @param requestId The id of the reimbursement request that we want attachments from.
      * @return List of Integers that represent related the attachment files
      */
-    public List<Integer> readRelatedReference(int requestId) throws SQLException;
+    public List<Attachment> readRelatedReference(int requestId) throws SQLException;
 
     /**
      * Remove attachment file from storage.

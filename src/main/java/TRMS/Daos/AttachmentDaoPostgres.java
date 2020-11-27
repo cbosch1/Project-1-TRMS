@@ -136,8 +136,8 @@ public class AttachmentDaoPostgres implements AttachmentDao {
      * @return List of Integers that represent related the attachment files
      */
     @Override
-    public List<Integer> readRelatedReference(int requestId) throws SQLException {
-        List<Integer> result = new ArrayList<>(); 
+    public List<Attachment> readRelatedReference(int requestId) throws SQLException {
+        List<Attachment> result = new ArrayList<>(); 
 
         try(Connection conn = connUtil.createConnection()) {
             Log.info("Received request to retrieve files related to request with id: " + requestId);
@@ -149,7 +149,9 @@ public class AttachmentDaoPostgres implements AttachmentDao {
 
             ResultSet rs = stmt.executeQuery();
             while (rs.next()){
-                result.add(rs.getInt(1));
+                Attachment attach = new Attachment(rs.getInt(1), rs.getInt(2), rs.getString(3));
+                attach.setData(rs.getBinaryStream(4));
+                result.add(attach);
             }
 
             Log.info("Request completed, retrieved attachments, count: " + result.size());

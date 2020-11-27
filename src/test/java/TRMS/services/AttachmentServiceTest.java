@@ -86,13 +86,12 @@ public class AttachmentServiceTest {
 	@Test
 	public void readRelatedReferencesTest() {
 		try {
-			List<Integer> references = new ArrayList<>();
-			references.add(1);
-			references.add(2);
+			List<Attachment> references = new ArrayList<>();
+			references.add(attach);
 
 			when(mockDao.readRelatedReference(attach.getRequestId())).thenReturn(references);
 
-			List<Integer> foundRefs = attachServ.readRelatedReferences(attach.getRequestId());
+			List<Attachment> foundRefs = attachServ.readRelatedReferences(attach.getRequestId());
 
 			verify(mockDao).readRelatedReference(attach.getRequestId());
 

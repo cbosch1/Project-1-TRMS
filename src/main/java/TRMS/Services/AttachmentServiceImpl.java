@@ -130,9 +130,9 @@ public class AttachmentServiceImpl implements AttachmentService {
      * @return A list of the attachment ids of the related files.
      */
     @Override
-    public List<Integer> readRelatedReferences(int requestId) {
+    public List<Attachment> readRelatedReferences(int requestId) {
         Log.info("Responding to read related attachments...");
-        List<Integer> result = null;
+        List<Attachment> result = null;
 
         try {
             result = attachDao.readRelatedReference(requestId);
