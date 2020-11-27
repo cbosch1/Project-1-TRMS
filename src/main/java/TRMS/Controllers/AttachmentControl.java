@@ -19,11 +19,13 @@ public class AttachmentControl {
 
     private static Logger Log = LogManager.getLogger("Service");
 
+    private AuthControl auth;
     private AttachmentService service;
 
-    public AttachmentControl(AttachmentService service){
+    public AttachmentControl(AttachmentService service, AuthControl authControl){
         super();
         this.service = service;
+        this.auth = authControl;
     }
 
     /**
@@ -107,26 +109,27 @@ public class AttachmentControl {
      */
     public void readRelatedReferences(Context ctx){
         int requestId = -1;
-        try {
-            requestId = Integer.parseInt(ctx.formParam("requestId"));
 
-            ctx.json(service.readRelatedReferences(requestId));
+        if(auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
+                ctx.json(service.readRelatedReferences(requestId));
 
-            ctx.status(200);
-            Log.info("Successfully read attachments related to: " + requestId);
+                ctx.status(200);
+                Log.info("Successfully read attachments related to: " + requestId);
 
-        } catch (NumberFormatException e){
-            Log.warn("NumberFormatException thrown while reading attachments related to: " + requestId + " Exception: " + e);
-            ctx.html("NumberFormatException thrown: " + e);
-            ctx.status(500);
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while reading attachments related to: " + requestId + " Exception: " + e);
+                ctx.html("NumberFormatException thrown: " + e);
+                ctx.status(500);
 
-         } catch (Exception e) {
-            Log.warn("Exception thrown while reading attachments related to: " + requestId + " Exception: " + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading attachments related to: " + requestId + " Exception: " + e);
+                ctx.html("Exception thrown: " + e);
+                ctx.status(500);
+            }
         }
     }
-
     /**
      * For updating an already existing attachment within the system.
      * Parses form parameters out of the context object and passes them

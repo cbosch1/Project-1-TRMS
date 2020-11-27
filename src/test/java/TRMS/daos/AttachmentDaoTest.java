@@ -178,7 +178,7 @@ public class AttachmentDaoTest {
 
 		//Test readRelatedReference functionality
 		try {
-			List<Integer> related = attachDao.readRelatedReference(attach.getRequestId());
+			List<Attachment> related = attachDao.readRelatedReference(attach.getRequestId());
 
 			//Verify statement was executed properly
 			verify(spy).setInt(1, attach.getRequestId());
@@ -186,8 +186,10 @@ public class AttachmentDaoTest {
 
 			//Verify result set returned proper data
 			assertTrue("Returned set is not the same size as expected", numRelated == related.size());
-			for (Integer r : related){
-				assertFalse("Id returned 0 for related attachment ", 0 == r);
+			for (Attachment r : related){
+				assertFalse("attachId returned 0 for related attachment ", 0 == r.getAttachId());
+				assertFalse("requestId returned 0 for related attachment ", 0 == r.getRequestId());
+				assertFalse("type returned empty for related attachment ", "".equals(r.getFileType()));
 			}
 		} catch (SQLException e) {
 			fail("SQLException thrown while reading all employees");
