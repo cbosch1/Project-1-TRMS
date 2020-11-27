@@ -61,7 +61,7 @@ button:hover {
 .error-log {
   visibility: hidden;
   color: #D8315B;
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 .login-form {
