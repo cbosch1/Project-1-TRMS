@@ -26,6 +26,7 @@ public class AuthServiceImpl implements AuthService {
             .withIssuer("TRMS-CB")
             .withClaim("name", user.getUsername())
             .withClaim("id", user.getUserId())
+            .withClaim("emp", user.getEmployeeId())
             .withClaim("privilege", user.getPrivilege().toString())
             .sign(algorithmT);
         
@@ -47,6 +48,54 @@ public class AuthServiceImpl implements AuthService {
         } catch (NullPointerException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    @Override
+    public String readTokenUsername(String token) {
+        String name = "";
+        try {
+            JWTVerifier verifier = JWT.require(algorithmT).withIssuer("TRMS-CB").build();
+            name = verifier.verify(token).getClaim("name").asString();
+            return name;
+        } catch (JWTVerificationException e){
+            e.printStackTrace();
+            return name;
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+            return name;
+        }
+    }
+
+    @Override
+    public int readTokenId(String token) {
+        int id = 0;
+        try {
+            JWTVerifier verifier = JWT.require(algorithmT).withIssuer("TRMS-CB").build();
+            id = verifier.verify(token).getClaim("id").asInt();
+            return id;
+        } catch (JWTVerificationException e){
+            e.printStackTrace();
+            return id;
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+            return id;
+        }
+    }
+
+    @Override
+    public int readTokenEmp(String token) {
+        int emp = 0;
+        try {
+            JWTVerifier verifier = JWT.require(algorithmT).withIssuer("TRMS-CB").build();
+            emp = verifier.verify(token).getClaim("emp").asInt();
+            return emp;
+        } catch (JWTVerificationException e){
+            e.printStackTrace();
+            return emp;
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+            return emp;
         }
     }
 

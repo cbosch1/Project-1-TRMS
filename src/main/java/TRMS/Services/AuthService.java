@@ -10,5 +10,11 @@ public interface AuthService {
 	
 	public boolean validateToken(String token);
 
+	public String readTokenUsername(String token);
+	
+	public int readTokenId(String token);
+	
+	public int readTokenEmp(String token);
+
 	public String readTokenPrivilege(String token);
 }

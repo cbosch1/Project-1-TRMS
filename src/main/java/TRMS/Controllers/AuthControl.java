@@ -62,6 +62,45 @@ public class AuthControl {
         return auth;
     }
 
+    public String getUsername(Context ctx) {
+        String name = "";
+
+        try {
+            name = authService.readTokenUsername(ctx.cookieStore(TOKEN_NAME));
+
+        } catch (NullPointerException e) {
+            Log.warn("Token's name was not able to be found: " + e);
+        }
+
+        return name;
+    }
+
+    public int getId(Context ctx) {
+        int id = 0;
+
+        try {
+            id = authService.readTokenId(ctx.cookieStore(TOKEN_NAME));
+            
+        } catch (NullPointerException e) {
+            Log.warn("Token's Id was not able to be found: " + e);
+        }
+
+        return id;
+    }
+
+    public int getEmp(Context ctx) {
+        int emp = 0;
+
+        try {
+            emp = authService.readTokenEmp(ctx.cookieStore(TOKEN_NAME));
+            
+        } catch (NullPointerException e) {
+            Log.warn("Token's Emp was not able to be found: " + e);
+        }
+
+        return emp;
+    }
+
     public AuthPriv getPrivilege(Context ctx) {
         AuthPriv priv = null;
         try {
