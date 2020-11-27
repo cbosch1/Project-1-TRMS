@@ -27,7 +27,7 @@ public class EmployeeWebControl {
     
     public void getOverview(Context ctx){
         if (!auth.checkUser(ctx)){
-            ctx.redirect("index.html?error=failed-login-verification");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login verification");
 
         } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
@@ -41,11 +41,11 @@ public class EmployeeWebControl {
 
     public void getNewReimbursement(Context ctx){
         if (!auth.checkUser(ctx)){
-            ctx.redirect("index.html?error=failed-login-verification");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login verification");
 
         } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
-            ctx.redirect("index.html?error=failed-login-privilege");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login privilege");
         
         } else {
@@ -55,11 +55,11 @@ public class EmployeeWebControl {
 
     public void postNewReimbursement(Context ctx){
         if (!auth.checkUser(ctx)){
-            ctx.redirect("index.html?error=failed-login-verification");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login verification");
 
         } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
-            ctx.redirect("index.html?error=failed-login-privilege");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login privilege");
         
         } else {
@@ -69,11 +69,11 @@ public class EmployeeWebControl {
 
     public void getViewReimbursement(Context ctx){
         if (!auth.checkUser(ctx)){
-            ctx.redirect("index.html?error=failed-login-verification");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login verification");
 
         } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
-            ctx.redirect("index.html?error=failed-login-privilege");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login privilege");
         
         } else {
