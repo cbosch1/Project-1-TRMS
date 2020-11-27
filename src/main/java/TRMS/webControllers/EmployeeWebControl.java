@@ -31,7 +31,7 @@ public class EmployeeWebControl {
             Log.warn("Access denied due to login verification");
 
         } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
-            ctx.redirect("index.html?error=failed-login-privilege");
+            ctx.redirect("employee-login.html");
             Log.warn("Access denied due to login privilege");
         
         } else {
