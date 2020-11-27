@@ -1,11 +1,21 @@
 package TRMS.javalin;
 
+import TRMS.controllers.AttachmentControl;
 import TRMS.controllers.AuthControl;
+import TRMS.controllers.ReimburseRequestControl;
 import TRMS.controllers.UserControl;
+import TRMS.daos.AttachmentDao;
+import TRMS.daos.AttachmentDaoPostgres;
+import TRMS.daos.ReimburseDaoPostgres;
+import TRMS.daos.ReimburseRequestDao;
 import TRMS.daos.UserDao;
 import TRMS.daos.UserDaoPostgres;
+import TRMS.services.AttachmentService;
+import TRMS.services.AttachmentServiceImpl;
 import TRMS.services.AuthService;
 import TRMS.services.AuthServiceImpl;
+import TRMS.services.ReimburseRequestService;
+import TRMS.services.ReimburseServiceImpl;
 import TRMS.services.UserService;
 import TRMS.services.UserServiceImpl;
 import TRMS.util.ConnectionUtil;
@@ -23,6 +33,14 @@ public class WebDriver {
 
     private static AuthService authService = new AuthServiceImpl();
     private static AuthControl authControl = new AuthControl(authService, userService);
+
+    private static ReimburseRequestDao reimburseDao = new ReimburseDaoPostgres(connectionUtil);
+    private static ReimburseRequestService reimburseService = new ReimburseServiceImpl(reimburseDao);
+    private static ReimburseRequestControl reimburseControl = new ReimburseRequestControl(reimburseService, authControl);
+
+    private static AttachmentDao attachDao = new AttachmentDaoPostgres(connectionUtil);
+    private static AttachmentService attachService = new AttachmentServiceImpl(attachDao);
+    private static AttachmentControl attachControl = new AttachmentControl(attachService, authControl);
 
     private static EmployeeWebControl eWebControl = new EmployeeWebControl(authControl);
     private static ManagerWebControl mWebControl = new ManagerWebControl(authControl);
@@ -51,22 +69,27 @@ public class WebDriver {
         app.get(EMPLOYEE_URL, ctx -> { if(authControl.checkUser(ctx)) { eWebControl.getOverview(ctx); } 
                                         else ctx.redirect("employee-login.html");});
         app.post(EMPLOYEE_URL, ctx -> { if(authControl.login(ctx)) { eWebControl.getOverview(ctx); } 
-                                        else ctx.redirect("index.html?error=index.html?error=failed-login");});
+                                        else ctx.redirect("employee-login.html");});
         app.get(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.getNewReimbursement(ctx));
         app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.postNewReimbursement(ctx));
         app.get(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> eWebControl.getViewReimbursement(ctx));
 
         //Manager only endpoints
-        app.get(MANAGER_URL, ctx -> ctx.redirect("manager-login.html"));
+        app.get(MANAGER_URL, ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }
+                                        else ctx.redirect("manager-login.html");});
         app.post(MANAGER_URL, ctx -> { if(authControl.login(ctx)) { mWebControl.getOverview(ctx); } 
-                                        else ctx.redirect("index.html?error=index.html?error=failed-login");});
+                                        else ctx.redirect("manager-login.html");});
         app.get(MANAGER_URL+"/portal", ctx -> ctx.redirect("hidden/Manager/manager-overview.html"));
-
 
         //Admin only endpoints
         app.post("/login", ctx -> authControl.login(ctx));
         app.get("/login", ctx -> authControl.checkUser(ctx));
         app.post("/priv", ctx -> authControl.getPrivilege(ctx));
         app.post("/create", ctx -> userControl.createUser(ctx));
+
+        //Javascript endpoints
+        app.post("/my-reimbursements", ctx -> { reimburseControl.readAllRequestsFor(ctx);});
+        app.post(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.readRequest(ctx);});
+        app.post(EMPLOYEE_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
     }
 }
