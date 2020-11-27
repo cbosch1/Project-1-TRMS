@@ -58,6 +58,28 @@ button:hover {
   cursor: pointer;
 }
 
+button.invert {
+  background-color: #D8315B;
+  color: cyan;
+  border: solid cyan;
+  border-radius: 5%;
+  padding: 8px 24px;
+  margin: 4px, 2px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.invert:hover {
+  background-color: darkslategray;
+  color: cyan;
+  border: solid #3E92CC;
+  border-radius: 5%;
+  padding: 8px 24px;
+  margin: 4px, 2px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .error-log {
   visibility: hidden;
   color: #D8315B;
