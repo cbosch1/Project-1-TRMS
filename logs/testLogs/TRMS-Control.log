@@ -14,3 +14,22 @@
 2020-11-15 20:12:17,747 [main] ERROR: This is an error message
 2020-11-24 14:33:04,042 [main] INFO : This is an error message
 2020-11-24 14:33:04,042 [main] ERROR: This is an error message
+2020-11-27 15:12:17,278 [main] INFO : Successfully read all reimbursement requests
+2020-11-27 15:12:17,318 [main] INFO : Reimbursement request successfully updated
+2020-11-27 15:12:17,363 [main] INFO : Reimbursement Request successfully deleted
+2020-11-27 15:12:17,373 [main] INFO : Successfully inserted reimbursement request, id returned: 0
+2020-11-27 15:12:18,652 [main] INFO : Successfully read information request
+2020-11-27 15:12:18,655 [main] INFO : Information Request successfully deleted
+2020-11-27 15:12:18,660 [main] INFO : Successfully inserted info request, id returned: 0
+2020-11-27 15:12:18,663 [main] INFO : Successfully read all info requests for employee: 0
+2020-11-27 15:12:18,667 [main] INFO : Info request successfully updated
+2020-11-27 15:12:18,670 [main] INFO : Successfully read all information requests
+2020-11-27 15:12:19,041 [main] INFO : Successfully read user
+2020-11-27 15:12:19,043 [main] INFO : User successfully updated
+2020-11-27 15:12:19,047 [main] INFO : Successfully inserted user, id returned: 0
+2020-11-27 15:12:19,051 [main] INFO : User successfully deleted
+2020-11-27 15:12:19,851 [main] INFO : Successfully inserted employee, id returned: 0
+2020-11-27 15:12:19,853 [main] INFO : Successfully read employee
+2020-11-27 15:12:19,856 [main] INFO : Employee successfully deleted
+2020-11-27 15:12:19,860 [main] INFO : Employee successfully updated
+2020-11-27 15:12:19,864 [main] INFO : Successfully read all employees

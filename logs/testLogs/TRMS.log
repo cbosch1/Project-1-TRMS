@@ -434,3 +434,160 @@
 2020-11-24 14:33:05,722 [main] INFO : Util - Successfully retrieved connection to database.
 2020-11-24 14:33:05,726 [main] INFO : Dao - Received request to delete file with id: 2010
 2020-11-24 14:33:05,729 [main] INFO : Dao - Request completed, attachment with id: 2010 was deleted.
+2020-11-27 15:12:17,278 [main] INFO : Control - Successfully read all reimbursement requests
+2020-11-27 15:12:17,318 [main] INFO : Control - Reimbursement request successfully updated
+2020-11-27 15:12:17,363 [main] INFO : Control - Reimbursement Request successfully deleted
+2020-11-27 15:12:17,373 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-11-27 15:12:17,495 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:17,751 [main] INFO : Service - Responding to create employee...
+2020-11-27 15:12:17,752 [main] INFO : Service - Successfully created employee
+2020-11-27 15:12:17,754 [main] INFO : Service - Responding to read employee...
+2020-11-27 15:12:17,755 [main] INFO : Service - Successfully retrieved employee
+2020-11-27 15:12:17,756 [main] INFO : Service - Responding to delete employee...
+2020-11-27 15:12:17,757 [main] INFO : Service - Successfully deleted employee
+2020-11-27 15:12:17,760 [main] INFO : Service - Responding to update employee...
+2020-11-27 15:12:17,760 [main] INFO : Service - Successfully updated employee
+2020-11-27 15:12:17,762 [main] INFO : Service - Responding to read all employees...
+2020-11-27 15:12:17,763 [main] INFO : Service - Successfully retrieved employees
+2020-11-27 15:12:17,964 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,325 [main] INFO : Dao - Received request to insert employee: Billy Bob
+2020-11-27 15:12:18,371 [main] INFO : Dao - Request completed, generated employee id: 7
+2020-11-27 15:12:18,431 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,436 [main] INFO : Dao - Received request to retrieve employee with id: 2010
+2020-11-27 15:12:18,444 [main] INFO : Dao - Request completed, retrieved employee: Billy Bob
+2020-11-27 15:12:18,491 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,496 [main] INFO : Dao - Received request to delete employee with id: 2010
+2020-11-27 15:12:18,513 [main] INFO : Dao - Request completed, employee with id: 2010 was deleted.
+2020-11-27 15:12:18,554 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,558 [main] INFO : Dao - Received request to update employee with id: 2010
+2020-11-27 15:12:18,565 [main] INFO : Dao - Request completed, employee with id: 2010 was updated.
+2020-11-27 15:12:18,612 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,619 [main] INFO : Dao - Received request to retrieve all employees
+2020-11-27 15:12:18,623 [main] INFO : Dao - Request completed, retrieved 2 employees
+2020-11-27 15:12:18,652 [main] INFO : Control - Successfully read information request
+2020-11-27 15:12:18,655 [main] INFO : Control - Information Request successfully deleted
+2020-11-27 15:12:18,660 [main] INFO : Control - Successfully inserted info request, id returned: 0
+2020-11-27 15:12:18,663 [main] INFO : Control - Successfully read all info requests for employee: 0
+2020-11-27 15:12:18,667 [main] INFO : Control - Info request successfully updated
+2020-11-27 15:12:18,670 [main] INFO : Control - Successfully read all information requests
+2020-11-27 15:12:18,748 [main] INFO : Service - Successfully inserted attachment, id returned: 0
+2020-11-27 15:12:18,753 [main] INFO : Service - Attachment successfully updated
+2020-11-27 15:12:18,757 [main] INFO : Service - Successfully read attachment
+2020-11-27 15:12:18,763 [main] INFO : Service - Successfully inserted attachment, id returned: 0
+2020-11-27 15:12:18,773 [main] INFO : Service - Attachment successfully deleted
+2020-11-27 15:12:18,826 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,843 [main] INFO : Dao - Received request to retrieve user with id: 0
+2020-11-27 15:12:18,851 [main] INFO : Dao - Request completed, retrieved user: bigbad1
+2020-11-27 15:12:18,899 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,903 [main] INFO : Dao - Received request to update user with id: 0
+2020-11-27 15:12:18,908 [main] INFO : Dao - Request completed, user with id: 0 was updated.
+2020-11-27 15:12:18,949 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:18,950 [main] INFO : Dao - Received request to insert user: bigbad1
+2020-11-27 15:12:18,956 [main] INFO : Dao - Request completed, generated user id: 4
+2020-11-27 15:12:19,004 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,008 [main] INFO : Dao - Received request to delete user with id: 0
+2020-11-27 15:12:19,013 [main] INFO : Dao - Request completed, user with id: 0 was deleted.
+2020-11-27 15:12:19,016 [main] INFO : Controller - This is an error message
+2020-11-27 15:12:19,017 [main] ERROR: Controller - This is an error message
+2020-11-27 15:12:19,041 [main] INFO : Control - Successfully read user
+2020-11-27 15:12:19,043 [main] INFO : Control - User successfully updated
+2020-11-27 15:12:19,047 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-11-27 15:12:19,051 [main] INFO : Control - User successfully deleted
+2020-11-27 15:12:19,078 [main] INFO : Service - Responding to read user...
+2020-11-27 15:12:19,078 [main] INFO : Service - Successfully retrieved user
+2020-11-27 15:12:19,079 [main] INFO : Service - Responding to update user...
+2020-11-27 15:12:19,081 [main] INFO : Service - Successfully updated user
+2020-11-27 15:12:19,082 [main] INFO : Service - Responding to create user...
+2020-11-27 15:12:19,083 [main] INFO : Service - Successfully created user
+2020-11-27 15:12:19,084 [main] INFO : Service - Responding to delete user...
+2020-11-27 15:12:19,084 [main] INFO : Service - Successfully deleted user
+2020-11-27 15:12:19,110 [main] INFO : Service - Responding to read related attachments...
+2020-11-27 15:12:19,110 [main] INFO : Service - Successfully retrieved attachments
+2020-11-27 15:12:19,111 [main] INFO : Service - Responding to update attachment...
+2020-11-27 15:12:19,112 [main] INFO : Service - Successfully updated attachment
+2020-11-27 15:12:19,113 [main] INFO : Service - Responding to read attachment...
+2020-11-27 15:12:19,113 [main] INFO : Service - Successfully retrieved attachment
+2020-11-27 15:12:19,114 [main] INFO : Service - Responding to create attachment with id...
+2020-11-27 15:12:19,114 [main] INFO : Service - Successfully created attachment
+2020-11-27 15:12:19,115 [main] INFO : Service - Responding to delete attachment...
+2020-11-27 15:12:19,116 [main] INFO : Service - Successfully deleted attachment
+2020-11-27 15:12:19,254 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,264 [main] INFO : Dao - Received request to retrieve all reimbursement requests
+2020-11-27 15:12:19,272 [main] INFO : Dao - Request completed, retrieved reimbursement requests, count: 6
+2020-11-27 15:12:19,307 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,336 [main] INFO : Dao - Received request to update reimbursement request with id: 48
+2020-11-27 15:12:19,352 [main] INFO : Dao - Request completed, reimbursement with id: 48 was updated.
+2020-11-27 15:12:19,398 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,406 [main] INFO : Dao - Received request to retrieve reimbursement request with id: 49
+2020-11-27 15:12:19,413 [main] INFO : Dao - Request completed, retrieved reimbursement request with id: 49
+2020-11-27 15:12:19,447 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,454 [main] INFO : Dao - Received request to delete reimbursement with id: 50
+2020-11-27 15:12:19,462 [main] INFO : Dao - Request completed, reimbursement with id: 50 was deleted.
+2020-11-27 15:12:19,597 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,602 [main] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-27 15:12:19,608 [main] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 4
+2020-11-27 15:12:19,646 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,745 [main] INFO : Dao - Received request to insert reimbursement for employee with id: 0
+2020-11-27 15:12:19,774 [main] INFO : Dao - Request completed, generated reimbursement request id: 51
+2020-11-27 15:12:19,817 [main] INFO : Service - Responding to read information request...
+2020-11-27 15:12:19,818 [main] INFO : Service - Successfully retrieved information request
+2020-11-27 15:12:19,819 [main] INFO : Service - Responding to delete information request...
+2020-11-27 15:12:19,819 [main] INFO : Service - Successfully deleted information request
+2020-11-27 15:12:19,820 [main] INFO : Service - Responding to create information request...
+2020-11-27 15:12:19,820 [main] INFO : Service - Successfully created information request
+2020-11-27 15:12:19,821 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-11-27 15:12:19,822 [main] INFO : Service - Successfully retrieved information requests
+2020-11-27 15:12:19,822 [main] INFO : Service - Responding to update information request...
+2020-11-27 15:12:19,823 [main] INFO : Service - Successfully updated information request
+2020-11-27 15:12:19,823 [main] INFO : Service - Responding to read all information requests...
+2020-11-27 15:12:19,824 [main] INFO : Service - Successfully retrieved information requests
+2020-11-27 15:12:19,851 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-11-27 15:12:19,853 [main] INFO : Control - Successfully read employee
+2020-11-27 15:12:19,856 [main] INFO : Control - Employee successfully deleted
+2020-11-27 15:12:19,860 [main] INFO : Control - Employee successfully updated
+2020-11-27 15:12:19,864 [main] INFO : Control - Successfully read all employees
+2020-11-27 15:12:19,894 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-11-27 15:12:19,894 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-27 15:12:19,896 [main] INFO : Service - Responding to update reimbursement request...
+2020-11-27 15:12:19,896 [main] INFO : Service - Successfully updated reimbursement request
+2020-11-27 15:12:19,897 [main] INFO : Service - Responding to read reimbursement request...
+2020-11-27 15:12:19,897 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-11-27 15:12:19,898 [main] INFO : Service - Responding to delete reimbursement request...
+2020-11-27 15:12:19,898 [main] INFO : Service - Successfully deleted reimbursement request
+2020-11-27 15:12:19,898 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-27 15:12:19,899 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-27 15:12:19,899 [main] INFO : Service - Responding to create reimbursement request...
+2020-11-27 15:12:19,899 [main] INFO : Service - Successfully created reimbursement request
+2020-11-27 15:12:19,935 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,943 [main] INFO : Dao - Received request to retrieve all info requests
+2020-11-27 15:12:19,948 [main] INFO : Dao - Request completed, retrieved info request with id: 2010
+2020-11-27 15:12:19,979 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:19,984 [main] INFO : Dao - Received request to delete info request with id: 2010
+2020-11-27 15:12:19,988 [main] INFO : Dao - Request completed, info request with id: 2010 was deleted.
+2020-11-27 15:12:20,025 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,026 [main] INFO : Dao - Received request to insert info request related to reimbursement: 1
+2020-11-27 15:12:20,037 [main] INFO : Dao - Request completed, generated info request id: 5
+2020-11-27 15:12:20,071 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,074 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-27 15:12:20,077 [main] INFO : Dao - Request completed, retrieved info requests, count: 0
+2020-11-27 15:12:20,110 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,115 [main] INFO : Dao - Received request to update info request with id: 2010
+2020-11-27 15:12:20,119 [main] INFO : Dao - Request completed, info request with id: 2010 was updated.
+2020-11-27 15:12:20,156 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,160 [main] INFO : Dao - Received request to retrieve all info requests
+2020-11-27 15:12:20,164 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-27 15:12:20,201 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,204 [main] INFO : Dao - Received request to retrieve files related to request with id: 1
+2020-11-27 15:12:20,207 [main] INFO : Dao - Request completed, retrieved attachments, count: 1
+2020-11-27 15:12:20,240 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,245 [main] INFO : Dao - Received request to update attachment with id: 2010
+2020-11-27 15:12:20,248 [main] INFO : Dao - Request completed, attachment with id: 2010 was updated.
+2020-11-27 15:12:20,288 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,294 [main] INFO : Dao - Received request to retrieve file with id: 2010
+2020-11-27 15:12:20,297 [main] INFO : Dao - Request completed, retrieved attachment id: 2010
+2020-11-27 15:12:20,329 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,330 [main] INFO : Dao - Received request to insert file for request: 1
+2020-11-27 15:12:20,336 [main] INFO : Dao - Request completed, generated attachment id: 20
+2020-11-27 15:12:20,367 [main] INFO : Util - Successfully retrieved connection to database.
+2020-11-27 15:12:20,370 [main] INFO : Dao - Received request to delete file with id: 2010
+2020-11-27 15:12:20,373 [main] INFO : Dao - Request completed, attachment with id: 2010 was deleted.
