@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import TRMS.enums.AppStage;
 import TRMS.enums.AppStatus;
 import TRMS.enums.EventType;
+import TRMS.pojos.ReimburseRequest;
 import TRMS.services.ReimburseRequestService;
 import io.javalin.http.Context;
 
@@ -24,10 +25,12 @@ public class ReimburseRequestControl {
     private static Logger Log = LogManager.getLogger("Control");
 
     private ReimburseRequestService service;
+    private AuthControl auth;
 
-    public ReimburseRequestControl(ReimburseRequestService service){
+    public ReimburseRequestControl(ReimburseRequestService service, AuthControl auth){
         super();
         this.service = service;
+        this.auth = auth;
     }
 
     /**
@@ -93,22 +96,30 @@ public class ReimburseRequestControl {
      * <ul><li>requestId</li></ul>
      */
     public void readRequest(Context ctx){
-        try {
-            int requestId = Integer.parseInt(ctx.formParam("requestId"));
-            ctx.json(service.readRequest(requestId));
+        int requestId = -1;
 
-            ctx.status(200);
-            Log.info("Successfully read reimbursement request");
+        if(auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
+                ReimburseRequest request = service.readRequest(requestId);
 
-        } catch (NumberFormatException e){
-            Log.warn("NumberFormatException thrown while reading reimbursement request: " + e);
-            ctx.html("NumberFormatException thrown: " + e);
-            ctx.status(500);
+                if (request.getEmployeeId() == auth.getEmp(ctx)){
+                    ctx.json(request);
+                    ctx.status(200);
+                    Log.info("Successfully read reimbursement request");
+                } else {
+                    ctx.status(401);
+                    Log.info("Unauthorized access attempted to view reimbursement request");
+                }
 
-        } catch (Exception e) {
-            Log.warn("Exception thrown while reading reimbursement request: " + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+            }
         }
     }
 
@@ -124,17 +135,19 @@ public class ReimburseRequestControl {
      */
     public void readAllRequestsFor(Context ctx){
         int employeeId = -1;
-        try {
-            employeeId = Integer.parseInt(ctx.formParam("employeeId"));
-            ctx.json(service.readAllRequestsFor(employeeId));
 
-            ctx.status(200);
-            Log.info("Successfully read all reimbursement requests for employee: " + employeeId);
+        if(auth.checkUser(ctx)) {
+            try {
+                employeeId = auth.getEmp(ctx);
+                ctx.json(service.readAllRequestsFor(employeeId));
 
-        } catch (Exception e) {
-            Log.warn("Exception thrown while reading all reimbursement requests for employee: " + employeeId + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
+                ctx.status(200);
+                Log.info("Successfully read all reimbursement requests for employee: " + employeeId);
+            
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading all reimbursement requests for employee: " + employeeId + e);
+                ctx.status(500);
+            }
         }
     }
 

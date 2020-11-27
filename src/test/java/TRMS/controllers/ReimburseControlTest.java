@@ -28,6 +28,8 @@ public class ReimburseControlTest {
 	@Mock
 	private ReimburseServiceImpl mockService;
 	@Mock
+	private AuthControl mockAuth;
+	@Mock
 	private Context mockCtx;
 
 	private ReimburseRequestControl controlToTest;
@@ -43,7 +45,7 @@ public class ReimburseControlTest {
 
 	@Before
 	public void setUp() throws Exception {
-		controlToTest = new ReimburseRequestControl(mockService);
+		controlToTest = new ReimburseRequestControl(mockService, mockAuth);
 		request = new ReimburseRequest(2010, 0, "Knowhere", 1000.00, EventType.OTHER, "Instruction on the retrieval of artifacts", 
 										"The boss said for me to take this", 1000.00, true, AppStatus.PENDING, AppStage.EVENT,
 										LocalDateTime.of(2301, 8, 12, 4, 0));
