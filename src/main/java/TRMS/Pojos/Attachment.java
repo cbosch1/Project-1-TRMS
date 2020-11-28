@@ -1,6 +1,5 @@
 package TRMS.pojos;
 
-import java.io.InputStream;
 
 /**
  * A java representation of a file uploaded to the system
@@ -10,7 +9,7 @@ public class Attachment {
     private int attachId;
     private int requestId;
     private String fileType;
-    private InputStream data;
+    private byte[] data;
 
     public Attachment(){
         super();
@@ -74,14 +73,14 @@ public class Attachment {
     /**
      * @return data the byte stream of the file to be uploaded
      */
-    public InputStream getData() {
+    public byte[] getData() {
         return data;
     }
 
     /**
      * @param data the byte stream of the file to be uploaded
      */
-    public void setData(InputStream data) {
+    public void setData(byte[] data) {
         this.data = data;
     }
 

@@ -2,10 +2,16 @@ package TRMS.javalin;
 
 import TRMS.controllers.AttachmentControl;
 import TRMS.controllers.AuthControl;
+import TRMS.controllers.EmployeeControl;
+import TRMS.controllers.InfoRequestControl;
 import TRMS.controllers.ReimburseRequestControl;
 import TRMS.controllers.UserControl;
 import TRMS.daos.AttachmentDao;
 import TRMS.daos.AttachmentDaoPostgres;
+import TRMS.daos.EmployeeDao;
+import TRMS.daos.EmployeeDaoPostgres;
+import TRMS.daos.InfoRequestDao;
+import TRMS.daos.InfoRequestDaoPostgres;
 import TRMS.daos.ReimburseDaoPostgres;
 import TRMS.daos.ReimburseRequestDao;
 import TRMS.daos.UserDao;
@@ -14,6 +20,10 @@ import TRMS.services.AttachmentService;
 import TRMS.services.AttachmentServiceImpl;
 import TRMS.services.AuthService;
 import TRMS.services.AuthServiceImpl;
+import TRMS.services.EmployeeService;
+import TRMS.services.EmployeeServiceImpl;
+import TRMS.services.InfoRequestService;
+import TRMS.services.InfoRequestServiceImpl;
 import TRMS.services.ReimburseRequestService;
 import TRMS.services.ReimburseServiceImpl;
 import TRMS.services.UserService;
@@ -31,12 +41,20 @@ public class WebDriver {
     private static UserService userService = new UserServiceImpl(userDao);
     private static UserControl userControl = new UserControl(userService);
 
+    private static EmployeeDao empDao = new EmployeeDaoPostgres(connectionUtil);
+    private static EmployeeService empService = new EmployeeServiceImpl(empDao);
+    private static EmployeeControl empControl = new EmployeeControl(empService);
+
     private static AuthService authService = new AuthServiceImpl();
-    private static AuthControl authControl = new AuthControl(authService, userService);
+    private static AuthControl authControl = new AuthControl(authService, userService, empService);
     
     private static AttachmentDao attachDao = new AttachmentDaoPostgres(connectionUtil);
     private static AttachmentService attachService = new AttachmentServiceImpl(attachDao);
     private static AttachmentControl attachControl = new AttachmentControl(attachService, authControl);
+
+    private static InfoRequestDao infoDao = new InfoRequestDaoPostgres(connectionUtil);
+    private static InfoRequestService infoService = new InfoRequestServiceImpl(infoDao);
+    private static InfoRequestControl infoControl = new InfoRequestControl(infoService, authControl, attachService);
 
     private static ReimburseRequestDao reimburseDao = new ReimburseDaoPostgres(connectionUtil);
     private static ReimburseRequestService reimburseService = new ReimburseServiceImpl(reimburseDao);
@@ -73,6 +91,7 @@ public class WebDriver {
         app.get(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.getNewReimbursement(ctx));
         app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> reimburseControl.createRequest(ctx));
         app.get(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> eWebControl.getViewReimbursement(ctx));
+        app.get(EMPLOYEE_URL+"/view-info/:id", ctx -> eWebControl.getViewInfoRequest(ctx));
         app.post(EMPLOYEE_URL+"/cancel-reimbursement/:id", ctx -> reimburseControl.cancelRequest(ctx));
 
         //Manager only endpoints
@@ -92,5 +111,9 @@ public class WebDriver {
         app.post("/my-reimbursements", ctx -> { reimburseControl.readAllRequestsFor(ctx);});
         app.post(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.readRequest(ctx);});
         app.post(EMPLOYEE_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
+        app.post(EMPLOYEE_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoFor(ctx);});    
+        app.post(EMPLOYEE_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
+        app.post(EMPLOYEE_URL+"/view-info/:id/response", ctx -> { infoControl.createInfoResponse(ctx);});
+        app.get(EMPLOYEE_URL+"/download-attachment/:id", ctx -> attachControl.downloadAttachment(ctx));
     }
 }

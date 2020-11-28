@@ -40,7 +40,7 @@ public class InfoRequestServiceTest {
 	@Before
 	public void setUp() throws Exception {
 		serviceToTest = new InfoRequestServiceImpl(mockDao);
-		info = new InfoRequest(2010, 0, 0, false, "I need more details concerning the benefits of this event", LocalDateTime.of(2001, 12, 12, 12, 0));
+		info = new InfoRequest(2010, 0, 0, 1, "Big Boss", false, "I need more details concerning the benefits of this event", LocalDateTime.of(2001, 12, 12, 12, 0));
 	}
 
 	@After
@@ -54,8 +54,8 @@ public class InfoRequestServiceTest {
 			when(mockDao.createInfoRequest(info)).thenReturn(info.getInfoId());
 
 			assertTrue("createInfoRequest returned false", 
-				serviceToTest.createInfoRequest(info.getRelatedId(), info.getDestinationId(), info.getUrgent(), 
-												info.getDescription(), info.getDateTime()) == info.getInfoId());
+				serviceToTest.createInfoRequest(info.getRelatedId(), info.getDestinationId(), info.getSenderId(), info.getSender(),
+												info.getUrgent(), info.getDescription(), info.getDateTime()) == info.getInfoId());
 
 			verify(mockDao).createInfoRequest(info);
 
@@ -132,8 +132,8 @@ public class InfoRequestServiceTest {
 			when(mockDao.updateInfoRequest(info)).thenReturn(true);
 
 			assertTrue("updateInfoRequest returned false", 
-				serviceToTest.updateInfoRequest(info.getInfoId(), info.getRelatedId(), info.getDestinationId(), 
-												info.getUrgent(), info.getDescription(), info.getDateTime()));
+				serviceToTest.updateInfoRequest(info.getInfoId(), info.getRelatedId(), info.getDestinationId(), info.getSenderId(), 
+												info.getSender(), info.getUrgent(), info.getDescription(), info.getDateTime()));
 
 			verify(mockDao).updateInfoRequest(info);
 

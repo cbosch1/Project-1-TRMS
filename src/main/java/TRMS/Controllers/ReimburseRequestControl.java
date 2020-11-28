@@ -1,5 +1,6 @@
 package TRMS.controllers;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -116,7 +117,12 @@ public class ReimburseRequestControl {
                                                 grading, projected, urgent, status, stage, dateTime);
             
             ctx.uploadedFiles("files").forEach(f -> {
-                attachService.createAttachment(returnId, f.getFilename(), f.getContent());
+                try {
+                attachService.createAttachment(returnId, f.getFilename(), f.getContent().readAllBytes());
+                }  catch(IOException e) {
+                    Log.warn("Exception thrown while creating info request: " + e);
+                    ctx.status(500);
+                }
             });
             
             ctx.status(200);

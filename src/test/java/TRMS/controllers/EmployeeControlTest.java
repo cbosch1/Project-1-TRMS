@@ -70,8 +70,6 @@ public class EmployeeControlTest {
 
 			verify(mockService).createEmployee(employee.getName(), employee.getTitle(), employee.getSupervisor(),
 												employee.getDepartment(), employee.getDeptHead());
-
-			//TODO verify ctx being given proper inputs.
 			
 			verify(mockCtx).status(200);
 
@@ -87,8 +85,6 @@ public class EmployeeControlTest {
 
 			verify(mockCtx).formParam("employeeId");
 			verify(mockService).readEmployee(employee.getEmployeeId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		
@@ -107,8 +103,6 @@ public class EmployeeControlTest {
 
 			controlToTest.readAllEmployees(mockCtx);
 			verify(mockService).readAllEmployees();
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		
@@ -135,8 +129,6 @@ public class EmployeeControlTest {
 	
 			verify(mockService).updateEmployee(employee.getEmployeeId(), employee.getName(), employee.getTitle(), 
 												employee.getSupervisor(), employee.getDepartment(), employee.getDeptHead());
-			
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 	
@@ -154,8 +146,6 @@ public class EmployeeControlTest {
 
 			verify(mockCtx).formParam("employeeId");
 			verify(mockService).deleteEmployee(employee.getEmployeeId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		

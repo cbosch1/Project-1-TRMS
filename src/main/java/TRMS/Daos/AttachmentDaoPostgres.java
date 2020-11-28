@@ -1,5 +1,6 @@
 package TRMS.daos;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -50,7 +51,7 @@ public class AttachmentDaoPostgres implements AttachmentDao {
 
             stmt.setInt(1, file.getRequestId());
             stmt.setString(2, file.getFileType());
-            stmt.setBinaryStream(3, file.getData());
+            stmt.setBytes(3, file.getData());
 
             ResultSet rs = stmt.executeQuery();
             rs.next();
@@ -117,13 +118,15 @@ public class AttachmentDaoPostgres implements AttachmentDao {
             ResultSet rs = stmt.executeQuery();
             rs.next();
             result = new Attachment(attachId, rs.getInt(2), rs.getString(3)); 
-            result.setData(rs.getBinaryStream(4));
+            result.setData(rs.getBinaryStream(4).readAllBytes());
 
             Log.info("Request completed, retrieved attachment id: " + attachId);
 
         } catch (SQLException e){
             Log.warn("SQLException thrown in read for attachment with id: " + attachId, e);
             throw e;
+        } catch (IOException e) {
+            Log.warn("IOException throw while reading attachment file: " + attachId, e);
         }
 
         return result;
@@ -150,7 +153,6 @@ public class AttachmentDaoPostgres implements AttachmentDao {
             ResultSet rs = stmt.executeQuery();
             while (rs.next()){
                 Attachment attach = new Attachment(rs.getInt(1), rs.getInt(2), rs.getString(3));
-                attach.setData(rs.getBinaryStream(4));
                 result.add(attach);
             }
 
@@ -181,7 +183,7 @@ public class AttachmentDaoPostgres implements AttachmentDao {
 
             stmt.setInt(1, attach.getRequestId());
             stmt.setString(2, attach.getFileType());
-            stmt.setBinaryStream(3, attach.getData());
+            stmt.setBytes(3, attach.getData());
             stmt.setInt(4, attach.getAttachId());
 
             result = (1 == stmt.executeUpdate());

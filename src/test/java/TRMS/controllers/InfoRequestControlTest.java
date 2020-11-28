@@ -18,6 +18,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import TRMS.pojos.InfoRequest;
+import TRMS.services.AttachmentService;
 import TRMS.services.InfoRequestService;
 import io.javalin.http.Context;
 
@@ -26,6 +27,10 @@ public class InfoRequestControlTest {
 
 	@Mock
 	private InfoRequestService mockService;
+	@Mock
+	private AuthControl mockAuth;
+	@Mock
+	private AttachmentService mockAttach;
 	@Mock
 	private Context mockCtx;
 
@@ -42,8 +47,8 @@ public class InfoRequestControlTest {
 
 	@Before
 	public void setUp() throws Exception {
-		controlToTest = new InfoRequestControl(mockService);
-		request = new InfoRequest(2010, 1, 0, true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
+		controlToTest = new InfoRequestControl(mockService, mockAuth, mockAttach);
+		request = new InfoRequest(2010, 1, 0, 1, "Big Boss", true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
 
 		when(mockCtx.formParam("infoId")).thenReturn(Integer.toString(request.getInfoId()));
 		when(mockCtx.formParam("relatedId")).thenReturn(Integer.toString(request.getRelatedId()));
@@ -68,10 +73,8 @@ public class InfoRequestControlTest {
 			verify(mockCtx).formParam("description");
 			verify(mockCtx).formParam("dateTime");
 
-			verify(mockService).createInfoRequest(request.getRelatedId(), request.getDestinationId(), request.getUrgent(),
-													request.getDescription(), request.getDateTime());
-
-			//TODO verify ctx being given proper inputs.
+			verify(mockService).createInfoRequest(request.getRelatedId(), request.getDestinationId(), request.getSenderId(), request.getSender(),
+												request.getUrgent(), request.getDescription(), request.getDateTime());
 			
 			verify(mockCtx).status(200);
 
@@ -87,8 +90,6 @@ public class InfoRequestControlTest {
 
 			verify(mockCtx).formParam("infoId");
 			verify(mockService).readInfoRequest(request.getInfoId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		
@@ -110,8 +111,6 @@ public class InfoRequestControlTest {
 			verify(mockCtx).formParam("destinationId");
 			verify(mockService).readAllInfoFor(request.getDestinationId());
 
-			//TODO verify ctx being given proper inputs.
-
 			verify(mockCtx).status(200);
 		
 		} catch (Exception e) {
@@ -130,8 +129,6 @@ public class InfoRequestControlTest {
 			controlToTest.readAllInfoReq(mockCtx);
 			verify(mockService).readAllInfoReq();
 
-			//TODO verify ctx being given proper inputs.
-
 			verify(mockCtx).status(200);
 		
 		} catch (Exception e) {
@@ -143,7 +140,8 @@ public class InfoRequestControlTest {
 	public void updateInfoRequestTest() {
 		try {
 			when(mockService.updateInfoRequest(request.getInfoId(), request.getRelatedId(), request.getDestinationId(), 
-										request.getUrgent(), request.getDescription(), request.getDateTime())).thenReturn(true);
+												request.getSenderId(), request.getSender(), request.getUrgent(), 
+												request.getDescription(), request.getDateTime())).thenReturn(true);
 
 			controlToTest.updateInfoRequest(mockCtx);
 	
@@ -155,9 +153,8 @@ public class InfoRequestControlTest {
 			verify(mockCtx).formParam("dateTime");
 
 			verify(mockService).updateInfoRequest(request.getInfoId(), request.getRelatedId(), request.getDestinationId(), 
-													request.getUrgent(), request.getDescription(), request.getDateTime());
-			
-			//TODO verify ctx being given proper inputs.
+													request.getSenderId(), request.getSender(), request.getUrgent(), 
+													request.getDescription(), request.getDateTime());
 
 			verify(mockCtx).status(200);
 	
@@ -176,7 +173,6 @@ public class InfoRequestControlTest {
 			verify(mockCtx).formParam("infoId");
 			verify(mockService).deleteInfoRequest(request.getInfoId());
 
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		

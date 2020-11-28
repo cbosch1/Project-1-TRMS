@@ -3,6 +3,7 @@ package TRMS.daos;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -81,7 +82,7 @@ public class AttachmentDaoTest {
 				
 				verify(spy).setInt(1, attach.getRequestId());
 				verify(spy).setString(2, attach.getFileType());
-				verify(spy).setBinaryStream(3, attach.getData());
+				verify(spy).setBytes(3, attach.getData());
 
 				verify(spy).executeQuery();
 
@@ -114,7 +115,7 @@ public class AttachmentDaoTest {
 				testStmt.setInt(1, attach.getAttachId());
 				testStmt.setInt(2, attach.getRequestId());
 				testStmt.setString(3, attach.getFileType());
-				testStmt.setBinaryStream(4, attach.getData());
+				testStmt.setBytes(4, attach.getData());
 				assertTrue("Error in inserting attachment", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
@@ -207,7 +208,7 @@ public class AttachmentDaoTest {
 				testStmt.setInt(1, attach.getAttachId());
 				testStmt.setInt(2, attach.getRequestId());
 				testStmt.setString(3, attach.getFileType());
-				testStmt.setBinaryStream(4, attach.getData());
+				testStmt.setBytes(4, attach.getData());
 				assertTrue("Error in inserting attachment", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
@@ -252,7 +253,7 @@ public class AttachmentDaoTest {
 				testStmt.setInt(1, attach.getAttachId());
 				testStmt.setInt(2, attach.getRequestId());
 				testStmt.setString(3, attach.getFileType());
-				testStmt.setBinaryStream(4, attach.getData());
+				testStmt.setBytes(4, attach.getData());
 				assertTrue("Error in inserting attachment", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
@@ -277,7 +278,7 @@ public class AttachmentDaoTest {
 				//Verify statement was prepared and executed properly
 				verify(spy).setInt(1, attach.getRequestId());
 				verify(spy).setString(2, attach.getFileType());
-				verify(spy).setBinaryStream(3, attach.getData());
+				verify(spy).setBytes(3, attach.getData());
 				verify(spy).setInt(4, attach.getAttachId());
 
 				verify(spy).executeUpdate();
@@ -289,7 +290,11 @@ public class AttachmentDaoTest {
 
 				rs.next();
 				Attachment modAttach = new Attachment(rs.getInt(1), rs.getInt(2), rs.getString(3));
-				modAttach.setData(rs.getBinaryStream(4));
+				try {
+					modAttach.setData(rs.getBinaryStream(4).readAllBytes());
+				} catch (IOException e) {
+					fail("Error thrown getting byte array");
+				}
 
 				assertTrue("Database object does not match as modified", attach.equals(modAttach));
 

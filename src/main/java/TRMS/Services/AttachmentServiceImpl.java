@@ -1,6 +1,5 @@
 package TRMS.services;
 
-import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -39,7 +38,7 @@ public class AttachmentServiceImpl implements AttachmentService {
      * @return attachId the generated or provided Id for this object
      */
     @Override
-    public int createAttachment(int attachId, int requestId, String fileType, InputStream data) {
+    public int createAttachment(int attachId, int requestId, String fileType, byte[] data) {
         Log.info("Responding to create attachment with id...");
         int result = -1;
 
@@ -64,7 +63,7 @@ public class AttachmentServiceImpl implements AttachmentService {
      * @return attachId the generated Id for this object
      */
     @Override
-    public int createAttachment(int requestId, String fileType, InputStream data) {
+    public int createAttachment(int requestId, String fileType, byte[] data) {
         Log.info("Responding to create attachment...");
         int result = -1;
 
@@ -154,7 +153,7 @@ public class AttachmentServiceImpl implements AttachmentService {
      * @return true if the request was successful
      */
     @Override
-    public boolean updateAttachment(int attachId, int requestId, String fileType, InputStream data) {
+    public boolean updateAttachment(int attachId, int requestId, String fileType, byte[] data) {
         Log.info("Responding to update attachment...");
         boolean result = false;
 

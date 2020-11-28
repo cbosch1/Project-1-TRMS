@@ -38,12 +38,12 @@ public class InfoRequestServiceImpl implements InfoRequestService {
      * @return infoId the generated Id for this object
      */
     @Override
-    public int createInfoRequest(int relatedId, int destinationId, boolean urgent, String description,
+    public int createInfoRequest(int relatedId, int destinationId, int senderId,  String sender, boolean urgent, String description,
             LocalDateTime dateTime) {
         Log.info("Responding to create information request...");
         int result = -1;
 
-        InfoRequest info = new InfoRequest(0, relatedId, destinationId, urgent, description, dateTime);
+        InfoRequest info = new InfoRequest(0, relatedId, destinationId, senderId, sender, urgent, description, dateTime);
 
         try {
             result = infoDao.createInfoRequest(info);
@@ -149,12 +149,12 @@ public class InfoRequestServiceImpl implements InfoRequestService {
      * @return true if the operation was successful
      */
     @Override
-    public boolean updateInfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,
+    public boolean updateInfoRequest(int infoId, int relatedId, int destinationId,  int senderId, String sender, boolean urgent, String description,
             LocalDateTime dateTime) {
         Log.info("Responding to update information request...");
         boolean result = false;
 
-        InfoRequest info = new InfoRequest(infoId, relatedId, destinationId, urgent, description, dateTime);
+        InfoRequest info = new InfoRequest(infoId, relatedId, destinationId, senderId, sender, urgent, description, dateTime);
 
         try {
             result = infoDao.updateInfoRequest(info);

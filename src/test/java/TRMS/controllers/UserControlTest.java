@@ -64,8 +64,6 @@ public class UserControlTest {
 			verify(mockCtx).formParam("privilege");
 
 			verify(mockService).createUser(user.getUsername(), user.getPassword(), user.getEmployeeId(), user.getPrivilege());
-
-			//TODO verify ctx being given proper inputs.
 			
 			verify(mockCtx).status(200);
 
@@ -81,8 +79,6 @@ public class UserControlTest {
 
 			verify(mockCtx).formParam("userId");
 			verify(mockService).readUser(user.getUserId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		
@@ -107,8 +103,6 @@ public class UserControlTest {
 	
 			verify(mockService).updateUser(user.getUserId(), user.getUsername(), user.getPassword(), 
 											user.getEmployeeId(), user.getPrivilege());
-			
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 	
@@ -126,8 +120,6 @@ public class UserControlTest {
 
 			verify(mockCtx).formParam("userId");
 			verify(mockService).deleteUser(user.getUserId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		

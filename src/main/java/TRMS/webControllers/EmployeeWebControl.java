@@ -53,20 +53,6 @@ public class EmployeeWebControl {
         }
     }
 
-    public void postNewReimbursement(Context ctx){
-        if (!auth.checkUser(ctx)){
-            ctx.redirect("employee-login.html");
-            Log.warn("Access denied due to login verification");
-
-        } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
-            ctx.redirect("employee-login.html");
-            Log.warn("Access denied due to login privilege");
-        
-        } else {
-            //TODO: Add implementation for adding a reimbursement request
-        }
-    }
-
     public void getViewReimbursement(Context ctx){
         if (!auth.checkUser(ctx)){
             ctx.redirect("employee-login.html");
@@ -78,6 +64,20 @@ public class EmployeeWebControl {
         
         } else {
             servePage(ctx, "view-reimbursement.html");
+        }
+    }
+
+    public void getViewInfoRequest(Context ctx){
+        if (!auth.checkUser(ctx)){
+            ctx.redirect("employee-login.html");
+            Log.warn("Access denied due to login verification");
+
+        } else if (!auth.getPrivilege(ctx).equals(AuthPriv.EMPLOYEE)) {
+            ctx.redirect("employee-login.html");
+            Log.warn("Access denied due to login privilege");
+        
+        } else {
+            servePage(ctx, "info-request-reader.html");
         }
     }
 

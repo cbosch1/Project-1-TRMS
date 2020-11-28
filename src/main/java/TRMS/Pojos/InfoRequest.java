@@ -10,7 +10,9 @@ public class InfoRequest {
     
     private int infoId;
     private int relatedId;
-    private int destinationId;
+	private int destinationId;
+	private int senderId;
+	private String sender;
     private boolean urgent;
     private String description;
     private LocalDateTime dateTime;
@@ -27,13 +29,15 @@ public class InfoRequest {
      * @param destinationId the id of the employee that is to receive this info request.
      * @param description the main body of this request.
 	 */
-	public InfoRequest(int infoId, int relatedId, int destinationId, String description) {
+	public InfoRequest(int infoId, int relatedId, int destinationId, int senderId, String sender, String description) {
 		this.infoId = infoId;
 		this.relatedId = relatedId;
 		this.destinationId = destinationId;
+		this.senderId = senderId;
 		this.urgent = false;
 		this.description = description;
 		this.dateTime = LocalDateTime.now();
+		this.sender = sender;
     }
 
 	/**
@@ -45,14 +49,16 @@ public class InfoRequest {
 	 * @param description the main body of this request.
 	 * @param dateTime a LocalDateTime object representing when the request was made.
 	 */
-	public InfoRequest(int infoId, int relatedId, int destinationId, boolean urgent, String description,
+	public InfoRequest(int infoId, int relatedId, int destinationId, int senderId, String sender, boolean urgent, String description,
 			LocalDateTime dateTime) {
 		this.infoId = infoId;
 		this.relatedId = relatedId;
 		this.destinationId = destinationId;
+		this.senderId = senderId;
 		this.urgent = urgent;
 		this.description = description;
 		this.dateTime = dateTime;
+		this.sender = sender;
     }
 
 	/**
@@ -174,5 +180,21 @@ public class InfoRequest {
 		if (urgent != other.urgent)
 			return false;
 		return true;
+	}
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
+	}
+
+	public int getSenderId() {
+		return senderId;
+	}
+
+	public void setSenderId(int senderId) {
+		this.senderId = senderId;
 	}
 }

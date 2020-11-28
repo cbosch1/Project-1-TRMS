@@ -23,7 +23,7 @@ public interface InfoRequestService {
      * @param dateTime a DateTime object representing when the request was made
      * @return infoId the generated Id for this object
      */
-    public int createInfoRequest(int relatedId, int destinationId, boolean urgent, 
+    public int createInfoRequest(int relatedId, int destinationId, int senderId, String sender, boolean urgent,
                                     String description, LocalDateTime dateTime);
 
     /**
@@ -52,7 +52,7 @@ public interface InfoRequestService {
      * @param infoId the id of the request to read
      * @return The Info request with the given id
      */
-    public boolean updateInfoRequest(int infoId, int relatedId, int destinationId, 
+    public boolean updateInfoRequest(int infoId, int relatedId, int destinationId, int senderId, String sender, 
                                     boolean urgent, String description, LocalDateTime dateTime);
 
     /**

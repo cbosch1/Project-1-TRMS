@@ -1,8 +1,12 @@
 package TRMS.controllers;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import TRMS.pojos.Attachment;
 import TRMS.services.AttachmentService;
 import io.javalin.http.Context;
 import io.javalin.http.UploadedFile;
@@ -17,7 +21,7 @@ import io.javalin.http.UploadedFile;
  */
 public class AttachmentControl {
 
-    private static Logger Log = LogManager.getLogger("Service");
+    private static Logger Log = LogManager.getLogger("Control");
 
     private AuthControl auth;
     private AttachmentService service;
@@ -48,9 +52,9 @@ public class AttachmentControl {
             int returnId;
     
             if (attachNum.equals("")){
-                returnId = service.createAttachment(requestId, fileType, file.getContent());
+                returnId = service.createAttachment(requestId, fileType, file.getContent().readAllBytes());
             } else {
-                returnId = service.createAttachment(Integer.parseInt(attachNum), requestId, fileType, file.getContent());
+                returnId = service.createAttachment(Integer.parseInt(attachNum), requestId, fileType, file.getContent().readAllBytes());
             }
             ctx.json(returnId);
             ctx.status(200);
@@ -93,6 +97,29 @@ public class AttachmentControl {
         } catch (Exception e) {
             Log.warn("Exception thrown while reading attachment: " + e);
             ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
+    }
+
+    public void downloadAttachment(Context ctx) {
+        try {
+            int attachId = Integer.parseInt(ctx.pathParam("id"));
+            Attachment attach = service.readAttachment(attachId);
+            List<Object> list = new LinkedList<>();
+
+            list.add(attach.getData());
+            list.add(attach.getFileType());
+            ctx.json(list);
+            
+            ctx.status(200);
+            Log.info("Successfully read attachment");
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while downloading attachment: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while downloading attachment: " + e);
             ctx.status(500);
         }
     }
@@ -149,7 +176,7 @@ public class AttachmentControl {
             String fileType = ctx.formParam("fileType");
             UploadedFile file = ctx.uploadedFile("file");
     
-            if (service.updateAttachment(attachId, requestId, fileType, file.getContent())){
+            if (service.updateAttachment(attachId, requestId, fileType, file.getContent().readAllBytes())){
                 Log.info("Attachment successfully updated");
                 ctx.status(200);
             } else {

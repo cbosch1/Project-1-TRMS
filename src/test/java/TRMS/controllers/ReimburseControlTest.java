@@ -92,8 +92,6 @@ public class ReimburseControlTest {
 			verify(mockService).createRequest(request.getEmployeeId(), request.getLocation(), request.getCost(), request.getType(),
 											request.getDescription(), request.getJustification(), request.getGrading(), request.getProjected(), 
 											request.isUrgent(), request.getStatus(), request.getStage(), request.getDateTime());
-
-			//TODO verify ctx being given proper inputs.
 			
 			verify(mockCtx).status(200);
 
@@ -109,8 +107,6 @@ public class ReimburseControlTest {
 
 			verify(mockCtx).formParam("requestId");
 			verify(mockService).readRequest(request.getRequestId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		
@@ -132,8 +128,6 @@ public class ReimburseControlTest {
 			verify(mockCtx).formParam("employeeId");
 			verify(mockService).readAllRequestsFor(request.getEmployeeId());
 
-			//TODO verify ctx being given proper inputs.
-
 			verify(mockCtx).status(200);
 		
 		} catch (Exception e) {
@@ -151,8 +145,6 @@ public class ReimburseControlTest {
 
 			controlToTest.readAllRequests(mockCtx);
 			verify(mockService).readAllRequests();
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		
@@ -189,8 +181,6 @@ public class ReimburseControlTest {
 											request.getJustification(), request.getGrading(), request.getProjected(), request.isUrgent(), 
 											request.getStatus(), request.getStage(), request.getDateTime());
 
-			//TODO verify ctx being given proper inputs.
-
 			verify(mockCtx).status(200);
 	
 			} catch (Exception e) {
@@ -207,8 +197,6 @@ public class ReimburseControlTest {
 
 			verify(mockCtx).formParam("requestId");
 			verify(mockService).deleteRequest(request.getRequestId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 		

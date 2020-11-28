@@ -1,10 +1,15 @@
 package TRMS.controllers;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import TRMS.pojos.InfoRequest;
+import TRMS.services.AttachmentService;
 import TRMS.services.InfoRequestService;
 import io.javalin.http.Context;
 
@@ -20,11 +25,15 @@ public class InfoRequestControl {
 
     private static Logger Log = LogManager.getLogger("Control");
 
+    private AuthControl auth;
     private InfoRequestService service;
+    private AttachmentService attachService;
 
-    public InfoRequestControl(InfoRequestService service){
+    public InfoRequestControl(InfoRequestService service, AuthControl auth, AttachmentService attachService){
         super();
         this.service = service;
+        this.auth = auth;
+        this.attachService = attachService;
     }
 
     /**
@@ -44,11 +53,13 @@ public class InfoRequestControl {
         try {
             int relatedId = Integer.parseInt(ctx.formParam("relatedId"));
             int destinationId = Integer.parseInt(ctx.formParam("destinationId"));
+            int senderId = Integer.parseInt(ctx.formParam("senderId"));
+            String sender = ctx.formParam("sender");
             boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
             String description = ctx.formParam("description");
             LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
             
-            int returnId = service.createInfoRequest(relatedId, destinationId, urgent, description, dateTime);
+            int returnId = service.createInfoRequest(relatedId, destinationId, senderId, sender, urgent, description, dateTime);
 
             ctx.json(returnId);
             ctx.status(200);
@@ -66,6 +77,43 @@ public class InfoRequestControl {
         }
     }
 
+    public void createInfoResponse(Context ctx){
+        try {
+            InfoRequest og = service.readInfoRequest(Integer.parseInt(ctx.pathParam("id")));
+
+            int relatedId = og.getRelatedId();
+            int destinationId = og.getSenderId();
+            int senderId = auth.getEmp(ctx);
+            String sender = auth.getName(ctx);
+            boolean urgent = og.getUrgent();
+            String description = ctx.formParam("description");
+            LocalDateTime dateTime = LocalDateTime.now();
+            
+            int returnId = service.createInfoRequest(relatedId, destinationId, senderId, sender, urgent, description, dateTime);
+
+            ctx.uploadedFiles("files").forEach(file -> {
+                try {
+                attachService.createAttachment(relatedId, file.getFilename(), file.getContent().readAllBytes());
+                } catch(IOException e) {
+                    Log.warn("Exception thrown while creating info request: " + e);
+                    ctx.status(500);
+                }
+            });
+
+            ctx.redirect("../");
+            ctx.status(200);
+            Log.info("Successfully inserted info request, id returned: " + returnId);
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while creating info request: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while creating info request: " + e);
+            ctx.status(500);
+        }
+    }
+
     /**
      * For reading the information request with the given infoId.
      * Parses form parameters out of the context object and passes them
@@ -77,22 +125,20 @@ public class InfoRequestControl {
      * <ul><li>infoId</li></ul>
      */
     public void readInfoRequest(Context ctx){
-        try {
-            int infoId = Integer.parseInt(ctx.formParam("infoId"));
-            ctx.json(service.readInfoRequest(infoId));
+        int infoId = -1;
 
-            ctx.status(200);
-            Log.info("Successfully read information request");
+        if(auth.checkUser(ctx)) {
+            try {
+                infoId = Integer.parseInt(ctx.pathParam("id"));
 
-        } catch (NumberFormatException e){
-            Log.warn("NumberFormatException thrown while reading information request: " + e);
-            ctx.html("NumberFormatException thrown: " + e);
-            ctx.status(500);
+                ctx.json(service.readInfoRequest(infoId));
+                ctx.status(200);
+                Log.info("Successfully returned information request: " + infoId);
 
-        } catch (Exception e) {
-            Log.warn("Exception thrown while reading information request: " + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading info request: " + infoId +" | "+ e);
+                ctx.status(500);
+            }
         }
     }
 
@@ -107,18 +153,28 @@ public class InfoRequestControl {
      * <ul><li>empId</li></ul>
      */
     public void readAllInfoFor(Context ctx){
-        int employeeId = -1;
-        try {
-            employeeId = Integer.parseInt(ctx.formParam("destinationId"));
-            ctx.json(service.readAllInfoFor(employeeId));
+        int requestId = -1;
 
-            ctx.status(200);
-            Log.info("Successfully read all info requests for employee: " + employeeId);
+        if(auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
+                List<InfoRequest> reimburseInfos = new LinkedList<>();
 
-        } catch (Exception e) {
-            Log.warn("Exception thrown while reading all info requests for employee: " + employeeId + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
+                for (InfoRequest info : service.readAllInfoFor(auth.getEmp(ctx))){
+                    if (info.getRelatedId() == requestId) {
+                        reimburseInfos.add(info);
+                    }
+                }
+
+                ctx.json(reimburseInfos);
+
+                ctx.status(200);
+                Log.info("Successfully returned: " + reimburseInfos.size() + " related infos");
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading all info requests related to: " + requestId + e);
+                ctx.status(500);
+            }
         }
     }
 
@@ -160,11 +216,13 @@ public class InfoRequestControl {
             int infoId = Integer.parseInt(ctx.formParam("infoId"));
             int relatedId = Integer.parseInt(ctx.formParam("relatedId"));
             int destinationId = Integer.parseInt(ctx.formParam("destinationId"));
+            int senderId = Integer.parseInt(ctx.formParam("senderId"));
+            String sender = ctx.formParam("sender");
             boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
             String description = ctx.formParam("description");
             LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
     
-            if (service.updateInfoRequest(infoId, relatedId, destinationId, urgent, description, dateTime)){
+            if (service.updateInfoRequest(infoId, relatedId, destinationId, senderId, sender, urgent, description, dateTime)){
                 Log.info("Info request successfully updated");
                 ctx.status(200);
             } else {

@@ -47,15 +47,17 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
         try(Connection conn = connUtil.createConnection()) {
             Log.info("Received request to insert info request related to reimbursement: " + info.getRelatedId());
 
-            String sql = "INSERT INTO info_request VALUES (Default,?,?,?,?,?,?) RETURNING info_id;";
+            String sql = "INSERT INTO info_request VALUES (Default,?,?,?,?,?,?,?,?) RETURNING info_id;";
             stmt = conn.prepareStatement(sql);
 
             stmt.setInt(1, info.getRelatedId());
             stmt.setInt(2, info.getDestinationId());
-            stmt.setBoolean(3, info.getUrgent());
-            stmt.setString(4, info.getDescription());
-            stmt.setDate(5, Date.valueOf(LocalDate.from(info.getDateTime())));
-            stmt.setTime(6, Time.valueOf(LocalTime.from(info.getDateTime())));
+            stmt.setInt(3, info.getSenderId());
+            stmt.setString(4, info.getSender());
+            stmt.setBoolean(5, info.getUrgent());
+            stmt.setString(6, info.getDescription());
+            stmt.setDate(7, Date.valueOf(LocalDate.from(info.getDateTime())));
+            stmt.setTime(8, Time.valueOf(LocalTime.from(info.getDateTime())));
 
             ResultSet rs = stmt.executeQuery();
             rs.next();
@@ -121,8 +123,9 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
 
             ResultSet rs = stmt.executeQuery();
             while (rs.next()){
-                InfoRequest i = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getBoolean(4), 
-                rs.getString(5), LocalDateTime.of(rs.getDate(6).toLocalDate(), rs.getTime(7).toLocalTime()));
+                InfoRequest i = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getString(5),
+                                                rs.getBoolean(6), rs.getString(7), LocalDateTime.of(rs.getDate(8).toLocalDate(), 
+                                                rs.getTime(9).toLocalTime()));
                 result.add(i);
             }
 
@@ -152,8 +155,9 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
 
             ResultSet rs = stmt.executeQuery();
             while (rs.next()){
-                InfoRequest i = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getBoolean(4), 
-                rs.getString(5), LocalDateTime.of(rs.getDate(6).toLocalDate(), rs.getTime(7).toLocalTime()));
+                InfoRequest i = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getString(5),
+                                                rs.getBoolean(6), rs.getString(7), LocalDateTime.of(rs.getDate(8).toLocalDate(), 
+                                                rs.getTime(9).toLocalTime()));
                 result.add(i);
             }
 
@@ -186,8 +190,8 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
             ResultSet rs = stmt.executeQuery();
 
             rs.next();
-            result = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getBoolean(4), rs.getString(5), 
-                                        LocalDateTime.of(rs.getDate(6).toLocalDate(), rs.getTime(7).toLocalTime()));
+            result = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getString(5), rs.getBoolean(6), 
+                                    rs.getString(7), LocalDateTime.of(rs.getDate(8).toLocalDate(), rs.getTime(9).toLocalTime()));
 
             Log.info("Request completed, retrieved info request with id: " + infoId);
 

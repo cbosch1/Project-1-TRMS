@@ -55,7 +55,7 @@ public class InfoRequestDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		infoDao = new InfoRequestDaoPostgres(connUtil);
-		info = new InfoRequest(2010, 1, 0, true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
+		info = new InfoRequest(2010, 1, 0, 1, "Big Boss", true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
 	}
 
 	@After
@@ -307,8 +307,8 @@ public class InfoRequestDaoTest {
 				ResultSet rs = testStmt.executeQuery();
 
 				rs.next();
-				InfoRequest modInfo = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getBoolean(4),
-													  rs.getString(5), LocalDateTime.of(rs.getDate(6).toLocalDate(), rs.getTime(7).toLocalTime()));
+				InfoRequest modInfo = new InfoRequest(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getString(5), rs.getBoolean(6),
+													  rs.getString(7), LocalDateTime.of(rs.getDate(8).toLocalDate(), rs.getTime(9).toLocalTime()));
 
 				assertTrue("Database object does not match as modified", info.equals(modInfo));
 

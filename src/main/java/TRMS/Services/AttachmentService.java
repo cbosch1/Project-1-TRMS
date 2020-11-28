@@ -1,6 +1,5 @@
 package TRMS.services;
 
-import java.io.InputStream;
 import java.util.List;
 
 import TRMS.pojos.Attachment;
@@ -24,7 +23,7 @@ public interface AttachmentService {
      * @param data the byte stream of the file to be uploaded
      * @return attachId the generated or provided Id for this object
      */
-    public int createAttachment(int attachId, int requestId, String fileType, InputStream data);
+    public int createAttachment(int attachId, int requestId, String fileType, byte[] data);
 
     /**
      * Converts inputs into an attachment object and then sends object
@@ -34,7 +33,7 @@ public interface AttachmentService {
      * @param data the byte stream of the file to be uploaded
      * @return attachId the generated Id for this object
      */
-    public int createAttachment(int requestId, String fileType, InputStream data);
+    public int createAttachment(int requestId, String fileType, byte[] data);
 
     /**
      * Calls the Dao to delete the attachment file with given id
@@ -56,7 +55,7 @@ public interface AttachmentService {
      * @param requestId the id of the reimbursement request with the desired files
      * @return A list of the attachment ids of the related files.
      */
-    public boolean updateAttachment(int attachId, int requestId, String fileType, InputStream data);
+    public boolean updateAttachment(int attachId, int requestId, String fileType, byte[] data);
 
     /**
      * Calls the Dao to update an attachment file with the given id. The input fields

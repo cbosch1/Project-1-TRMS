@@ -90,9 +90,7 @@ public class AttachmentControlTest {
 			verify(mockCtx).uploadedFile("file");
 
 			verify(mockService).createAttachment(attach.getAttachId(), attach.getRequestId(), 
-												attach.getFileType(), stream);
-
-			//TODO verify ctx being given proper inputs.
+												attach.getFileType(), stream.readAllBytes());
 			
 			verify(mockCtx).status(200);
 
@@ -112,9 +110,7 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("requestId");
 			verify(mockCtx).formParam("fileType");
 			verify(mockCtx).uploadedFile("file");
-			verify(mockService).createAttachment(attach.getRequestId(), attach.getFileType(), stream);
-
-			//TODO verify ctx being given proper inputs.
+			verify(mockService).createAttachment(attach.getRequestId(), attach.getFileType(), stream.readAllBytes());
 			
 			verify(mockCtx).status(200);
 
@@ -131,8 +127,6 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("attachId");
 			verify(mockService).readAttachment(attach.getAttachId());
 
-			//TODO verify ctx being given proper inputs.
-
 			verify(mockCtx).status(200);
 
 		} catch (Exception e) {
@@ -148,8 +142,6 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("requestId");
 			verify(mockService).readRelatedReferences(attach.getRequestId());
 
-			//TODO verify ctx being given proper inputs.
-
 			verify(mockCtx).status(200);
 
 		} catch (Exception e) {
@@ -161,7 +153,7 @@ public class AttachmentControlTest {
 	public void updateAttachmentTest() {
 		try {
 			when(mockService.updateAttachment(attach.getAttachId(), attach.getRequestId(), 
-												attach.getFileType(), stream)).thenReturn(true);
+												attach.getFileType(), stream.readAllBytes())).thenReturn(true);
 
 			controlToTest.updateAttachment(mockCtx);
 
@@ -170,9 +162,7 @@ public class AttachmentControlTest {
 			verify(mockCtx).formParam("fileType");
 			verify(mockCtx).uploadedFile("file");
 			verify(mockService).updateAttachment(attach.getAttachId(), attach.getRequestId(), 
-												attach.getFileType(), stream);
-
-			//TODO verify ctx being given proper inputs.
+												attach.getFileType(), stream.readAllBytes());
 
 			verify(mockCtx).status(200);
 
@@ -190,8 +180,6 @@ public class AttachmentControlTest {
 
 			verify(mockCtx).formParam("attachId");
 			verify(mockService).deleteAttachment(attach.getAttachId());
-
-			//TODO verify ctx being given proper inputs.
 
 			verify(mockCtx).status(200);
 

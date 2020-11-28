@@ -39,6 +39,8 @@ CREATE TABLE info_request
 	info_id serial PRIMARY KEY,
 	related_id integer NOT NULL,
 	destination_id integer NOT NULL,
+	sender_id integer NOT NULL,
+	sender varchar(100) NOT NULL,
 	urgent boolean,
 	description text NOT NULL,
 	request_date date NOT NULL,
@@ -113,7 +115,7 @@ ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- Procedure used by JDBC to insert into the reimbursement and reimburse_status list properly
 CREATE or REPLACE FUNCTION insert_reimbursement(emp_id int4, ev_location varchar(100), ev_cost double precision, ev_type varchar(10), 
-												description text, justification text, projected_award double precision, urgent boolean,
+												description text, justification text, grading varchar(100), projected_award double precision, urgent boolean,
 												status varchar(10), stage varchar(10), request_date varchar(15), request_time varchar(15))
 	RETURNS integer
 	LANGUAGE plpgsql 
@@ -122,7 +124,7 @@ CREATE or REPLACE FUNCTION insert_reimbursement(emp_id int4, ev_location varchar
 		reimburseId integer;
 	BEGIN 
 		
-		INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification) returning request_id into reimburseId;
+		INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
 		
 		INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, stage::app_stage, request_date::date, request_time::time);
 	

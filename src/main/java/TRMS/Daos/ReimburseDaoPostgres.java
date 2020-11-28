@@ -40,7 +40,7 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
     /**
      * Insert Reimbursement Request object into the database. This object's id number
      * will be ignored as the database will generate it's own.
-     * @param reimbursmentRequest to be inserted
+     * @param reimbursementRequest to be inserted
      * @return int - The generated id of the request
      */
     @Override

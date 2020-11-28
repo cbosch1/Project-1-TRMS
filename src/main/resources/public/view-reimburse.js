@@ -38,6 +38,8 @@ window.onload = function () {
     xhr.open("POST", url, true);
     //sends request
     xhr.send();
+
+    retrieveInfos();
 };
 
 var showRequest = function (reimburse) {
@@ -84,9 +86,7 @@ var showRequest = function (reimburse) {
         cancelCol.addEventListener("click", function (event) {
             event.preventDefault();
             event.stopPropagation();
-            console.log("clicked");
             if(window.confirm("Are you sure you want to delete this request? This cannot be undone.")){
-                console.log(this.firstChild);
                 this.firstChild.submit();
             }
         });
@@ -147,4 +147,88 @@ var showAttachment = function(attachment) {
     idCol.innerHTML = attachment.attachId;
     fileCol.innerHTML = attachment.fileType;
     downloadCol.innerHTML = "<form id=\"download-attachment-form\" method=\"GET\" action=\"../download-attachment/" + attachment.attachId + "\">\n                            <button id=\"download-attachment-btn\" type=\"submit\" class=\"btn table-btn\">Download</button>\n                        </form>";
+}
+
+var retrieveInfos = function() {
+
+    let xhr = new XMLHttpRequest();
+    let url = window.location.pathname+"/infos";
+    console.log(url);
+    //sets up ready state handler
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        switch (xhr.readyState) {
+            case 0:
+                console.log("Nothing, initialized not sent");
+                break;
+            case 1:
+                console.log("Connection established");
+                break;
+            case 2:
+                console.log("Request sent");
+                break;
+            case 3:
+                console.log("Waiting response");
+                break;
+            case 4:
+                console.log("Response received");
+                //logic to add attachment to table
+                if (xhr.status === 200) {
+                    let infoList = JSON.parse(xhr.responseText);
+                    infoList.forEach(function (element) {
+                        showInfo(element);
+                    });
+                }
+                break;
+        }
+    };
+    //opens up the request
+    xhr.open("POST", url, true);
+    //sends request
+    xhr.send();
+}
+
+var showInfo = function(info) {
+    var table = document.getElementById("information-requests");
+    var tableRow = document.createElement("tr");
+    var dateCol = document.createElement("td");
+    var senderCol = document.createElement("td");
+    var viewCol = document.createElement("td");
+
+    tableRow.appendChild(dateCol);
+    tableRow.appendChild(senderCol);
+    tableRow.appendChild(viewCol);
+    table.childNodes[3].appendChild(tableRow);
+
+    dateCol.innerText = dateTimeFormat(info.dateTime);
+    senderCol.innerText = info.sender;
+    viewCol.innerHTML = "<form id=\"view-info-form\" method=\"GET\" action=\"../view-info/" + info.infoId + "\">\n                            <button id=\"view-info-btn\" type=\"submit\" class=\"btn table-btn\">View</button>\n                        </form>";
+}
+
+var dateTimeFormat = function(dateTime) {
+
+    let date = dateTime.monthValue +"-"+ dateTime.dayOfMonth +"-"+ dateTime.year;
+    let time = "";
+    let afternoon = false; 
+    
+    if (dateTime.hour > 12) {
+        time += (dateTime.hour - 12);
+        afternoon = true;
+    } else {
+        time += dateTime.hour;
+    }
+
+    if (dateTime.minute > 9) {
+        time += ":" + dateTime.minute;
+    } else {
+        time += ":" + "0" + dateTime.minute;
+    }
+
+    if (afternoon) {
+        time += " PM";
+    } else {
+        time += " AM"
+    }
+
+    return (date + " " + time);
 }

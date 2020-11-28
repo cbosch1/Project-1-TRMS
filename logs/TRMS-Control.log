@@ -1378,3 +1378,834 @@
 2020-11-27 22:08:46,087 [qtp193178046-20] WARN : Service returned false while updating reimbursement request
 2020-11-27 22:08:47,700 [qtp193178046-25] INFO : Successfully read reimbursement request
 2020-11-27 22:11:29,256 [qtp665698670-23] WARN : Service returned false while updating reimbursement request
+2020-11-27 22:12:20,308 [qtp665698670-23] INFO : Successfully read reimbursement request
+2020-11-27 22:12:22,957 [qtp665698670-24] INFO : Reimbursement request successfully updated
+2020-11-27 22:12:28,444 [qtp665698670-20] INFO : Successfully read reimbursement request
+2020-11-27 22:12:31,513 [qtp665698670-19] INFO : Access approved
+2020-11-27 22:12:31,642 [qtp665698670-30] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:16:19,676 [qtp665698670-22] INFO : Access approved
+2020-11-27 22:16:19,804 [qtp665698670-19] INFO : Successfully read reimbursement request
+2020-11-27 22:16:51,018 [qtp665698670-29] INFO : Access approved
+2020-11-27 22:16:51,122 [qtp665698670-20] INFO : Successfully read reimbursement request
+2020-11-27 22:16:56,213 [qtp665698670-20] INFO : Access approved
+2020-11-27 22:16:56,328 [qtp665698670-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:16:57,903 [qtp665698670-29] INFO : Access approved
+2020-11-27 22:16:58,021 [qtp665698670-30] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:17:58,463 [qtp665698670-23] INFO : Successfully inserted reimbursement request, id returned: 3
+2020-11-27 22:17:58,469 [qtp665698670-20] INFO : Access approved
+2020-11-27 22:17:58,607 [qtp665698670-29] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:18:00,424 [qtp665698670-30] INFO : Access approved
+2020-11-27 22:18:00,525 [qtp665698670-24] INFO : Successfully read reimbursement request
+2020-11-27 22:18:03,821 [qtp665698670-24] INFO : Access approved
+2020-11-27 22:18:03,929 [qtp665698670-20] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:18:05,038 [qtp665698670-30] INFO : Access approved
+2020-11-27 22:18:05,141 [qtp665698670-19] INFO : Successfully read reimbursement request
+2020-11-27 22:18:06,804 [qtp665698670-19] INFO : Access approved
+2020-11-27 22:18:06,920 [qtp665698670-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:18:07,988 [qtp665698670-24] INFO : Access approved
+2020-11-27 22:18:08,092 [qtp665698670-30] INFO : Successfully read reimbursement request
+2020-11-27 22:18:09,890 [qtp665698670-30] INFO : Access approved
+2020-11-27 22:18:09,993 [qtp665698670-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:18:10,888 [qtp665698670-23] INFO : Access approved
+2020-11-27 22:18:10,983 [qtp665698670-24] INFO : Successfully read reimbursement request
+2020-11-27 22:18:13,023 [qtp665698670-24] INFO : Access approved
+2020-11-27 22:18:13,135 [qtp665698670-30] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:18:58,754 [qtp665698670-19] INFO : Access approved
+2020-11-27 22:18:58,883 [qtp665698670-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:19:11,788 [qtp665698670-30] INFO : Access approved
+2020-11-27 22:19:11,892 [qtp665698670-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:19:24,598 [qtp665698670-29] INFO : Access approved
+2020-11-27 22:19:24,721 [qtp665698670-20] INFO : Successfully read reimbursement request
+2020-11-27 22:20:27,296 [qtp665698670-23] INFO : Access approved
+2020-11-27 22:20:27,423 [qtp665698670-20] INFO : Successfully read reimbursement request
+2020-11-27 22:20:39,517 [qtp665698670-20] INFO : Access approved
+2020-11-27 22:20:39,618 [qtp665698670-24] INFO : Successfully read reimbursement request
+2020-11-27 22:21:47,481 [qtp665698670-30] INFO : Access approved
+2020-11-27 22:21:47,611 [qtp665698670-20] INFO : Successfully read reimbursement request
+2020-11-27 22:27:25,529 [qtp665698670-32] INFO : Access approved
+2020-11-27 22:27:25,665 [qtp665698670-35] INFO : Successfully read reimbursement request
+2020-11-27 22:27:33,306 [qtp665698670-35] INFO : Access approved
+2020-11-27 22:27:33,520 [qtp665698670-23] INFO : Successfully read reimbursement request
+2020-11-27 22:27:41,006 [qtp665698670-23] INFO : Access approved
+2020-11-27 22:27:41,109 [qtp665698670-23] INFO : Successfully read reimbursement request
+2020-11-27 22:50:08,054 [qtp1080476785-18] INFO : Access approved
+2020-11-27 22:50:08,567 [qtp1080476785-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:50:12,961 [qtp1080476785-18] INFO : Access approved
+2020-11-27 22:50:13,072 [qtp1080476785-20] INFO : Successfully read reimbursement request
+2020-11-27 22:50:13,072 [qtp1080476785-18] INFO : Successfully returned: 1 related infos
+2020-11-27 22:51:43,970 [qtp1080476785-23] INFO : Access approved
+2020-11-27 22:51:44,154 [qtp1080476785-20] INFO : Successfully returned: 1 related infos
+2020-11-27 22:51:44,166 [qtp1080476785-29] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-27 22:51:51,478 [qtp1080476785-18] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:51:54,654 [qtp1080476785-21] INFO : Access approved
+2020-11-27 22:51:54,797 [qtp1080476785-21] INFO : Successfully returned: 1 related infos
+2020-11-27 22:51:54,895 [qtp1080476785-22] INFO : Successfully read reimbursement request
+2020-11-27 22:52:52,070 [qtp1080476785-29] INFO : Access approved
+2020-11-27 22:52:52,265 [qtp1080476785-29] INFO : Successfully returned: 1 related infos
+2020-11-27 22:52:52,269 [qtp1080476785-18] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-27 22:53:12,158 [qtp1080476785-19] INFO : Access approved
+2020-11-27 22:53:12,299 [qtp1080476785-20] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:53:13,577 [qtp1080476785-21] INFO : Access approved
+2020-11-27 22:53:13,719 [qtp1080476785-22] INFO : Successfully read reimbursement request
+2020-11-27 22:53:13,723 [qtp1080476785-21] INFO : Successfully returned: 1 related infos
+2020-11-27 22:53:42,035 [qtp1080476785-18] WARN : Exception thrown while reading info request: -1 | java.lang.NumberFormatException: For input string: "undefined"
+2020-11-27 22:53:45,939 [qtp1080476785-21] INFO : Successfully read reimbursement request
+2020-11-27 22:53:45,947 [qtp1080476785-29] INFO : Successfully returned: 1 related infos
+2020-11-27 22:54:16,283 [qtp1080476785-22] INFO : Access approved
+2020-11-27 22:54:16,440 [qtp1080476785-29] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 22:54:17,279 [qtp1080476785-19] INFO : Access approved
+2020-11-27 22:54:17,415 [qtp1080476785-19] INFO : Successfully returned: 1 related infos
+2020-11-27 22:54:17,417 [qtp1080476785-20] INFO : Successfully read reimbursement request
+2020-11-27 22:54:21,303 [qtp1080476785-18] INFO : Successfully returned information request: 1
+2020-11-27 22:54:53,082 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-27 22:54:53,087 [qtp1080476785-22] WARN : Exception thrown while reading all info requests related to: 3java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "TRMS.services.InfoRequestService.readAllInfoFor(int)" is null
+2020-11-27 22:54:58,907 [qtp1080476785-22] INFO : Access approved
+2020-11-27 22:54:59,076 [qtp1080476785-22] INFO : Successfully returned: 1 related infos
+2020-11-27 22:54:59,078 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-27 22:59:00,085 [qtp1080476785-20] INFO : Successfully returned information request: 1
+2020-11-27 23:04:02,966 [qtp1080476785-20] INFO : Successfully returned: 1 related infos
+2020-11-27 23:04:02,967 [qtp1080476785-24] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-27 23:04:05,216 [qtp1080476785-19] INFO : Access approved
+2020-11-27 23:04:05,370 [qtp1080476785-19] INFO : Successfully returned: 1 related infos
+2020-11-27 23:04:05,419 [qtp1080476785-29] INFO : Successfully read reimbursement request
+2020-11-27 23:15:43,438 [qtp1080476785-22] INFO : Access approved
+2020-11-27 23:15:43,767 [qtp1080476785-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:15:44,764 [qtp1080476785-22] INFO : Access approved
+2020-11-27 23:15:44,926 [qtp1080476785-22] INFO : Successfully returned: 0 related infos
+2020-11-27 23:15:44,926 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-27 23:16:12,010 [qtp1080476785-18] INFO : Access approved
+2020-11-27 23:16:12,161 [qtp1080476785-22] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:16:13,073 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:16:13,213 [qtp1080476785-24] INFO : Successfully read reimbursement request
+2020-11-27 23:16:13,217 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:17:19,533 [qtp1080476785-20] INFO : Access approved
+2020-11-27 23:17:19,707 [qtp1080476785-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:17:20,624 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:17:20,766 [qtp1080476785-30] INFO : Successfully read reimbursement request
+2020-11-27 23:17:20,770 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:17:38,307 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:17:38,495 [qtp1080476785-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:17:39,515 [qtp1080476785-21] INFO : Access approved
+2020-11-27 23:17:39,651 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-27 23:17:39,662 [qtp1080476785-21] INFO : Successfully returned: 1 related infos
+2020-11-27 23:18:08,318 [qtp1080476785-21] INFO : Access approved
+2020-11-27 23:18:08,464 [qtp1080476785-21] INFO : Successfully returned: 1 related infos
+2020-11-27 23:18:08,477 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-27 23:18:21,808 [qtp1080476785-18] WARN : Exception thrown while reading info request: -1 | java.lang.NumberFormatException: For input string: "undefined"
+2020-11-27 23:18:23,287 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:18:23,298 [qtp1080476785-30] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-27 23:20:30,602 [qtp1080476785-17] INFO : Access approved
+2020-11-27 23:20:30,781 [qtp1080476785-18] INFO : Successfully returned: 1 related infos
+2020-11-27 23:20:30,784 [qtp1080476785-24] INFO : Successfully read reimbursement request
+2020-11-27 23:21:13,910 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:21:14,061 [qtp1080476785-29] INFO : Successfully read reimbursement request
+2020-11-27 23:21:14,062 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:23:25,861 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:23:26,277 [qtp1080476785-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:23:27,653 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:23:27,816 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:23:27,816 [qtp1080476785-22] INFO : Successfully read reimbursement request
+2020-11-27 23:25:54,739 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:25:55,212 [qtp1080476785-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:25:57,182 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:25:57,336 [qtp1080476785-22] INFO : Successfully read reimbursement request
+2020-11-27 23:25:57,365 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:26:41,219 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:26:41,625 [qtp1080476785-22] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:26:42,607 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:26:42,755 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:26:42,756 [qtp1080476785-21] INFO : Successfully read reimbursement request
+2020-11-27 23:37:47,314 [qtp1080476785-20] INFO : Access approved
+2020-11-27 23:37:47,730 [qtp1080476785-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:37:49,082 [qtp1080476785-20] INFO : Access approved
+2020-11-27 23:37:49,483 [qtp1080476785-24] INFO : Successfully returned: 1 related infos
+2020-11-27 23:37:49,514 [qtp1080476785-21] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-27 23:37:56,953 [qtp1080476785-18] INFO : Successfully returned information request: 3
+2020-11-27 23:37:59,609 [qtp1080476785-17] INFO : Successfully returned: 1 related infos
+2020-11-27 23:37:59,610 [qtp1080476785-20] INFO : Successfully read reimbursement request
+2020-11-27 23:40:01,316 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:40:01,687 [qtp1080476785-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:40:03,201 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:40:03,392 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:40:03,393 [qtp1080476785-24] INFO : Successfully read reimbursement request
+2020-11-27 23:40:56,671 [qtp1080476785-20] INFO : Access approved
+2020-11-27 23:40:56,836 [qtp1080476785-19] INFO : Successfully returned: 1 related infos
+2020-11-27 23:40:56,844 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-27 23:42:17,579 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:42:17,770 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:42:17,771 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-27 23:42:23,091 [qtp1080476785-18] INFO : Access approved
+2020-11-27 23:42:23,233 [qtp1080476785-18] INFO : Successfully returned: 1 related infos
+2020-11-27 23:42:23,325 [qtp1080476785-23] INFO : Successfully read reimbursement request
+2020-11-27 23:42:49,612 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:42:49,759 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-27 23:42:49,766 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:43:15,538 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:43:15,726 [qtp1080476785-23] INFO : Successfully returned: 1 related infos
+2020-11-27 23:43:15,728 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-27 23:43:18,801 [qtp1080476785-18] INFO : Successfully returned information request: 3
+2020-11-27 23:43:21,654 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-27 23:43:21,657 [qtp1080476785-22] INFO : Successfully returned: 1 related infos
+2020-11-27 23:43:50,942 [qtp1080476785-22] INFO : Access approved
+2020-11-27 23:43:51,047 [qtp1080476785-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:43:55,101 [qtp1080476785-18] INFO : Access approved
+2020-11-27 23:43:55,240 [qtp1080476785-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:43:57,000 [qtp1080476785-22] INFO : Access approved
+2020-11-27 23:43:57,099 [qtp1080476785-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:43:58,322 [qtp1080476785-18] INFO : Access approved
+2020-11-27 23:43:58,420 [qtp1080476785-18] INFO : Successfully returned: 1 related infos
+2020-11-27 23:43:58,526 [qtp1080476785-23] INFO : Successfully read reimbursement request
+2020-11-27 23:44:02,171 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:44:02,271 [qtp1080476785-18] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:44:03,501 [qtp1080476785-19] INFO : Access approved
+2020-11-27 23:44:03,614 [qtp1080476785-22] INFO : Successfully read reimbursement request
+2020-11-27 23:44:03,623 [qtp1080476785-19] WARN : Exception thrown while reading all info requests related to: 3java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "TRMS.services.InfoRequestService.readAllInfoFor(int)" is null
+2020-11-27 23:44:06,354 [qtp1080476785-22] INFO : Access approved
+2020-11-27 23:44:06,458 [qtp1080476785-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:44:07,341 [qtp1080476785-18] INFO : Access approved
+2020-11-27 23:44:07,448 [qtp1080476785-18] INFO : Successfully returned: 1 related infos
+2020-11-27 23:44:07,451 [qtp1080476785-23] INFO : Successfully read reimbursement request
+2020-11-27 23:44:11,506 [qtp1080476785-23] INFO : Access approved
+2020-11-27 23:44:11,610 [qtp1080476785-18] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-27 23:44:13,969 [qtp1080476785-22] INFO : Access approved
+2020-11-27 23:44:14,072 [qtp1080476785-22] INFO : Successfully returned: 1 related infos
+2020-11-27 23:44:14,072 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-27 23:44:15,692 [qtp1080476785-22] INFO : Access approved
+2020-11-27 23:44:15,790 [qtp1080476785-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:04:53,001 [qtp1080476785-23] INFO : Received request to log in user: myGuy
+2020-11-28 13:04:53,275 [qtp1080476785-23] INFO : Access approved
+2020-11-28 13:04:53,430 [qtp1080476785-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:04:56,619 [qtp1080476785-20] INFO : Access approved
+2020-11-28 13:04:56,722 [qtp1080476785-24] INFO : Successfully read reimbursement request
+2020-11-28 13:04:56,725 [qtp1080476785-20] INFO : Successfully returned: 1 related infos
+2020-11-28 13:04:59,164 [qtp1080476785-20] INFO : Successfully returned information request: 3
+2020-11-28 13:08:27,117 [qtp1080476785-21] INFO : Successfully returned: 1 related infos
+2020-11-28 13:08:27,119 [qtp1080476785-29] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 13:08:28,027 [qtp1080476785-18] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:08:29,342 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:08:29,442 [qtp1080476785-29] INFO : Successfully returned: 1 related infos
+2020-11-28 13:08:29,444 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-28 13:08:31,128 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:08:31,147 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:08:31,147 [qtp1080476785-21] INFO : Access approved
+2020-11-28 13:08:35,495 [qtp1080476785-19] INFO : Successfully returned: 1 related infos
+2020-11-28 13:08:35,496 [qtp1080476785-29] INFO : Successfully read reimbursement request
+2020-11-28 13:08:36,864 [qtp1080476785-29] INFO : Access approved
+2020-11-28 13:08:36,886 [qtp1080476785-21] INFO : Access approved
+2020-11-28 13:08:36,887 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:08:38,450 [qtp1080476785-29] INFO : Successfully returned: 1 related infos
+2020-11-28 13:08:38,453 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-28 13:19:39,901 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:19:40,299 [qtp1080476785-20] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:19:41,467 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:19:41,560 [qtp1080476785-24] INFO : Successfully returned: 1 related infos
+2020-11-28 13:19:41,561 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-28 13:19:42,493 [qtp1080476785-18] INFO : Access approved
+2020-11-28 13:24:45,191 [qtp1080476785-18] INFO : Access approved
+2020-11-28 13:24:59,495 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:24:59,599 [qtp1080476785-18] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:25:01,325 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:25:01,421 [qtp1080476785-24] INFO : Successfully returned: 1 related infos
+2020-11-28 13:25:01,428 [qtp1080476785-21] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 13:25:48,591 [qtp1080476785-22] INFO : Access approved
+2020-11-28 13:25:48,704 [qtp1080476785-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:25:50,421 [qtp1080476785-20] INFO : Access approved
+2020-11-28 13:25:50,517 [qtp1080476785-20] INFO : Successfully returned: 1 related infos
+2020-11-28 13:25:50,518 [qtp1080476785-29] INFO : Successfully read reimbursement request
+2020-11-28 13:25:52,373 [qtp1080476785-29] INFO : Access approved
+2020-11-28 13:34:35,838 [qtp1080476785-20] INFO : Access approved
+2020-11-28 13:34:36,176 [qtp1080476785-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:34:37,596 [qtp1080476785-20] INFO : Access approved
+2020-11-28 13:34:37,706 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-28 13:34:37,708 [qtp1080476785-20] INFO : Successfully returned: 1 related infos
+2020-11-28 13:34:38,851 [qtp1080476785-20] INFO : Access approved
+2020-11-28 13:34:38,948 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 13:35:14,409 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:35:14,541 [qtp1080476785-18] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:35:15,845 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:35:15,977 [qtp1080476785-19] INFO : Successfully returned: 1 related infos
+2020-11-28 13:35:15,978 [qtp1080476785-31] INFO : Successfully read reimbursement request
+2020-11-28 13:35:16,965 [qtp1080476785-31] INFO : Access approved
+2020-11-28 13:35:17,091 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 13:35:17,137 [qtp1080476785-20] INFO : Successfully returned information request: 3
+2020-11-28 13:35:36,987 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:35:37,139 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 13:35:37,182 [qtp1080476785-31] INFO : Successfully returned information request: 3
+2020-11-28 13:35:39,867 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:35:39,990 [qtp1080476785-20] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 13:35:41,724 [qtp1080476785-18] INFO : Access approved
+2020-11-28 13:35:41,854 [qtp1080476785-18] INFO : Successfully read reimbursement request
+2020-11-28 13:35:41,948 [qtp1080476785-31] INFO : Successfully returned: 1 related infos
+2020-11-28 13:35:42,539 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:35:42,669 [qtp1080476785-20] INFO : Successfully returned information request: 3
+2020-11-28 13:35:42,712 [qtp1080476785-18] INFO : Successfully returned information request: 3
+2020-11-28 13:35:54,042 [qtp1080476785-20] INFO : Access approved
+2020-11-28 13:35:54,171 [qtp1080476785-31] INFO : Successfully returned information request: 3
+2020-11-28 13:35:54,212 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 13:37:24,407 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:37:24,558 [qtp1080476785-21] INFO : Successfully returned information request: 3
+2020-11-28 13:37:24,608 [qtp1080476785-22] INFO : Successfully returned information request: 3
+2020-11-28 13:39:16,116 [qtp1080476785-18] INFO : Access approved
+2020-11-28 13:39:16,253 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 13:39:16,303 [qtp1080476785-20] INFO : Successfully returned information request: 3
+2020-11-28 13:41:20,672 [qtp1080476785-32] INFO : Access approved
+2020-11-28 13:41:20,821 [qtp1080476785-21] INFO : Successfully returned information request: 3
+2020-11-28 13:41:20,870 [qtp1080476785-22] INFO : Successfully returned information request: 3
+2020-11-28 13:49:01,160 [qtp1080476785-33] INFO : Access approved
+2020-11-28 13:49:01,314 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 13:49:01,459 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 13:49:24,834 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:49:24,982 [qtp1080476785-33] INFO : Successfully returned information request: 3
+2020-11-28 13:49:25,045 [qtp1080476785-32] INFO : Successfully returned information request: 3
+2020-11-28 13:49:58,287 [qtp1080476785-31] INFO : Access approved
+2020-11-28 13:49:58,511 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 13:49:58,557 [qtp1080476785-21] INFO : Successfully returned information request: 3
+2020-11-28 13:51:18,223 [qtp1080476785-35] INFO : Access approved
+2020-11-28 13:51:18,374 [qtp1080476785-22] INFO : Successfully returned information request: 3
+2020-11-28 13:51:26,636 [qtp1080476785-32] INFO : Access approved
+2020-11-28 13:51:26,766 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 13:54:17,599 [qtp1080476785-19] INFO : Access approved
+2020-11-28 13:54:17,749 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 13:54:26,726 [qtp1080476785-31] INFO : Access approved
+2020-11-28 13:54:26,862 [qtp1080476785-22] INFO : Successfully returned information request: 3
+2020-11-28 13:54:56,592 [qtp1080476785-24] INFO : Access approved
+2020-11-28 13:54:56,724 [qtp1080476785-31] INFO : Successfully returned information request: 3
+2020-11-28 13:58:58,607 [qtp1080476785-31] INFO : Access approved
+2020-11-28 13:58:58,757 [qtp1080476785-36] INFO : Successfully returned information request: 3
+2020-11-28 13:59:37,326 [qtp1080476785-22] INFO : Access approved
+2020-11-28 13:59:37,464 [qtp1080476785-32] INFO : Successfully returned information request: 3
+2020-11-28 14:00:05,128 [qtp1080476785-19] INFO : Access approved
+2020-11-28 14:00:05,276 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 14:00:22,632 [qtp1080476785-22] INFO : Access approved
+2020-11-28 14:00:22,765 [qtp1080476785-32] INFO : Successfully returned information request: 3
+2020-11-28 14:00:37,006 [qtp1080476785-19] INFO : Access approved
+2020-11-28 14:00:37,134 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 14:02:29,365 [qtp1080476785-31] INFO : Access approved
+2020-11-28 14:02:29,600 [qtp1080476785-22] INFO : Successfully returned information request: 3
+2020-11-28 14:03:01,278 [qtp1080476785-24] INFO : Access approved
+2020-11-28 14:03:01,408 [qtp1080476785-21] INFO : Successfully returned information request: 3
+2020-11-28 14:03:55,662 [qtp1080476785-37] INFO : Access approved
+2020-11-28 14:03:55,813 [qtp1080476785-31] INFO : Successfully returned information request: 3
+2020-11-28 14:04:37,271 [qtp1080476785-19] INFO : Access approved
+2020-11-28 14:04:37,429 [qtp1080476785-21] INFO : Successfully returned information request: 3
+2020-11-28 14:11:44,481 [qtp1080476785-22] WARN : Exception thrown while reading info request: -1 | java.lang.NumberFormatException: For input string: "response"
+2020-11-28 14:11:48,240 [qtp1080476785-37] INFO : Successfully returned information request: 3
+2020-11-28 14:12:04,149 [qtp1080476785-37] WARN : Exception thrown while reading info request: -1 | java.lang.NumberFormatException: For input string: "response"
+2020-11-28 14:12:05,489 [qtp1080476785-32] INFO : Successfully returned information request: 3
+2020-11-28 14:12:27,006 [qtp1080476785-32] INFO : Access approved
+2020-11-28 14:12:27,229 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 14:12:30,123 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 14:12:55,544 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 14:12:58,428 [qtp1080476785-24] INFO : Access approved
+2020-11-28 14:12:58,574 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 14:12:59,864 [qtp1080476785-24] WARN : Exception thrown while reading info request: -1 | java.lang.NumberFormatException: For input string: "response"
+2020-11-28 14:13:01,768 [qtp1080476785-32] INFO : Successfully returned information request: 3
+2020-11-28 14:21:28,474 [qtp1080476785-22] INFO : Access approved
+2020-11-28 14:21:28,630 [qtp1080476785-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:21:30,217 [qtp1080476785-37] INFO : Access approved
+2020-11-28 14:21:30,344 [qtp1080476785-19] INFO : Successfully read reimbursement request
+2020-11-28 14:21:30,344 [qtp1080476785-37] INFO : Successfully returned: 1 related infos
+2020-11-28 14:21:33,791 [qtp1080476785-37] INFO : Access approved
+2020-11-28 14:21:33,907 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 14:21:43,084 [qtp1080476785-19] WARN : Exception thrown while reading info request: -1 | java.lang.NumberFormatException: For input string: ":3response"
+2020-11-28 14:21:50,329 [qtp1080476785-43] INFO : Successfully returned information request: 3
+2020-11-28 14:21:51,409 [qtp1080476785-43] INFO : Access approved
+2020-11-28 14:21:51,521 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 14:22:11,013 [qtp1080476785-24] INFO : Successfully returned information request: 3
+2020-11-28 14:22:12,273 [qtp1080476785-24] INFO : Access approved
+2020-11-28 14:22:12,391 [qtp1080476785-19] INFO : Successfully returned information request: 3
+2020-11-28 14:22:18,509 [qtp1080476785-43] INFO : Successfully returned information request: 3
+2020-11-28 14:23:27,997 [qtp1080476785-18] INFO : Successfully returned information request: 3
+2020-11-28 14:49:23,495 [qtp2101153819-22] INFO : Successfully returned: 0 related infos
+2020-11-28 14:49:23,499 [qtp2101153819-29] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 14:49:24,713 [qtp2101153819-18] INFO : Access approved
+2020-11-28 14:49:24,881 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:49:25,810 [qtp2101153819-24] INFO : Access approved
+2020-11-28 14:49:25,939 [qtp2101153819-22] INFO : Successfully returned: 0 related infos
+2020-11-28 14:49:25,943 [qtp2101153819-24] INFO : Successfully read reimbursement request
+2020-11-28 14:49:33,426 [qtp2101153819-24] INFO : Access approved
+2020-11-28 14:49:33,644 [qtp2101153819-22] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:49:34,754 [qtp2101153819-29] INFO : Access approved
+2020-11-28 14:49:34,881 [qtp2101153819-29] INFO : Successfully returned: 1 related infos
+2020-11-28 14:49:34,887 [qtp2101153819-23] INFO : Successfully read reimbursement request
+2020-11-28 14:49:36,095 [qtp2101153819-23] INFO : Access approved
+2020-11-28 14:49:36,215 [qtp2101153819-23] WARN : Exception thrown while reading info request: 2 | java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 14:49:38,837 [qtp2101153819-24] INFO : Access approved
+2020-11-28 14:49:38,961 [qtp2101153819-22] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:49:41,110 [qtp2101153819-23] INFO : Access approved
+2020-11-28 14:49:41,243 [qtp2101153819-23] INFO : Successfully returned: 1 related infos
+2020-11-28 14:49:41,244 [qtp2101153819-29] INFO : Successfully read reimbursement request
+2020-11-28 14:49:45,830 [qtp2101153819-29] INFO : Access approved
+2020-11-28 14:49:45,952 [qtp2101153819-23] WARN : Exception thrown while reading info request: 2 | java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 14:49:48,964 [qtp2101153819-22] INFO : Access approved
+2020-11-28 14:49:49,087 [qtp2101153819-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:49:50,718 [qtp2101153819-29] INFO : Access approved
+2020-11-28 14:49:50,850 [qtp2101153819-23] INFO : Successfully read reimbursement request
+2020-11-28 14:49:50,850 [qtp2101153819-29] INFO : Successfully returned: 1 related infos
+2020-11-28 14:50:36,750 [qtp2101153819-20] INFO : Access approved
+2020-11-28 14:50:36,897 [qtp2101153819-18] WARN : Exception thrown while reading info request: 2 | java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 14:50:38,689 [qtp2101153819-29] INFO : Access approved
+2020-11-28 14:50:38,806 [qtp2101153819-30] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:50:40,031 [qtp2101153819-22] INFO : Access approved
+2020-11-28 14:50:40,159 [qtp2101153819-18] INFO : Successfully read reimbursement request
+2020-11-28 14:50:40,160 [qtp2101153819-22] INFO : Successfully returned: 1 related infos
+2020-11-28 14:55:48,622 [qtp2101153819-21] INFO : Access approved
+2020-11-28 14:55:48,940 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:55:49,940 [qtp2101153819-21] INFO : Access approved
+2020-11-28 14:55:50,076 [qtp2101153819-22] INFO : Successfully read reimbursement request
+2020-11-28 14:55:50,079 [qtp2101153819-21] INFO : Successfully returned: 1 related infos
+2020-11-28 14:56:15,157 [qtp2101153819-21] INFO : Access approved
+2020-11-28 14:56:15,339 [qtp2101153819-21] INFO : Successfully returned: 1 related infos
+2020-11-28 14:56:15,415 [qtp2101153819-22] INFO : Successfully read reimbursement request
+2020-11-28 14:56:21,049 [qtp2101153819-22] INFO : Access approved
+2020-11-28 14:56:21,182 [qtp2101153819-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:56:23,359 [qtp2101153819-24] INFO : Access approved
+2020-11-28 14:56:23,482 [qtp2101153819-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:56:24,501 [qtp2101153819-21] INFO : Access approved
+2020-11-28 14:56:24,634 [qtp2101153819-22] INFO : Successfully read reimbursement request
+2020-11-28 14:56:24,636 [qtp2101153819-21] INFO : Successfully returned: 1 related infos
+2020-11-28 14:56:53,076 [qtp2101153819-23] INFO : Received request to log in user: myGuy
+2020-11-28 14:56:53,171 [qtp2101153819-23] INFO : Access approved
+2020-11-28 14:56:53,273 [qtp2101153819-30] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:56:54,730 [qtp2101153819-21] INFO : Access approved
+2020-11-28 14:56:54,830 [qtp2101153819-21] INFO : Successfully returned: 1 related infos
+2020-11-28 14:56:54,841 [qtp2101153819-29] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 14:56:58,426 [qtp2101153819-23] INFO : Access approved
+2020-11-28 14:56:58,523 [qtp2101153819-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:56:59,575 [qtp2101153819-30] INFO : Access approved
+2020-11-28 14:56:59,672 [qtp2101153819-29] INFO : Successfully returned: 1 related infos
+2020-11-28 14:56:59,673 [qtp2101153819-30] INFO : Successfully read reimbursement request
+2020-11-28 14:57:42,158 [qtp2101153819-22] INFO : Access approved
+2020-11-28 14:57:42,418 [qtp2101153819-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 14:57:43,734 [qtp2101153819-24] INFO : Access approved
+2020-11-28 14:57:43,851 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:00:40,133 [qtp2101153819-22] INFO : Access approved
+2020-11-28 15:00:40,502 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:00:43,406 [qtp2101153819-22] INFO : Access approved
+2020-11-28 15:00:43,546 [qtp2101153819-22] INFO : Successfully returned: 1 related infos
+2020-11-28 15:00:43,546 [qtp2101153819-18] INFO : Successfully read reimbursement request
+2020-11-28 15:01:14,348 [qtp2101153819-20] INFO : Access approved
+2020-11-28 15:01:14,498 [qtp2101153819-21] INFO : Successfully read reimbursement request
+2020-11-28 15:01:14,499 [qtp2101153819-24] INFO : Successfully returned: 1 related infos
+2020-11-28 15:02:18,396 [qtp2101153819-29] INFO : Access approved
+2020-11-28 15:02:18,550 [qtp2101153819-21] INFO : Successfully returned: 1 related infos
+2020-11-28 15:02:18,554 [qtp2101153819-32] INFO : Successfully read reimbursement request
+2020-11-28 15:03:00,671 [qtp2101153819-24] INFO : Access approved
+2020-11-28 15:03:00,812 [qtp2101153819-24] INFO : Successfully returned: 1 related infos
+2020-11-28 15:03:00,817 [qtp2101153819-32] INFO : Successfully read reimbursement request
+2020-11-28 15:03:04,605 [qtp2101153819-32] INFO : Access approved
+2020-11-28 15:03:04,736 [qtp2101153819-24] INFO : Successfully returned information request: 1
+2020-11-28 15:03:10,278 [qtp2101153819-24] INFO : Successfully inserted info request, id returned: -1
+2020-11-28 15:03:13,389 [qtp2101153819-23] INFO : Successfully returned information request: 1
+2020-11-28 15:03:16,604 [qtp2101153819-23] INFO : Access approved
+2020-11-28 15:03:16,739 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:03:18,332 [qtp2101153819-24] INFO : Access approved
+2020-11-28 15:03:18,463 [qtp2101153819-24] INFO : Successfully returned: 1 related infos
+2020-11-28 15:03:18,470 [qtp2101153819-32] INFO : Successfully read reimbursement request
+2020-11-28 15:03:27,010 [qtp2101153819-32] INFO : Access approved
+2020-11-28 15:03:27,238 [qtp2101153819-24] INFO : Successfully returned information request: 1
+2020-11-28 15:03:50,509 [qtp2101153819-24] INFO : Successfully inserted info request, id returned: -1
+2020-11-28 15:07:05,427 [qtp51152513-27] INFO : Successfully returned information request: 1
+2020-11-28 15:07:07,171 [qtp51152513-26] INFO : Successfully inserted info request, id returned: 2
+2020-11-28 15:07:22,577 [qtp51152513-21] INFO : Successfully returned information request: 1
+2020-11-28 15:07:45,430 [qtp51152513-21] INFO : Successfully inserted info request, id returned: 3
+2020-11-28 15:07:47,502 [qtp51152513-27] INFO : Successfully returned information request: 1
+2020-11-28 15:08:06,365 [qtp51152513-27] INFO : Access approved
+2020-11-28 15:08:06,528 [qtp51152513-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:08:08,068 [qtp51152513-21] INFO : Access approved
+2020-11-28 15:08:08,205 [qtp51152513-21] INFO : Successfully returned: 1 related infos
+2020-11-28 15:08:08,215 [qtp51152513-25] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 15:08:10,965 [qtp51152513-27] INFO : Access approved
+2020-11-28 15:08:11,095 [qtp51152513-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:08:12,154 [qtp51152513-23] INFO : Access approved
+2020-11-28 15:08:12,280 [qtp51152513-23] INFO : Successfully returned: 1 related infos
+2020-11-28 15:08:12,366 [qtp51152513-25] INFO : Successfully read reimbursement request
+2020-11-28 15:12:39,784 [qtp51152513-26] INFO : Access approved
+2020-11-28 15:12:40,087 [qtp51152513-24] INFO : Successfully returned information request: 1
+2020-11-28 15:12:45,744 [qtp51152513-24] INFO : Successfully inserted info request, id returned: 4
+2020-11-28 15:12:48,228 [qtp51152513-26] INFO : Successfully returned information request: 1
+2020-11-28 15:12:50,505 [qtp51152513-26] INFO : Access approved
+2020-11-28 15:12:50,646 [qtp51152513-25] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:12:51,948 [qtp51152513-27] INFO : Access approved
+2020-11-28 15:12:52,080 [qtp51152513-24] INFO : Successfully read reimbursement request
+2020-11-28 15:12:52,087 [qtp51152513-27] INFO : Successfully returned: 1 related infos
+2020-11-28 15:13:11,158 [qtp51152513-27] INFO : Access approved
+2020-11-28 15:13:11,302 [qtp51152513-24] INFO : Successfully returned: 1 related infos
+2020-11-28 15:13:11,303 [qtp51152513-27] INFO : Successfully read reimbursement request
+2020-11-28 15:14:31,111 [qtp51152513-22] INFO : Access approved
+2020-11-28 15:14:31,258 [qtp51152513-25] INFO : Successfully returned information request: 1
+2020-11-28 15:14:38,278 [qtp51152513-25] INFO : Successfully inserted info request, id returned: 5
+2020-11-28 15:14:40,365 [qtp51152513-22] INFO : Successfully returned information request: 1
+2020-11-28 15:14:41,068 [qtp51152513-22] INFO : Successfully read reimbursement request
+2020-11-28 15:14:41,167 [qtp51152513-24] INFO : Successfully returned: 1 related infos
+2020-11-28 15:14:42,850 [qtp51152513-23] INFO : Access approved
+2020-11-28 15:14:42,982 [qtp51152513-23] INFO : Successfully read reimbursement request
+2020-11-28 15:14:42,990 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 15:14:45,114 [qtp51152513-23] INFO : Access approved
+2020-11-28 15:14:45,246 [qtp51152513-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:14:46,475 [qtp51152513-23] INFO : Access approved
+2020-11-28 15:14:46,589 [qtp51152513-22] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:14:49,242 [qtp51152513-25] INFO : Access approved
+2020-11-28 15:14:49,385 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 15:14:49,388 [qtp51152513-24] INFO : Successfully read reimbursement request
+2020-11-28 15:16:22,804 [qtp51152513-23] INFO : Access approved
+2020-11-28 15:16:22,956 [qtp51152513-20] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:16:24,219 [qtp51152513-27] INFO : Access approved
+2020-11-28 15:16:24,345 [qtp51152513-26] INFO : Successfully read reimbursement request
+2020-11-28 15:16:24,347 [qtp51152513-27] INFO : Successfully returned: 0 related infos
+2020-11-28 15:16:28,496 [qtp51152513-27] INFO : Access approved
+2020-11-28 15:16:28,618 [qtp51152513-26] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:16:29,641 [qtp51152513-25] INFO : Access approved
+2020-11-28 15:16:29,770 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 15:16:29,772 [qtp51152513-20] INFO : Successfully read reimbursement request
+2020-11-28 15:21:08,700 [qtp51152513-23] INFO : Access approved
+2020-11-28 15:21:08,851 [qtp51152513-25] INFO : Successfully read reimbursement request
+2020-11-28 15:21:08,865 [qtp51152513-27] WARN : Exception thrown while reading all info requests related to: 2java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "TRMS.services.InfoRequestService.readAllInfoFor(int)" is null
+2020-11-28 15:33:30,389 [qtp51152513-24] INFO : Access approved
+2020-11-28 15:33:30,709 [qtp51152513-27] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:33:31,945 [qtp51152513-32] INFO : Access approved
+2020-11-28 15:33:32,087 [qtp51152513-22] INFO : Successfully read reimbursement request
+2020-11-28 15:33:32,090 [qtp51152513-32] INFO : Successfully returned: 1 related infos
+2020-11-28 15:33:32,144 [qtp51152513-23] INFO : Successfully read attachments related to: 2
+2020-11-28 15:33:35,470 [qtp51152513-32] INFO : Access approved
+2020-11-28 15:33:35,609 [qtp51152513-22] INFO : Successfully returned information request: 1
+2020-11-28 15:33:35,660 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 15:33:41,022 [qtp51152513-27] INFO : Successfully returned information request: 1
+2020-11-28 15:33:41,070 [qtp51152513-22] INFO : Successfully read attachments related to: 2
+2020-11-28 15:33:43,339 [qtp51152513-22] INFO : Successfully returned information request: 1
+2020-11-28 15:33:43,388 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 15:33:45,337 [qtp51152513-22] INFO : Access approved
+2020-11-28 15:33:45,464 [qtp51152513-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:33:46,853 [qtp51152513-32] INFO : Access approved
+2020-11-28 15:33:46,985 [qtp51152513-32] INFO : Successfully returned: 1 related infos
+2020-11-28 15:33:46,995 [qtp51152513-27] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 15:33:49,656 [qtp51152513-22] INFO : Access approved
+2020-11-28 15:33:49,784 [qtp51152513-32] INFO : Successfully returned: 1 related infos
+2020-11-28 15:33:49,878 [qtp51152513-22] INFO : Successfully read reimbursement request
+2020-11-28 15:33:49,933 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 15:47:35,755 [qtp51152513-32] INFO : Successfully read reimbursement request
+2020-11-28 15:47:35,780 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 15:47:35,832 [qtp51152513-23] INFO : Successfully read attachments related to: 2
+2020-11-28 15:47:37,740 [qtp51152513-26] WARN : NumberFormatException thrown while reading attachment: java.lang.NumberFormatException: null
+2020-11-28 15:48:04,703 [qtp51152513-24] INFO : Successfully returned: 1 related infos
+2020-11-28 15:48:04,703 [qtp51152513-27] INFO : Successfully read reimbursement request
+2020-11-28 15:48:04,764 [qtp51152513-26] INFO : Successfully read attachments related to: 2
+2020-11-28 15:48:06,430 [qtp51152513-27] WARN : NumberFormatException thrown while reading attachment: java.lang.NumberFormatException: null
+2020-11-28 15:48:58,307 [qtp51152513-27] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 15:48:58,343 [qtp51152513-32] INFO : Successfully returned: 1 related infos
+2020-11-28 15:49:00,669 [qtp51152513-23] INFO : Access approved
+2020-11-28 15:49:00,907 [qtp51152513-33] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:49:02,109 [qtp51152513-25] INFO : Access approved
+2020-11-28 15:49:02,249 [qtp51152513-27] INFO : Successfully read reimbursement request
+2020-11-28 15:49:02,250 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 15:49:02,303 [qtp51152513-33] INFO : Successfully read attachments related to: 2
+2020-11-28 15:49:04,250 [qtp51152513-25] WARN : Exception thrown while reading attachment: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2020-11-28 15:49:17,717 [qtp51152513-33] INFO : Successfully read reimbursement request
+2020-11-28 15:49:17,809 [qtp51152513-26] INFO : Successfully returned: 1 related infos
+2020-11-28 15:49:17,871 [qtp51152513-25] INFO : Successfully read attachments related to: 2
+2020-11-28 15:49:19,257 [qtp51152513-33] WARN : Exception thrown while reading attachment: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2020-11-28 15:58:49,667 [qtp2101153819-22] INFO : Successfully read reimbursement request
+2020-11-28 15:58:49,698 [qtp2101153819-29] INFO : Successfully returned: 1 related infos
+2020-11-28 15:58:49,743 [qtp2101153819-20] INFO : Successfully read attachments related to: 2
+2020-11-28 15:58:52,300 [qtp2101153819-24] WARN : Exception thrown while reading attachment: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2020-11-28 15:58:55,933 [qtp2101153819-18] INFO : Successfully returned: 1 related infos
+2020-11-28 15:58:56,040 [qtp2101153819-23] INFO : Successfully read reimbursement request
+2020-11-28 15:58:56,095 [qtp2101153819-24] INFO : Successfully read attachments related to: 2
+2020-11-28 15:58:57,642 [qtp2101153819-23] WARN : Exception thrown while reading attachment: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2020-11-28 15:58:59,246 [qtp2101153819-24] INFO : Successfully read reimbursement request
+2020-11-28 15:58:59,247 [qtp2101153819-22] INFO : Successfully returned: 1 related infos
+2020-11-28 15:58:59,312 [qtp2101153819-29] INFO : Successfully read attachments related to: 2
+2020-11-28 15:59:00,528 [qtp2101153819-22] INFO : Access approved
+2020-11-28 15:59:00,749 [qtp2101153819-24] INFO : Successfully returned information request: 1
+2020-11-28 15:59:00,799 [qtp2101153819-23] INFO : Successfully read attachments related to: 2
+2020-11-28 15:59:05,690 [qtp2101153819-23] INFO : Successfully inserted info request, id returned: 6
+2020-11-28 15:59:08,630 [qtp2101153819-24] INFO : Successfully returned information request: 1
+2020-11-28 15:59:08,683 [qtp2101153819-23] INFO : Successfully read attachments related to: 2
+2020-11-28 15:59:11,226 [qtp2101153819-24] INFO : Access approved
+2020-11-28 15:59:11,352 [qtp2101153819-29] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 15:59:12,713 [qtp2101153819-22] INFO : Access approved
+2020-11-28 15:59:12,850 [qtp2101153819-22] INFO : Successfully returned: 1 related infos
+2020-11-28 15:59:12,853 [qtp2101153819-23] INFO : Successfully read reimbursement request
+2020-11-28 15:59:12,907 [qtp2101153819-24] INFO : Successfully read attachments related to: 2
+2020-11-28 15:59:14,473 [qtp2101153819-23] WARN : Exception thrown while reading attachment: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2020-11-28 16:01:35,077 [qtp51152513-26] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 16:01:35,110 [qtp51152513-32] INFO : Successfully returned: 1 related infos
+2020-11-28 16:01:36,238 [qtp51152513-24] INFO : Access approved
+2020-11-28 16:01:36,468 [qtp51152513-26] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:01:37,636 [qtp51152513-21] INFO : Access approved
+2020-11-28 16:01:37,763 [qtp51152513-21] INFO : Successfully returned: 1 related infos
+2020-11-28 16:01:37,764 [qtp51152513-32] INFO : Successfully read reimbursement request
+2020-11-28 16:01:37,922 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 16:01:39,843 [qtp51152513-32] INFO : Successfully read attachment
+2020-11-28 16:13:22,528 [qtp51152513-21] INFO : Successfully read reimbursement request
+2020-11-28 16:13:22,528 [qtp51152513-23] INFO : Successfully returned: 1 related infos
+2020-11-28 16:13:22,692 [qtp51152513-25] INFO : Successfully read attachments related to: 2
+2020-11-28 16:13:24,821 [qtp51152513-22] INFO : Successfully read attachment
+2020-11-28 16:13:31,165 [qtp51152513-25] INFO : Successfully read reimbursement request
+2020-11-28 16:13:31,226 [qtp51152513-22] INFO : Successfully read attachments related to: 2
+2020-11-28 16:13:31,264 [qtp51152513-26] INFO : Successfully returned: 1 related infos
+2020-11-28 16:13:32,532 [qtp51152513-32] INFO : Successfully read attachment
+2020-11-28 16:13:33,782 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 16:13:33,783 [qtp51152513-22] INFO : Successfully read reimbursement request
+2020-11-28 16:13:33,845 [qtp51152513-32] INFO : Successfully read attachments related to: 2
+2020-11-28 16:13:35,002 [qtp51152513-22] INFO : Access approved
+2020-11-28 16:13:35,134 [qtp51152513-25] INFO : Successfully returned information request: 1
+2020-11-28 16:13:35,185 [qtp51152513-21] INFO : Successfully read attachments related to: 2
+2020-11-28 16:14:19,635 [qtp51152513-23] INFO : Access approved
+2020-11-28 16:14:19,861 [qtp51152513-21] INFO : Successfully returned information request: 1
+2020-11-28 16:14:19,915 [qtp51152513-22] INFO : Successfully read attachments related to: 2
+2020-11-28 16:15:04,935 [qtp51152513-23] INFO : Access approved
+2020-11-28 16:15:05,159 [qtp51152513-26] INFO : Successfully returned information request: 1
+2020-11-28 16:15:05,315 [qtp51152513-32] INFO : Successfully read attachments related to: 2
+2020-11-28 16:15:49,427 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:15:49,581 [qtp51152513-23] INFO : Successfully returned information request: 1
+2020-11-28 16:15:49,634 [qtp51152513-21] INFO : Successfully read attachments related to: 2
+2020-11-28 16:15:51,828 [qtp51152513-23] INFO : Successfully read attachment
+2020-11-28 16:16:13,289 [qtp51152513-21] INFO : Successfully read attachment
+2020-11-28 16:19:00,719 [qtp51152513-22] INFO : Access approved
+2020-11-28 16:19:01,043 [qtp51152513-27] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:19:02,243 [qtp51152513-22] INFO : Access approved
+2020-11-28 16:19:02,373 [qtp51152513-22] INFO : Successfully returned: 1 related infos
+2020-11-28 16:19:02,373 [qtp51152513-25] INFO : Successfully read reimbursement request
+2020-11-28 16:19:02,437 [qtp51152513-24] INFO : Successfully read attachments related to: 2
+2020-11-28 16:19:04,510 [qtp51152513-22] INFO : Access approved
+2020-11-28 16:19:04,633 [qtp51152513-25] INFO : Successfully returned information request: 1
+2020-11-28 16:19:04,684 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 16:19:06,477 [qtp51152513-25] INFO : Successfully read attachment
+2020-11-28 16:21:42,664 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:21:42,964 [qtp51152513-25] INFO : Successfully returned information request: 1
+2020-11-28 16:21:43,021 [qtp51152513-26] INFO : Successfully read attachments related to: 2
+2020-11-28 16:21:44,971 [qtp51152513-25] WARN : Exception thrown while downloading attachment: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2020-11-28 16:21:53,664 [qtp51152513-26] WARN : Exception thrown while downloading attachment: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2020-11-28 16:23:35,117 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:23:35,414 [qtp51152513-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:23:36,747 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:23:36,878 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 16:23:36,973 [qtp51152513-23] INFO : Successfully read reimbursement request
+2020-11-28 16:23:37,030 [qtp51152513-26] INFO : Successfully read attachments related to: 2
+2020-11-28 16:23:46,366 [qtp51152513-23] INFO : Access approved
+2020-11-28 16:23:46,513 [qtp51152513-25] INFO : Successfully returned information request: 1
+2020-11-28 16:23:46,563 [qtp51152513-21] INFO : Successfully read attachments related to: 2
+2020-11-28 16:23:47,702 [qtp51152513-25] INFO : Successfully read attachment
+2020-11-28 16:24:36,056 [qtp51152513-22] INFO : Access approved
+2020-11-28 16:24:36,243 [qtp51152513-24] INFO : Successfully returned information request: 1
+2020-11-28 16:24:36,299 [qtp51152513-23] INFO : Successfully read attachments related to: 2
+2020-11-28 16:24:45,273 [qtp51152513-24] INFO : Successfully read attachment
+2020-11-28 16:30:53,536 [qtp51152513-33] INFO : Successfully read attachment
+2020-11-28 16:31:17,524 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:31:17,707 [qtp51152513-33] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:31:19,141 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:31:19,284 [qtp51152513-23] INFO : Successfully read reimbursement request
+2020-11-28 16:31:19,285 [qtp51152513-26] INFO : Successfully returned: 1 related infos
+2020-11-28 16:31:19,337 [qtp51152513-33] INFO : Successfully read attachments related to: 2
+2020-11-28 16:31:20,540 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:31:20,656 [qtp51152513-23] INFO : Successfully returned information request: 1
+2020-11-28 16:31:20,708 [qtp51152513-25] INFO : Successfully read attachments related to: 2
+2020-11-28 16:31:21,747 [qtp51152513-23] INFO : Successfully read attachment
+2020-11-28 16:31:34,579 [qtp51152513-25] INFO : Successfully read attachment
+2020-11-28 16:32:58,621 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:33:07,999 [qtp51152513-21] INFO : Access approved
+2020-11-28 16:33:08,125 [qtp51152513-36] INFO : Successfully returned information request: 1
+2020-11-28 16:33:08,269 [qtp51152513-33] INFO : Successfully read attachments related to: 2
+2020-11-28 16:33:09,578 [qtp51152513-36] INFO : Successfully read attachment
+2020-11-28 16:33:13,624 [qtp51152513-33] INFO : Successfully read attachment
+2020-11-28 16:33:23,403 [qtp51152513-36] INFO : Successfully read attachment
+2020-11-28 16:34:00,730 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:34:00,964 [qtp51152513-21] INFO : Successfully returned information request: 1
+2020-11-28 16:34:01,117 [qtp51152513-23] INFO : Successfully read attachments related to: 2
+2020-11-28 16:34:02,273 [qtp51152513-21] INFO : Successfully read attachment
+2020-11-28 16:36:00,740 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:36:00,905 [qtp51152513-37] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:36:02,260 [qtp51152513-36] INFO : Access approved
+2020-11-28 16:36:02,438 [qtp51152513-36] INFO : Successfully returned: 1 related infos
+2020-11-28 16:36:02,438 [qtp51152513-24] INFO : Successfully read reimbursement request
+2020-11-28 16:36:02,501 [qtp51152513-37] INFO : Successfully read attachments related to: 2
+2020-11-28 16:36:03,299 [qtp51152513-36] INFO : Access approved
+2020-11-28 16:36:03,445 [qtp51152513-24] INFO : Successfully returned information request: 1
+2020-11-28 16:36:03,606 [qtp51152513-38] INFO : Successfully read attachments related to: 2
+2020-11-28 16:36:04,722 [qtp51152513-24] INFO : Successfully read attachment
+2020-11-28 16:46:50,394 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:46:50,734 [qtp51152513-27] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:46:52,832 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:46:52,975 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 16:46:52,976 [qtp51152513-24] INFO : Successfully read reimbursement request
+2020-11-28 16:46:53,041 [qtp51152513-26] INFO : Successfully read attachments related to: 2
+2020-11-28 16:46:54,301 [qtp51152513-24] INFO : Access approved
+2020-11-28 16:46:54,421 [qtp51152513-25] INFO : Successfully returned information request: 1
+2020-11-28 16:46:54,470 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 16:46:55,951 [qtp51152513-25] INFO : Successfully read attachment
+2020-11-28 16:47:35,287 [qtp51152513-20] INFO : Access approved
+2020-11-28 16:47:35,465 [qtp51152513-32] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:47:36,885 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:47:37,009 [qtp51152513-26] INFO : Successfully returned: 1 related infos
+2020-11-28 16:47:37,012 [qtp51152513-24] INFO : Successfully read reimbursement request
+2020-11-28 16:47:37,066 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 16:47:37,986 [qtp51152513-24] INFO : Access approved
+2020-11-28 16:47:38,105 [qtp51152513-26] INFO : Successfully returned information request: 1
+2020-11-28 16:47:38,156 [qtp51152513-32] INFO : Successfully read attachments related to: 2
+2020-11-28 16:47:39,828 [qtp51152513-26] INFO : Successfully read attachment
+2020-11-28 16:47:49,908 [qtp51152513-32] INFO : Successfully read attachment
+2020-11-28 16:48:24,280 [qtp51152513-23] INFO : Access approved
+2020-11-28 16:48:24,444 [qtp51152513-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:48:25,281 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:48:25,444 [qtp51152513-26] INFO : Successfully read reimbursement request
+2020-11-28 16:48:25,445 [qtp51152513-25] INFO : Successfully returned: 1 related infos
+2020-11-28 16:48:25,517 [qtp51152513-24] INFO : Successfully read attachments related to: 2
+2020-11-28 16:48:26,073 [qtp51152513-25] INFO : Access approved
+2020-11-28 16:48:26,240 [qtp51152513-26] INFO : Successfully returned information request: 1
+2020-11-28 16:48:26,305 [qtp51152513-23] INFO : Successfully read attachments related to: 2
+2020-11-28 16:48:27,439 [qtp51152513-26] INFO : Successfully read attachment
+2020-11-28 16:49:04,791 [qtp51152513-32] INFO : Access approved
+2020-11-28 16:49:04,999 [qtp51152513-32] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:49:05,906 [qtp51152513-23] INFO : Access approved
+2020-11-28 16:49:06,063 [qtp51152513-27] INFO : Successfully read reimbursement request
+2020-11-28 16:49:06,066 [qtp51152513-23] INFO : Successfully returned: 1 related infos
+2020-11-28 16:49:06,129 [qtp51152513-32] INFO : Successfully read attachments related to: 2
+2020-11-28 16:49:07,182 [qtp51152513-23] INFO : Access approved
+2020-11-28 16:49:07,332 [qtp51152513-27] INFO : Successfully returned information request: 1
+2020-11-28 16:49:07,407 [qtp51152513-25] INFO : Successfully read attachments related to: 2
+2020-11-28 16:49:08,649 [qtp51152513-27] INFO : Successfully read attachment
+2020-11-28 16:49:10,479 [qtp51152513-25] INFO : Successfully read attachment
+2020-11-28 16:51:00,299 [qtp51152513-32] INFO : Access approved
+2020-11-28 16:51:00,461 [qtp51152513-36] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:51:01,397 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:51:01,521 [qtp51152513-24] INFO : Successfully read reimbursement request
+2020-11-28 16:51:01,522 [qtp51152513-26] INFO : Successfully returned: 1 related infos
+2020-11-28 16:51:01,571 [qtp51152513-36] INFO : Successfully read attachments related to: 2
+2020-11-28 16:51:02,227 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:51:02,348 [qtp51152513-24] INFO : Successfully returned information request: 1
+2020-11-28 16:51:02,393 [qtp51152513-37] INFO : Successfully read attachments related to: 2
+2020-11-28 16:51:03,731 [qtp51152513-24] INFO : Successfully read attachment
+2020-11-28 16:51:45,203 [qtp51152513-27] INFO : Access approved
+2020-11-28 16:51:45,486 [qtp51152513-37] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:51:46,607 [qtp51152513-23] INFO : Access approved
+2020-11-28 16:51:46,771 [qtp51152513-23] INFO : Successfully returned: 1 related infos
+2020-11-28 16:51:46,772 [qtp51152513-26] INFO : Successfully read reimbursement request
+2020-11-28 16:51:46,842 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 16:51:47,492 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:51:47,648 [qtp51152513-23] INFO : Successfully returned information request: 1
+2020-11-28 16:51:47,709 [qtp51152513-37] INFO : Successfully read attachments related to: 2
+2020-11-28 16:51:48,860 [qtp51152513-23] INFO : Successfully read attachment
+2020-11-28 16:52:21,647 [qtp51152513-36] INFO : Successfully read attachment
+2020-11-28 16:52:47,251 [qtp51152513-37] INFO : Successfully read attachment
+2020-11-28 16:52:57,294 [qtp51152513-37] INFO : Successfully read attachment
+2020-11-28 16:53:24,877 [qtp51152513-36] INFO : Access approved
+2020-11-28 16:53:25,006 [qtp51152513-26] INFO : Successfully returned information request: 1
+2020-11-28 16:53:25,166 [qtp51152513-24] INFO : Successfully read attachments related to: 2
+2020-11-28 16:53:27,541 [qtp51152513-26] INFO : Successfully read attachment
+2020-11-28 16:53:37,395 [qtp51152513-24] INFO : Access approved
+2020-11-28 16:53:37,525 [qtp51152513-37] INFO : Successfully returned information request: 1
+2020-11-28 16:53:37,673 [qtp51152513-36] INFO : Successfully read attachments related to: 2
+2020-11-28 16:53:39,543 [qtp51152513-37] INFO : Successfully read attachment
+2020-11-28 16:54:08,903 [qtp51152513-36] INFO : Successfully read attachment
+2020-11-28 16:58:41,822 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:58:42,173 [qtp51152513-25] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 16:58:44,302 [qtp51152513-26] INFO : Access approved
+2020-11-28 16:58:44,468 [qtp51152513-26] INFO : Successfully returned: 1 related infos
+2020-11-28 16:58:44,562 [qtp51152513-24] INFO : Successfully read reimbursement request
+2020-11-28 16:58:44,631 [qtp51152513-27] INFO : Successfully read attachments related to: 2
+2020-11-28 16:58:45,952 [qtp51152513-24] INFO : Access approved
+2020-11-28 16:58:46,045 [qtp51152513-26] INFO : Successfully returned information request: 1
+2020-11-28 16:58:46,092 [qtp51152513-25] INFO : Successfully read attachments related to: 2
+2020-11-28 16:58:51,604 [qtp51152513-26] INFO : Successfully read attachment
+2020-11-28 16:58:53,738 [qtp51152513-25] INFO : Successfully read attachment
+2020-11-28 16:59:03,816 [qtp51152513-26] INFO : Successfully read attachment
+2020-11-28 17:00:00,011 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:00:00,175 [qtp51152513-21] INFO : Successfully returned information request: 1
+2020-11-28 17:00:00,222 [qtp51152513-26] INFO : Successfully read attachments related to: 2
+2020-11-28 17:00:07,722 [qtp51152513-21] INFO : Successfully read attachment
+2020-11-28 17:00:32,406 [qtp51152513-26] INFO : Access approved
+2020-11-28 17:00:32,619 [qtp51152513-22] INFO : Successfully returned information request: 1
+2020-11-28 17:00:32,671 [qtp51152513-24] INFO : Successfully read attachments related to: 2
+2020-11-28 17:00:34,945 [qtp51152513-22] INFO : Successfully read attachment
+2020-11-28 17:02:03,662 [qtp51152513-20] INFO : Access approved
+2020-11-28 17:02:03,794 [qtp51152513-22] INFO : Successfully returned information request: 1
+2020-11-28 17:02:03,846 [qtp51152513-21] INFO : Successfully read attachments related to: 2
+2020-11-28 17:02:05,531 [qtp51152513-22] INFO : Successfully read attachment
+2020-11-28 17:02:11,684 [qtp51152513-21] INFO : Successfully read attachment
+2020-11-28 17:03:07,647 [qtp51152513-26] INFO : Access approved
+2020-11-28 17:03:07,814 [qtp51152513-25] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:03:09,732 [qtp51152513-24] INFO : Access approved
+2020-11-28 17:03:09,861 [qtp51152513-24] INFO : Successfully returned: 1 related infos
+2020-11-28 17:03:09,869 [qtp51152513-22] WARN : Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 17:03:11,018 [qtp51152513-26] INFO : Access approved
+2020-11-28 17:03:11,137 [qtp51152513-24] INFO : Successfully returned information request: 1
+2020-11-28 17:03:11,185 [qtp51152513-25] INFO : Successfully read attachments related to: 2
+2020-11-28 17:03:11,940 [qtp51152513-24] INFO : Successfully read attachment
+2020-11-28 17:28:53,964 [qtp51152513-26] INFO : Access approved
+2020-11-28 17:28:54,265 [qtp51152513-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:29:00,866 [qtp51152513-23] INFO : Access approved
+2020-11-28 17:29:01,016 [qtp51152513-23] INFO : Successfully returned: 1 related infos
+2020-11-28 17:29:01,103 [qtp51152513-25] INFO : Successfully read reimbursement request
+2020-11-28 17:29:01,169 [qtp51152513-22] INFO : Successfully read attachments related to: 2
+2020-11-28 17:29:02,205 [qtp51152513-25] INFO : Access approved
+2020-11-28 17:29:46,993 [qtp51152513-20] INFO : Access approved
+2020-11-28 17:29:47,748 [qtp51152513-27] INFO : Access approved
+2020-11-28 17:29:47,978 [qtp51152513-33] INFO : Access approved
+2020-11-28 17:29:48,173 [qtp51152513-23] INFO : Access approved
+2020-11-28 17:29:48,356 [qtp51152513-25] INFO : Access approved
+2020-11-28 17:30:03,263 [qtp51152513-27] INFO : Access approved
+2020-11-28 17:30:03,971 [qtp51152513-33] INFO : Access approved
+2020-11-28 17:30:04,147 [qtp51152513-23] INFO : Access approved
+2020-11-28 17:30:04,330 [qtp51152513-25] INFO : Access approved
+2020-11-28 17:30:46,427 [qtp51152513-26] INFO : Access approved
+2020-11-28 17:30:55,644 [qtp51152513-27] INFO : Access approved
+2020-11-28 17:30:56,689 [qtp51152513-33] INFO : Access approved
+2020-11-28 17:30:56,928 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:31:58,106 [qtp51152513-33] INFO : Access approved
+2020-11-28 17:32:07,685 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:32:09,793 [qtp51152513-25] INFO : Access approved
+2020-11-28 17:32:10,250 [qtp51152513-23] INFO : Access approved
+2020-11-28 17:32:10,476 [qtp51152513-20] INFO : Access approved
+2020-11-28 17:33:54,819 [qtp51152513-27] INFO : Access approved
+2020-11-28 17:34:10,106 [qtp51152513-25] INFO : Access approved
+2020-11-28 17:35:21,819 [qtp51152513-20] INFO : Access approved
+2020-11-28 17:37:16,310 [qtp51152513-26] INFO : Access approved
+2020-11-28 17:37:18,986 [qtp51152513-37] INFO : Access approved
+2020-11-28 17:37:20,129 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:37:20,255 [qtp51152513-33] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:37:21,399 [qtp51152513-37] INFO : Access approved
+2020-11-28 17:37:21,529 [qtp51152513-38] INFO : Successfully read reimbursement request
+2020-11-28 17:37:21,530 [qtp51152513-37] INFO : Successfully returned: 1 related infos
+2020-11-28 17:37:21,581 [qtp51152513-33] INFO : Successfully read attachments related to: 2
+2020-11-28 17:37:23,983 [qtp51152513-37] INFO : Access approved
+2020-11-28 17:37:54,535 [qtp51152513-25] INFO : Access approved
+2020-11-28 17:38:00,470 [qtp51152513-36] INFO : Access approved
+2020-11-28 17:38:00,700 [qtp51152513-34] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:38:01,750 [qtp51152513-38] INFO : Access approved
+2020-11-28 17:38:01,881 [qtp51152513-33] INFO : Successfully read reimbursement request
+2020-11-28 17:38:01,883 [qtp51152513-38] INFO : Successfully returned: 1 related infos
+2020-11-28 17:38:01,930 [qtp51152513-34] INFO : Successfully read attachments related to: 2
+2020-11-28 17:38:03,392 [qtp51152513-38] INFO : Access approved
+2020-11-28 17:38:33,527 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:38:52,197 [qtp51152513-36] INFO : Access approved
+2020-11-28 17:38:54,303 [qtp51152513-38] INFO : Access approved
+2020-11-28 17:38:54,428 [qtp51152513-33] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:38:55,232 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:38:55,367 [qtp51152513-22] INFO : Successfully returned: 1 related infos
+2020-11-28 17:38:55,377 [qtp51152513-36] INFO : Successfully read reimbursement request
+2020-11-28 17:38:55,433 [qtp51152513-38] INFO : Successfully read attachments related to: 2
+2020-11-28 17:38:56,021 [qtp51152513-36] INFO : Access approved
+2020-11-28 17:39:45,794 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:39:48,910 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:39:49,032 [qtp51152513-36] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:39:50,143 [qtp51152513-33] INFO : Access approved
+2020-11-28 17:39:50,267 [qtp51152513-33] INFO : Successfully returned: 1 related infos
+2020-11-28 17:39:50,270 [qtp51152513-34] INFO : Successfully read reimbursement request
+2020-11-28 17:39:50,315 [qtp51152513-22] INFO : Successfully read attachments related to: 2
+2020-11-28 17:39:52,687 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:40:02,529 [qtp51152513-25] INFO : Access approved
+2020-11-28 17:40:21,492 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:40:22,433 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:40:33,587 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:40:39,040 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:40:39,769 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:40:40,003 [qtp51152513-22] INFO : Access approved
+2020-11-28 17:40:45,457 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:40:55,113 [qtp51152513-36] INFO : Access approved
+2020-11-28 17:41:00,105 [qtp51152513-34] INFO : Access approved
+2020-11-28 17:41:15,154 [qtp51152513-36] INFO : Access approved
+2020-11-28 17:41:15,294 [qtp51152513-34] INFO : Successfully returned information request: 1
+2020-11-28 17:41:15,338 [qtp51152513-25] INFO : Successfully read attachments related to: 2
+2020-11-28 17:41:18,940 [qtp51152513-34] INFO : Successfully read attachment
+2020-11-28 17:41:25,737 [qtp51152513-25] INFO : Successfully read attachment
