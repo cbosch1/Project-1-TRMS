@@ -73,7 +73,7 @@ public class WebDriver {
         app.get(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.getNewReimbursement(ctx));
         app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> reimburseControl.createRequest(ctx));
         app.get(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> eWebControl.getViewReimbursement(ctx));
-        app.post(EMPLOYEE_URL+"/cancel-reimbursement/:id", ctx -> reimburseControl.deleteRequest(ctx));
+        app.post(EMPLOYEE_URL+"/cancel-reimbursement/:id", ctx -> reimburseControl.cancelRequest(ctx));
 
         //Manager only endpoints
         app.get(MANAGER_URL, ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }

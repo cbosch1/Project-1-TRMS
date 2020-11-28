@@ -75,21 +75,22 @@ var showRequest = function (reimburse) {
     payoutCol.innerHTML = "$"+ reimburse.projected;
     statusCol.innerHTML = reimburse.status;
     urgentCol.innerHTML = reimburse.urgent;
-    cancelCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"POST\" action=\"../cancel-reimbursement/" + reimburse.requestId + "\">\n                            <button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">Cancel</button>\n                        </form>";
     descriptionArea.innerHTML = reimburse.description;
     justificationArea.innerHTML = reimburse.justification;
     gradingArea.innerHTML = reimburse.grading;
 
-    cancelCol.addEventListener("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        console.log("clicked");
-        if(window.confirm("Are you sure you want to delete this request? This cannot be undone.")){
-            console.log(this.firstChild);
-            this.firstChild.submit();
-        }
-    });
-
+    if (reimburse.status == "PENDING"){
+        cancelCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"POST\" action=\"../cancel-reimbursement/" + reimburse.requestId + "\">\n                            <button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">Cancel</button>\n                        </form>";
+        cancelCol.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            console.log("clicked");
+            if(window.confirm("Are you sure you want to delete this request? This cannot be undone.")){
+                console.log(this.firstChild);
+                this.firstChild.submit();
+            }
+        });
+    }
 };
 
 var retrieveAttachments = function() {

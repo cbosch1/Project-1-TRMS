@@ -310,4 +310,38 @@ public class ReimburseRequestControl {
             }
         }
     }
+
+    public void cancelRequest(Context ctx){
+        int requestId = -1;
+
+        if(auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
+                ReimburseRequest request = service.readRequest(requestId);
+                if (request.getStatus() == AppStatus.PENDING){
+                    request.setStatus(AppStatus.CANCELLED);
+                    
+                    if (service.updateRequest(request)){
+                        Log.info("Reimbursement request successfully updated");
+                        ctx.status(200);
+                        ctx.redirect("../employee");
+                    } else {
+                        Log.warn("Service returned false while updating reimbursement request");
+                        ctx.status(500);
+                    }
+                } else {
+                    Log.info("Cannot change status of event's not pending");
+                    ctx.redirect("../employee");
+                }
+                
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+            }
+        }
+    }
 }

@@ -65,6 +65,8 @@ public interface ReimburseRequestService {
                                 String description, String justification, String grading, double projected, boolean urgent,
                                 AppStatus status, AppStage stage, LocalDateTime dateTime);
 
+    public boolean updateRequest(ReimburseRequest request);
+
     /**
      * Calls the Dao to update a reimbursement request with given id.
      * The input fields should be given the updated information.

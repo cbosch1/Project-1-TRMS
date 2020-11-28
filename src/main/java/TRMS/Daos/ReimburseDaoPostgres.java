@@ -265,7 +265,8 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
             stmt.setString(3, request.getType().toString());
             stmt.setString(4, request.getDescription());
             stmt.setString(5, request.getJustification());
-            stmt.setInt(6, request.getRequestId());
+            stmt.setString(6, request.getGrading());
+            stmt.setInt(7, request.getRequestId());
 
             stmt2.setDouble(1, request.getProjected());
             stmt2.setBoolean(2, request.isUrgent());
