@@ -1,6 +1,10 @@
 package TRMS.controllers;
 
+import java.io.Console;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,79 +13,127 @@ import TRMS.enums.AppStage;
 import TRMS.enums.AppStatus;
 import TRMS.enums.EventType;
 import TRMS.pojos.ReimburseRequest;
+import TRMS.services.AttachmentService;
 import TRMS.services.ReimburseRequestService;
 import io.javalin.http.Context;
+import io.javalin.http.UploadedFile;
 
 /**
- * ReimburseRequestControl implementation, dependency is an object that implements
- * the ReimburseRequestService interface. The controller will take in a Javalin Context
- * object at each method, pull the information necessary to process the request, 
- * convert that information into what the service expects, and pass it on to the
- * equivalent service object. The controller will also take what ever returns from
- * the Service, and supply it back to the ctx properly.
+ * ReimburseRequestControl implementation, dependency is an object that
+ * implements the ReimburseRequestService interface. The controller will take in
+ * a Javalin Context object at each method, pull the information necessary to
+ * process the request, convert that information into what the service expects,
+ * and pass it on to the equivalent service object. The controller will also
+ * take what ever returns from the Service, and supply it back to the ctx
+ * properly.
  */
 public class ReimburseRequestControl {
-    
+
     private static Logger Log = LogManager.getLogger("Control");
 
     private ReimburseRequestService service;
+    private AttachmentService attachService;
     private AuthControl auth;
 
-    public ReimburseRequestControl(ReimburseRequestService service, AuthControl auth){
+    public ReimburseRequestControl(ReimburseRequestService service, AuthControl auth, AttachmentService attachService) {
         super();
         this.service = service;
+        this.attachService = attachService;
         this.auth = auth;
     }
 
     /**
-     * For creating an reimbursement request within the system.
-     * Parses form parameters out of the context object and passes them
-     * to the proper Service method. Then this method will apply the correct 
-     * status code to the ctx.
+     * For creating an reimbursement request within the system. Parses form
+     * parameters out of the context object and passes them to the proper Service
+     * method. Then this method will apply the correct status code to the ctx.
      * 
      * @param ctx A context object that has at least the following formParams:
-     * <ul><li>employeeId</li>
-     * <li>location</li>
-     * <li>cost</li>
-     * <li>type</li>
-     * <li>description</li>
-     * <li>justification</li>
-     * <li>projected - optional</li>
-     * <li>urgent - optional</li>
-     * <li>status - optional</li>
-     * <li>stage - optional</li>
-     * <li>dateTime - optional</li></ul>
+     *            <ul>
+     *            <li>employeeId</li>
+     *            <li>location</li>
+     *            <li>cost</li>
+     *            <li>type</li>
+     *            <li>description</li>
+     *            <li>justification</li>
+     *            <li>projected - optional</li>
+     *            <li>urgent - optional</li>
+     *            <li>status - optional</li>
+     *            <li>stage - optional</li>
+     *            <li>dateTime - optional</li>
+     *            </ul>
      */
-    public void createRequest(Context ctx){
+    public void createRequest(Context ctx) {
         try {
-            int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
-            String location = ctx.formParam("location");
-            Double cost = Double.parseDouble(ctx.formParam("cost"));
-            EventType type = EventType.valueOf(ctx.formParam("type"));
+            int employeeId = auth.getEmp(ctx);
+            String location = ctx.formParam("event-location");
+            Double cost = Double.parseDouble(ctx.formParam("event-cost"));
+            EventType type = EventType.valueOf(ctx.formParam("event-type"));
             String description = ctx.formParam("description");
             String justification = ctx.formParam("justification");
-            Double projected = Double.parseDouble(ctx.formParam("projected"));
-            boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
-            AppStatus status = AppStatus.valueOf(ctx.formParam("status"));
-            AppStage stage = AppStage.valueOf(ctx.formParam("stage"));
-            LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
+            boolean urgent = Boolean.parseBoolean(ctx.formParam("urgency"));
+            AppStatus status = AppStatus.PENDING;
+            AppStage stage = AppStage.UPLOAD;
+            LocalDateTime dateTime = LocalDateTime.of(LocalDate.parse(ctx.formParam("event-date")),
+                    LocalTime.parse(ctx.formParam("event-time")));
+
+            Double projected;
+
+            switch (type) {
+                case UNI_COURSE:
+                    projected = (cost * 0.8);
+                    break;
+
+                case SEMINAR:
+                    projected = (cost * 0.6);
+                    break;
+
+                case CERT_PREP_CLASS:
+                    projected = (cost * 0.75);
+                    break;
+
+                case CERTIFICATION:
+                    projected = (cost);
+                    break;
+
+                case TECHNICAL_TRAINING:
+                    projected = (cost * 0.9);
+                    break;
+
+                default:
+                    projected = (cost * 0.3);
+                    break;
+            }
+
+            boolean supervisor = Boolean.parseBoolean(ctx.formParam("Supervisor"));
+            boolean deptHead = Boolean.parseBoolean(ctx.formParam("Dept_Head"));
+
+            if (supervisor) {
+                stage = AppStage.DEPT_HEAD;
+                if (deptHead) {
+                    stage = AppStage.BENCO;
+                }
+            }
             
             int returnId = service.createRequest(employeeId, location, cost, type, description, justification, 
                                                 projected, urgent, status, stage, dateTime);
-
-            ctx.json(returnId);
+            
+            ctx.uploadedFiles("files").forEach(f -> {
+                attachService.createAttachment(returnId, f.getFilename(), f.getContent());
+            });
+            
             ctx.status(200);
             Log.info("Successfully inserted reimbursement request, id returned: " + returnId);
+            ctx.redirect("../employee");
 
         } catch (NumberFormatException e){
             Log.warn("NumberFormatException thrown while creating reimbursement request: " + e);
-            ctx.html("NumberFormatException thrown: " + e);
             ctx.status(500);
+            ctx.redirect("employee-login.html");
 
         } catch (Exception e) {
             Log.warn("Exception thrown while creating reimbursement request: " + e);
-            ctx.html("Exception thrown: " + e);
             ctx.status(500);
+            ctx.redirect("employee-login.html");
         }
     }
 
@@ -236,25 +288,27 @@ public class ReimburseRequestControl {
      * <ul><li>requestId</li></ul>
      */
     public void deleteRequest(Context ctx){
-        try {
-            int requestId = Integer.parseInt(ctx.formParam("requestId"));
+        int requestId = -1;
+        if (auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
 
-            if (service.deleteRequest(requestId)){
-                Log.info("Reimbursement Request successfully deleted");
-                ctx.status(200);
-            } else {
-                Log.warn("Service returned false while deleting reimbursement request");
+                if (service.deleteRequest(requestId)){
+                    Log.info("Reimbursement Request successfully deleted");
+                    ctx.status(200);
+                    ctx.redirect("../../employee");
+                } else {
+                    Log.warn("Service returned false while deleting reimbursement request");
+                    ctx.status(500);
+                }
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while deleting reimbursement request: " + e);
+                ctx.status(400);
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while deleting reimbursement request: " + e);
                 ctx.status(500);
             }
-        } catch (NumberFormatException e){
-            Log.warn("NumberFormatException thrown while deleting reimbursement request: " + e);
-            ctx.html("NumberFormatException thrown: " + e);
-            ctx.status(500);
-
-        } catch (Exception e) {
-            Log.warn("Exception thrown while deleting reimbursement request: " + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
         }
     }
 }

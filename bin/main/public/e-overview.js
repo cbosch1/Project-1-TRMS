@@ -1,4 +1,5 @@
 window.onload = function () {
+
     var xhr = new XMLHttpRequest();
     var url = "http://localhost:2839/my-reimbursements";
     //sets up ready state handler
@@ -22,12 +23,34 @@ window.onload = function () {
                 //logic to add requests to table
                 if (xhr.status === 200) {
                     let reimburseList = JSON.parse(xhr.responseText);
+                    let runningTotal = 1000;
                     reimburseList.forEach(function (element) {
                         if(element.status == "PENDING"){
                             addRowCurrent(element);
                         } else {
                             addRowPast(element);
                         }
+                        if(element.status == "APPROVED" || element.status == "PENDING"){
+                            let jsonDate = element.dateTime;
+                            let d = new Date(jsonDate.year +"-"+ jsonDate.monthValue +"-"+ jsonDate.dayOfMonth);
+                            let date = new Date(Date.now());
+
+                            date.setFullYear(date.getFullYear() - 1);
+
+                            if(d > (date)) {
+                                if(runningTotal - element.projected > 0) {
+                                    runningTotal -= element.projected;
+                                } else {
+                                    runningTotal = 0;
+                                }
+                            }
+                        }
+                        let used = document.getElementById("user-fund-used");
+                        let avail = document.getElementById("user-fund-available");
+                        let total = document.getElementById("user-fund-total");
+                        used.innerHTML = "$" + (1000 - runningTotal);
+                        avail.innerHTML = "$" + runningTotal;
+                        total.innerHTML = "$" + ((1000 - runningTotal) + runningTotal);
                     });
                 }
                 break;
@@ -62,11 +85,11 @@ var addRowCurrent = function (reimburse) {
     table.childNodes[3].appendChild(tableRow);
 
     idCol.innerHTML = reimburse.requestId;
-    dateCol.innerHTML = "" + reimburse.dateTime.monthValue +"-"+ reimburse.dateTime.dayOfMonth +"-"+ reimburse.dateTime.year;
+    dateCol.innerHTML = reimburse.dateTime.monthValue +"-"+ reimburse.dateTime.dayOfMonth +"-"+ reimburse.dateTime.year;
     typeCol.innerHTML = reimburse.type;
     locationCol.innerHTML = reimburse.location;
-    costCol.innerHTML = reimburse.cost;
-    payoutCol.innerHTML = reimburse.projected;
+    costCol.innerHTML = "$"+ reimburse.cost;
+    payoutCol.innerHTML = "$"+ reimburse.projected;
     statusCol.innerHTML = reimburse.status;
     viewCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"GET\" action=\"employee/view-reimbursement/" + reimburse.requestId + "\">\n                            <button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">View</button>\n                        </form>";
 };

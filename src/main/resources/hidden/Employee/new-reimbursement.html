@@ -49,28 +49,34 @@
             <hr />
             <span id="login-error" class="error-log">Error: </span>
 
-            <form id="new-reimbursement-form" method="POST" action="new-reimbursement">
+            <form id="new-reimbursement-form" method="POST" action="new-reimbursement" enctype="multipart/form-data">
               <div class="form-group form-inline">
-                <label for="event-date">Event Date & Time:</label>
-                <input type="date" class="form-control" id="event-date" />
-                <input type="time" class="form-control" id="event-time" />
+                <label>Event Date & Time:</label>
+                <input type="date" class="form-control" name="event-date" />
+                <input type="time" class="form-control" name="event-time" />
               </div>
 
               <div class="form-group">
                 <label for="radio-type">Event Type:</label>
-                <div class="radio" id="radio-type">
-                  <label><input type="radio" name="option" />UNI_COURSE</label>
-                  <label><input type="radio" name="option" />SEMINAR</label>
-                  <label><input type="radio" name="option" />CERT_PREP_CLASS</label>
-                  <label><input type="radio" name="option" />CERTIFICATION</label>
-                  <label><input type="radio" name="option" />TECHNICAL_TRAINING</label>
-                  <label><input type="radio" name="option" />OTHER</label>
+                <div class="radio radio-inline" id="radio-type">
+                  <label><input type="radio" name="event-type" value="UNI_COURSE" />University Course</label>
+                  <label><input type="radio" name="event-type" value="SEMINAR" />Seminar</label>
+                  <label
+                    ><input type="radio" name="event-type" value="CERT_PREP_CLASS" />Certification Prep
+                    Class</label
+                  >
+                  <label><input type="radio" name="event-type" value="CERTIFICATION" />Certification</label>
+                  <label
+                    ><input type="radio" name="event-type" value="TECHNICAL_TRAINING" />Technical
+                    Training</label
+                  >
+                  <label><input type="radio" name="event-type" value="OTHER" />Other</label>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="grading-format">Grading format:</label>
-                <input type="text" class="form-control" id="grading-format" />
+                <label>Grading format:</label>
+                <input type="text" class="form-control" name="grading-format" />
                 <p>
                   If event issues no grade, a presentation may be required to receive funds. In such a case,
                   please enter Presentation
@@ -78,65 +84,65 @@
               </div>
 
               <div class="form-group">
-                <label for="event-location">Event Location:</label>
-                <input type="text" class="form-control" id="event-location" />
+                <label>Event Location:</label>
+                <input type="text" class="form-control" id="event-location" name="event-location" />
               </div>
 
               <div class="form-group">
-                <label for="event-cost">Estimated Cost:</label>
-                <input type="number" id="event-cost" />
+                <label>Estimated Cost:</label>
+                <input type="number" id="event-cost" name="event-cost" />
               </div>
 
               <div class="form-group">
-                <label for="description">Description of Event:</label>
-                <textarea class="form-control" rows="6" id="description"></textarea>
+                <label>Description of Event:</label>
+                <textarea class="form-control" rows="6" name="description"></textarea>
               </div>
 
               <div class="form-group">
-                <label for="justification">Justification for Event:</label>
-                <textarea class="form-control" rows="4" id="justification"></textarea>
+                <label>Justification for Event:</label>
+                <textarea class="form-control" rows="4" name="justification"></textarea>
               </div>
 
               <div class="form-group">
-                <label for="request-urgency">Is this request urgent?:</label>
-                <div class="radio" id="request-urgency">
-                  <label><input type="radio" name="option" /> Yes</label>
-                  <label><input type="radio" name="option" /> No</label>
+                <label>Is this request urgent?:</label>
+                <div class="radio" id="urgency">
+                  <label><input type="radio" name="urgency" value="true" /> Yes</label>
+                  <label><input type="radio" name="urgency" value="false" /> No</label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div id="current-attachments" class="form-group">
                   <table class="table">
-                      <thead>
-                          <tr>
-                              <th>Related attachments:</th>
-                              <th colspan="3">Is this a pre-approval email?:</th>
-                          </tr>
-                      </thead>
+                    <thead>
+                      <tr>
+                        <th>Related attachments:</th>
+                        <th colspan="3">Have you included pre-approval emails?:</th>
+                      </tr>
+                    </thead>
                     <tbody>
                       <tr>
-                        <td><input type="file" /></td>
-                        <td><label><input type="radio" name="option" /> No</label></td>
-                        <td><label><input type="radio" name="option" /> Yes - Supervisor</label></td>
-                        <td><label><input type="radio" name="option" /> Yes - Dept. Head</label></td>
-                      </tr>
-                      <tr>
-                        <td><input type="file" /></td>
-                        <td><label><input type="radio" name="option" /> No</label></td>
-                        <td><label><input type="radio" name="option" /> Yes - Supervisor</label></td>
-                        <td><label><input type="radio" name="option" /> Yes - Dept. Head</label></td>
+                        <td><input type="file" name="files" multiple /></td>
+                        <td>
+                          <label
+                            ><input type="checkbox" name="Supervisor" value="true" /> Yes -
+                            Supervisor</label
+                          >
+                        </td>
+                        <td>
+                          <label
+                            ><input type="checkbox" name="Dept_Head" value="true" /> Yes - Dept. Head</label
+                          >
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <label for="add-attachments-btn">Add another attachment: </label>
-                <button type="button" class="table-btn" id="add-attachments-btn">Add</button>
               </div>
 
               <div class="form-group">
-                  <button type="submit" class="login-form">Submit</button>
-                  <button type="button">Clear</button>
+                <button type="submit" id="submit-btn" class="login-form">Submit</button>
+                <button type="button" id="clear-btn">Clear</button>
               </div>
             </form>
           </div>
@@ -155,9 +161,9 @@
               </thead>
               <tbody id="user-funds-values" class="table-right">
                 <tr>
-                  <td>$625</td>
-                  <td>$375</td>
-                  <td>$1000</td>
+                  <td id="user-fund-available"></td>
+                  <td id="user-fund-used"></td>
+                  <td id="user-fund-total"></td>
                 </tr>
               </tbody>
             </table>
@@ -168,7 +174,7 @@
     </main>
     <footer class="page-footer col-md-12">
       © 2020 Copyright: <a href="index.html">TRMS Owning Company</a>
-      <script src="../../view-reimburse.js"></script>
+      <script src="../../new-reimburse.js"></script>
     </footer>
   </body>
 </html>

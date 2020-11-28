@@ -33,14 +33,14 @@ public class WebDriver {
 
     private static AuthService authService = new AuthServiceImpl();
     private static AuthControl authControl = new AuthControl(authService, userService);
-
-    private static ReimburseRequestDao reimburseDao = new ReimburseDaoPostgres(connectionUtil);
-    private static ReimburseRequestService reimburseService = new ReimburseServiceImpl(reimburseDao);
-    private static ReimburseRequestControl reimburseControl = new ReimburseRequestControl(reimburseService, authControl);
-
+    
     private static AttachmentDao attachDao = new AttachmentDaoPostgres(connectionUtil);
     private static AttachmentService attachService = new AttachmentServiceImpl(attachDao);
     private static AttachmentControl attachControl = new AttachmentControl(attachService, authControl);
+
+    private static ReimburseRequestDao reimburseDao = new ReimburseDaoPostgres(connectionUtil);
+    private static ReimburseRequestService reimburseService = new ReimburseServiceImpl(reimburseDao);
+    private static ReimburseRequestControl reimburseControl = new ReimburseRequestControl(reimburseService, authControl, attachService);
 
     private static EmployeeWebControl eWebControl = new EmployeeWebControl(authControl);
     private static ManagerWebControl mWebControl = new ManagerWebControl(authControl);
@@ -71,8 +71,9 @@ public class WebDriver {
         app.post(EMPLOYEE_URL, ctx -> { if(authControl.login(ctx)) { eWebControl.getOverview(ctx); } 
                                         else ctx.redirect("employee-login.html");});
         app.get(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.getNewReimbursement(ctx));
-        app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> eWebControl.postNewReimbursement(ctx));
+        app.post(EMPLOYEE_URL+"/new-reimbursement", ctx -> reimburseControl.createRequest(ctx));
         app.get(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> eWebControl.getViewReimbursement(ctx));
+        app.post(EMPLOYEE_URL+"/cancel-reimbursement/:id", ctx -> reimburseControl.deleteRequest(ctx));
 
         //Manager only endpoints
         app.get(MANAGER_URL, ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }
