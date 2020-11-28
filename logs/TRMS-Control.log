@@ -2209,3 +2209,40 @@
 2020-11-28 17:41:15,338 [qtp51152513-25] INFO : Successfully read attachments related to: 2
 2020-11-28 17:41:18,940 [qtp51152513-34] INFO : Successfully read attachment
 2020-11-28 17:41:25,737 [qtp51152513-25] INFO : Successfully read attachment
+2020-11-28 17:46:06,681 [qtp2101153819-22] INFO : Access approved
+2020-11-28 17:46:06,897 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:46:08,141 [qtp2101153819-24] INFO : User successfully logged out
+2020-11-28 17:46:22,218 [qtp2101153819-24] INFO : Received request to log in user: anotherOne
+2020-11-28 17:46:22,318 [qtp2101153819-24] INFO : Access approved
+2020-11-28 17:46:56,259 [qtp2101153819-21] INFO : Received request to log in user: anotherOne
+2020-11-28 17:46:56,345 [qtp2101153819-21] INFO : Access approved
+2020-11-28 17:47:00,863 [qtp2101153819-24] INFO : Access approved
+2020-11-28 17:47:36,551 [qtp2101153819-23] INFO : Access approved
+2020-11-28 17:47:36,683 [qtp2101153819-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:49:25,758 [qtp2101153819-17] INFO : Access approved
+2020-11-28 17:49:25,876 [qtp2101153819-24] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:49:50,492 [qtp2101153819-19] INFO : Access approved
+2020-11-28 17:49:50,602 [qtp2101153819-18] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:51:44,810 [qtp2101153819-29] INFO : Access approved
+2020-11-28 17:51:44,929 [qtp2101153819-17] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:54:25,644 [qtp2101153819-29] INFO : Access approved
+2020-11-28 17:54:25,740 [qtp2101153819-34] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:55:20,964 [qtp2101153819-18] INFO : Access approved
+2020-11-28 17:55:21,163 [qtp2101153819-17] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:55:41,840 [qtp2101153819-23] INFO : Access approved
+2020-11-28 17:55:42,036 [qtp2101153819-19] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:56:14,849 [qtp2101153819-34] INFO : Access approved
+2020-11-28 18:38:30,103 [qtp2101153819-35] INFO : Access approved
+2020-11-28 18:39:06,761 [qtp51152513-27] WARN : Access denied due to login privilege
+2020-11-28 18:39:09,386 [qtp51152513-26] INFO : Access approved
+2020-11-28 18:39:12,545 [qtp51152513-25] INFO : Access approved
+2020-11-28 18:39:21,515 [qtp51152513-26] INFO : Access approved
+2020-11-28 18:39:21,852 [qtp51152513-27] WARN : Exception thrown while reading all reimbursement requests for manager: 0java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 18:40:55,930 [qtp51152513-26] INFO : Access approved
+2020-11-28 18:40:56,218 [qtp51152513-27] WARN : Exception thrown while reading all reimbursement requests for manager: 0java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 18:41:43,271 [qtp51152513-25] INFO : Access approved
+2020-11-28 18:41:43,706 [qtp51152513-26] WARN : Exception thrown while reading all reimbursement requests for manager: 0java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 18:42:16,853 [qtp51152513-25] INFO : Access approved
+2020-11-28 18:42:17,157 [qtp51152513-26] INFO : Successfully read all reimbursement requests for manager: 0
+2020-11-28 18:44:10,494 [qtp51152513-23] INFO : Access approved
+2020-11-28 18:44:10,647 [qtp51152513-26] INFO : Successfully read all reimbursement requests for manager: 0

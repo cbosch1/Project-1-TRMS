@@ -1,14 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Manager Overview</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
-    Welcome to the managers' overview!
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TRMS - Manager Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse fixed-top container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index">TRMS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="employee">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2 column-left">
+            <h3>Settings</h3>
+            <hr class="hr-side" />
+            <form id="account-details-link-form" method="POST" action="account-details">
+              <button id="account-details-link-btn" type="submit" class="btn-block">Account Details</button>
+            </form>
+          </div>
+
+          <div class="col-md-8 column-center">
+            <h1 style="text-align: center">TRMS - Manager</h1>
+            <hr />
+            <span id="login-error" class="error-log">Error: </span>
+
+            <h3>Requests Needing Approval</h3>
+            <table id="pending-requests-table" class="table table-bordered table-hover request-table">
+              <thead>
+                <tr>
+                  <th>Employee</th>
+                  <th>Date</th>
+                  <th>Event Type</th>
+                  <th>Event Location</th>
+                  <th>Current Stage</th>
+                  <th>Urgent</th>
+                  <th>Estimated Payout</th>
+                  <th>View</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+
+
+            <h3>Other Pending Requests</h3>
+            <table id="other-requests-table" class="table table-bordered table-hover request-table">
+              <thead>
+                <tr>
+                  <th>Employee</th>
+                  <th>Date</th>
+                  <th>Event Type</th>
+                  <th>Event Location</th>
+                  <th>Current Stage</th>
+                  <th>Urgent</th>
+                  <th>Estimated Payout</th>
+                  <th>View</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-2 column-right" style="text-align: right">
+            <h3>Information Requests</h3>
+            <hr class="hr-side" />
+            <table id="information-requests" class="table login-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>From</th>
+                  <th>View</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer col-md-12">
+      © 2020 Copyright: <a href="index.html">TRMS Owning Company</a>
+      <script src="m-overview.js"></script>
+    </footer>
+  </body>
 </html>

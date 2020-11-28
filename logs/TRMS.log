@@ -16025,3 +16025,443 @@ Caused by: java.net.SocketException: Socket closed
 2020-11-28 17:41:25,714 [qtp51152513-25] INFO : Dao - Request completed, retrieved attachment id: 5
 2020-11-28 17:41:25,716 [qtp51152513-25] INFO : Service - Successfully retrieved attachment
 2020-11-28 17:41:25,737 [qtp51152513-25] INFO : Control - Successfully read attachment
+2020-11-28 17:46:06,681 [qtp2101153819-22] INFO : Control - Access approved
+2020-11-28 17:46:06,734 [qtp2101153819-23] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:46:06,842 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:46:06,843 [qtp2101153819-23] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:46:06,862 [qtp2101153819-23] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:46:06,862 [qtp2101153819-23] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:46:06,897 [qtp2101153819-23] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:46:08,141 [qtp2101153819-24] INFO : Control - User successfully logged out
+2020-11-28 17:46:22,218 [qtp2101153819-24] INFO : Control - Received request to log in user: anotherOne
+2020-11-28 17:46:22,219 [qtp2101153819-24] INFO : Service - Responding to login user...
+2020-11-28 17:46:22,254 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:46:22,254 [qtp2101153819-24] INFO : Dao - Received request to login user: anotherOne
+2020-11-28 17:46:22,267 [qtp2101153819-24] INFO : Dao - Request completed, logged in user: anotherOne
+2020-11-28 17:46:22,268 [qtp2101153819-24] INFO : Service - Successfully logged in user
+2020-11-28 17:46:22,268 [qtp2101153819-24] INFO : Service - Responding to read employee...
+2020-11-28 17:46:22,300 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:46:22,300 [qtp2101153819-24] INFO : Dao - Received request to retrieve employee with id: 0
+2020-11-28 17:46:22,306 [qtp2101153819-24] INFO : Dao - Request completed, retrieved employee: Nick Fury
+2020-11-28 17:46:22,306 [qtp2101153819-24] INFO : Service - Successfully retrieved employee
+2020-11-28 17:46:22,318 [qtp2101153819-24] INFO : Control - Access approved
+2020-11-28 17:46:56,259 [qtp2101153819-21] INFO : Control - Received request to log in user: anotherOne
+2020-11-28 17:46:56,259 [qtp2101153819-21] INFO : Service - Responding to login user...
+2020-11-28 17:46:56,297 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:46:56,297 [qtp2101153819-21] INFO : Dao - Received request to login user: anotherOne
+2020-11-28 17:46:56,300 [qtp2101153819-21] INFO : Dao - Request completed, logged in user: anotherOne
+2020-11-28 17:46:56,300 [qtp2101153819-21] INFO : Service - Successfully logged in user
+2020-11-28 17:46:56,300 [qtp2101153819-21] INFO : Service - Responding to read employee...
+2020-11-28 17:46:56,334 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:46:56,334 [qtp2101153819-21] INFO : Dao - Received request to retrieve employee with id: 0
+2020-11-28 17:46:56,336 [qtp2101153819-21] INFO : Dao - Request completed, retrieved employee: Nick Fury
+2020-11-28 17:46:56,336 [qtp2101153819-21] INFO : Service - Successfully retrieved employee
+2020-11-28 17:46:56,345 [qtp2101153819-21] INFO : Control - Access approved
+2020-11-28 17:47:00,863 [qtp2101153819-24] INFO : Control - Access approved
+2020-11-28 17:47:36,551 [qtp2101153819-23] INFO : Control - Access approved
+2020-11-28 17:47:36,641 [qtp2101153819-24] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:47:36,678 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:47:36,678 [qtp2101153819-24] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:47:36,683 [qtp2101153819-24] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:47:36,683 [qtp2101153819-24] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:47:36,683 [qtp2101153819-24] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:49:25,758 [qtp2101153819-17] INFO : Control - Access approved
+2020-11-28 17:49:25,832 [qtp2101153819-24] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:49:25,871 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:49:25,871 [qtp2101153819-24] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:49:25,875 [qtp2101153819-24] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:49:25,875 [qtp2101153819-24] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:49:25,876 [qtp2101153819-24] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:49:50,492 [qtp2101153819-19] INFO : Control - Access approved
+2020-11-28 17:49:50,554 [qtp2101153819-18] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:49:50,594 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:49:50,594 [qtp2101153819-18] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:49:50,601 [qtp2101153819-18] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:49:50,601 [qtp2101153819-18] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:49:50,602 [qtp2101153819-18] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:51:44,810 [qtp2101153819-29] INFO : Control - Access approved
+2020-11-28 17:51:44,885 [qtp2101153819-17] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:51:44,924 [qtp2101153819-17] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:51:44,924 [qtp2101153819-17] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:51:44,928 [qtp2101153819-17] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:51:44,929 [qtp2101153819-17] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:51:44,929 [qtp2101153819-17] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:54:25,644 [qtp2101153819-29] INFO : Control - Access approved
+2020-11-28 17:54:25,694 [qtp2101153819-34] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:54:25,734 [qtp2101153819-34] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:54:25,734 [qtp2101153819-34] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:54:25,739 [qtp2101153819-34] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:54:25,739 [qtp2101153819-34] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:54:25,740 [qtp2101153819-34] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:55:20,964 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-28 17:55:21,022 [qtp2101153819-17] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:55:21,158 [qtp2101153819-17] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:55:21,158 [qtp2101153819-17] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:55:21,162 [qtp2101153819-17] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:55:21,163 [qtp2101153819-17] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:55:21,163 [qtp2101153819-17] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:55:41,840 [qtp2101153819-23] INFO : Control - Access approved
+2020-11-28 17:55:41,894 [qtp2101153819-19] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 17:55:42,027 [qtp2101153819-19] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 17:55:42,027 [qtp2101153819-19] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 17:55:42,031 [qtp2101153819-19] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 2
+2020-11-28 17:55:42,031 [qtp2101153819-19] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 17:55:42,036 [qtp2101153819-19] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 17:56:14,849 [qtp2101153819-34] INFO : Control - Access approved
+2020-11-28 18:38:30,103 [qtp2101153819-35] INFO : Control - Access approved
+2020-11-28 18:39:06,761 [qtp51152513-27] WARN : Control - Access denied due to login privilege
+2020-11-28 18:39:09,386 [qtp51152513-26] INFO : Control - Access approved
+2020-11-28 18:39:12,545 [qtp51152513-25] INFO : Control - Access approved
+2020-11-28 18:39:21,515 [qtp51152513-26] INFO : Control - Access approved
+2020-11-28 18:39:21,604 [qtp51152513-27] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-28 18:39:21,823 [qtp51152513-27] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 18:39:21,824 [qtp51152513-27] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 18:39:21,848 [qtp51152513-27] WARN : Dao - SQLException thrown in read all reimbursement requests related to manager with id: 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "status"
+  Position: 93
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readManagedRequests(ReimburseDaoPostgres.java:211)
+	at TRMS.services.ReimburseServiceImpl.readManagedRequests(ReimburseServiceImpl.java:137)
+	at TRMS.controllers.ReimburseRequestControl.readManagedRequests(ReimburseRequestControl.java:216)
+	at TRMS.javalin.WebDriver.lambda$27(WebDriver.java:113)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-28 18:39:21,850 [qtp51152513-27] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "status"
+  Position: 93
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readManagedRequests(ReimburseDaoPostgres.java:211)
+	at TRMS.services.ReimburseServiceImpl.readManagedRequests(ReimburseServiceImpl.java:137)
+	at TRMS.controllers.ReimburseRequestControl.readManagedRequests(ReimburseRequestControl.java:216)
+	at TRMS.javalin.WebDriver.lambda$27(WebDriver.java:113)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-28 18:39:21,852 [qtp51152513-27] WARN : Control - Exception thrown while reading all reimbursement requests for manager: 0java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 18:40:55,930 [qtp51152513-26] INFO : Control - Access approved
+2020-11-28 18:40:56,052 [qtp51152513-27] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-28 18:40:56,194 [qtp51152513-27] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 18:40:56,195 [qtp51152513-27] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 18:40:56,215 [qtp51152513-27] WARN : Dao - SQLException thrown in read all reimbursement requests related to manager with id: 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "status"
+  Position: 93
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readManagedRequests(ReimburseDaoPostgres.java:211)
+	at TRMS.services.ReimburseServiceImpl.readManagedRequests(ReimburseServiceImpl.java:137)
+	at TRMS.controllers.ReimburseRequestControl.readManagedRequests(ReimburseRequestControl.java:216)
+	at TRMS.javalin.WebDriver.lambda$27(WebDriver.java:113)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-28 18:40:56,217 [qtp51152513-27] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "status"
+  Position: 93
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readManagedRequests(ReimburseDaoPostgres.java:211)
+	at TRMS.services.ReimburseServiceImpl.readManagedRequests(ReimburseServiceImpl.java:137)
+	at TRMS.controllers.ReimburseRequestControl.readManagedRequests(ReimburseRequestControl.java:216)
+	at TRMS.javalin.WebDriver.lambda$27(WebDriver.java:113)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-28 18:40:56,218 [qtp51152513-27] WARN : Control - Exception thrown while reading all reimbursement requests for manager: 0java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 18:41:43,271 [qtp51152513-25] INFO : Control - Access approved
+2020-11-28 18:41:43,417 [qtp51152513-26] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-28 18:41:43,680 [qtp51152513-26] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 18:41:43,680 [qtp51152513-26] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 18:41:43,703 [qtp51152513-26] WARN : Dao - SQLException thrown in read all reimbursement requests related to manager with id: 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "status"
+  Position: 93
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readManagedRequests(ReimburseDaoPostgres.java:212)
+	at TRMS.services.ReimburseServiceImpl.readManagedRequests(ReimburseServiceImpl.java:137)
+	at TRMS.controllers.ReimburseRequestControl.readManagedRequests(ReimburseRequestControl.java:216)
+	at TRMS.javalin.WebDriver.lambda$27(WebDriver.java:113)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-28 18:41:43,705 [qtp51152513-26] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "status"
+  Position: 93
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readManagedRequests(ReimburseDaoPostgres.java:212)
+	at TRMS.services.ReimburseServiceImpl.readManagedRequests(ReimburseServiceImpl.java:137)
+	at TRMS.controllers.ReimburseRequestControl.readManagedRequests(ReimburseRequestControl.java:216)
+	at TRMS.javalin.WebDriver.lambda$27(WebDriver.java:113)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-28 18:41:43,706 [qtp51152513-26] WARN : Control - Exception thrown while reading all reimbursement requests for manager: 0java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-28 18:42:16,853 [qtp51152513-25] INFO : Control - Access approved
+2020-11-28 18:42:16,976 [qtp51152513-26] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-28 18:42:17,096 [qtp51152513-26] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 18:42:17,096 [qtp51152513-26] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 18:42:17,119 [qtp51152513-26] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 2
+2020-11-28 18:42:17,119 [qtp51152513-26] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 18:42:17,157 [qtp51152513-26] INFO : Control - Successfully read all reimbursement requests for manager: 0
+2020-11-28 18:44:10,494 [qtp51152513-23] INFO : Control - Access approved
+2020-11-28 18:44:10,598 [qtp51152513-26] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-28 18:44:10,640 [qtp51152513-26] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 18:44:10,640 [qtp51152513-26] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 18:44:10,645 [qtp51152513-26] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 3
+2020-11-28 18:44:10,646 [qtp51152513-26] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 18:44:10,647 [qtp51152513-26] INFO : Control - Successfully read all reimbursement requests for manager: 0

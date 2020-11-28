@@ -207,6 +207,24 @@ public class ReimburseRequestControl {
         }
     }
 
+    public void readManagedRequests(Context ctx){
+        int managerId = -1;
+
+        if(auth.checkUser(ctx)) {
+            try {
+                managerId = auth.getEmp(ctx);
+                ctx.json(service.readManagedRequests(managerId));
+
+                ctx.status(200);
+                Log.info("Successfully read all reimbursement requests for manager: " + managerId);
+            
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading all reimbursement requests for manager: " + managerId + e);
+                ctx.status(500);
+            }
+        }
+    }
+
     /**
      * For reading all reimbursement requests in the TRMS. The ctx will have values
      * set to the returned reimbursement request objects. Then this method will 

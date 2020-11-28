@@ -47,6 +47,8 @@ public interface ReimburseRequestService {
      */
     public List<ReimburseRequest> readAllRequestsFor(int employeeId);
 
+    public List<ReimburseRequest> readManagedRequests(int managerId);
+
     /**
      * Calls the Dao to return a list of all reimbursement requests
      * that have been made by an employee
