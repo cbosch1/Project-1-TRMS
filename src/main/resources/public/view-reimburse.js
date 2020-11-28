@@ -51,7 +51,7 @@ var showRequest = function (reimburse) {
     var payoutCol = document.createElement("td");
     var statusCol = document.createElement("td");
     var urgentCol = document.createElement("td");
-    var editCol = document.createElement("td");
+    var cancelCol = document.createElement("td");
     var descriptionArea = document.getElementById("view-description");
     var justificationArea = document.getElementById("view-justification");
 
@@ -63,20 +63,30 @@ var showRequest = function (reimburse) {
     tableRow.appendChild(payoutCol);
     tableRow.appendChild(statusCol);
     tableRow.appendChild(urgentCol);
-    tableRow.appendChild(editCol);
+    tableRow.appendChild(cancelCol);
     table.childNodes[3].appendChild(tableRow);
 
     idCol.innerHTML = reimburse.requestId;
-    dateCol.innerHTML = "" + reimburse.dateTime.monthValue +"-"+ reimburse.dateTime.dayOfMonth +"-"+ reimburse.dateTime.year;
+    dateCol.innerHTML = reimburse.dateTime.monthValue +"-"+ reimburse.dateTime.dayOfMonth +"-"+ reimburse.dateTime.year;
     typeCol.innerHTML = reimburse.type;
     locationCol.innerHTML = reimburse.location;
-    costCol.innerHTML = reimburse.cost;
-    payoutCol.innerHTML = reimburse.projected;
+    costCol.innerHTML = "$"+ reimburse.cost;
+    payoutCol.innerHTML = "$"+ reimburse.projected;
     statusCol.innerHTML = reimburse.status;
     urgentCol.innerHTML = reimburse.urgent;
-    editCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"GET\" action=\"../edit-reimbursement/" + reimburse.requestId + "\">\n                            <button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">Edit</button>\n                        </form>";
+    cancelCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"POST\" action=\"../cancel-reimbursement/" + reimburse.requestId + "\">\n                            <button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">Cancel</button>\n                        </form>";
     descriptionArea.innerHTML = reimburse.description;
     justificationArea.innerHTML = reimburse.justification;
+
+    cancelCol.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log("clicked");
+        if(window.confirm("Are you sure you want to delete this request? This cannot be undone.")){
+            console.log(this.firstChild);
+            this.firstChild.submit();
+        }
+    });
 
 };
 
