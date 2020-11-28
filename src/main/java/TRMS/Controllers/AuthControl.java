@@ -6,8 +6,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import TRMS.enums.AuthPriv;
+import TRMS.pojos.Employee;
 import TRMS.pojos.User;
 import TRMS.services.AuthService;
+import TRMS.services.EmployeeService;
 import TRMS.services.UserService;
 import io.javalin.http.Context;
 
@@ -19,11 +21,13 @@ public class AuthControl {
 
     private AuthService authService;
     private UserService userService;
+    private EmployeeService empService;
 
-    public AuthControl(AuthService authService, UserService userService){
+    public AuthControl(AuthService authService, UserService userService, EmployeeService empService){
         super();
         this.authService = authService;
         this.userService = userService;
+        this.empService = empService;
     }
 
     public boolean login(Context ctx) {
@@ -31,9 +35,10 @@ public class AuthControl {
         String password = ctx.formParam("password");
         Log.info("Received request to log in user: " + username);
         User user = userService.loginUser(username, password);
+        Employee emp = empService.readEmployee(user.getEmployeeId());
 
         if(Objects.nonNull(user)) {
-            ctx.cookieStore(TOKEN_NAME, authService.createToken(user));
+            ctx.cookieStore(TOKEN_NAME, authService.createToken(user, emp));
             return true;
         } else {
             Log.warn("Login attempt failed");
@@ -62,11 +67,11 @@ public class AuthControl {
         return auth;
     }
 
-    public String getUsername(Context ctx) {
+    public String getName(Context ctx) {
         String name = "";
 
         try {
-            name = authService.readTokenUsername(ctx.cookieStore(TOKEN_NAME));
+            name = authService.readTokenName(ctx.cookieStore(TOKEN_NAME));
 
         } catch (NullPointerException e) {
             Log.warn("Token's name was not able to be found: " + e);

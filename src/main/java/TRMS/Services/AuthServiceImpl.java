@@ -6,6 +6,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 
+import TRMS.pojos.Employee;
 import TRMS.pojos.User;
 
 
@@ -19,12 +20,12 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public String createToken(User user) {
+    public String createToken(User user, Employee emp) {
         String token = "";
         try {
             token = JWT.create()
             .withIssuer("TRMS-CB")
-            .withClaim("name", user.getUsername())
+            .withClaim("name", emp.getName())
             .withClaim("id", user.getUserId())
             .withClaim("emp", user.getEmployeeId())
             .withClaim("privilege", user.getPrivilege().toString())
@@ -52,7 +53,7 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public String readTokenUsername(String token) {
+    public String readTokenName(String token) {
         String name = "";
         try {
             JWTVerifier verifier = JWT.require(algorithmT).withIssuer("TRMS-CB").build();
