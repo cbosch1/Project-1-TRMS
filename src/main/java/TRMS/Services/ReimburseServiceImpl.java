@@ -48,13 +48,14 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
      */
     @Override
     public int createRequest(int employeeId, String location, double cost, EventType type, String description, 
-                            String justification, double projected, boolean urgent, AppStatus status,
+                            String justification, String grading, double projected, boolean urgent, AppStatus status,
                             AppStage stage, LocalDateTime dateTime) {
         Log.info("Responding to create reimbursement request...");
         int result = -1;
 
         ReimburseRequest request = new ReimburseRequest(0, employeeId, location, cost, type, description, 
-                                                        justification, projected, urgent, status, stage, dateTime);
+                                                        justification, grading, projected, urgent, status,
+                                                        stage, dateTime);
         try {
             result = reimburseDao.createRequest(request);
             Log.info("Successfully created reimbursement request");
@@ -166,14 +167,15 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
      */
     @Override
     public boolean updateRequest(int requestId, int employeeId, String location, double cost, EventType type,
-                                String description, String justification, double projected, boolean urgent, AppStatus status,
-                                AppStage stage, LocalDateTime dateTime) {
+                                String description, String justification, String grading, double projected, 
+                                boolean urgent, AppStatus status, AppStage stage, LocalDateTime dateTime) {
 
         Log.info("Responding to update reimbursement request...");
         boolean result = false;
 
         ReimburseRequest request = new ReimburseRequest(requestId, employeeId, location, cost, type, description, 
-                                                        justification, projected, urgent, status, stage, dateTime);
+                                                        justification, grading, projected, urgent, status, stage,
+                                                        dateTime);
         try {
             result = reimburseDao.updateRequest(request);
 

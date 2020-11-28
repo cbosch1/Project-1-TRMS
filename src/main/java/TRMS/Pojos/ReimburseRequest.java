@@ -19,6 +19,7 @@ public class ReimburseRequest {
     private EventType type;
     private String description;
     private String justification;
+    private String grading;
     private double projected;
     private boolean urgent;
     private AppStatus status;
@@ -39,9 +40,10 @@ public class ReimburseRequest {
      * @param type the type of event, and EventType enum: (UNI_COURSE, SEMINAR, CERT_PREP_CLASS, CERTIFICATION, TECHNICAL_TRAINING, OTHER)
      * @param description a description of the event and what it entails
      * @param justification the work related justification for this event
+     * @param grading the grading format for this event
      */
     public ReimburseRequest(int requestId, int employeeId, String location, double cost, EventType type,
-            String description, String justification) {
+            String description, String justification, String grading) {
         this.requestId = requestId;
         this.employeeId = employeeId;
         this.location = location;
@@ -49,6 +51,7 @@ public class ReimburseRequest {
         this.type = type;
         this.description = description;
         this.justification = justification;
+        this.grading = grading;
         this.projected = 00.00;
         this.urgent = false;
         this.status = AppStatus.PENDING;
@@ -65,6 +68,7 @@ public class ReimburseRequest {
      * @param type the type of event (UNI_COURSE, SEMINAR, CERT_PREP_CLASS, CERTIFICATION, TECHNICAL_TRAINING, OTHER)
      * @param description a description of the event and what it entails
      * @param justification the work related justification for this event
+     * @param grading the grading format for this event
      * @param projected the projected reimbursement amount
      * @param urgent if the request is urgent or not
      * @param status AppStatus enum, what status the request current has (PENDING, APPROVED, DENIED, CANCELLED)
@@ -72,15 +76,16 @@ public class ReimburseRequest {
      * @param dateTime a LocalDateTime object representing when the request was made
      */
 	public ReimburseRequest(int requestId, int employeeId, String location, double cost, EventType type,
-			String description, String justification, double projected, boolean urgent, AppStatus status,
-			AppStage stage, LocalDateTime dateTime) {
+            String description, String justification, String grading, double projected, boolean urgent, 
+            AppStatus status, AppStage stage, LocalDateTime dateTime) {
 		this.requestId = requestId;
 		this.employeeId = employeeId;
 		this.location = location;
 		this.cost = cost;
 		this.type = type;
 		this.description = description;
-		this.justification = justification;
+        this.justification = justification;
+        this.grading = grading;
 		this.projected = projected;
 		this.urgent = urgent;
 		this.status = status;
@@ -309,4 +314,12 @@ public class ReimburseRequest {
 			return false;
 		return true;
 	}
+
+    public String getGrading() {
+        return grading;
+    }
+
+    public void setGrading(String grading) {
+        this.grading = grading;
+    }
 }

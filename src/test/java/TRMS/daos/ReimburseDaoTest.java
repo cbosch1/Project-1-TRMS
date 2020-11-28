@@ -64,7 +64,7 @@ public class ReimburseDaoTest {
 		reimburseDao = new ReimburseDaoPostgres(connUtil);
 		reimburse = new ReimburseRequest(2010, 0, "The room where it happens", 500.00, EventType.SEMINAR,
 										 "A seminar to go over well to do writing techniques", 
-										"Writing techniques are applicable in work environments", 
+										"Writing techniques are applicable in work environments", "pass/fail",
 										400.00, true, AppStatus.PENDING, AppStage.UPLOAD, 
 										LocalDateTime.of(2020, 11, 17, 10, 0));
 	}
@@ -439,7 +439,7 @@ public class ReimburseDaoTest {
 
 				ReimburseRequest modRequest;
 				modRequest = new ReimburseRequest(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4),
-						EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs2.getDouble(2),
+						EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs.getString(8), rs2.getDouble(2),
 						rs2.getBoolean(3), AppStatus.valueOf(rs2.getString(4)), AppStage.valueOf(rs2.getString(5)),
 						LocalDateTime.of(rs2.getDate(6).toLocalDate(), rs2.getTime(7).toLocalTime()));
 

@@ -54,6 +54,7 @@ var showRequest = function (reimburse) {
     var cancelCol = document.createElement("td");
     var descriptionArea = document.getElementById("view-description");
     var justificationArea = document.getElementById("view-justification");
+    var gradingArea = document.getElementById("view-grading");
 
     tableRow.appendChild(idCol);
     tableRow.appendChild(dateCol);
@@ -77,6 +78,7 @@ var showRequest = function (reimburse) {
     cancelCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"POST\" action=\"../cancel-reimbursement/" + reimburse.requestId + "\">\n                            <button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">Cancel</button>\n                        </form>";
     descriptionArea.innerHTML = reimburse.description;
     justificationArea.innerHTML = reimburse.justification;
+    gradingArea.innerHTML = reimburse.grading;
 
     cancelCol.addEventListener("click", function (event) {
         event.preventDefault();

@@ -50,7 +50,7 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
         try(Connection conn = connUtil.createConnection()) {
             Log.info("Received request to insert reimbursement for employee with id: " + request.getEmployeeId());
 
-            String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
             stmt = conn.prepareCall(sql);
 
             stmt.setInt(1, request.getEmployeeId());
@@ -59,12 +59,13 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
             stmt.setString(4, request.getType().toString());
             stmt.setString(5, request.getDescription());
             stmt.setString(6, request.getJustification());
-            stmt.setDouble(7, request.getProjected());
-            stmt.setBoolean(8, request.isUrgent());
-            stmt.setString(9, request.getStatus().toString());
-            stmt.setString(10, request.getStage().toString());
-            stmt.setDate(11, Date.valueOf(LocalDate.from(request.getDateTime())));
-            stmt.setTime(12, Time.valueOf(LocalTime.from(request.getDateTime())));
+            stmt.setString(7, request.getGrading());
+            stmt.setDouble(8, request.getProjected());
+            stmt.setBoolean(9, request.isUrgent());
+            stmt.setString(10, request.getStatus().toString());
+            stmt.setString(11, request.getStage().toString());
+            stmt.setDate(12, Date.valueOf(LocalDate.from(request.getDateTime())));
+            stmt.setTime(13, Time.valueOf(LocalTime.from(request.getDateTime())));
             
             ResultSet rs = stmt.executeQuery();
             rs.next();
@@ -133,7 +134,7 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
             while (rs.next()){
                 rs2.next();
                 ReimburseRequest r = new ReimburseRequest(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4),
-                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs2.getDouble(2),
+                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs.getString(8), rs2.getDouble(2),
                                     rs2.getBoolean(3), AppStatus.valueOf(rs2.getString(4)), AppStage.valueOf(rs2.getString(5)),
                                     LocalDateTime.of(rs2.getDate(6).toLocalDate(), rs2.getTime(7).toLocalTime()));                    
                 result.add(r);
@@ -177,7 +178,7 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
             while (rs.next()){
                 rs2.next();
                 ReimburseRequest r = new ReimburseRequest(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4),
-                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs2.getDouble(2),
+                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs.getString(8), rs2.getDouble(2),
                                     rs2.getBoolean(3), AppStatus.valueOf(rs2.getString(4)), AppStage.valueOf(rs2.getString(5)),
                                     LocalDateTime.of(rs2.getDate(6).toLocalDate(), rs2.getTime(7).toLocalTime()));                    
                 result.add(r);
@@ -222,7 +223,7 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
             while (rs.next()){
                 rs2.next();
                 result = new ReimburseRequest(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4),
-                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs2.getDouble(2),
+                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs.getString(8), rs2.getDouble(2),
                                     rs2.getBoolean(3), AppStatus.valueOf(rs2.getString(4)), AppStage.valueOf(rs2.getString(5)),
                                     LocalDateTime.of(rs2.getDate(6).toLocalDate(), rs2.getTime(7).toLocalTime()));
             }
@@ -253,7 +254,7 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
             conn.setAutoCommit(false);
 
             String sql = "UPDATE reimbursement SET ev_location = ?, ev_cost = ?, ev_type = ?::event_type, description = ?, "
-                                                +"justification = ? WHERE request_id = ?;";
+                                                +"justification = ?, grading_format = ? WHERE request_id = ?;";
             String sql2 = "UPDATE reimburse_status SET projected_award = ?, urgent = ?, status = ?::app_status, "
                                                 +"stage = ?::app_stage, request_date = ?, request_time = ? WHERE request_id = ?;";
             stmt = conn.prepareStatement(sql);

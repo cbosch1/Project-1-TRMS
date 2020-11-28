@@ -1,10 +1,8 @@
 package TRMS.controllers;
 
-import java.io.Console;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +14,6 @@ import TRMS.pojos.ReimburseRequest;
 import TRMS.services.AttachmentService;
 import TRMS.services.ReimburseRequestService;
 import io.javalin.http.Context;
-import io.javalin.http.UploadedFile;
 
 /**
  * ReimburseRequestControl implementation, dependency is an object that
@@ -70,6 +67,7 @@ public class ReimburseRequestControl {
             EventType type = EventType.valueOf(ctx.formParam("event-type"));
             String description = ctx.formParam("description");
             String justification = ctx.formParam("justification");
+            String grading = ctx.formParam("grading");
             boolean urgent = Boolean.parseBoolean(ctx.formParam("urgency"));
             AppStatus status = AppStatus.PENDING;
             AppStage stage = AppStage.UPLOAD;
@@ -115,7 +113,7 @@ public class ReimburseRequestControl {
             }
             
             int returnId = service.createRequest(employeeId, location, cost, type, description, justification, 
-                                                projected, urgent, status, stage, dateTime);
+                                                grading, projected, urgent, status, stage, dateTime);
             
             ctx.uploadedFiles("files").forEach(f -> {
                 attachService.createAttachment(returnId, f.getFilename(), f.getContent());
@@ -251,6 +249,7 @@ public class ReimburseRequestControl {
             EventType type = EventType.valueOf(ctx.formParam("type"));
             String description = ctx.formParam("description");
             String justification = ctx.formParam("justification");
+            String grading = ctx.formParam("grading");
             Double projected = Double.parseDouble(ctx.formParam("projected"));
             boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
             AppStatus status = AppStatus.valueOf(ctx.formParam("status"));
@@ -258,7 +257,7 @@ public class ReimburseRequestControl {
             LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
             
             if (service.updateRequest(requestId, employeeId, location, cost, type, description, justification, 
-                                        projected, urgent, status, stage, dateTime)){
+                                        grading, projected, urgent, status, stage, dateTime)){
                 Log.info("Reimbursement request successfully updated");
                 ctx.status(200);
             } else {

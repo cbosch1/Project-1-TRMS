@@ -44,7 +44,7 @@ public class ReimburseServiceTest {
 	public void setUp() throws Exception {
 		serviceToTest = new ReimburseServiceImpl(mockDao);
 		reimburse = new ReimburseRequest(2010, 0, "Knowhere", 1000.00, EventType.OTHER, "Instruction on the retrieval of artifacts", 
-										"The boss said for me to take this", 1000.00, true, AppStatus.PENDING, AppStage.EVENT,
+										"The boss said for me to take this",  "pass/fail", 1000.00, true, AppStatus.PENDING, AppStage.EVENT,
 										LocalDateTime.of(2301, 8, 12, 4, 0));
 	}
 
@@ -61,7 +61,7 @@ public class ReimburseServiceTest {
 			assertTrue("createInfoRequest returned false", 
 				serviceToTest.createRequest(reimburse.getEmployeeId(), reimburse.getLocation(), reimburse.getCost(), 
 											reimburse.getType(), reimburse.getDescription(), reimburse.getJustification(), 
-											reimburse.getProjected(), reimburse.isUrgent(), reimburse.getStatus(), 
+											reimburse.getGrading(), reimburse.getProjected(), reimburse.isUrgent(), reimburse.getStatus(), 
 											reimburse.getStage(), reimburse.getDateTime()) == reimburse.getRequestId());
 
 			verify(mockDao).createRequest(reimburse);
@@ -141,7 +141,7 @@ public class ReimburseServiceTest {
 			assertTrue("updateInfoRequest returned false", 
 				serviceToTest.updateRequest(reimburse.getRequestId(), reimburse.getEmployeeId(), reimburse.getLocation(), 
 											reimburse.getCost(), reimburse.getType(), reimburse.getDescription(), 
-											reimburse.getJustification(), reimburse.getProjected(), reimburse.isUrgent(), 
+											reimburse.getJustification(), reimburse.getGrading(), reimburse.getProjected(), reimburse.isUrgent(), 
 											reimburse.getStatus(), reimburse.getStage(), reimburse.getDateTime()));
 
 			verify(mockDao).updateRequest(reimburse);

@@ -25,6 +25,7 @@ CREATE TABLE userbase
 	privilege auth_priv NOT NULL
 );
 
+DROP TABLE benco_processing;
 CREATE TABLE benco_processing
 (
 	emp_id integer NOT NULL,
@@ -32,6 +33,7 @@ CREATE TABLE benco_processing
 	PRIMARY KEY(emp_id, request_id)
 );
 
+DROP TABLE info_request;
 CREATE TABLE info_request
 (
 	info_id serial PRIMARY KEY,
@@ -43,6 +45,7 @@ CREATE TABLE info_request
 	request_time time NOT NULL
 );
 
+DROP TABLE reimbursement;
 CREATE TABLE reimbursement
 (
 	request_id serial PRIMARY KEY,
@@ -51,9 +54,11 @@ CREATE TABLE reimbursement
 	ev_cost numeric(10,2) NOT NULL,
 	ev_type event_type NOT NULL,
 	description text NOT NULL,
-	justification text NOT NULL
+	justification text NOT NULL,
+	grading_format varchar(100) NOT NULL
 );
 
+DROP TABLE reimburse_status;
 CREATE TABLE reimburse_status
 (
 	request_id integer PRIMARY KEY,
@@ -65,11 +70,12 @@ CREATE TABLE reimburse_status
 	request_time time NOT NULL
 );
 
+DROP TABLE attachment;
 CREATE TABLE attachment
 (
 	attach_id serial PRIMARY KEY,
 	request_id integer NOT NULL,
-	file_type varchar(25) NOT NULL,
+	file_type varchar(150) NOT NULL,
 	file bytea
 );
 

@@ -31,7 +31,7 @@ public interface ReimburseRequestService {
      * @return The generated id for this object
      */
     public int createRequest(int employeeId, String location, double cost, EventType type, String description, 
-                                String justification, double projected, boolean urgent,
+                                String justification, String grading, double projected, boolean urgent,
                                 AppStatus status, AppStage stage, LocalDateTime dateTime);
 
     /**
@@ -62,7 +62,7 @@ public interface ReimburseRequestService {
      * @return the reimbursement request with given id
      */
     public boolean updateRequest(int requestId, int employeeId, String location, double cost, EventType type, 
-                                String description, String justification, double projected, boolean urgent,
+                                String description, String justification, String grading, double projected, boolean urgent,
                                 AppStatus status, AppStage stage, LocalDateTime dateTime);
 
     /**

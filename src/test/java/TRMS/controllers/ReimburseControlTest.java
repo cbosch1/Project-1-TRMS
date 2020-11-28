@@ -50,7 +50,7 @@ public class ReimburseControlTest {
 	public void setUp() throws Exception {
 		controlToTest = new ReimburseRequestControl(mockService, mockAuth, mockAttach);
 		request = new ReimburseRequest(2010, 0, "Knowhere", 1000.00, EventType.OTHER, "Instruction on the retrieval of artifacts", 
-										"The boss said for me to take this", 1000.00, true, AppStatus.PENDING, AppStage.EVENT,
+										"The boss said for me to take this", "pass/fail", 1000.00, true, AppStatus.PENDING, AppStage.EVENT,
 										LocalDateTime.of(2301, 8, 12, 4, 0));
 
 		when(mockCtx.formParam("requestId")).thenReturn(Integer.toString(request.getRequestId()));
@@ -90,7 +90,7 @@ public class ReimburseControlTest {
 			verify(mockCtx).formParam("dateTime");
 
 			verify(mockService).createRequest(request.getEmployeeId(), request.getLocation(), request.getCost(), request.getType(),
-											request.getDescription(), request.getJustification(), request.getProjected(), 
+											request.getDescription(), request.getJustification(), request.getGrading(), request.getProjected(), 
 											request.isUrgent(), request.getStatus(), request.getStage(), request.getDateTime());
 
 			//TODO verify ctx being given proper inputs.
@@ -166,7 +166,7 @@ public class ReimburseControlTest {
 		try {
 			when(mockService.updateRequest(request.getRequestId(), request.getEmployeeId(), request.getLocation(), 
 											request.getCost(), request.getType(), request.getDescription(), 
-											request.getJustification(), request.getProjected(), request.isUrgent(), 
+											request.getJustification(), request.getGrading(), request.getProjected(), request.isUrgent(), 
 											request.getStatus(), request.getStage(), request.getDateTime())).thenReturn(true);
 
 			controlToTest.updateRequest(mockCtx);
@@ -186,7 +186,7 @@ public class ReimburseControlTest {
 
 			verify(mockService).updateRequest(request.getRequestId(), request.getEmployeeId(), request.getLocation(), 
 											request.getCost(), request.getType(), request.getDescription(), 
-											request.getJustification(), request.getProjected(), request.isUrgent(), 
+											request.getJustification(), request.getGrading(), request.getProjected(), request.isUrgent(), 
 											request.getStatus(), request.getStage(), request.getDateTime());
 
 			//TODO verify ctx being given proper inputs.

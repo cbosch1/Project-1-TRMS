@@ -2001,3 +2001,1432 @@ org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps yo
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 15:56:26,383 [qtp665698670-24] INFO : Responding to login user...
+2020-11-27 15:56:26,507 [qtp665698670-24] INFO : Successfully logged in user
+2020-11-27 15:56:26,608 [qtp665698670-23] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 15:56:26,660 [qtp665698670-23] INFO : Successfully retrieved reimbursement requests
+2020-11-27 15:56:30,697 [qtp665698670-21] INFO : Responding to read reimbursement request...
+2020-11-27 15:56:30,743 [qtp665698670-21] INFO : Successfully retrieved reimbursement request
+2020-11-27 15:56:30,750 [qtp665698670-19] INFO : Responding to read related attachments...
+2020-11-27 15:56:30,788 [qtp665698670-19] INFO : Successfully retrieved attachments
+2020-11-27 15:56:30,789 [qtp665698670-19] INFO : Successfully read attachments related to: 10
+2020-11-27 15:56:39,485 [qtp665698670-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 15:56:39,541 [qtp665698670-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 15:56:41,533 [qtp665698670-21] INFO : Responding to read reimbursement request...
+2020-11-27 15:56:41,572 [qtp665698670-21] INFO : Successfully retrieved reimbursement request
+2020-11-27 15:56:41,582 [qtp665698670-23] INFO : Responding to read related attachments...
+2020-11-27 15:56:41,619 [qtp665698670-23] INFO : Successfully retrieved attachments
+2020-11-27 15:56:41,621 [qtp665698670-23] INFO : Successfully read attachments related to: 11
+2020-11-27 15:56:46,864 [qtp665698670-24] INFO : Responding to read reimbursement request...
+2020-11-27 15:56:46,908 [qtp665698670-24] INFO : Successfully retrieved reimbursement request
+2020-11-27 15:56:46,919 [qtp665698670-20] INFO : Responding to read related attachments...
+2020-11-27 15:56:46,961 [qtp665698670-20] INFO : Successfully retrieved attachments
+2020-11-27 15:56:46,961 [qtp665698670-20] INFO : Successfully read attachments related to: 11
+2020-11-27 15:59:08,201 [qtp665698670-29] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 15:59:08,249 [qtp665698670-29] INFO : Successfully retrieved reimbursement requests
+2020-11-27 15:59:10,738 [qtp665698670-29] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 15:59:10,787 [qtp665698670-29] INFO : Successfully retrieved reimbursement requests
+2020-11-27 15:59:12,906 [qtp665698670-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 15:59:12,949 [qtp665698670-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 15:59:15,089 [qtp665698670-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 15:59:15,135 [qtp665698670-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:46:33,695 [qtp665698670-58] INFO : Responding to login user...
+2020-11-27 17:46:34,006 [qtp665698670-58] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$11(WebDriver.java:71)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 17:46:35,375 [qtp665698670-48] INFO : Responding to login user...
+2020-11-27 17:46:35,426 [qtp665698670-48] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$11(WebDriver.java:71)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 17:46:46,117 [qtp665698670-54] INFO : Responding to login user...
+2020-11-27 17:46:46,184 [qtp665698670-54] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$11(WebDriver.java:71)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 17:46:51,339 [qtp665698670-54] INFO : Responding to login user...
+2020-11-27 17:46:51,391 [qtp665698670-54] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:33)
+	at TRMS.javalin.WebDriver.lambda$16(WebDriver.java:80)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 17:46:58,899 [qtp665698670-73] INFO : Responding to login user...
+2020-11-27 17:46:58,954 [qtp665698670-73] INFO : Successfully logged in user
+2020-11-27 17:46:59,079 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:46:59,160 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:48:35,854 [qtp665698670-73] INFO : Responding to login user...
+2020-11-27 17:48:35,909 [qtp665698670-73] INFO : Successfully logged in user
+2020-11-27 17:48:36,011 [qtp665698670-76] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:48:36,086 [qtp665698670-76] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:48:53,819 [qtp665698670-58] INFO : Responding to login user...
+2020-11-27 17:48:53,885 [qtp665698670-58] INFO : Successfully logged in user
+2020-11-27 17:48:53,960 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:48:54,024 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:49:02,347 [qtp665698670-76] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:49:02,402 [qtp665698670-76] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:49:08,846 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:49:08,904 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:49:19,228 [qtp665698670-58] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:49:19,306 [qtp665698670-58] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:49:25,235 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:49:25,295 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:49:44,182 [qtp665698670-58] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:49:44,251 [qtp665698670-58] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:50:28,857 [qtp665698670-70] INFO : Responding to login user...
+2020-11-27 17:50:28,912 [qtp665698670-70] INFO : Successfully logged in user
+2020-11-27 17:50:28,990 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:50:29,049 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:50:58,734 [qtp665698670-76] INFO : Responding to read reimbursement request...
+2020-11-27 17:50:58,884 [qtp665698670-76] INFO : Successfully retrieved reimbursement request
+2020-11-27 17:50:58,890 [qtp665698670-70] INFO : Responding to read related attachments...
+2020-11-27 17:50:58,938 [qtp665698670-70] INFO : Successfully retrieved attachments
+2020-11-27 17:50:58,939 [qtp665698670-70] INFO : Successfully read attachments related to: 10
+2020-11-27 17:51:36,197 [qtp665698670-76] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:51:36,256 [qtp665698670-76] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:51:39,154 [qtp665698670-54] INFO : Responding to read reimbursement request...
+2020-11-27 17:51:39,209 [qtp665698670-54] INFO : Successfully retrieved reimbursement request
+2020-11-27 17:51:39,214 [qtp665698670-56] INFO : Responding to read related attachments...
+2020-11-27 17:51:39,258 [qtp665698670-56] INFO : Successfully retrieved attachments
+2020-11-27 17:51:39,259 [qtp665698670-56] INFO : Successfully read attachments related to: 11
+2020-11-27 17:51:50,827 [qtp665698670-56] INFO : Responding to read reimbursement request...
+2020-11-27 17:51:50,892 [qtp665698670-56] INFO : Successfully retrieved reimbursement request
+2020-11-27 17:51:50,899 [qtp665698670-54] INFO : Responding to read related attachments...
+2020-11-27 17:51:50,955 [qtp665698670-54] INFO : Successfully retrieved attachments
+2020-11-27 17:51:50,955 [qtp665698670-54] INFO : Successfully read attachments related to: 11
+2020-11-27 17:52:30,888 [qtp665698670-56] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:52:30,950 [qtp665698670-56] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:54:51,008 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:54:51,065 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:55:01,752 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:55:01,807 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 17:55:15,428 [qtp665698670-56] INFO : Responding to read reimbursement request...
+2020-11-27 17:55:15,492 [qtp665698670-56] INFO : Successfully retrieved reimbursement request
+2020-11-27 17:55:15,497 [qtp665698670-54] INFO : Responding to read related attachments...
+2020-11-27 17:55:15,543 [qtp665698670-54] INFO : Successfully retrieved attachments
+2020-11-27 17:55:15,543 [qtp665698670-54] INFO : Successfully read attachments related to: 11
+2020-11-27 17:55:26,559 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 17:55:26,629 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:06:46,665 [qtp665698670-56] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:06:46,743 [qtp665698670-56] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:08:29,934 [qtp665698670-83] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:08:29,993 [qtp665698670-83] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:20:18,448 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:20:18,566 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:21:12,200 [qtp665698670-85] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:21:12,314 [qtp665698670-85] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:21:59,785 [qtp665698670-83] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:21:59,858 [qtp665698670-83] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:22:22,993 [qtp665698670-56] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:22:23,086 [qtp665698670-56] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:22:41,864 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:22:41,944 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:22:57,689 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:22:57,764 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:23:08,868 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:23:09,033 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:23:21,729 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:23:21,815 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:23:38,689 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:23:38,778 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:24:09,630 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:24:09,733 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:24:46,478 [qtp665698670-83] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:24:46,567 [qtp665698670-83] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:24:53,922 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:24:53,995 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:25:32,274 [qtp665698670-85] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:25:32,358 [qtp665698670-85] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:26:12,352 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:26:12,471 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:27:32,961 [qtp665698670-91] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:27:33,031 [qtp665698670-91] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:28:41,814 [qtp665698670-56] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:28:41,876 [qtp665698670-56] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:29:04,017 [qtp665698670-85] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:29:04,101 [qtp665698670-85] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:29:42,097 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:29:42,194 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:30:32,491 [qtp665698670-56] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:30:32,584 [qtp665698670-56] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:31:14,141 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:31:14,250 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:31:15,837 [qtp665698670-91] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:31:15,918 [qtp665698670-91] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:31:16,851 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:31:16,927 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:31:43,660 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:31:43,745 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:32:03,558 [qtp665698670-70] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:32:03,666 [qtp665698670-70] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:32:04,800 [qtp665698670-85] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:32:04,876 [qtp665698670-85] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:32:13,736 [qtp665698670-56] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:32:13,821 [qtp665698670-56] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:32:14,360 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:32:14,543 [qtp665698670-93] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:32:14,563 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:32:14,644 [qtp665698670-93] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:32:14,821 [qtp665698670-93] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:32:14,936 [qtp665698670-93] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:33:50,842 [qtp665698670-56] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:33:50,939 [qtp665698670-56] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:35:22,598 [qtp665698670-92] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:35:22,695 [qtp665698670-92] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:36:04,188 [qtp665698670-85] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:36:04,266 [qtp665698670-85] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:39:32,900 [qtp665698670-93] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:39:33,084 [qtp665698670-93] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:40:08,297 [qtp665698670-95] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:40:08,546 [qtp665698670-95] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:40:26,104 [qtp665698670-92] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:40:26,423 [qtp665698670-92] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:40:52,202 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:40:52,458 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:41:05,266 [qtp665698670-54] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:41:05,541 [qtp665698670-54] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:41:42,443 [qtp665698670-49] INFO : Responding to read reimbursement request...
+2020-11-27 18:41:42,713 [qtp665698670-49] INFO : Successfully retrieved reimbursement request
+2020-11-27 18:41:42,752 [qtp665698670-93] INFO : Responding to read related attachments...
+2020-11-27 18:41:42,950 [qtp665698670-93] INFO : Successfully retrieved attachments
+2020-11-27 18:41:42,951 [qtp665698670-93] INFO : Successfully read attachments related to: 11
+2020-11-27 18:41:44,949 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:41:45,142 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:41:46,542 [qtp665698670-92] INFO : Responding to read reimbursement request...
+2020-11-27 18:41:46,719 [qtp665698670-92] INFO : Successfully retrieved reimbursement request
+2020-11-27 18:41:46,731 [qtp665698670-95] INFO : Responding to read related attachments...
+2020-11-27 18:41:46,930 [qtp665698670-95] INFO : Successfully retrieved attachments
+2020-11-27 18:41:46,931 [qtp665698670-95] INFO : Successfully read attachments related to: 11
+2020-11-27 18:41:48,794 [qtp665698670-92] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:41:49,019 [qtp665698670-92] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:42:05,846 [qtp665698670-93] INFO : Responding to read reimbursement request...
+2020-11-27 18:42:06,090 [qtp665698670-93] INFO : Successfully retrieved reimbursement request
+2020-11-27 18:42:06,123 [qtp665698670-49] INFO : Responding to read related attachments...
+2020-11-27 18:42:06,256 [qtp665698670-49] INFO : Successfully retrieved attachments
+2020-11-27 18:42:06,257 [qtp665698670-49] INFO : Successfully read attachments related to: 11
+2020-11-27 18:42:11,021 [qtp665698670-93] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:42:11,185 [qtp665698670-93] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:43:18,058 [qtp665698670-92] INFO : Responding to read reimbursement request...
+2020-11-27 18:43:18,188 [qtp665698670-92] INFO : Successfully retrieved reimbursement request
+2020-11-27 18:43:18,195 [qtp665698670-100] INFO : Responding to read related attachments...
+2020-11-27 18:43:18,360 [qtp665698670-100] INFO : Successfully retrieved attachments
+2020-11-27 18:43:18,361 [qtp665698670-100] INFO : Successfully read attachments related to: 11
+2020-11-27 18:44:00,717 [qtp665698670-85] INFO : Responding to read reimbursement request...
+2020-11-27 18:44:00,958 [qtp665698670-85] INFO : Successfully retrieved reimbursement request
+2020-11-27 18:44:00,995 [qtp665698670-93] INFO : Responding to read related attachments...
+2020-11-27 18:44:01,274 [qtp665698670-93] INFO : Successfully retrieved attachments
+2020-11-27 18:44:01,275 [qtp665698670-93] INFO : Successfully read attachments related to: 11
+2020-11-27 18:44:03,094 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:44:03,230 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:44:06,106 [qtp665698670-100] INFO : Responding to read reimbursement request...
+2020-11-27 18:44:06,250 [qtp665698670-100] INFO : Successfully retrieved reimbursement request
+2020-11-27 18:44:06,274 [qtp665698670-49] INFO : Responding to read related attachments...
+2020-11-27 18:44:06,419 [qtp665698670-49] INFO : Successfully retrieved attachments
+2020-11-27 18:44:06,420 [qtp665698670-49] INFO : Successfully read attachments related to: 11
+2020-11-27 18:44:07,416 [qtp665698670-100] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:44:07,599 [qtp665698670-100] INFO : Successfully retrieved reimbursement requests
+2020-11-27 18:45:05,419 [qtp665698670-102] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 18:45:05,600 [qtp665698670-102] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:00:10,612 [qtp665698670-85] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:00:10,934 [qtp665698670-85] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:01:47,326 [qtp665698670-93] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:01:47,603 [qtp665698670-93] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:02:17,402 [qtp665698670-93] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:02:17,761 [qtp665698670-93] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:02:21,861 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:02:22,127 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:02:24,504 [qtp665698670-92] INFO : Responding to read reimbursement request...
+2020-11-27 19:02:24,739 [qtp665698670-92] INFO : Successfully retrieved reimbursement request
+2020-11-27 19:02:24,754 [qtp665698670-93] INFO : Responding to read related attachments...
+2020-11-27 19:02:24,851 [qtp665698670-93] INFO : Successfully retrieved attachments
+2020-11-27 19:02:24,851 [qtp665698670-93] INFO : Successfully read attachments related to: 11
+2020-11-27 19:06:31,865 [qtp665698670-97] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:06:32,169 [qtp665698670-97] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:08:30,931 [qtp665698670-93] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:08:31,152 [qtp665698670-93] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:08:36,279 [qtp665698670-95] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:08:36,593 [qtp665698670-95] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:08:38,561 [qtp665698670-100] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:08:38,886 [qtp665698670-100] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:08:41,733 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:08:42,020 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:08:43,475 [qtp665698670-107] INFO : Responding to read reimbursement request...
+2020-11-27 19:08:43,779 [qtp665698670-107] INFO : Successfully retrieved reimbursement request
+2020-11-27 19:08:43,827 [qtp665698670-97] INFO : Responding to read related attachments...
+2020-11-27 19:08:43,993 [qtp665698670-97] INFO : Successfully retrieved attachments
+2020-11-27 19:08:43,993 [qtp665698670-97] INFO : Successfully read attachments related to: 11
+2020-11-27 19:08:46,390 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:08:46,701 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:08:50,146 [qtp665698670-97] INFO : Responding to read reimbursement request...
+2020-11-27 19:08:50,432 [qtp665698670-97] INFO : Successfully retrieved reimbursement request
+2020-11-27 19:08:50,464 [qtp665698670-107] INFO : Responding to read related attachments...
+2020-11-27 19:08:50,665 [qtp665698670-107] INFO : Successfully retrieved attachments
+2020-11-27 19:08:50,665 [qtp665698670-107] INFO : Successfully read attachments related to: 11
+2020-11-27 19:08:52,776 [qtp665698670-49] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:08:52,992 [qtp665698670-49] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:08:55,638 [qtp665698670-107] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:08:55,917 [qtp665698670-107] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:20:11,041 [qtp665698670-97] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:20:11,311 [qtp665698670-97] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:22:18,504 [qtp665698670-109] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:22:18,937 [qtp665698670-109] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:26:52,258 [qtp665698670-23] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:26:52,859 [qtp665698670-23] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:26:54,883 [qtp665698670-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:26:55,216 [qtp665698670-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:28:44,076 [qtp665698670-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:28:44,395 [qtp665698670-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:28:49,902 [qtp665698670-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:28:50,251 [qtp665698670-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:29:18,052 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:29:19,149 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:29:21,062 [qtp193178046-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:29:21,346 [qtp193178046-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:29:23,070 [qtp193178046-23] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:29:23,378 [qtp193178046-23] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:29:24,725 [qtp193178046-23] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:29:25,000 [qtp193178046-23] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:30:58,988 [qtp665698670-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:30:59,457 [qtp665698670-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:31:02,399 [qtp665698670-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:31:02,666 [qtp665698670-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:36:53,908 [qtp665698670-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:36:54,129 [qtp665698670-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:39:51,338 [qtp665698670-19] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:39:51,405 [qtp665698670-19] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:40:08,293 [qtp665698670-30] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:40:08,351 [qtp665698670-30] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:40:11,866 [qtp665698670-30] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:40:11,921 [qtp665698670-30] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:41:11,423 [qtp665698670-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:41:11,618 [qtp665698670-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:45:27,167 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:45:27,376 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:48:25,866 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:48:26,000 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:50:51,075 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:50:51,220 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:52:51,347 [qtp193178046-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:52:51,451 [qtp193178046-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:52:52,746 [qtp193178046-33] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:52:52,801 [qtp193178046-33] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:54:08,172 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:54:08,578 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:56:43,170 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:56:43,304 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:56:46,291 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:56:46,342 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 19:58:26,736 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 19:58:26,894 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:00:46,844 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:00:46,972 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:03:28,024 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:03:28,161 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:04:00,961 [qtp193178046-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:04:01,112 [qtp193178046-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:05:59,079 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:05:59,149 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:06:26,346 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:06:26,497 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:06:27,347 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:06:27,395 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:06:28,882 [qtp193178046-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:06:28,927 [qtp193178046-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:12:40,168 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:12:40,335 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:42:57,160 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:42:57,386 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:44:37,703 [qtp193178046-34] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:44:37,878 [qtp193178046-34] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:44:52,924 [qtp193178046-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:44:52,977 [qtp193178046-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:47:32,094 [qtp193178046-26] INFO : Responding to create reimbursement request...
+2020-11-27 20:47:32,314 [qtp193178046-26] INFO : Successfully created reimbursement request
+2020-11-27 20:47:57,974 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:47:58,039 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:54:48,560 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:54:48,713 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:56:23,009 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:56:23,153 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:57:08,537 [qtp193178046-21] INFO : Responding to create reimbursement request...
+2020-11-27 20:57:08,722 [qtp193178046-21] INFO : Successfully created reimbursement request
+2020-11-27 20:58:57,228 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 20:58:57,373 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 20:59:09,590 [qtp193178046-22] INFO : Responding to create reimbursement request...
+2020-11-27 20:59:09,774 [qtp193178046-22] INFO : Successfully created reimbursement request
+2020-11-27 21:02:19,760 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:02:19,890 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:02:22,724 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:02:22,785 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:02:54,827 [qtp193178046-27] INFO : Responding to create reimbursement request...
+2020-11-27 21:02:54,911 [qtp193178046-27] INFO : Successfully created reimbursement request
+2020-11-27 21:03:44,163 [qtp193178046-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:03:44,299 [qtp193178046-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:03:46,541 [qtp193178046-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:03:46,589 [qtp193178046-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:04:03,653 [qtp193178046-26] INFO : Responding to create reimbursement request...
+2020-11-27 21:04:03,721 [qtp193178046-26] INFO : Successfully created reimbursement request
+2020-11-27 21:04:07,374 [qtp193178046-26] INFO : Responding to create attachment...
+2020-11-27 21:04:07,616 [qtp193178046-26] INFO : Successfully created attachment
+2020-11-27 21:04:07,620 [qtp193178046-26] INFO : Responding to create attachment...
+2020-11-27 21:04:07,828 [qtp193178046-26] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(25)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:120)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:05:52,387 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:05:52,537 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:05:57,883 [qtp193178046-23] INFO : Responding to create reimbursement request...
+2020-11-27 21:05:57,942 [qtp193178046-23] INFO : Successfully created reimbursement request
+2020-11-27 21:05:57,943 [qtp193178046-23] INFO : Responding to create attachment...
+2020-11-27 21:05:57,990 [qtp193178046-23] INFO : Successfully created attachment
+2020-11-27 21:05:57,990 [qtp193178046-23] INFO : Responding to create attachment...
+2020-11-27 21:05:58,036 [qtp193178046-23] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(25)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:120)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:07:23,984 [qtp193178046-20] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:07:24,049 [qtp193178046-20] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:07:24,805 [qtp193178046-23] INFO : Responding to create reimbursement request...
+2020-11-27 21:07:24,882 [qtp193178046-23] INFO : Successfully created reimbursement request
+2020-11-27 21:07:56,829 [qtp193178046-23] INFO : Responding to create attachment...
+2020-11-27 21:07:56,884 [qtp193178046-23] INFO : Successfully created attachment
+2020-11-27 21:07:56,884 [qtp193178046-23] INFO : Responding to create attachment...
+2020-11-27 21:07:56,955 [qtp193178046-23] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(25)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:120)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:08:35,686 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:08:35,764 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:08:37,132 [qtp193178046-25] INFO : Responding to create reimbursement request...
+2020-11-27 21:08:37,199 [qtp193178046-25] INFO : Successfully created reimbursement request
+2020-11-27 21:08:37,199 [qtp193178046-25] INFO : Responding to create attachment...
+2020-11-27 21:08:37,240 [qtp193178046-25] INFO : Successfully created attachment
+2020-11-27 21:08:37,240 [qtp193178046-25] INFO : Responding to create attachment...
+2020-11-27 21:08:37,282 [qtp193178046-25] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(25)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:120)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:08:51,837 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:08:51,894 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:08:53,203 [qtp193178046-22] INFO : Responding to create reimbursement request...
+2020-11-27 21:08:53,257 [qtp193178046-22] INFO : Successfully created reimbursement request
+2020-11-27 21:08:53,257 [qtp193178046-22] INFO : Responding to create attachment...
+2020-11-27 21:08:53,306 [qtp193178046-22] INFO : Successfully created attachment
+2020-11-27 21:08:53,306 [qtp193178046-22] INFO : Responding to create attachment...
+2020-11-27 21:08:53,354 [qtp193178046-22] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(25)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:120)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:09:03,126 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:09:03,177 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:09:04,379 [qtp193178046-25] INFO : Responding to create reimbursement request...
+2020-11-27 21:09:04,443 [qtp193178046-25] INFO : Successfully created reimbursement request
+2020-11-27 21:09:04,443 [qtp193178046-25] INFO : Responding to create attachment...
+2020-11-27 21:09:04,484 [qtp193178046-25] INFO : Successfully created attachment
+2020-11-27 21:09:04,484 [qtp193178046-25] INFO : Responding to create attachment...
+2020-11-27 21:09:04,529 [qtp193178046-25] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(25)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:120)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:09:41,620 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:09:41,783 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:09:42,553 [qtp193178046-22] INFO : Responding to create reimbursement request...
+2020-11-27 21:09:42,704 [qtp193178046-22] INFO : Successfully created reimbursement request
+2020-11-27 21:09:42,707 [qtp193178046-22] INFO : Responding to create attachment...
+2020-11-27 21:09:42,761 [qtp193178046-22] INFO : Successfully created attachment
+2020-11-27 21:09:42,762 [qtp193178046-22] INFO : Responding to create attachment...
+2020-11-27 21:09:42,824 [qtp193178046-22] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(25)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:120)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:11:06,755 [qtp193178046-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:11:06,817 [qtp193178046-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:11:07,724 [qtp193178046-26] INFO : Responding to create reimbursement request...
+2020-11-27 21:11:07,771 [qtp193178046-26] INFO : Successfully created reimbursement request
+2020-11-27 21:11:07,772 [qtp193178046-26] INFO : Responding to create attachment...
+2020-11-27 21:11:07,820 [qtp193178046-26] INFO : Successfully created attachment
+2020-11-27 21:11:07,820 [qtp193178046-26] INFO : Responding to create attachment...
+2020-11-27 21:11:07,872 [qtp193178046-26] INFO : Successfully created attachment
+2020-11-27 21:11:29,786 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:11:29,853 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:11:37,618 [qtp193178046-22] INFO : Responding to create reimbursement request...
+2020-11-27 21:11:37,675 [qtp193178046-22] INFO : Successfully created reimbursement request
+2020-11-27 21:11:37,677 [qtp193178046-22] INFO : Responding to create attachment...
+2020-11-27 21:11:37,910 [qtp193178046-22] INFO : Successfully created attachment
+2020-11-27 21:12:02,884 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:12:02,948 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:12:18,875 [qtp193178046-32] INFO : Responding to create reimbursement request...
+2020-11-27 21:12:18,926 [qtp193178046-32] INFO : Successfully created reimbursement request
+2020-11-27 21:12:18,927 [qtp193178046-32] INFO : Responding to create attachment...
+2020-11-27 21:12:19,075 [qtp193178046-32] INFO : Successfully created attachment
+2020-11-27 21:12:25,834 [qtp193178046-32] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:12:25,890 [qtp193178046-32] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:12:43,763 [qtp193178046-25] INFO : Responding to create reimbursement request...
+2020-11-27 21:12:43,947 [qtp193178046-25] INFO : Successfully created reimbursement request
+2020-11-27 21:12:43,950 [qtp193178046-25] INFO : Responding to create attachment...
+2020-11-27 21:12:44,084 [qtp193178046-25] INFO : Successfully created attachment
+2020-11-27 21:12:47,504 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:12:47,555 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:13:08,321 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:13:08,465 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:13:09,061 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:13:09,115 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:13:39,843 [qtp193178046-21] INFO : Responding to create reimbursement request...
+2020-11-27 21:13:39,901 [qtp193178046-21] INFO : Successfully created reimbursement request
+2020-11-27 21:13:39,904 [qtp193178046-21] INFO : Responding to create attachment...
+2020-11-27 21:13:40,055 [qtp193178046-21] INFO : Successfully created attachment
+2020-11-27 21:14:07,192 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:14:07,353 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:14:08,585 [qtp193178046-21] INFO : Responding to create reimbursement request...
+2020-11-27 21:14:08,640 [qtp193178046-21] INFO : Successfully created reimbursement request
+2020-11-27 21:14:08,642 [qtp193178046-21] INFO : Responding to create attachment...
+2020-11-27 21:14:08,751 [qtp193178046-21] INFO : Successfully created attachment
+2020-11-27 21:14:08,834 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:14:08,892 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:15:04,033 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:15:04,080 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:15:06,774 [qtp193178046-32] INFO : Responding to read reimbursement request...
+2020-11-27 21:15:06,926 [qtp193178046-32] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:15:06,935 [qtp193178046-25] INFO : Responding to read related attachments...
+2020-11-27 21:15:06,975 [qtp193178046-25] INFO : Successfully retrieved attachments
+2020-11-27 21:15:06,975 [qtp193178046-25] INFO : Successfully read attachments related to: 57
+2020-11-27 21:15:11,311 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:15:11,360 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:15:29,417 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:15:29,489 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:15:38,735 [qtp193178046-22] INFO : Responding to read reimbursement request...
+2020-11-27 21:15:38,796 [qtp193178046-22] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:15:38,808 [qtp193178046-27] INFO : Responding to read related attachments...
+2020-11-27 21:15:38,864 [qtp193178046-27] INFO : Successfully retrieved attachments
+2020-11-27 21:15:38,864 [qtp193178046-27] INFO : Successfully read attachments related to: 52
+2020-11-27 21:15:44,777 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:15:44,838 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:15:48,198 [qtp193178046-27] INFO : Responding to read reimbursement request...
+2020-11-27 21:15:48,250 [qtp193178046-27] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:15:48,261 [qtp193178046-22] INFO : Responding to read related attachments...
+2020-11-27 21:15:48,412 [qtp193178046-22] INFO : Successfully retrieved attachments
+2020-11-27 21:15:48,412 [qtp193178046-22] INFO : Successfully read attachments related to: 11
+2020-11-27 21:17:10,539 [qtp193178046-26] INFO : Responding to read reimbursement request...
+2020-11-27 21:17:10,584 [qtp193178046-26] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:17:10,595 [qtp193178046-32] INFO : Responding to read related attachments...
+2020-11-27 21:17:10,735 [qtp193178046-32] INFO : Successfully retrieved attachments
+2020-11-27 21:17:10,736 [qtp193178046-32] INFO : Successfully read attachments related to: 11
+2020-11-27 21:17:13,900 [qtp193178046-32] INFO : Responding to read reimbursement request...
+2020-11-27 21:17:14,043 [qtp193178046-32] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:17:14,056 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:17:14,102 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:17:14,102 [qtp193178046-26] INFO : Successfully read attachments related to: 11
+2020-11-27 21:26:58,359 [qtp193178046-32] INFO : Responding to read reimbursement request...
+2020-11-27 21:26:58,437 [qtp193178046-32] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:26:58,451 [qtp193178046-22] INFO : Responding to read related attachments...
+2020-11-27 21:26:58,495 [qtp193178046-22] INFO : Successfully retrieved attachments
+2020-11-27 21:26:58,496 [qtp193178046-22] INFO : Successfully read attachments related to: 11
+2020-11-27 21:27:16,270 [qtp193178046-26] INFO : Responding to read reimbursement request...
+2020-11-27 21:27:16,323 [qtp193178046-26] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:27:16,334 [qtp193178046-25] INFO : Responding to read related attachments...
+2020-11-27 21:27:16,391 [qtp193178046-25] INFO : Successfully retrieved attachments
+2020-11-27 21:27:16,391 [qtp193178046-25] INFO : Successfully read attachments related to: 11
+2020-11-27 21:27:32,602 [qtp193178046-25] INFO : Responding to read reimbursement request...
+2020-11-27 21:27:32,648 [qtp193178046-25] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:27:32,659 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:27:32,699 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:27:32,699 [qtp193178046-26] INFO : Successfully read attachments related to: 11
+2020-11-27 21:31:09,043 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:31:09,201 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:31:11,983 [qtp193178046-21] INFO : Responding to read reimbursement request...
+2020-11-27 21:31:12,033 [qtp193178046-21] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:31:12,043 [qtp193178046-25] INFO : Responding to read related attachments...
+2020-11-27 21:31:12,138 [qtp193178046-25] INFO : Successfully retrieved attachments
+2020-11-27 21:31:12,142 [qtp193178046-25] WARN : Exception thrown while reading attachments related to: 68 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:31:14,039 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:31:14,092 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:31:16,953 [qtp193178046-23] INFO : Responding to read reimbursement request...
+2020-11-27 21:31:16,997 [qtp193178046-23] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:31:17,004 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:31:17,076 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:31:17,077 [qtp193178046-26] WARN : Exception thrown while reading attachments related to: 64 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:31:24,146 [qtp193178046-26] INFO : Responding to read reimbursement request...
+2020-11-27 21:31:24,197 [qtp193178046-26] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:31:24,203 [qtp193178046-23] INFO : Responding to read related attachments...
+2020-11-27 21:31:24,268 [qtp193178046-23] INFO : Successfully retrieved attachments
+2020-11-27 21:31:24,269 [qtp193178046-23] WARN : Exception thrown while reading attachments related to: 64 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:32:17,158 [qtp193178046-26] INFO : Responding to delete reimbursement request...
+2020-11-27 21:32:17,292 [qtp193178046-26] INFO : Successfully deleted reimbursement request
+2020-11-27 21:34:51,881 [qtp193178046-27] INFO : Responding to read reimbursement request...
+2020-11-27 21:34:52,017 [qtp193178046-27] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:34:54,336 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:34:54,389 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:34:57,149 [qtp193178046-27] INFO : Responding to read reimbursement request...
+2020-11-27 21:34:57,197 [qtp193178046-27] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:34:57,207 [qtp193178046-21] INFO : Responding to read related attachments...
+2020-11-27 21:34:57,285 [qtp193178046-21] INFO : Successfully retrieved attachments
+2020-11-27 21:34:57,288 [qtp193178046-21] WARN : Exception thrown while reading attachments related to: 68 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:35:00,357 [qtp193178046-23] INFO : Responding to delete reimbursement request...
+2020-11-27 21:35:00,405 [qtp193178046-23] INFO : Successfully deleted reimbursement request
+2020-11-27 21:35:37,333 [qtp193178046-25] INFO : Responding to read reimbursement request...
+2020-11-27 21:35:37,467 [qtp193178046-25] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:35:38,759 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:35:38,815 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:35:41,590 [qtp193178046-22] INFO : Responding to read reimbursement request...
+2020-11-27 21:35:41,637 [qtp193178046-22] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:35:41,648 [qtp193178046-23] INFO : Responding to read related attachments...
+2020-11-27 21:35:41,723 [qtp193178046-23] INFO : Successfully retrieved attachments
+2020-11-27 21:35:41,728 [qtp193178046-23] WARN : Exception thrown while reading attachments related to: 67 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:35:43,873 [qtp193178046-22] INFO : Responding to delete reimbursement request...
+2020-11-27 21:35:43,921 [qtp193178046-22] INFO : Successfully deleted reimbursement request
+2020-11-27 21:35:43,987 [qtp193178046-33] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:35:44,034 [qtp193178046-33] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:35:45,734 [qtp193178046-22] INFO : Responding to read reimbursement request...
+2020-11-27 21:35:45,773 [qtp193178046-22] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:35:45,781 [qtp193178046-23] INFO : Responding to read related attachments...
+2020-11-27 21:35:45,851 [qtp193178046-23] INFO : Successfully retrieved attachments
+2020-11-27 21:35:45,851 [qtp193178046-23] WARN : Exception thrown while reading attachments related to: 66 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:35:47,252 [qtp193178046-22] INFO : Responding to delete reimbursement request...
+2020-11-27 21:35:47,299 [qtp193178046-22] INFO : Successfully deleted reimbursement request
+2020-11-27 21:35:47,364 [qtp193178046-33] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:35:47,413 [qtp193178046-33] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:35:48,874 [qtp193178046-22] INFO : Responding to read reimbursement request...
+2020-11-27 21:35:48,919 [qtp193178046-22] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:35:48,925 [qtp193178046-23] INFO : Responding to read related attachments...
+2020-11-27 21:35:48,994 [qtp193178046-23] INFO : Successfully retrieved attachments
+2020-11-27 21:35:48,995 [qtp193178046-23] WARN : Exception thrown while reading attachments related to: 65 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:35:50,468 [qtp193178046-25] INFO : Responding to delete reimbursement request...
+2020-11-27 21:35:50,618 [qtp193178046-25] INFO : Successfully deleted reimbursement request
+2020-11-27 21:35:50,676 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:35:50,817 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:35:52,199 [qtp193178046-25] INFO : Responding to read reimbursement request...
+2020-11-27 21:35:52,243 [qtp193178046-25] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:35:52,252 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:35:52,294 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:35:52,295 [qtp193178046-26] WARN : Exception thrown while reading attachments related to: 63 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
+2020-11-27 21:35:54,726 [qtp193178046-25] INFO : Responding to delete reimbursement request...
+2020-11-27 21:35:54,774 [qtp193178046-25] INFO : Successfully deleted reimbursement request
+2020-11-27 21:35:54,837 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:35:54,885 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:35:56,387 [qtp193178046-25] INFO : Responding to read reimbursement request...
+2020-11-27 21:35:56,429 [qtp193178046-25] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:35:56,437 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:35:56,475 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:35:56,476 [qtp193178046-26] INFO : Successfully read attachments related to: 62
+2020-11-27 21:35:57,934 [qtp193178046-25] INFO : Responding to delete reimbursement request...
+2020-11-27 21:35:58,073 [qtp193178046-25] INFO : Successfully deleted reimbursement request
+2020-11-27 21:35:58,157 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:35:58,203 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:35:59,343 [qtp193178046-27] INFO : Responding to read reimbursement request...
+2020-11-27 21:35:59,387 [qtp193178046-27] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:35:59,393 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:35:59,429 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:35:59,430 [qtp193178046-26] INFO : Successfully read attachments related to: 61
+2020-11-27 21:36:01,013 [qtp193178046-33] INFO : Responding to delete reimbursement request...
+2020-11-27 21:36:01,060 [qtp193178046-33] INFO : Successfully deleted reimbursement request
+2020-11-27 21:36:01,124 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:36:01,169 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:36:10,349 [qtp193178046-27] INFO : Responding to read reimbursement request...
+2020-11-27 21:36:10,393 [qtp193178046-27] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:36:10,400 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:36:10,439 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:36:10,439 [qtp193178046-26] INFO : Successfully read attachments related to: 60
+2020-11-27 21:36:12,629 [qtp193178046-27] INFO : Responding to delete reimbursement request...
+2020-11-27 21:36:12,678 [qtp193178046-27] INFO : Successfully deleted reimbursement request
+2020-11-27 21:36:12,739 [qtp193178046-23] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:36:12,784 [qtp193178046-23] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:36:14,096 [qtp193178046-27] INFO : Responding to read reimbursement request...
+2020-11-27 21:36:14,140 [qtp193178046-27] INFO : Successfully retrieved reimbursement request
+2020-11-27 21:36:14,146 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 21:36:14,189 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 21:36:14,189 [qtp193178046-26] INFO : Successfully read attachments related to: 59
+2020-11-27 21:36:15,789 [qtp193178046-27] INFO : Responding to delete reimbursement request...
+2020-11-27 21:36:15,836 [qtp193178046-27] INFO : Successfully deleted reimbursement request
+2020-11-27 21:36:15,890 [qtp193178046-23] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:36:15,941 [qtp193178046-23] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:39:50,439 [qtp193178046-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:39:50,483 [qtp193178046-26] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:40:22,429 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:40:22,501 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:40:25,627 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:40:25,674 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:57:07,420 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:57:07,569 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:57:13,509 [qtp193178046-24] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:57:13,558 [qtp193178046-24] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:58:23,142 [qtp193178046-26] INFO : Responding to create reimbursement request...
+2020-11-27 21:58:23,221 [qtp193178046-26] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: null value in column "grading_format" violates not-null constraint
+  Detail: Failing row contains (1, 0, University of Alabama, 100.00, UNI_COURSE, Geology course on the local rock formations, This event rocks!, null).
+  Where: SQL statement "INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification) returning request_id"
+PL/pgSQL function insert_reimbursement(integer,character varying,double precision,character varying,text,text,double precision,boolean,character varying,character varying,character varying,character varying) line 6 at SQL statement
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgCallableStatement.executeWithFlags(PgCallableStatement.java:83)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.createRequest(ReimburseDaoPostgres.java:69)
+	at TRMS.services.ReimburseServiceImpl.createRequest(ReimburseServiceImpl.java:60)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:115)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:58:23,223 [qtp193178046-26] INFO : Responding to create attachment...
+2020-11-27 21:58:23,279 [qtp193178046-26] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: insert or update on table "attachment" violates foreign key constraint "fk_reimbursement"
+  Detail: Key (request_id)=(-1) is not present in table "reimbursement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:119)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:118)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 21:58:23,401 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:58:23,448 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:58:25,143 [qtp193178046-32] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:58:25,185 [qtp193178046-32] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:58:28,872 [qtp193178046-25] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:58:28,915 [qtp193178046-25] INFO : Successfully retrieved reimbursement requests
+2020-11-27 21:58:36,257 [qtp193178046-22] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 21:58:36,304 [qtp193178046-22] INFO : Successfully retrieved reimbursement requests
+2020-11-27 22:00:56,937 [qtp193178046-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 22:00:57,055 [qtp193178046-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 22:00:58,588 [qtp193178046-26] INFO : Responding to create reimbursement request...
+2020-11-27 22:00:58,644 [qtp193178046-26] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: function insert_reimbursement(integer, character varying, double precision, character varying, character varying, character varying, character varying, double precision, boolean, character varying, character varying, unknown, unknown) does not exist
+  Hint: No function matches the given name and argument types. You might need to add explicit type casts.
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgCallableStatement.executeWithFlags(PgCallableStatement.java:83)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.createRequest(ReimburseDaoPostgres.java:70)
+	at TRMS.services.ReimburseServiceImpl.createRequest(ReimburseServiceImpl.java:60)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:115)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 22:00:58,647 [qtp193178046-26] INFO : Responding to create attachment...
+2020-11-27 22:00:58,699 [qtp193178046-26] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: insert or update on table "attachment" violates foreign key constraint "fk_reimbursement"
+  Detail: Key (request_id)=(-1) is not present in table "reimbursement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:55)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:75)
+	at TRMS.controllers.ReimburseRequestControl.lambda$0(ReimburseRequestControl.java:119)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.ReimburseRequestControl.createRequest(ReimburseRequestControl.java:118)
+	at TRMS.javalin.WebDriver.lambda$13(WebDriver.java:74)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-27 22:00:58,798 [qtp193178046-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 22:00:58,846 [qtp193178046-21] INFO : Successfully retrieved reimbursement requests
+2020-11-27 22:02:50,292 [qtp193178046-32] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 22:02:50,349 [qtp193178046-32] INFO : Successfully retrieved reimbursement requests
+2020-11-27 22:02:51,687 [qtp193178046-25] INFO : Responding to create reimbursement request...
+2020-11-27 22:02:51,734 [qtp193178046-25] INFO : Successfully created reimbursement request
+2020-11-27 22:02:51,735 [qtp193178046-25] INFO : Responding to create attachment...
+2020-11-27 22:02:51,774 [qtp193178046-25] INFO : Successfully created attachment
+2020-11-27 22:02:51,873 [qtp193178046-27] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-27 22:02:51,926 [qtp193178046-27] INFO : Successfully retrieved reimbursement requests
+2020-11-27 22:03:12,749 [qtp193178046-24] INFO : Responding to read reimbursement request...
+2020-11-27 22:03:12,796 [qtp193178046-24] INFO : Successfully retrieved reimbursement request
+2020-11-27 22:03:12,804 [qtp193178046-26] INFO : Responding to read related attachments...
+2020-11-27 22:03:12,843 [qtp193178046-26] INFO : Successfully retrieved attachments
+2020-11-27 22:03:12,846 [qtp193178046-26] WARN : Exception thrown while reading attachments related to: 2 Exception: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class java.io.ByteArrayInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->TRMS.pojos.Attachment["data"])
