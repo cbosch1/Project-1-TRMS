@@ -17,7 +17,7 @@ jar {
     }
     
     from {
-        configurations.impementation.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     } 
 }
 
@@ -41,19 +41,19 @@ dependencies {
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.6.0'
 
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.0'
 
     // https://mvnrepository.com/artifact/io.javalin/javalin
-    implementation group: 'io.javalin', name: 'javalin', version: '3.11.2'
+    compile group: 'io.javalin', name: 'javalin', version: '3.11.2'
 
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
-    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
 
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
-    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.18'
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.18'
     
     // https://github.com/auth0/java-jwt
-    implementation 'com.auth0:java-jwt:3.11.0' 
+    compile 'com.auth0:java-jwt:3.11.0' 
 
-    implementation "org.thymeleaf:thymeleaf:3.0.11.RELEASE"
+    compile "org.thymeleaf:thymeleaf:3.0.11.RELEASE"
 }
