@@ -1,7 +1,8 @@
 import { FileManager } from "./file-manager.js";
 
 window.onload = function () {
-    this.managerLevel = "DEPT_HEAD";
+    window.userInfo; 
+    getMyInfo();
 
     let xhr = new XMLHttpRequest();
     let url = window.location.pathname;
@@ -42,6 +43,47 @@ window.onload = function () {
 
     retrieveInfos();
 };
+
+function getMyInfo() {
+    var xhr = new XMLHttpRequest();
+    var url = "http://52.149.146.226/manager/myinfo";
+    var user;
+    //sets up ready state handler
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        switch (xhr.readyState) {
+            case 0:
+                console.log("Nothing, initialized not sent");
+                break;
+            case 1:
+                console.log("Connection established");
+                break;
+            case 2:
+                console.log("Request sent");
+                break;
+            case 3:
+                console.log("Waiting response");
+                break;
+            case 4:
+                console.log("Response received");
+                //logic to add requests to table
+                if (xhr.status === 200) {
+                    window.userInfo = JSON.parse(xhr.responseText);
+                    setWelcome();
+                }
+                break;
+        }
+    };
+    //opens up the request
+    xhr.open("POST", url, true);
+    //sends request
+    xhr.send();
+}
+
+function setWelcome(user) {
+    let welcome = document.getElementById("welcome");
+    welcome.innerHTML = "Welcome " + window.userInfo.username;
+}
 
 var showRequest = function (reimburse) {
     var table = document.getElementById("review-request-table");
@@ -84,7 +126,7 @@ var showRequest = function (reimburse) {
     justificationArea.innerHTML = reimburse.justification;
     gradingArea.innerHTML = reimburse.grading;
 
-    if (reimburse.stage == window.managerLevel) {
+    if (reimburse.stage == window.userInfo.privilege) {
         approvalArea.innerHTML = "<button id=\"deny-btn\" type=\"button\" class=\"login-table col-md-3\">Deny</button>"
                                 +"<span class=\"col-md-6\"></span>"
                                 +"<button id=\"approve-btn\" type=\"button\" class=\"login-table col-md-3\">Approve</button>";
