@@ -118,7 +118,7 @@ public class WebDriver {
             app.post(MANAGER_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
             app.post(MANAGER_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoForManager(ctx);});    
             app.post(MANAGER_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
-            app.get(MANAGER_URL+"/myinfo", ctx -> { userControl.readUser(ctx);});
+            app.post(MANAGER_URL+"/myinfo", ctx -> { userControl.readUser(ctx);});
 
         //Admin only endpoints
         app.post("admin/login", ctx -> authControl.login(ctx));

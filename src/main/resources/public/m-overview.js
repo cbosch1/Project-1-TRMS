@@ -33,7 +33,7 @@ function getMyInfo() {
         }
     };
     //opens up the request
-    xhr.open("GET", url, true);
+    xhr.open("POST", url, true);
     //sends request
     xhr.send();
 }
