@@ -1,5 +1,6 @@
 window.onload = function () {
     this.window.userInfo = getMyInfo();
+    this.setWelcome();
     this.setViewTables();
 };
 
@@ -38,8 +39,13 @@ function getMyInfo() {
     xhr.send();
 }
 
-function setMyInfo(user){
+function setMyInfo(user) {
     this.window.userInfo = user;
+}
+
+function setWelcome() {
+    let welcome = document.getElementById("welcome");
+    welcome.innerHTML = "Welcome " + user.username;
 }
 
 function setViewTables() {
