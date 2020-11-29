@@ -20,10 +20,12 @@ public class UserControl {
     private static Logger Log = LogManager.getLogger("Control");
 
     private UserService service;
+    private AuthControl auth;
 
-    public UserControl(UserService service){
+    public UserControl(UserService service, AuthControl auth){
         super();
         this.service = service;
+        this.auth = auth;
     }
     
     /**
@@ -74,22 +76,24 @@ public class UserControl {
      * <ul><li>userId</li></ul>
      */
     public void readUser(Context ctx){
-        try {
-            int userId = Integer.parseInt(ctx.formParam("userId"));
-            ctx.json(service.readUser(userId));
+        if (auth.checkUser(ctx)) {
+            try {
+                int userId = Integer.parseInt(ctx.formParam("userId"));
+                ctx.json(service.readUser(userId));
 
-            ctx.status(200);
-            Log.info("Successfully read user");
+                ctx.status(200);
+                Log.info("Successfully read user");
 
-        } catch (NumberFormatException e){
-            Log.warn("NumberFormatException thrown while reading user: " + e);
-            ctx.html("NumberFormatException thrown: " + e);
-            ctx.status(500);
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while reading user: " + e);
+                ctx.html("NumberFormatException thrown: " + e);
+                ctx.status(500);
 
-        } catch (Exception e) {
-            Log.warn("Exception thrown while reading user: " + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading user: " + e);
+                ctx.html("Exception thrown: " + e);
+                ctx.status(500);
+            }
         }
     }
 

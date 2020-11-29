@@ -38,31 +38,28 @@ public class WebDriver {
     private static ConnectionUtil connectionUtil = new ConnectionUtil();
 
     private static UserDao userDao = new UserDaoPostgres(connectionUtil);
-    private static UserService userService = new UserServiceImpl(userDao);
-    private static UserControl userControl = new UserControl(userService);
-
+    private static AttachmentDao attachDao = new AttachmentDaoPostgres(connectionUtil);
     private static EmployeeDao empDao = new EmployeeDaoPostgres(connectionUtil);
+    private static InfoRequestDao infoDao = new InfoRequestDaoPostgres(connectionUtil);
+    private static ReimburseRequestDao reimburseDao = new ReimburseDaoPostgres(connectionUtil);
+
+    private static UserService userService = new UserServiceImpl(userDao);
+    private static AttachmentService attachService = new AttachmentServiceImpl(attachDao);
     private static EmployeeService empService = new EmployeeServiceImpl(empDao);
-    private static EmployeeControl empControl = new EmployeeControl(empService);
+    private static InfoRequestService infoService = new InfoRequestServiceImpl(infoDao);
+    private static ReimburseRequestService reimburseService = new ReimburseServiceImpl(reimburseDao);
 
     private static AuthService authService = new AuthServiceImpl();
     private static AuthControl authControl = new AuthControl(authService, userService, empService);
-    
-    private static AttachmentDao attachDao = new AttachmentDaoPostgres(connectionUtil);
-    private static AttachmentService attachService = new AttachmentServiceImpl(attachDao);
+
+    private static UserControl userControl = new UserControl(userService, authControl);
+    private static EmployeeControl empControl = new EmployeeControl(empService, authControl);
     private static AttachmentControl attachControl = new AttachmentControl(attachService, authControl);
-
-    private static InfoRequestDao infoDao = new InfoRequestDaoPostgres(connectionUtil);
-    private static InfoRequestService infoService = new InfoRequestServiceImpl(infoDao);
     private static InfoRequestControl infoControl = new InfoRequestControl(infoService, authControl, attachService);
-
-    private static ReimburseRequestDao reimburseDao = new ReimburseDaoPostgres(connectionUtil);
-    private static ReimburseRequestService reimburseService = new ReimburseServiceImpl(reimburseDao);
     private static ReimburseRequestControl reimburseControl = new ReimburseRequestControl(reimburseService, authControl, attachService);
 
     private static EmployeeWebControl eWebControl = new EmployeeWebControl(authControl);
     private static ManagerWebControl mWebControl = new ManagerWebControl(authControl);
-
 
     private static final String EMPLOYEE_URL = "employee";
     private static final String MANAGER_URL = "manager";
@@ -121,7 +118,7 @@ public class WebDriver {
             app.post(MANAGER_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
             app.post(MANAGER_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoForManager(ctx);});    
             app.post(MANAGER_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
-
+            app.get(MANAGER_URL+"/myinfo", ctx -> { userControl.readUser(ctx);});
 
         //Admin only endpoints
         app.post("admin/login", ctx -> authControl.login(ctx));
@@ -129,7 +126,5 @@ public class WebDriver {
         app.post("admin/priv", ctx -> authControl.getPrivilege(ctx));
         app.post("admin/user", ctx -> userControl.createUser(ctx));
         app.post("admin/employee", ctx -> empControl.createEmployee(ctx));
-
-
     }
 }

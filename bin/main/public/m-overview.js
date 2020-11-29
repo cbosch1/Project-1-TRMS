@@ -1,6 +1,46 @@
 window.onload = function () {
+    this.window.userInfo = getMyInfo();
     this.setViewTables();
 };
+
+function getMyInfo() {
+    var xhr = new XMLHttpRequest();
+    var url = "http://52.149.146.226/manager/myinfo";
+    //sets up ready state handler
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        switch (xhr.readyState) {
+            case 0:
+                console.log("Nothing, initialized not sent");
+                break;
+            case 1:
+                console.log("Connection established");
+                break;
+            case 2:
+                console.log("Request sent");
+                break;
+            case 3:
+                console.log("Waiting response");
+                break;
+            case 4:
+                console.log("Response received");
+                //logic to add requests to table
+                if (xhr.status === 200) {
+                    let user = JSON.parse(xhr.responseText);
+                    window.setMyInfo(user);
+                }
+                break;
+        }
+    };
+    //opens up the request
+    xhr.open("GET", url, true);
+    //sends request
+    xhr.send();
+}
+
+function setMyInfo(user){
+    this.window.userInfo = user;
+}
 
 function setViewTables() {
     var xhr = new XMLHttpRequest();
@@ -27,7 +67,7 @@ function setViewTables() {
                 if (xhr.status === 200) {
                     let reimburseList = JSON.parse(xhr.responseText);
                     reimburseList.forEach(function (element) {
-                        if(element.stage == "DEPT_HEAD"){
+                        if(element.stage == window.userInfo.privilege){
                             this.addRowNeed(element);
                         } else {
                             this.addRowOther(element);

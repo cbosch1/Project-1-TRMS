@@ -19,10 +19,12 @@ public class EmployeeControl {
     private static Logger Log = LogManager.getLogger("Control");
 
     private EmployeeService service;
+    private AuthControl auth;
 
-    public EmployeeControl(EmployeeService service){
+    public EmployeeControl(EmployeeService service, AuthControl auth){
         super();
         this.service = service;
+        this.auth = auth;
     }
 
     /**
@@ -186,6 +188,28 @@ public class EmployeeControl {
             Log.warn("Exception thrown while deleting employee: " + e);
             ctx.html("Exception thrown: " + e);
             ctx.status(500);
+        }
+    }
+
+    public void readManager(Context ctx){
+        if (auth.checkUser(ctx)){
+            try {
+                int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
+                ctx.json(service.readEmployee(employeeId));
+
+                ctx.status(200);
+                Log.info("Successfully read employee");
+
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while reading employee: " + e);
+                ctx.html("NumberFormatException thrown: " + e);
+                ctx.status(500);
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading employee: " + e);
+                ctx.html("Exception thrown: " + e);
+                ctx.status(500);
+            }
         }
     }
 }
