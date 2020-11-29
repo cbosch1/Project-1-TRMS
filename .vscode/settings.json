@@ -3,5 +3,21 @@
     "cSpell.words": [
         "TRMS"
     ],
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "launch": {
+
+        "configurations": [
+            {
+                "name": "Environment Vars",
+                "type": "java",
+                "request": "launch",
+                "env": {
+                    "TRMS_URL": "jdbc:postgresql://localhost:5432/TRMS?",
+                    "TRMS_USERNAME": "postgres",
+                    "TRMS_PASSWORD": "password"
+                }
+            }
+        ],
+        "compounds": []
+    }
 }

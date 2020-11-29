@@ -16,7 +16,10 @@ public class ConnectionUtil {
 	public Connection createConnection() {
 
         try {
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/TRMS?", "postgres", "password");
+            String url = System.getenv("TRMS_URL");
+            String username = System.getenv("TRMS_USERNAME");
+            String password = System.getenv("TRMS_PASSWORD");
+            conn = DriverManager.getConnection(url, username, password);
             Log.info("Successfully retrieved connection to database.");
             return conn;
 

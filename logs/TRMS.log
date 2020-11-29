@@ -19019,3 +19019,785 @@ org.postgresql.util.PSQLException: This connection has been closed.
 2020-11-28 23:40:53,096 [qtp51152513-25] INFO : Dao - Request completed, retrieved attachments, count: 2
 2020-11-28 23:40:53,097 [qtp51152513-25] INFO : Service - Successfully retrieved attachments
 2020-11-28 23:40:53,098 [qtp51152513-25] INFO : Control - Successfully read attachments related to: 5
+2020-11-28 23:59:01,637 [qtp2101153819-21] INFO : Service - Responding to read information request...
+2020-11-28 23:59:01,956 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:01,959 [qtp2101153819-21] INFO : Dao - Received request to retrieve all info requests
+2020-11-28 23:59:02,077 [qtp2101153819-21] INFO : Dao - Request completed, retrieved info request with id: 6
+2020-11-28 23:59:02,081 [qtp2101153819-21] INFO : Service - Successfully retrieved information request
+2020-11-28 23:59:02,119 [qtp2101153819-18] INFO : Service - Responding to read reimbursement request...
+2020-11-28 23:59:02,129 [qtp2101153819-20] INFO : Service - Responding to read all information requests...
+2020-11-28 23:59:02,271 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:02,272 [qtp2101153819-18] INFO : Dao - Received request to retrieve reimbursement request with id: 5
+2020-11-28 23:59:02,306 [qtp2101153819-20] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:02,307 [qtp2101153819-20] INFO : Dao - Received request to retrieve all info requests
+2020-11-28 23:59:02,311 [qtp2101153819-18] INFO : Dao - Request completed, retrieved reimbursement request with id: 5
+2020-11-28 23:59:02,312 [qtp2101153819-20] INFO : Dao - Request completed, retrieved info requests, count: 6
+2020-11-28 23:59:02,312 [qtp2101153819-18] INFO : Service - Successfully retrieved reimbursement request
+2020-11-28 23:59:02,313 [qtp2101153819-20] INFO : Service - Successfully retrieved information requests
+2020-11-28 23:59:02,353 [qtp2101153819-18] INFO : Control - Successfully read reimbursement request
+2020-11-28 23:59:02,353 [qtp2101153819-21] INFO : Control - Successfully returned information request: 6
+2020-11-28 23:59:02,354 [qtp2101153819-20] INFO : Control - Successfully returned: 1 related infos
+2020-11-28 23:59:02,395 [qtp2101153819-22] INFO : Service - Responding to read related attachments...
+2020-11-28 23:59:02,486 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:02,487 [qtp2101153819-22] INFO : Dao - Received request to retrieve files related to request with id: 5
+2020-11-28 23:59:02,501 [qtp2101153819-22] INFO : Dao - Request completed, retrieved attachments, count: 2
+2020-11-28 23:59:02,502 [qtp2101153819-22] INFO : Service - Successfully retrieved attachments
+2020-11-28 23:59:02,509 [qtp2101153819-22] INFO : Control - Successfully read attachments related to: 5
+2020-11-28 23:59:03,176 [qtp2101153819-29] INFO : Service - Responding to read reimbursement request...
+2020-11-28 23:59:03,177 [qtp2101153819-23] INFO : Service - Responding to read all information requests...
+2020-11-28 23:59:03,306 [qtp2101153819-29] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:03,306 [qtp2101153819-29] INFO : Dao - Received request to retrieve reimbursement request with id: 6
+2020-11-28 23:59:03,309 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:03,309 [qtp2101153819-23] INFO : Dao - Received request to retrieve all info requests
+2020-11-28 23:59:03,328 [qtp2101153819-23] INFO : Dao - Request completed, retrieved info requests, count: 6
+2020-11-28 23:59:03,329 [qtp2101153819-29] INFO : Dao - Request completed, retrieved reimbursement request with id: 6
+2020-11-28 23:59:03,330 [qtp2101153819-23] INFO : Service - Successfully retrieved information requests
+2020-11-28 23:59:03,331 [qtp2101153819-29] INFO : Service - Successfully retrieved reimbursement request
+2020-11-28 23:59:03,331 [qtp2101153819-23] INFO : Control - Successfully returned: 0 related infos
+2020-11-28 23:59:03,337 [qtp2101153819-29] INFO : Control - Successfully read reimbursement request
+2020-11-28 23:59:03,362 [qtp2101153819-22] INFO : Service - Responding to read related attachments...
+2020-11-28 23:59:03,483 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:03,486 [qtp2101153819-22] INFO : Dao - Received request to retrieve files related to request with id: 6
+2020-11-28 23:59:03,501 [qtp2101153819-22] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-11-28 23:59:03,503 [qtp2101153819-22] INFO : Service - Successfully retrieved attachments
+2020-11-28 23:59:03,503 [qtp2101153819-22] INFO : Control - Successfully read attachments related to: 6
+2020-11-28 23:59:04,957 [qtp2101153819-29] WARN : Control - Access denied due to login privilege
+2020-11-28 23:59:15,330 [qtp2101153819-29] WARN : Control - Access denied due to login privilege
+2020-11-28 23:59:23,003 [qtp2101153819-22] INFO : Control - Received request to log in user: myGuy
+2020-11-28 23:59:23,003 [qtp2101153819-22] INFO : Service - Responding to login user...
+2020-11-28 23:59:23,113 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:23,113 [qtp2101153819-22] INFO : Dao - Received request to login user: myGuy
+2020-11-28 23:59:23,136 [qtp2101153819-22] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-28 23:59:23,137 [qtp2101153819-22] INFO : Service - Successfully logged in user
+2020-11-28 23:59:23,137 [qtp2101153819-22] INFO : Service - Responding to read employee...
+2020-11-28 23:59:23,200 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:23,202 [qtp2101153819-22] INFO : Dao - Received request to retrieve employee with id: 0
+2020-11-28 23:59:23,210 [qtp2101153819-22] INFO : Dao - Request completed, retrieved employee: Nick Fury
+2020-11-28 23:59:23,210 [qtp2101153819-22] INFO : Service - Successfully retrieved employee
+2020-11-28 23:59:23,271 [qtp2101153819-22] INFO : Control - Access approved
+2020-11-28 23:59:23,499 [qtp2101153819-23] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-28 23:59:23,636 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:23,637 [qtp2101153819-23] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-28 23:59:23,661 [qtp2101153819-23] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-28 23:59:23,663 [qtp2101153819-23] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-28 23:59:23,666 [qtp2101153819-23] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-28 23:59:35,156 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-28 23:59:35,353 [qtp2101153819-22] INFO : Service - Responding to read reimbursement request...
+2020-11-28 23:59:35,381 [qtp2101153819-18] INFO : Service - Responding to read all information requests for employee 0...
+2020-11-28 23:59:35,493 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:35,493 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:35,494 [qtp2101153819-18] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-28 23:59:35,494 [qtp2101153819-22] INFO : Dao - Received request to retrieve reimbursement request with id: 2
+2020-11-28 23:59:35,503 [qtp2101153819-18] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-28 23:59:35,504 [qtp2101153819-18] INFO : Service - Successfully retrieved information requests
+2020-11-28 23:59:35,505 [qtp2101153819-18] INFO : Control - Successfully returned: 1 related infos
+2020-11-28 23:59:35,519 [qtp2101153819-22] WARN : Dao - SQLException thrown in reimbursement request with id: 2
+org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:350)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readRequest(ReimburseDaoPostgres.java:255)
+	at TRMS.services.ReimburseServiceImpl.readRequest(ReimburseServiceImpl.java:158)
+	at TRMS.controllers.ReimburseRequestControl.readRequest(ReimburseRequestControl.java:161)
+	at TRMS.javalin.WebDriver.lambda$20(WebDriver.java:103)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:248)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:327)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:982)
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:441)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2057)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	... 48 more
+2020-11-28 23:59:35,527 [qtp2101153819-22] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:350)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readRequest(ReimburseDaoPostgres.java:255)
+	at TRMS.services.ReimburseServiceImpl.readRequest(ReimburseServiceImpl.java:158)
+	at TRMS.controllers.ReimburseRequestControl.readRequest(ReimburseRequestControl.java:161)
+	at TRMS.javalin.WebDriver.lambda$20(WebDriver.java:103)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:248)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:327)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:982)
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:441)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2057)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	... 48 more
+2020-11-28 23:59:35,533 [qtp2101153819-22] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-11-28 23:59:37,638 [qtp2101153819-29] INFO : Control - Access approved
+2020-11-28 23:59:37,903 [qtp2101153819-23] INFO : Service - Responding to read reimbursement request...
+2020-11-28 23:59:37,904 [qtp2101153819-18] INFO : Service - Responding to read all information requests for employee 0...
+2020-11-28 23:59:38,010 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:38,011 [qtp2101153819-18] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-28 23:59:38,018 [qtp2101153819-18] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-28 23:59:38,018 [qtp2101153819-18] INFO : Service - Successfully retrieved information requests
+2020-11-28 23:59:38,019 [qtp2101153819-18] INFO : Control - Successfully returned: 1 related infos
+2020-11-28 23:59:38,086 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:38,086 [qtp2101153819-23] INFO : Dao - Received request to retrieve reimbursement request with id: 2
+2020-11-28 23:59:38,098 [qtp2101153819-23] INFO : Dao - Request completed, retrieved reimbursement request with id: 2
+2020-11-28 23:59:38,101 [qtp2101153819-23] INFO : Service - Successfully retrieved reimbursement request
+2020-11-28 23:59:38,104 [qtp2101153819-23] INFO : Control - Successfully read reimbursement request
+2020-11-28 23:59:38,133 [qtp2101153819-29] INFO : Service - Responding to read related attachments...
+2020-11-28 23:59:38,295 [qtp2101153819-29] INFO : Util - Successfully retrieved connection to database.
+2020-11-28 23:59:38,296 [qtp2101153819-29] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-28 23:59:38,315 [qtp2101153819-29] INFO : Dao - Request completed, retrieved attachments, count: 3
+2020-11-28 23:59:38,316 [qtp2101153819-29] INFO : Service - Successfully retrieved attachments
+2020-11-28 23:59:38,317 [qtp2101153819-29] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:00:00,007 [qtp2101153819-23] INFO : Service - Responding to read attachment...
+2020-11-29 00:00:00,106 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:00,107 [qtp2101153819-23] INFO : Dao - Received request to retrieve file with id: 5
+2020-11-29 00:00:00,139 [qtp2101153819-23] INFO : Dao - Request completed, retrieved attachment id: 5
+2020-11-29 00:00:00,140 [qtp2101153819-23] INFO : Service - Successfully retrieved attachment
+2020-11-29 00:00:00,174 [qtp2101153819-23] INFO : Control - Successfully read attachment
+2020-11-29 00:00:24,454 [qtp2101153819-29] INFO : Control - Access approved
+2020-11-29 00:00:24,707 [qtp2101153819-22] INFO : Service - Responding to read information request...
+2020-11-29 00:00:24,812 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:24,812 [qtp2101153819-22] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:00:24,819 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info request with id: 1
+2020-11-29 00:00:24,820 [qtp2101153819-22] INFO : Service - Successfully retrieved information request
+2020-11-29 00:00:24,821 [qtp2101153819-22] INFO : Control - Successfully returned information request: 1
+2020-11-29 00:00:24,833 [qtp2101153819-18] INFO : Service - Responding to read related attachments...
+2020-11-29 00:00:24,908 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:24,909 [qtp2101153819-18] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:00:24,914 [qtp2101153819-18] INFO : Dao - Request completed, retrieved attachments, count: 3
+2020-11-29 00:00:24,915 [qtp2101153819-18] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:00:24,915 [qtp2101153819-18] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:00:45,618 [qtp2101153819-22] INFO : Service - Responding to read information request...
+2020-11-29 00:00:45,761 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:45,763 [qtp2101153819-22] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:00:45,768 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info request with id: 1
+2020-11-29 00:00:45,769 [qtp2101153819-22] INFO : Service - Successfully retrieved information request
+2020-11-29 00:00:45,827 [qtp2101153819-22] INFO : Service - Responding to create information request...
+2020-11-29 00:00:45,876 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:45,876 [qtp2101153819-22] INFO : Dao - Received request to insert info request related to reimbursement: 2
+2020-11-29 00:00:45,894 [qtp2101153819-22] INFO : Dao - Request completed, generated info request id: 7
+2020-11-29 00:00:45,894 [qtp2101153819-22] INFO : Service - Successfully created information request
+2020-11-29 00:00:45,899 [qtp2101153819-22] INFO : Service - Responding to create attachment...
+2020-11-29 00:00:45,993 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:45,995 [qtp2101153819-22] INFO : Dao - Received request to insert file for request: 2
+2020-11-29 00:00:46,037 [qtp2101153819-22] WARN : Dao - SQLException thrown in create for attachment related to request: 2
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "attachment_pkey"
+  Detail: Key (attach_id)=(8) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:56)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:74)
+	at TRMS.controllers.InfoRequestControl.lambda$0(InfoRequestControl.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.InfoRequestControl.createInfoResponse(InfoRequestControl.java:94)
+	at TRMS.javalin.WebDriver.lambda$24(WebDriver.java:107)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-29 00:00:46,041 [qtp2101153819-22] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "attachment_pkey"
+  Detail: Key (attach_id)=(8) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:56)
+	at TRMS.services.AttachmentServiceImpl.createAttachment(AttachmentServiceImpl.java:74)
+	at TRMS.controllers.InfoRequestControl.lambda$0(InfoRequestControl.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TRMS.controllers.InfoRequestControl.createInfoResponse(InfoRequestControl.java:94)
+	at TRMS.javalin.WebDriver.lambda$24(WebDriver.java:107)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-29 00:00:46,042 [qtp2101153819-22] INFO : Control - Successfully inserted info request, id returned: 7
+2020-11-29 00:00:52,054 [qtp2101153819-18] INFO : Service - Responding to read information request...
+2020-11-29 00:00:52,247 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:52,248 [qtp2101153819-18] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:00:52,251 [qtp2101153819-18] INFO : Dao - Request completed, retrieved info request with id: 1
+2020-11-29 00:00:52,252 [qtp2101153819-18] INFO : Service - Successfully retrieved information request
+2020-11-29 00:00:52,253 [qtp2101153819-18] INFO : Control - Successfully returned information request: 1
+2020-11-29 00:00:52,282 [qtp2101153819-22] INFO : Service - Responding to read related attachments...
+2020-11-29 00:00:52,453 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:52,453 [qtp2101153819-22] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:00:52,466 [qtp2101153819-22] INFO : Dao - Request completed, retrieved attachments, count: 3
+2020-11-29 00:00:52,466 [qtp2101153819-22] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:00:52,467 [qtp2101153819-22] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:00:55,422 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:00:55,627 [qtp2101153819-21] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 00:00:55,759 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:55,760 [qtp2101153819-21] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:00:55,774 [qtp2101153819-21] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 00:00:55,776 [qtp2101153819-21] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:00:55,779 [qtp2101153819-21] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-29 00:00:57,043 [qtp2101153819-24] INFO : Control - Access approved
+2020-11-29 00:00:57,269 [qtp2101153819-18] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:00:57,275 [qtp2101153819-24] INFO : Service - Responding to read all information requests for employee 0...
+2020-11-29 00:00:57,421 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:57,422 [qtp2101153819-18] INFO : Dao - Received request to retrieve reimbursement request with id: 2
+2020-11-29 00:00:57,435 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:57,437 [qtp2101153819-24] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-29 00:00:57,447 [qtp2101153819-18] INFO : Dao - Request completed, retrieved reimbursement request with id: 2
+2020-11-29 00:00:57,448 [qtp2101153819-18] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:00:57,453 [qtp2101153819-24] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-29 00:00:57,453 [qtp2101153819-24] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:00:57,459 [qtp2101153819-24] INFO : Control - Successfully returned: 1 related infos
+2020-11-29 00:00:57,460 [qtp2101153819-18] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:00:57,479 [qtp2101153819-22] INFO : Service - Responding to read related attachments...
+2020-11-29 00:00:57,604 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:00:57,605 [qtp2101153819-22] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:00:57,617 [qtp2101153819-22] INFO : Dao - Request completed, retrieved attachments, count: 3
+2020-11-29 00:00:57,618 [qtp2101153819-22] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:00:57,619 [qtp2101153819-22] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:01:00,103 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:01:00,415 [qtp2101153819-22] INFO : Service - Responding to read information request...
+2020-11-29 00:01:00,496 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:00,496 [qtp2101153819-22] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:01:00,501 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info request with id: 1
+2020-11-29 00:01:00,502 [qtp2101153819-22] INFO : Service - Successfully retrieved information request
+2020-11-29 00:01:00,503 [qtp2101153819-22] INFO : Control - Successfully returned information request: 1
+2020-11-29 00:01:00,520 [qtp2101153819-18] INFO : Service - Responding to read related attachments...
+2020-11-29 00:01:00,621 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:00,621 [qtp2101153819-18] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:01:00,634 [qtp2101153819-18] INFO : Dao - Request completed, retrieved attachments, count: 3
+2020-11-29 00:01:00,635 [qtp2101153819-18] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:01:00,638 [qtp2101153819-18] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:01:03,478 [qtp2101153819-22] INFO : Control - Access approved
+2020-11-29 00:01:03,718 [qtp2101153819-21] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 00:01:03,833 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:03,833 [qtp2101153819-21] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:01:03,838 [qtp2101153819-21] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 00:01:03,839 [qtp2101153819-21] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:01:03,839 [qtp2101153819-21] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-29 00:01:05,019 [qtp2101153819-24] INFO : Control - Access approved
+2020-11-29 00:01:05,273 [qtp2101153819-22] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:01:05,287 [qtp2101153819-24] INFO : Service - Responding to read all information requests for employee 0...
+2020-11-29 00:01:05,387 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:05,387 [qtp2101153819-24] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-29 00:01:05,387 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:05,388 [qtp2101153819-22] INFO : Dao - Received request to retrieve reimbursement request with id: 3
+2020-11-29 00:01:05,404 [qtp2101153819-24] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-29 00:01:05,404 [qtp2101153819-24] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:01:05,405 [qtp2101153819-24] INFO : Control - Successfully returned: 0 related infos
+2020-11-29 00:01:05,407 [qtp2101153819-22] INFO : Dao - Request completed, retrieved reimbursement request with id: 3
+2020-11-29 00:01:05,408 [qtp2101153819-22] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:01:05,410 [qtp2101153819-22] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:01:05,421 [qtp2101153819-18] INFO : Service - Responding to read related attachments...
+2020-11-29 00:01:05,522 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:05,523 [qtp2101153819-18] INFO : Dao - Received request to retrieve files related to request with id: 3
+2020-11-29 00:01:05,532 [qtp2101153819-18] INFO : Dao - Request completed, retrieved attachments, count: 1
+2020-11-29 00:01:05,534 [qtp2101153819-18] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:01:05,536 [qtp2101153819-18] INFO : Control - Successfully read attachments related to: 3
+2020-11-29 00:01:09,919 [qtp2101153819-22] INFO : Control - Access approved
+2020-11-29 00:01:10,241 [qtp2101153819-18] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 00:01:10,362 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:10,362 [qtp2101153819-18] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:01:10,384 [qtp2101153819-18] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 00:01:10,384 [qtp2101153819-18] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:01:10,388 [qtp2101153819-18] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-29 00:01:11,143 [qtp2101153819-22] INFO : Control - Access approved
+2020-11-29 00:01:11,364 [qtp2101153819-21] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:01:11,376 [qtp2101153819-22] INFO : Service - Responding to read all information requests for employee 0...
+2020-11-29 00:01:11,528 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:11,528 [qtp2101153819-22] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-29 00:01:11,528 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:11,528 [qtp2101153819-21] INFO : Dao - Received request to retrieve reimbursement request with id: 10
+2020-11-29 00:01:11,539 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-29 00:01:11,540 [qtp2101153819-22] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:01:11,540 [qtp2101153819-22] INFO : Control - Successfully returned: 0 related infos
+2020-11-29 00:01:11,545 [qtp2101153819-21] INFO : Dao - Request completed, retrieved reimbursement request with id: 10
+2020-11-29 00:01:11,545 [qtp2101153819-21] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:01:11,548 [qtp2101153819-21] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:01:11,571 [qtp2101153819-24] INFO : Service - Responding to read related attachments...
+2020-11-29 00:01:11,711 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:11,712 [qtp2101153819-24] INFO : Dao - Received request to retrieve files related to request with id: 10
+2020-11-29 00:01:11,723 [qtp2101153819-24] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-11-29 00:01:11,725 [qtp2101153819-24] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:01:11,725 [qtp2101153819-24] INFO : Control - Successfully read attachments related to: 10
+2020-11-29 00:01:13,922 [qtp2101153819-21] INFO : Control - Access approved
+2020-11-29 00:01:14,160 [qtp2101153819-22] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 00:01:14,277 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:14,278 [qtp2101153819-22] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:01:14,286 [qtp2101153819-22] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 00:01:14,287 [qtp2101153819-22] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:01:14,288 [qtp2101153819-22] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-29 00:01:15,705 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:01:15,877 [qtp2101153819-21] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:01:15,878 [qtp2101153819-18] INFO : Service - Responding to read all information requests for employee 0...
+2020-11-29 00:01:15,952 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:15,953 [qtp2101153819-21] INFO : Dao - Received request to retrieve reimbursement request with id: 2
+2020-11-29 00:01:15,965 [qtp2101153819-21] INFO : Dao - Request completed, retrieved reimbursement request with id: 2
+2020-11-29 00:01:15,968 [qtp2101153819-21] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:01:15,972 [qtp2101153819-21] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:01:15,976 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:15,976 [qtp2101153819-18] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-29 00:01:15,982 [qtp2101153819-18] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-29 00:01:15,985 [qtp2101153819-18] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:01:15,987 [qtp2101153819-18] INFO : Control - Successfully returned: 1 related infos
+2020-11-29 00:01:15,988 [qtp2101153819-24] INFO : Service - Responding to read related attachments...
+2020-11-29 00:01:16,087 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:16,087 [qtp2101153819-24] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:01:16,094 [qtp2101153819-24] INFO : Dao - Request completed, retrieved attachments, count: 3
+2020-11-29 00:01:16,094 [qtp2101153819-24] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:01:16,094 [qtp2101153819-24] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:01:35,824 [qtp2101153819-21] INFO : Control - Access approved
+2020-11-29 00:01:36,087 [qtp2101153819-22] INFO : Service - Responding to read information request...
+2020-11-29 00:01:36,214 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:36,214 [qtp2101153819-22] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:01:36,227 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info request with id: 1
+2020-11-29 00:01:36,228 [qtp2101153819-22] INFO : Service - Successfully retrieved information request
+2020-11-29 00:01:36,229 [qtp2101153819-22] INFO : Control - Successfully returned information request: 1
+2020-11-29 00:01:36,244 [qtp2101153819-18] INFO : Service - Responding to read related attachments...
+2020-11-29 00:01:36,331 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:36,331 [qtp2101153819-18] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:01:36,342 [qtp2101153819-18] INFO : Dao - Request completed, retrieved attachments, count: 3
+2020-11-29 00:01:36,343 [qtp2101153819-18] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:01:36,347 [qtp2101153819-18] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:01:39,432 [qtp2101153819-22] INFO : Service - Responding to read information request...
+2020-11-29 00:01:39,511 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:39,511 [qtp2101153819-22] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:01:39,519 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info request with id: 1
+2020-11-29 00:01:39,519 [qtp2101153819-22] INFO : Service - Successfully retrieved information request
+2020-11-29 00:01:39,523 [qtp2101153819-22] INFO : Service - Responding to create information request...
+2020-11-29 00:01:39,590 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:39,591 [qtp2101153819-22] INFO : Dao - Received request to insert info request related to reimbursement: 2
+2020-11-29 00:01:39,604 [qtp2101153819-22] INFO : Dao - Request completed, generated info request id: 8
+2020-11-29 00:01:39,605 [qtp2101153819-22] INFO : Service - Successfully created information request
+2020-11-29 00:01:39,605 [qtp2101153819-22] INFO : Service - Responding to create attachment...
+2020-11-29 00:01:39,670 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:39,670 [qtp2101153819-22] INFO : Dao - Received request to insert file for request: 2
+2020-11-29 00:01:39,681 [qtp2101153819-22] INFO : Dao - Request completed, generated attachment id: 9
+2020-11-29 00:01:39,681 [qtp2101153819-22] INFO : Service - Successfully created attachment
+2020-11-29 00:01:39,681 [qtp2101153819-22] INFO : Control - Successfully inserted info request, id returned: 8
+2020-11-29 00:01:47,748 [qtp2101153819-18] INFO : Service - Responding to read information request...
+2020-11-29 00:01:47,903 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:47,903 [qtp2101153819-18] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:01:47,906 [qtp2101153819-18] INFO : Dao - Request completed, retrieved info request with id: 1
+2020-11-29 00:01:47,907 [qtp2101153819-18] INFO : Service - Successfully retrieved information request
+2020-11-29 00:01:47,907 [qtp2101153819-18] INFO : Control - Successfully returned information request: 1
+2020-11-29 00:01:47,915 [qtp2101153819-22] INFO : Service - Responding to read related attachments...
+2020-11-29 00:01:48,122 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:48,122 [qtp2101153819-22] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:01:48,139 [qtp2101153819-22] INFO : Dao - Request completed, retrieved attachments, count: 4
+2020-11-29 00:01:48,139 [qtp2101153819-22] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:01:48,140 [qtp2101153819-22] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:01:51,804 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:01:51,962 [qtp2101153819-24] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 00:01:52,101 [qtp2101153819-24] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:52,101 [qtp2101153819-24] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:01:52,106 [qtp2101153819-24] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 00:01:52,107 [qtp2101153819-24] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:01:52,107 [qtp2101153819-24] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-29 00:01:54,749 [qtp2101153819-21] INFO : Control - Access approved
+2020-11-29 00:01:54,929 [qtp2101153819-18] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:01:54,935 [qtp2101153819-22] INFO : Service - Responding to read all information requests for employee 0...
+2020-11-29 00:01:55,043 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:55,043 [qtp2101153819-18] INFO : Dao - Received request to retrieve reimbursement request with id: 2
+2020-11-29 00:01:55,049 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:55,050 [qtp2101153819-22] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-11-29 00:01:55,054 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-11-29 00:01:55,054 [qtp2101153819-18] INFO : Dao - Request completed, retrieved reimbursement request with id: 2
+2020-11-29 00:01:55,055 [qtp2101153819-22] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:01:55,055 [qtp2101153819-18] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:01:55,055 [qtp2101153819-22] INFO : Control - Successfully returned: 1 related infos
+2020-11-29 00:01:55,056 [qtp2101153819-18] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:01:55,079 [qtp2101153819-21] INFO : Service - Responding to read related attachments...
+2020-11-29 00:01:55,176 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:55,176 [qtp2101153819-21] INFO : Dao - Received request to retrieve files related to request with id: 2
+2020-11-29 00:01:55,187 [qtp2101153819-21] INFO : Dao - Request completed, retrieved attachments, count: 4
+2020-11-29 00:01:55,188 [qtp2101153819-21] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:01:55,188 [qtp2101153819-21] INFO : Control - Successfully read attachments related to: 2
+2020-11-29 00:01:58,044 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:01:58,253 [qtp2101153819-22] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 00:01:58,380 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:01:58,380 [qtp2101153819-22] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:01:58,390 [qtp2101153819-22] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 00:01:58,391 [qtp2101153819-22] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:01:58,393 [qtp2101153819-22] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-29 00:02:04,021 [qtp2101153819-24] INFO : Control - Access approved
+2020-11-29 00:02:04,185 [qtp2101153819-21] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 00:02:04,259 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:02:04,259 [qtp2101153819-21] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:02:04,271 [qtp2101153819-21] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 00:02:04,272 [qtp2101153819-21] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:02:04,274 [qtp2101153819-21] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-11-29 00:02:05,795 [qtp2101153819-18] INFO : Control - User successfully logged out
+2020-11-29 00:02:19,629 [qtp2101153819-18] INFO : Control - Received request to log in user: anotherOne
+2020-11-29 00:02:19,630 [qtp2101153819-18] INFO : Service - Responding to login user...
+2020-11-29 00:02:19,727 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:02:19,727 [qtp2101153819-18] INFO : Dao - Received request to login user: anotherOne
+2020-11-29 00:02:19,732 [qtp2101153819-18] INFO : Dao - Request completed, logged in user: anotherOne
+2020-11-29 00:02:19,733 [qtp2101153819-18] INFO : Service - Successfully logged in user
+2020-11-29 00:02:19,733 [qtp2101153819-18] INFO : Service - Responding to read employee...
+2020-11-29 00:02:19,808 [qtp2101153819-18] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:02:19,808 [qtp2101153819-18] INFO : Dao - Received request to retrieve employee with id: 0
+2020-11-29 00:02:19,814 [qtp2101153819-18] INFO : Dao - Request completed, retrieved employee: Nick Fury
+2020-11-29 00:02:19,815 [qtp2101153819-18] INFO : Service - Successfully retrieved employee
+2020-11-29 00:02:19,820 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:02:19,938 [qtp2101153819-22] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-29 00:02:20,115 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:02:20,115 [qtp2101153819-22] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:02:20,135 [qtp2101153819-22] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 3
+2020-11-29 00:02:20,135 [qtp2101153819-22] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:02:20,136 [qtp2101153819-22] INFO : Control - Successfully read all reimbursement requests for manager: 0
+2020-11-29 00:04:59,128 [qtp2101153819-21] INFO : Control - Received request to log in user: anotherOne
+2020-11-29 00:04:59,128 [qtp2101153819-21] INFO : Service - Responding to login user...
+2020-11-29 00:04:59,305 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:04:59,305 [qtp2101153819-21] INFO : Dao - Received request to login user: anotherOne
+2020-11-29 00:04:59,312 [qtp2101153819-21] INFO : Dao - Request completed, logged in user: anotherOne
+2020-11-29 00:04:59,312 [qtp2101153819-21] INFO : Service - Successfully logged in user
+2020-11-29 00:04:59,312 [qtp2101153819-21] INFO : Service - Responding to read employee...
+2020-11-29 00:04:59,448 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:04:59,448 [qtp2101153819-21] INFO : Dao - Received request to retrieve employee with id: 0
+2020-11-29 00:04:59,458 [qtp2101153819-21] INFO : Dao - Request completed, retrieved employee: Nick Fury
+2020-11-29 00:04:59,458 [qtp2101153819-21] INFO : Service - Successfully retrieved employee
+2020-11-29 00:04:59,467 [qtp2101153819-21] INFO : Control - Access approved
+2020-11-29 00:04:59,712 [qtp2101153819-23] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-29 00:04:59,905 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:04:59,905 [qtp2101153819-23] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:04:59,915 [qtp2101153819-23] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 4
+2020-11-29 00:04:59,915 [qtp2101153819-23] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:04:59,917 [qtp2101153819-23] INFO : Control - Successfully read all reimbursement requests for manager: 0
+2020-11-29 00:05:28,016 [qtp2101153819-29] INFO : Control - Access approved
+2020-11-29 00:05:28,256 [qtp2101153819-17] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:05:28,271 [qtp2101153819-29] INFO : Service - Responding to read all information requests...
+2020-11-29 00:05:28,437 [qtp2101153819-17] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:05:28,438 [qtp2101153819-17] INFO : Dao - Received request to retrieve reimbursement request with id: 6
+2020-11-29 00:05:28,457 [qtp2101153819-17] INFO : Dao - Request completed, retrieved reimbursement request with id: 6
+2020-11-29 00:05:28,458 [qtp2101153819-17] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:05:28,459 [qtp2101153819-29] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:05:28,460 [qtp2101153819-29] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:05:28,463 [qtp2101153819-17] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:05:28,470 [qtp2101153819-29] INFO : Dao - Request completed, retrieved info requests, count: 8
+2020-11-29 00:05:28,470 [qtp2101153819-29] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:05:28,471 [qtp2101153819-29] INFO : Control - Successfully returned: 0 related infos
+2020-11-29 00:05:28,480 [qtp2101153819-23] INFO : Service - Responding to read related attachments...
+2020-11-29 00:05:28,576 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:05:28,576 [qtp2101153819-23] INFO : Dao - Received request to retrieve files related to request with id: 6
+2020-11-29 00:05:28,583 [qtp2101153819-23] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-11-29 00:05:28,583 [qtp2101153819-23] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:05:28,583 [qtp2101153819-23] INFO : Control - Successfully read attachments related to: 6
+2020-11-29 00:05:30,515 [qtp2101153819-29] INFO : Control - Access approved
+2020-11-29 00:05:30,674 [qtp2101153819-17] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-29 00:05:30,812 [qtp2101153819-17] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:05:30,812 [qtp2101153819-17] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:05:30,833 [qtp2101153819-17] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 4
+2020-11-29 00:05:30,834 [qtp2101153819-17] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:05:30,835 [qtp2101153819-17] INFO : Control - Successfully read all reimbursement requests for manager: 0
+2020-11-29 00:05:37,529 [qtp2101153819-21] INFO : Control - Access approved
+2020-11-29 00:05:37,815 [qtp2101153819-17] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:05:37,818 [qtp2101153819-21] INFO : Service - Responding to read all information requests...
+2020-11-29 00:05:37,937 [qtp2101153819-17] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:05:37,938 [qtp2101153819-17] INFO : Dao - Received request to retrieve reimbursement request with id: 7
+2020-11-29 00:05:37,940 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:05:37,941 [qtp2101153819-21] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:05:37,948 [qtp2101153819-21] INFO : Dao - Request completed, retrieved info requests, count: 8
+2020-11-29 00:05:37,953 [qtp2101153819-21] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:05:37,953 [qtp2101153819-21] INFO : Control - Successfully returned: 0 related infos
+2020-11-29 00:05:37,959 [qtp2101153819-17] INFO : Dao - Request completed, retrieved reimbursement request with id: 7
+2020-11-29 00:05:37,960 [qtp2101153819-17] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:05:37,965 [qtp2101153819-17] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:05:37,979 [qtp2101153819-23] INFO : Service - Responding to read related attachments...
+2020-11-29 00:05:38,057 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:05:38,057 [qtp2101153819-23] INFO : Dao - Received request to retrieve files related to request with id: 7
+2020-11-29 00:05:38,067 [qtp2101153819-23] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-11-29 00:05:38,068 [qtp2101153819-23] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:05:38,068 [qtp2101153819-23] INFO : Control - Successfully read attachments related to: 7
+2020-11-29 00:07:14,788 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:07:15,045 [qtp2101153819-29] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-29 00:07:15,221 [qtp2101153819-29] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:07:15,221 [qtp2101153819-29] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:07:15,235 [qtp2101153819-29] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 4
+2020-11-29 00:07:15,237 [qtp2101153819-29] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:07:15,239 [qtp2101153819-29] INFO : Control - Successfully read all reimbursement requests for manager: 0
+2020-11-29 00:08:05,365 [qtp2101153819-23] INFO : Control - Access approved
+2020-11-29 00:08:05,620 [qtp2101153819-23] INFO : Service - Responding to read all information requests...
+2020-11-29 00:08:05,620 [qtp2101153819-21] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:08:05,783 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:05,783 [qtp2101153819-23] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:08:05,786 [qtp2101153819-23] INFO : Dao - Request completed, retrieved info requests, count: 8
+2020-11-29 00:08:05,787 [qtp2101153819-23] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:08:05,788 [qtp2101153819-23] INFO : Control - Successfully returned: 1 related infos
+2020-11-29 00:08:05,788 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:05,792 [qtp2101153819-21] INFO : Dao - Received request to retrieve reimbursement request with id: 5
+2020-11-29 00:08:05,806 [qtp2101153819-21] INFO : Dao - Request completed, retrieved reimbursement request with id: 5
+2020-11-29 00:08:05,806 [qtp2101153819-21] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:08:05,809 [qtp2101153819-21] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:08:05,820 [qtp2101153819-22] INFO : Service - Responding to read related attachments...
+2020-11-29 00:08:05,936 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:05,936 [qtp2101153819-22] INFO : Dao - Received request to retrieve files related to request with id: 5
+2020-11-29 00:08:05,943 [qtp2101153819-22] INFO : Dao - Request completed, retrieved attachments, count: 2
+2020-11-29 00:08:05,944 [qtp2101153819-22] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:08:05,945 [qtp2101153819-22] INFO : Control - Successfully read attachments related to: 5
+2020-11-29 00:08:12,016 [qtp2101153819-21] INFO : Control - Access approved
+2020-11-29 00:08:12,184 [qtp2101153819-23] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-29 00:08:12,337 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:12,338 [qtp2101153819-23] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:08:12,361 [qtp2101153819-23] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 4
+2020-11-29 00:08:12,362 [qtp2101153819-23] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:08:12,363 [qtp2101153819-23] INFO : Control - Successfully read all reimbursement requests for manager: 0
+2020-11-29 00:08:13,315 [qtp2101153819-18] INFO : Control - Access approved
+2020-11-29 00:08:13,548 [qtp2101153819-21] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:08:13,548 [qtp2101153819-22] INFO : Service - Responding to read all information requests...
+2020-11-29 00:08:13,647 [qtp2101153819-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:13,647 [qtp2101153819-21] INFO : Dao - Received request to retrieve reimbursement request with id: 7
+2020-11-29 00:08:13,652 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:13,652 [qtp2101153819-22] INFO : Dao - Received request to retrieve all info requests
+2020-11-29 00:08:13,655 [qtp2101153819-21] INFO : Dao - Request completed, retrieved reimbursement request with id: 7
+2020-11-29 00:08:13,655 [qtp2101153819-21] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:08:13,657 [qtp2101153819-21] INFO : Control - Successfully read reimbursement request
+2020-11-29 00:08:13,659 [qtp2101153819-22] INFO : Dao - Request completed, retrieved info requests, count: 8
+2020-11-29 00:08:13,660 [qtp2101153819-22] INFO : Service - Successfully retrieved information requests
+2020-11-29 00:08:13,661 [qtp2101153819-22] INFO : Control - Successfully returned: 0 related infos
+2020-11-29 00:08:13,692 [qtp2101153819-23] INFO : Service - Responding to read related attachments...
+2020-11-29 00:08:13,768 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:13,768 [qtp2101153819-23] INFO : Dao - Received request to retrieve files related to request with id: 7
+2020-11-29 00:08:13,773 [qtp2101153819-23] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-11-29 00:08:13,773 [qtp2101153819-23] INFO : Service - Successfully retrieved attachments
+2020-11-29 00:08:13,774 [qtp2101153819-23] INFO : Control - Successfully read attachments related to: 7
+2020-11-29 00:08:18,051 [qtp2101153819-22] INFO : Service - Responding to read reimbursement request...
+2020-11-29 00:08:18,113 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:18,113 [qtp2101153819-22] INFO : Dao - Received request to retrieve reimbursement request with id: 7
+2020-11-29 00:08:18,121 [qtp2101153819-22] INFO : Dao - Request completed, retrieved reimbursement request with id: 7
+2020-11-29 00:08:18,121 [qtp2101153819-22] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 00:08:18,121 [qtp2101153819-22] INFO : Service - Responding to update reimbursement request...
+2020-11-29 00:08:18,272 [qtp2101153819-22] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:18,272 [qtp2101153819-22] INFO : Dao - Received request to update reimbursement request with id: 7
+2020-11-29 00:08:18,285 [qtp2101153819-22] INFO : Dao - Request completed, reimbursement with id: 7 was updated.
+2020-11-29 00:08:18,286 [qtp2101153819-22] INFO : Service - Successfully updated reimbursement request
+2020-11-29 00:08:18,286 [qtp2101153819-22] INFO : Control - Reimbursement request successfully updated
+2020-11-29 00:08:24,224 [qtp2101153819-23] INFO : Control - Access approved
+2020-11-29 00:08:24,440 [qtp2101153819-23] INFO : Service - Responding to read all reimbursement requests for manager 0...
+2020-11-29 00:08:24,567 [qtp2101153819-23] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 00:08:24,567 [qtp2101153819-23] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 00:08:24,588 [qtp2101153819-23] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 0, count: 3
+2020-11-29 00:08:24,588 [qtp2101153819-23] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 00:08:24,588 [qtp2101153819-23] INFO : Control - Successfully read all reimbursement requests for manager: 0
+2020-11-29 00:11:32,105 [qtp2101153819-34] INFO : Control - User successfully logged out
+2020-11-29 11:20:56,788 [qtp51152513-26] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:20:56,794 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 11:20:56,796 [qtp51152513-26] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 11:20:56,797 [qtp51152513-26] INFO : Dao - Received request to login user: myGuy
+2020-11-29 11:21:24,765 [qtp51152513-23] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:21:24,766 [qtp51152513-23] INFO : Service - Responding to login user...
+2020-11-29 11:22:15,660 [qtp51152513-24] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:22:15,665 [qtp51152513-24] INFO : Service - Responding to login user...
+2020-11-29 11:23:49,754 [qtp51152513-26] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:23:49,759 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 11:25:57,559 [qtp51152513-26] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:25:57,563 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 11:26:11,300 [qtp2101153819-23] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:26:11,306 [qtp2101153819-23] INFO : Service - Responding to login user...
+2020-11-29 11:26:11,308 [qtp2101153819-23] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 11:26:11,309 [qtp2101153819-23] INFO : Dao - Received request to login user: myGuy
+2020-11-29 11:29:25,491 [qtp51152513-22] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:29:25,500 [qtp51152513-22] INFO : Service - Responding to login user...
+2020-11-29 11:31:13,493 [qtp51152513-26] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:31:13,503 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 11:31:34,524 [qtp51152513-21] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:31:34,529 [qtp51152513-21] INFO : Service - Responding to login user...
+2020-11-29 11:34:06,879 [qtp51152513-25] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:34:06,883 [qtp51152513-25] INFO : Service - Responding to login user...
+2020-11-29 11:35:43,140 [qtp2101153819-23] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:35:43,148 [qtp2101153819-23] INFO : Service - Responding to login user...
+2020-11-29 11:35:43,151 [qtp2101153819-23] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 11:35:43,152 [qtp2101153819-23] INFO : Dao - Received request to login user: myGuy
+2020-11-29 11:41:04,471 [qtp51152513-25] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:41:04,475 [qtp51152513-25] INFO : Service - Responding to login user...
+2020-11-29 11:45:16,653 [qtp51152513-26] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:45:16,658 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 11:47:16,264 [qtp51152513-22] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:47:16,271 [qtp51152513-22] INFO : Service - Responding to login user...
+2020-11-29 11:48:05,642 [qtp51152513-27] INFO : Control - Received request to log in user: myGuy
+2020-11-29 11:48:05,647 [qtp51152513-27] INFO : Service - Responding to login user...
+2020-11-29 11:48:10,648 [qtp51152513-27] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 11:48:10,649 [qtp51152513-27] INFO : Dao - Received request to login user: myGuy
+2020-11-29 11:48:10,738 [qtp51152513-27] INFO : Dao - Request completed, logged in user: myGuy
+2020-11-29 11:48:10,739 [qtp51152513-27] INFO : Service - Successfully logged in user
+2020-11-29 11:48:10,740 [qtp51152513-27] INFO : Service - Responding to read employee...
+2020-11-29 11:48:10,874 [qtp51152513-27] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 11:48:10,874 [qtp51152513-27] INFO : Dao - Received request to retrieve employee with id: 0
+2020-11-29 11:48:10,891 [qtp51152513-27] INFO : Dao - Request completed, retrieved employee: Nick Fury
+2020-11-29 11:48:10,891 [qtp51152513-27] INFO : Service - Successfully retrieved employee
+2020-11-29 11:48:11,225 [qtp51152513-27] INFO : Control - Access approved
+2020-11-29 11:48:11,335 [qtp51152513-21] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 11:48:11,380 [qtp51152513-21] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 11:48:11,380 [qtp51152513-21] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-11-29 11:48:11,417 [qtp51152513-21] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 3
+2020-11-29 11:48:11,417 [qtp51152513-21] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 11:48:11,444 [qtp51152513-21] INFO : Control - Successfully read all reimbursement requests for employee: 0
