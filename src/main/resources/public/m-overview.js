@@ -1,7 +1,5 @@
 window.onload = function () {
     this.window.userInfo = getMyInfo();
-    this.setWelcome();
-    this.setViewTables();
 };
 
 function getMyInfo() {
@@ -29,6 +27,8 @@ function getMyInfo() {
                 if (xhr.status === 200) {
                     let user = JSON.parse(xhr.responseText);
                     window.setMyInfo(user);
+                    window.setWelcome();
+                    window.setViewTables();
                 }
                 break;
         }
@@ -41,6 +41,7 @@ function getMyInfo() {
 
 function setMyInfo(user) {
     this.window.userInfo = user;
+    this.setWelcome();
 }
 
 function setWelcome() {
