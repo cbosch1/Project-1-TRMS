@@ -591,3 +591,105 @@
 2020-11-27 15:12:20,367 [main] INFO : Util - Successfully retrieved connection to database.
 2020-11-27 15:12:20,370 [main] INFO : Dao - Received request to delete file with id: 2010
 2020-11-27 15:12:20,373 [main] INFO : Dao - Request completed, attachment with id: 2010 was deleted.
+2020-11-29 13:05:25,396 [Test worker] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-11-29 13:05:25,463 [Test worker] WARN : Control - Service returned false while updating attachment
+2020-11-29 13:05:25,478 [Test worker] INFO : Control - Successfully read attachment
+2020-11-29 13:05:25,487 [Test worker] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-11-29 13:05:25,507 [Test worker] INFO : Control - Attachment successfully deleted
+2020-11-29 13:05:25,573 [Test worker] INFO : Control - Successfully inserted employee, id returned: 0
+2020-11-29 13:05:25,579 [Test worker] INFO : Control - Successfully read employee
+2020-11-29 13:05:25,586 [Test worker] INFO : Control - Employee successfully deleted
+2020-11-29 13:05:25,591 [Test worker] INFO : Control - Employee successfully updated
+2020-11-29 13:05:25,598 [Test worker] INFO : Control - Successfully read all employees
+2020-11-29 13:05:25,652 [Test worker] INFO : Control - Information Request successfully deleted
+2020-11-29 13:05:25,661 [Test worker] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-11-29 13:05:25,694 [Test worker] WARN : Control - NumberFormatException thrown while updating information request: java.lang.NumberFormatException: null
+2020-11-29 13:05:25,707 [Test worker] INFO : Control - Successfully read all information requests
+2020-11-29 13:05:25,841 [Test worker] INFO : Control - Successfully read all reimbursement requests
+2020-11-29 13:05:25,868 [Test worker] WARN : Control - Service returned false while updating reimbursement request
+2020-11-29 13:05:25,926 [Test worker] WARN : Control - Exception thrown while creating reimbursement request: java.lang.NullPointerException
+2020-11-29 13:05:25,994 [Test worker] INFO : Control - Successfully read user
+2020-11-29 13:05:25,998 [Test worker] INFO : Control - User successfully updated
+2020-11-29 13:05:26,004 [Test worker] INFO : Control - Successfully inserted user, id returned: 0
+2020-11-29 13:05:26,008 [Test worker] INFO : Control - User successfully deleted
+2020-11-29 13:05:26,205 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,208 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,211 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,213 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,215 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,226 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,233 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,235 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,237 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,262 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,274 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,284 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,286 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,288 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,296 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,300 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,311 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,317 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,319 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,323 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,329 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,334 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,347 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,353 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,356 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,368 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,438 [Test worker] INFO : Service - Responding to read related attachments...
+2020-11-29 13:05:26,439 [Test worker] INFO : Service - Successfully retrieved attachments
+2020-11-29 13:05:26,440 [Test worker] INFO : Service - Responding to update attachment...
+2020-11-29 13:05:26,441 [Test worker] INFO : Service - Successfully updated attachment
+2020-11-29 13:05:26,447 [Test worker] INFO : Service - Responding to read attachment...
+2020-11-29 13:05:26,447 [Test worker] INFO : Service - Successfully retrieved attachment
+2020-11-29 13:05:26,450 [Test worker] INFO : Service - Responding to create attachment with id...
+2020-11-29 13:05:26,450 [Test worker] INFO : Service - Successfully created attachment
+2020-11-29 13:05:26,452 [Test worker] INFO : Service - Responding to delete attachment...
+2020-11-29 13:05:26,452 [Test worker] INFO : Service - Successfully deleted attachment
+2020-11-29 13:05:26,489 [Test worker] INFO : Service - Responding to create employee...
+2020-11-29 13:05:26,489 [Test worker] INFO : Service - Successfully created employee
+2020-11-29 13:05:26,491 [Test worker] INFO : Service - Responding to read employee...
+2020-11-29 13:05:26,492 [Test worker] INFO : Service - Successfully retrieved employee
+2020-11-29 13:05:26,496 [Test worker] INFO : Service - Responding to delete employee...
+2020-11-29 13:05:26,497 [Test worker] INFO : Service - Successfully deleted employee
+2020-11-29 13:05:26,498 [Test worker] INFO : Service - Responding to update employee...
+2020-11-29 13:05:26,499 [Test worker] INFO : Service - Successfully updated employee
+2020-11-29 13:05:26,500 [Test worker] INFO : Service - Responding to read all employees...
+2020-11-29 13:05:26,500 [Test worker] INFO : Service - Successfully retrieved employees
+2020-11-29 13:05:26,542 [Test worker] INFO : Service - Responding to read information request...
+2020-11-29 13:05:26,544 [Test worker] INFO : Service - Successfully retrieved information request
+2020-11-29 13:05:26,548 [Test worker] INFO : Service - Responding to delete information request...
+2020-11-29 13:05:26,548 [Test worker] INFO : Service - Successfully deleted information request
+2020-11-29 13:05:26,550 [Test worker] INFO : Service - Responding to create information request...
+2020-11-29 13:05:26,550 [Test worker] INFO : Service - Successfully created information request
+2020-11-29 13:05:26,551 [Test worker] INFO : Service - Responding to read all information requests for employee 2010...
+2020-11-29 13:05:26,551 [Test worker] INFO : Service - Successfully retrieved information requests
+2020-11-29 13:05:26,552 [Test worker] INFO : Service - Responding to update information request...
+2020-11-29 13:05:26,552 [Test worker] INFO : Service - Successfully updated information request
+2020-11-29 13:05:26,553 [Test worker] INFO : Service - Responding to read all information requests...
+2020-11-29 13:05:26,553 [Test worker] INFO : Service - Successfully retrieved information requests
+2020-11-29 13:05:26,605 [Test worker] INFO : Service - Responding to read all reimbursement requests...
+2020-11-29 13:05:26,605 [Test worker] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 13:05:26,607 [Test worker] INFO : Service - Responding to update reimbursement request...
+2020-11-29 13:05:26,607 [Test worker] INFO : Service - Successfully updated reimbursement request
+2020-11-29 13:05:26,609 [Test worker] INFO : Service - Responding to read reimbursement request...
+2020-11-29 13:05:26,611 [Test worker] INFO : Service - Successfully retrieved reimbursement request
+2020-11-29 13:05:26,614 [Test worker] INFO : Service - Responding to delete reimbursement request...
+2020-11-29 13:05:26,614 [Test worker] INFO : Service - Successfully deleted reimbursement request
+2020-11-29 13:05:26,616 [Test worker] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-11-29 13:05:26,616 [Test worker] INFO : Service - Successfully retrieved reimbursement requests
+2020-11-29 13:05:26,618 [Test worker] INFO : Service - Responding to create reimbursement request...
+2020-11-29 13:05:26,618 [Test worker] INFO : Service - Successfully created reimbursement request
+2020-11-29 13:05:26,669 [Test worker] INFO : Service - Responding to read user...
+2020-11-29 13:05:26,670 [Test worker] INFO : Service - Successfully retrieved user
+2020-11-29 13:05:26,671 [Test worker] INFO : Service - Responding to update user...
+2020-11-29 13:05:26,672 [Test worker] INFO : Service - Successfully updated user
+2020-11-29 13:05:26,676 [Test worker] INFO : Service - Responding to create user...
+2020-11-29 13:05:26,678 [Test worker] INFO : Service - Successfully created user
+2020-11-29 13:05:26,680 [Test worker] INFO : Service - Responding to delete user...
+2020-11-29 13:05:26,681 [Test worker] INFO : Service - Successfully deleted user
+2020-11-29 13:05:26,688 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,697 [Test worker] INFO : Controller - This is an error message
+2020-11-29 13:05:26,698 [Test worker] ERROR: Controller - This is an error message

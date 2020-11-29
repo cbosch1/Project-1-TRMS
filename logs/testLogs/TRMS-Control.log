@@ -33,3 +33,24 @@
 2020-11-27 15:12:19,856 [main] INFO : Employee successfully deleted
 2020-11-27 15:12:19,860 [main] INFO : Employee successfully updated
 2020-11-27 15:12:19,864 [main] INFO : Successfully read all employees
+2020-11-29 13:05:25,396 [Test worker] INFO : Successfully inserted attachment, id returned: 0
+2020-11-29 13:05:25,463 [Test worker] WARN : Service returned false while updating attachment
+2020-11-29 13:05:25,478 [Test worker] INFO : Successfully read attachment
+2020-11-29 13:05:25,487 [Test worker] INFO : Successfully inserted attachment, id returned: 0
+2020-11-29 13:05:25,507 [Test worker] INFO : Attachment successfully deleted
+2020-11-29 13:05:25,573 [Test worker] INFO : Successfully inserted employee, id returned: 0
+2020-11-29 13:05:25,579 [Test worker] INFO : Successfully read employee
+2020-11-29 13:05:25,586 [Test worker] INFO : Employee successfully deleted
+2020-11-29 13:05:25,591 [Test worker] INFO : Employee successfully updated
+2020-11-29 13:05:25,598 [Test worker] INFO : Successfully read all employees
+2020-11-29 13:05:25,652 [Test worker] INFO : Information Request successfully deleted
+2020-11-29 13:05:25,661 [Test worker] WARN : NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-11-29 13:05:25,694 [Test worker] WARN : NumberFormatException thrown while updating information request: java.lang.NumberFormatException: null
+2020-11-29 13:05:25,707 [Test worker] INFO : Successfully read all information requests
+2020-11-29 13:05:25,841 [Test worker] INFO : Successfully read all reimbursement requests
+2020-11-29 13:05:25,868 [Test worker] WARN : Service returned false while updating reimbursement request
+2020-11-29 13:05:25,926 [Test worker] WARN : Exception thrown while creating reimbursement request: java.lang.NullPointerException
+2020-11-29 13:05:25,994 [Test worker] INFO : Successfully read user
+2020-11-29 13:05:25,998 [Test worker] INFO : User successfully updated
+2020-11-29 13:05:26,004 [Test worker] INFO : Successfully inserted user, id returned: 0
+2020-11-29 13:05:26,008 [Test worker] INFO : User successfully deleted

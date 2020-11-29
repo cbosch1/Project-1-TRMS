@@ -218,3 +218,30 @@
 2020-11-27 15:12:20,288 [main] INFO : Successfully retrieved connection to database.
 2020-11-27 15:12:20,329 [main] INFO : Successfully retrieved connection to database.
 2020-11-27 15:12:20,367 [main] INFO : Successfully retrieved connection to database.
+2020-11-29 13:05:26,205 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,208 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,211 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,213 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,215 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,226 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,233 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,235 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,237 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,262 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,274 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,284 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,286 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,288 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,296 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,300 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,311 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,317 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,319 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,323 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,329 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,334 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,347 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,353 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,356 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,368 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 13:05:26,688 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
