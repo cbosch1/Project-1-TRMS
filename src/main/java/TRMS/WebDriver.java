@@ -1,8 +1,7 @@
-package TRMS.javalin;
+package TRMS;
 
 import TRMS.controllers.AttachmentControl;
 import TRMS.controllers.AuthControl;
-import TRMS.controllers.EmployeeControl;
 import TRMS.controllers.InfoRequestControl;
 import TRMS.controllers.ReimburseRequestControl;
 import TRMS.controllers.UserControl;
@@ -43,7 +42,6 @@ public class WebDriver {
 
     private static EmployeeDao empDao = new EmployeeDaoPostgres(connectionUtil);
     private static EmployeeService empService = new EmployeeServiceImpl(empDao);
-    private static EmployeeControl empControl = new EmployeeControl(empService);
 
     private static AuthService authService = new AuthServiceImpl();
     private static AuthControl authControl = new AuthControl(authService, userService, empService);

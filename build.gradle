@@ -13,7 +13,7 @@ plugins {
 
 jar {
     manifest {
-        attributes 'Main-Class' : 'Project-1-TRMS.WebDriver.java'
+        attributes 'Main-Class' : 'Project-1-TRMS.WebDriver'
     }
     
     from {
