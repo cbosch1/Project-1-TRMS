@@ -72,9 +72,9 @@ public class ReimburseRequestControl {
             String grading = ctx.formParam("grading");
             boolean urgent = Boolean.parseBoolean(ctx.formParam("urgency"));
             AppStatus status = AppStatus.PENDING;
-            AppStage stage = AppStage.UPLOAD;
+            AppStage stage = AppStage.SUPERVISOR;
             LocalDateTime dateTime = LocalDateTime.of(LocalDate.parse(ctx.formParam("event-date")),
-                    LocalTime.parse(ctx.formParam("event-time")));
+            LocalTime.parse(ctx.formParam("event-time")));
 
             Double projected;
 
