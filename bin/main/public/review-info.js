@@ -76,7 +76,7 @@ var showInfo = function(info) {
 var retrieveAttachments = function(info) {
 
     let xhr = new XMLHttpRequest();
-    let url = "http://localhost:2839/manager/view-reimbursement/" + info.relatedId + "/attachments";
+    let url = "http://52.149.146.226/manager/view-reimbursement/" + info.relatedId + "/attachments";
     console.log(url);
     //sets up ready state handler
     xhr.onreadystatechange = function () {

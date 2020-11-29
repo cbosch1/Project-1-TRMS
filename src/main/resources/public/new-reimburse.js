@@ -1,7 +1,7 @@
 window.onload = function () {
 
     var xhr = new XMLHttpRequest();
-    var url = "http://localhost:2839/my-reimbursements";
+    var url = "http://52.149.146.226/my-reimbursements";
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
