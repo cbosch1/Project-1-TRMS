@@ -2,6 +2,7 @@ package TRMS;
 
 import TRMS.controllers.AttachmentControl;
 import TRMS.controllers.AuthControl;
+import TRMS.controllers.EmployeeControl;
 import TRMS.controllers.InfoRequestControl;
 import TRMS.controllers.ReimburseRequestControl;
 import TRMS.controllers.UserControl;
@@ -42,6 +43,7 @@ public class WebDriver {
 
     private static EmployeeDao empDao = new EmployeeDaoPostgres(connectionUtil);
     private static EmployeeService empService = new EmployeeServiceImpl(empDao);
+    private static EmployeeControl empControl = new EmployeeControl(empService);
 
     private static AuthService authService = new AuthServiceImpl();
     private static AuthControl authControl = new AuthControl(authService, userService, empService);
@@ -123,10 +125,11 @@ public class WebDriver {
 
 
         //Admin only endpoints
-        app.post("/login", ctx -> authControl.login(ctx));
-        app.get("/login", ctx -> authControl.checkUser(ctx));
-        app.post("/priv", ctx -> authControl.getPrivilege(ctx));
-        app.post("/create", ctx -> userControl.createUser(ctx));
+        app.post("admin/login", ctx -> authControl.login(ctx));
+        app.get("admin/login", ctx -> authControl.checkUser(ctx));
+        app.post("admin/priv", ctx -> authControl.getPrivilege(ctx));
+        app.post("admin/user", ctx -> userControl.createUser(ctx));
+        app.post("admin/employee", ctx -> empControl.createEmployee(ctx));
 
 
     }

@@ -2911,3 +2911,54 @@
 2020-11-29 11:48:05,642 [qtp51152513-27] INFO : Received request to log in user: myGuy
 2020-11-29 11:48:11,225 [qtp51152513-27] INFO : Access approved
 2020-11-29 11:48:11,444 [qtp51152513-21] INFO : Successfully read all reimbursement requests for employee: 0
+2020-11-29 14:38:25,759 [qtp2101153819-27] WARN : Access denied due to login privilege
+2020-11-29 14:38:31,389 [qtp2101153819-27] INFO : Access approved
+2020-11-29 14:38:31,451 [qtp2101153819-26] WARN : Exception thrown while reading all reimbursement requests for employee: 0java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
+2020-11-29 14:38:35,329 [qtp2101153819-24] INFO : Access approved
+2020-11-29 14:38:35,383 [qtp2101153819-21] WARN : Exception thrown while reading all reimbursement requests for employee: 0java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
+2020-11-29 14:40:08,842 [qtp2101153819-20] WARN : Exception thrown while creating user: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
+2020-11-29 14:41:50,306 [qtp2101153819-32] WARN : Exception thrown while creating user: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
+2020-11-29 14:42:23,811 [qtp2101153819-20] WARN : Exception thrown while creating user: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null
+2020-11-29 14:43:45,805 [qtp2101153819-26] INFO : Successfully inserted user, id returned: 7
+2020-11-29 14:43:53,106 [qtp2101153819-23] INFO : User successfully logged out
+2020-11-29 14:44:00,261 [qtp2101153819-25] INFO : Received request to log in user: BossMan
+2020-11-29 14:44:00,500 [qtp2101153819-25] INFO : Access approved
+2020-11-29 14:44:00,654 [qtp2101153819-20] INFO : Successfully read all reimbursement requests for manager: 1
+2020-11-29 14:44:04,956 [qtp2101153819-27] INFO : Access approved
+2020-11-29 14:44:05,052 [qtp2101153819-33] INFO : Successfully read all reimbursement requests for manager: 1
+2020-11-29 14:44:06,070 [qtp2101153819-25] INFO : User successfully logged out
+2020-11-29 14:44:12,611 [qtp2101153819-25] INFO : Received request to log in user: BossMan
+2020-11-29 14:44:12,686 [qtp2101153819-25] WARN : Access denied due to login privilege
+2020-11-29 14:44:21,399 [qtp2101153819-23] INFO : Received request to log in user: BossMan
+2020-11-29 14:44:21,675 [qtp2101153819-23] WARN : Access denied due to login privilege
+2020-11-29 14:44:31,351 [qtp2101153819-26] INFO : Successfully inserted user, id returned: 8
+2020-11-29 14:44:39,817 [qtp2101153819-27] INFO : Received request to log in user: BossMan
+2020-11-29 14:44:39,896 [qtp2101153819-27] WARN : Access denied due to login privilege
+2020-11-29 14:44:51,434 [qtp2101153819-33] INFO : Successfully inserted user, id returned: 9
+2020-11-29 14:44:57,440 [qtp2101153819-20] INFO : Received request to log in user: bossman
+2020-11-29 14:44:57,519 [qtp2101153819-20] INFO : Access approved
+2020-11-29 14:44:57,640 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for employee: 1
+2020-11-29 14:45:02,669 [qtp2101153819-26] INFO : Access approved
+2020-11-29 14:45:02,788 [qtp2101153819-20] INFO : Successfully read reimbursement request
+2020-11-29 14:45:02,793 [qtp2101153819-26] INFO : Successfully returned: 1 related infos
+2020-11-29 14:45:02,850 [qtp2101153819-33] INFO : Successfully read attachments related to: 5
+2020-11-29 14:45:06,884 [qtp2101153819-25] INFO : Access approved
+2020-11-29 14:45:06,984 [qtp2101153819-20] INFO : Successfully read all reimbursement requests for employee: 1
+2020-11-29 14:45:12,374 [qtp2101153819-27] INFO : User successfully logged out
+2020-11-29 14:45:18,485 [qtp2101153819-33] INFO : Received request to log in user: BossMan
+2020-11-29 14:45:18,659 [qtp2101153819-33] INFO : Access approved
+2020-11-29 14:45:18,763 [qtp2101153819-33] INFO : Successfully read all reimbursement requests for manager: 1
+2020-11-29 14:47:23,801 [qtp2101153819-23] INFO : Successfully inserted user, id returned: 10
+2020-11-29 14:47:43,911 [qtp2101153819-27] INFO : User successfully logged out
+2020-11-29 14:47:51,047 [qtp2101153819-27] INFO : Received request to log in user: miniMe
+2020-11-29 14:47:51,124 [qtp2101153819-27] INFO : Access approved
+2020-11-29 14:47:51,213 [qtp2101153819-34] INFO : Successfully read all reimbursement requests for manager: 1
+2020-11-29 14:47:56,202 [qtp2101153819-25] INFO : Access approved
+2020-11-29 14:47:56,311 [qtp2101153819-25] INFO : Successfully returned: 0 related infos
+2020-11-29 14:47:56,318 [qtp2101153819-27] WARN : Exception thrown while reading reimbursement request: java.lang.IllegalArgumentException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+2020-11-29 14:47:58,388 [qtp2101153819-23] INFO : Access approved
+2020-11-29 14:47:58,497 [qtp2101153819-23] INFO : Successfully returned: 0 related infos
+2020-11-29 14:47:58,497 [qtp2101153819-32] INFO : Successfully read reimbursement request
+2020-11-29 14:47:58,544 [qtp2101153819-25] INFO : Successfully read attachments related to: 13
+2020-11-29 14:47:59,600 [qtp2101153819-32] INFO : Access approved
+2020-11-29 14:47:59,787 [qtp2101153819-23] INFO : Successfully read all reimbursement requests for manager: 1

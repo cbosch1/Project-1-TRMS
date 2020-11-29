@@ -7638,3 +7638,138 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 2020-11-29 11:48:10,891 [qtp51152513-27] INFO : Successfully retrieved employee
 2020-11-29 11:48:11,335 [qtp51152513-21] INFO : Responding to read all reimbursement requests for employee 0...
 2020-11-29 11:48:11,417 [qtp51152513-21] INFO : Successfully retrieved reimbursement requests
+2020-11-29 14:38:31,446 [qtp2101153819-26] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-29 14:38:35,381 [qtp2101153819-21] INFO : Responding to read all reimbursement requests for employee 0...
+2020-11-29 14:40:08,838 [qtp2101153819-20] INFO : Responding to create user...
+2020-11-29 14:41:50,287 [qtp2101153819-32] INFO : Responding to create user...
+2020-11-29 14:42:23,809 [qtp2101153819-20] INFO : Responding to create user...
+2020-11-29 14:43:45,433 [qtp2101153819-26] INFO : Responding to create user...
+2020-11-29 14:43:45,627 [qtp2101153819-26] INFO : Successfully created user
+2020-11-29 14:44:00,261 [qtp2101153819-25] INFO : Responding to login user...
+2020-11-29 14:44:00,402 [qtp2101153819-25] INFO : Successfully logged in user
+2020-11-29 14:44:00,402 [qtp2101153819-25] INFO : Responding to read employee...
+2020-11-29 14:44:00,438 [qtp2101153819-25] INFO : Successfully retrieved employee
+2020-11-29 14:44:00,576 [qtp2101153819-20] INFO : Responding to read all reimbursement requests for manager 1...
+2020-11-29 14:44:00,631 [qtp2101153819-20] INFO : Successfully retrieved reimbursement requests
+2020-11-29 14:44:05,004 [qtp2101153819-33] INFO : Responding to read all reimbursement requests for manager 1...
+2020-11-29 14:44:05,050 [qtp2101153819-33] INFO : Successfully retrieved reimbursement requests
+2020-11-29 14:44:12,611 [qtp2101153819-25] INFO : Responding to login user...
+2020-11-29 14:44:12,648 [qtp2101153819-25] INFO : Successfully logged in user
+2020-11-29 14:44:12,648 [qtp2101153819-25] INFO : Responding to read employee...
+2020-11-29 14:44:12,683 [qtp2101153819-25] INFO : Successfully retrieved employee
+2020-11-29 14:44:21,399 [qtp2101153819-23] INFO : Responding to login user...
+2020-11-29 14:44:21,536 [qtp2101153819-23] INFO : Successfully logged in user
+2020-11-29 14:44:21,536 [qtp2101153819-23] INFO : Responding to read employee...
+2020-11-29 14:44:21,671 [qtp2101153819-23] INFO : Successfully retrieved employee
+2020-11-29 14:44:31,306 [qtp2101153819-26] INFO : Responding to create user...
+2020-11-29 14:44:31,351 [qtp2101153819-26] INFO : Successfully created user
+2020-11-29 14:44:39,817 [qtp2101153819-27] INFO : Responding to login user...
+2020-11-29 14:44:39,857 [qtp2101153819-27] INFO : Successfully logged in user
+2020-11-29 14:44:39,857 [qtp2101153819-27] INFO : Responding to read employee...
+2020-11-29 14:44:39,892 [qtp2101153819-27] INFO : Successfully retrieved employee
+2020-11-29 14:44:51,375 [qtp2101153819-33] INFO : Responding to create user...
+2020-11-29 14:44:51,434 [qtp2101153819-33] INFO : Successfully created user
+2020-11-29 14:44:57,441 [qtp2101153819-20] INFO : Responding to login user...
+2020-11-29 14:44:57,482 [qtp2101153819-20] INFO : Successfully logged in user
+2020-11-29 14:44:57,482 [qtp2101153819-20] INFO : Responding to read employee...
+2020-11-29 14:44:57,514 [qtp2101153819-20] INFO : Successfully retrieved employee
+2020-11-29 14:44:57,597 [qtp2101153819-23] INFO : Responding to read all reimbursement requests for employee 1...
+2020-11-29 14:44:57,638 [qtp2101153819-23] INFO : Successfully retrieved reimbursement requests
+2020-11-29 14:45:02,739 [qtp2101153819-20] INFO : Responding to read reimbursement request...
+2020-11-29 14:45:02,742 [qtp2101153819-26] INFO : Responding to read all information requests for employee 1...
+2020-11-29 14:45:02,787 [qtp2101153819-20] INFO : Successfully retrieved reimbursement request
+2020-11-29 14:45:02,788 [qtp2101153819-26] INFO : Successfully retrieved information requests
+2020-11-29 14:45:02,795 [qtp2101153819-33] INFO : Responding to read related attachments...
+2020-11-29 14:45:02,845 [qtp2101153819-33] INFO : Successfully retrieved attachments
+2020-11-29 14:45:06,937 [qtp2101153819-20] INFO : Responding to read all reimbursement requests for employee 1...
+2020-11-29 14:45:06,983 [qtp2101153819-20] INFO : Successfully retrieved reimbursement requests
+2020-11-29 14:45:18,485 [qtp2101153819-33] INFO : Responding to login user...
+2020-11-29 14:45:18,522 [qtp2101153819-33] INFO : Successfully logged in user
+2020-11-29 14:45:18,522 [qtp2101153819-33] INFO : Responding to read employee...
+2020-11-29 14:45:18,655 [qtp2101153819-33] INFO : Successfully retrieved employee
+2020-11-29 14:45:18,715 [qtp2101153819-33] INFO : Responding to read all reimbursement requests for manager 1...
+2020-11-29 14:45:18,758 [qtp2101153819-33] INFO : Successfully retrieved reimbursement requests
+2020-11-29 14:47:23,753 [qtp2101153819-23] INFO : Responding to create user...
+2020-11-29 14:47:23,801 [qtp2101153819-23] INFO : Successfully created user
+2020-11-29 14:47:51,048 [qtp2101153819-27] INFO : Responding to login user...
+2020-11-29 14:47:51,082 [qtp2101153819-27] INFO : Successfully logged in user
+2020-11-29 14:47:51,082 [qtp2101153819-27] INFO : Responding to read employee...
+2020-11-29 14:47:51,119 [qtp2101153819-27] INFO : Successfully retrieved employee
+2020-11-29 14:47:51,167 [qtp2101153819-34] INFO : Responding to read all reimbursement requests for manager 1...
+2020-11-29 14:47:51,211 [qtp2101153819-34] INFO : Successfully retrieved reimbursement requests
+2020-11-29 14:47:56,265 [qtp2101153819-27] INFO : Responding to read reimbursement request...
+2020-11-29 14:47:56,265 [qtp2101153819-25] INFO : Responding to read all information requests...
+2020-11-29 14:47:56,311 [qtp2101153819-25] INFO : Successfully retrieved information requests
+2020-11-29 14:47:56,317 [qtp2101153819-27] WARN : Error thrown in dao call: 
+org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:350)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.ReimburseDaoPostgres.readRequest(ReimburseDaoPostgres.java:256)
+	at TRMS.services.ReimburseServiceImpl.readRequest(ReimburseServiceImpl.java:158)
+	at TRMS.controllers.ReimburseRequestControl.readManagedRequest(ReimburseRequestControl.java:189)
+	at TRMS.WebDriver.lambda$31(WebDriver.java:118)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:248)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:327)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:982)
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:441)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2057)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	... 48 more
+2020-11-29 14:47:58,451 [qtp2101153819-32] INFO : Responding to read reimbursement request...
+2020-11-29 14:47:58,452 [qtp2101153819-23] INFO : Responding to read all information requests...
+2020-11-29 14:47:58,496 [qtp2101153819-32] INFO : Successfully retrieved reimbursement request
+2020-11-29 14:47:58,497 [qtp2101153819-23] INFO : Successfully retrieved information requests
+2020-11-29 14:47:58,503 [qtp2101153819-25] INFO : Responding to read related attachments...
+2020-11-29 14:47:58,544 [qtp2101153819-25] INFO : Successfully retrieved attachments
+2020-11-29 14:47:59,648 [qtp2101153819-23] INFO : Responding to read all reimbursement requests for manager 1...
+2020-11-29 14:47:59,786 [qtp2101153819-23] INFO : Successfully retrieved reimbursement requests

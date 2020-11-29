@@ -16,7 +16,7 @@ public class ManagerWebControl {
 
     private static Logger Log = LogManager.getLogger("Control");
 
-    private static final String HIDDEN_PATH = "src/main/resources/hidden/Manager/";
+    private static final String HIDDEN_PATH = "resources/main/hidden/Manager/";
 
     private static AuthControl auth;
 

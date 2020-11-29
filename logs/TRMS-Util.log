@@ -1733,3 +1733,41 @@
 2020-11-29 11:48:10,648 [qtp51152513-27] INFO : Successfully retrieved connection to database.
 2020-11-29 11:48:10,874 [qtp51152513-27] INFO : Successfully retrieved connection to database.
 2020-11-29 11:48:11,380 [qtp51152513-21] INFO : Successfully retrieved connection to database.
+2020-11-29 14:38:31,449 [qtp2101153819-26] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 14:38:35,382 [qtp2101153819-21] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 14:40:08,841 [qtp2101153819-20] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 14:41:50,302 [qtp2101153819-32] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 14:42:23,810 [qtp2101153819-20] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 14:43:45,593 [qtp2101153819-26] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:00,396 [qtp2101153819-25] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:00,433 [qtp2101153819-25] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:00,609 [qtp2101153819-20] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:05,044 [qtp2101153819-33] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:12,644 [qtp2101153819-25] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:12,680 [qtp2101153819-25] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:21,533 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:21,668 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:31,347 [qtp2101153819-26] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:39,854 [qtp2101153819-27] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:39,889 [qtp2101153819-27] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:51,426 [qtp2101153819-33] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:57,478 [qtp2101153819-20] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:57,512 [qtp2101153819-20] INFO : Successfully retrieved connection to database.
+2020-11-29 14:44:57,632 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
+2020-11-29 14:45:02,779 [qtp2101153819-20] INFO : Successfully retrieved connection to database.
+2020-11-29 14:45:02,781 [qtp2101153819-26] INFO : Successfully retrieved connection to database.
+2020-11-29 14:45:02,831 [qtp2101153819-33] INFO : Successfully retrieved connection to database.
+2020-11-29 14:45:06,979 [qtp2101153819-20] INFO : Successfully retrieved connection to database.
+2020-11-29 14:45:18,519 [qtp2101153819-33] INFO : Successfully retrieved connection to database.
+2020-11-29 14:45:18,653 [qtp2101153819-33] INFO : Successfully retrieved connection to database.
+2020-11-29 14:45:18,753 [qtp2101153819-33] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:23,795 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:51,079 [qtp2101153819-27] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:51,117 [qtp2101153819-27] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:51,206 [qtp2101153819-34] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:56,303 [qtp2101153819-27] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:56,304 [qtp2101153819-25] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:58,490 [qtp2101153819-32] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:58,493 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:58,539 [qtp2101153819-25] INFO : Successfully retrieved connection to database.
+2020-11-29 14:47:59,781 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
