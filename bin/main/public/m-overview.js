@@ -1,10 +1,12 @@
 window.onload = function () {
-    window.userInfo = getMyInfo();
+    this.userInfo; 
+    getMyInfo();
 };
 
 function getMyInfo() {
     var xhr = new XMLHttpRequest();
     var url = "http://52.149.146.226/manager/myinfo";
+    var user;
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
@@ -25,10 +27,9 @@ function getMyInfo() {
                 console.log("Response received");
                 //logic to add requests to table
                 if (xhr.status === 200) {
-                    let user = JSON.parse(xhr.responseText);
-                    window.setMyInfo(user);
-                    window.setWelcome();
-                    window.setViewTables();
+                    window.userInfo = JSON.parse(xhr.responseText);
+                    this.setViewTables();
+                    this.setWelcome();
                 }
                 break;
         }
@@ -39,14 +40,9 @@ function getMyInfo() {
     xhr.send();
 }
 
-function setMyInfo(user) {
-    window.userInfo = user;
-    window.setWelcome();
-}
-
-function setWelcome() {
+function setWelcome(user) {
     let welcome = document.getElementById("welcome");
-    welcome.innerHTML = "Welcome " + user.username;
+    welcome.innerHTML = "Welcome " + window.userInfo.username;
 }
 
 function setViewTables() {

@@ -7602,3 +7602,56 @@ Caused by: java.net.SocketException: Socket closed
 2020-11-29 14:47:58,543 [qtp2101153819-25] INFO : Request completed, retrieved attachments, count: 0
 2020-11-29 14:47:59,781 [qtp2101153819-23] INFO : Received request to retrieve reimbursement requests related to employee with id: 1
 2020-11-29 14:47:59,786 [qtp2101153819-23] INFO : Request completed, retrieved reimbursement requests related to manager with id: 1, count: 2
+2020-11-29 17:05:32,236 [qtp51152513-26] INFO : Received request to login user: lana
+2020-11-29 17:05:58,949 [qtp51152513-27] INFO : Received request to login user: lana
+2020-11-29 17:05:59,082 [qtp51152513-27] WARN : SQLException thrown in user login: lana
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:37)
+	at TRMS.WebDriver.lambda$36(WebDriver.java:124)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-29 17:09:12,832 [qtp51152513-27] INFO : Received request to login user: lana
+2020-11-29 17:10:07,491 [qtp51152513-32] INFO : Received request to login user: lana
+2020-11-29 17:10:33,882 [qtp51152513-25] INFO : Received request to login user: lana
+2020-11-29 17:11:02,659 [qtp51152513-26] INFO : Received request to login user: lana
+2020-11-29 17:11:23,839 [qtp51152513-32] INFO : Received request to login user: lana
+2020-11-29 17:13:17,085 [qtp51152513-26] INFO : Received request to login user: lana
+2020-11-29 17:14:17,529 [qtp51152513-32] INFO : Received request to login user: lana
+2020-11-29 17:15:47,715 [qtp51152513-32] INFO : Received request to login user: lana

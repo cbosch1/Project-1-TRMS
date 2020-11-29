@@ -20160,3 +20160,129 @@ Caused by: java.net.SocketException: Socket closed
 2020-11-29 14:47:59,786 [qtp2101153819-23] INFO : Dao - Request completed, retrieved reimbursement requests related to manager with id: 1, count: 2
 2020-11-29 14:47:59,786 [qtp2101153819-23] INFO : Service - Successfully retrieved reimbursement requests
 2020-11-29 14:47:59,787 [qtp2101153819-23] INFO : Control - Successfully read all reimbursement requests for manager: 1
+2020-11-29 17:05:32,218 [qtp51152513-26] INFO : Control - Received request to log in user: lana
+2020-11-29 17:05:32,229 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 17:05:32,235 [qtp51152513-26] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 17:05:32,236 [qtp51152513-26] INFO : Dao - Received request to login user: lana
+2020-11-29 17:05:58,394 [qtp51152513-27] INFO : Control - Received request to log in user: lana
+2020-11-29 17:05:58,428 [qtp51152513-27] INFO : Service - Responding to login user...
+2020-11-29 17:05:58,948 [qtp51152513-27] INFO : Util - Successfully retrieved connection to database.
+2020-11-29 17:05:58,949 [qtp51152513-27] INFO : Dao - Received request to login user: lana
+2020-11-29 17:05:59,082 [qtp51152513-27] WARN : Dao - SQLException thrown in user login: lana
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:37)
+	at TRMS.WebDriver.lambda$36(WebDriver.java:124)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-29 17:05:59,093 [qtp51152513-27] WARN : Service - Error thrown in dao call: 
+org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:2939)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2167)
+	at TRMS.daos.UserDaoPostgres.loginUser(UserDaoPostgres.java:179)
+	at TRMS.services.UserServiceImpl.loginUser(UserServiceImpl.java:140)
+	at TRMS.controllers.AuthControl.login(AuthControl.java:37)
+	at TRMS.WebDriver.lambda$36(WebDriver.java:124)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:121)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:129)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-29 17:09:11,357 [qtp51152513-27] INFO : Control - Received request to log in user: lana
+2020-11-29 17:09:11,370 [qtp51152513-27] INFO : Service - Responding to login user...
+2020-11-29 17:09:12,829 [qtp51152513-27] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:09:12,832 [qtp51152513-27] INFO : Dao - Received request to login user: lana
+2020-11-29 17:10:06,213 [qtp51152513-32] INFO : Control - Received request to log in user: lana
+2020-11-29 17:10:06,230 [qtp51152513-32] INFO : Service - Responding to login user...
+2020-11-29 17:10:07,491 [qtp51152513-32] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:10:07,491 [qtp51152513-32] INFO : Dao - Received request to login user: lana
+2020-11-29 17:10:32,836 [qtp51152513-25] INFO : Control - Received request to log in user: lana
+2020-11-29 17:10:32,881 [qtp51152513-25] INFO : Service - Responding to login user...
+2020-11-29 17:10:33,879 [qtp51152513-25] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:10:33,882 [qtp51152513-25] INFO : Dao - Received request to login user: lana
+2020-11-29 17:11:01,539 [qtp51152513-26] INFO : Control - Received request to log in user: lana
+2020-11-29 17:11:01,576 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 17:11:02,658 [qtp51152513-26] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:11:02,659 [qtp51152513-26] INFO : Dao - Received request to login user: lana
+2020-11-29 17:11:22,555 [qtp51152513-32] INFO : Control - Received request to log in user: lana
+2020-11-29 17:11:22,583 [qtp51152513-32] INFO : Service - Responding to login user...
+2020-11-29 17:11:23,838 [qtp51152513-32] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:11:23,839 [qtp51152513-32] INFO : Dao - Received request to login user: lana
+2020-11-29 17:13:17,062 [qtp51152513-26] INFO : Control - Received request to log in user: lana
+2020-11-29 17:13:17,077 [qtp51152513-26] INFO : Service - Responding to login user...
+2020-11-29 17:13:17,082 [qtp51152513-26] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 17:13:17,085 [qtp51152513-26] INFO : Dao - Received request to login user: lana
+2020-11-29 17:14:16,135 [qtp51152513-32] INFO : Control - Received request to log in user: lana
+2020-11-29 17:14:16,180 [qtp51152513-32] INFO : Service - Responding to login user...
+2020-11-29 17:14:17,528 [qtp51152513-32] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:14:17,529 [qtp51152513-32] INFO : Dao - Received request to login user: lana
+2020-11-29 17:15:46,538 [qtp51152513-32] INFO : Control - Received request to log in user: lana
+2020-11-29 17:15:46,549 [qtp51152513-32] INFO : Service - Responding to login user...
+2020-11-29 17:15:47,710 [qtp51152513-32] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:15:47,715 [qtp51152513-32] INFO : Dao - Received request to login user: lana

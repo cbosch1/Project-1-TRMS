@@ -1771,3 +1771,13 @@
 2020-11-29 14:47:58,493 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
 2020-11-29 14:47:58,539 [qtp2101153819-25] INFO : Successfully retrieved connection to database.
 2020-11-29 14:47:59,781 [qtp2101153819-23] INFO : Successfully retrieved connection to database.
+2020-11-29 17:05:32,235 [qtp51152513-26] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 17:05:58,948 [qtp51152513-27] INFO : Successfully retrieved connection to database.
+2020-11-29 17:09:12,829 [qtp51152513-27] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:10:07,491 [qtp51152513-32] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:10:33,879 [qtp51152513-25] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:11:02,658 [qtp51152513-26] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:11:23,838 [qtp51152513-32] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:13:17,082 [qtp51152513-26] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-11-29 17:14:17,528 [qtp51152513-32] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:15:47,710 [qtp51152513-32] WARN : Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
