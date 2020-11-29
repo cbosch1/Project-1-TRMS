@@ -75,6 +75,7 @@ public class EmployeeControl {
      * <ul><li>employeeId</li></ul>
      */
     public void readEmployee(Context ctx){
+        
         try {
             int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
             ctx.json(service.readEmployee(employeeId));
