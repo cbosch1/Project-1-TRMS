@@ -178,6 +178,32 @@ public class InfoRequestControl {
         }
     }
 
+    public void readAllInfoForManager(Context ctx){
+        int requestId = -1;
+
+        if(auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
+                List<InfoRequest> reimburseInfos = new LinkedList<>();
+
+                for (InfoRequest info : service.readAllInfoReq()){
+                    if (info.getRelatedId() == requestId) {
+                        reimburseInfos.add(info);
+                    }
+                }
+
+                ctx.json(reimburseInfos);
+
+                ctx.status(200);
+                Log.info("Successfully returned: " + reimburseInfos.size() + " related infos");
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading all info requests related to: " + requestId + e);
+                ctx.status(500);
+            }
+        }
+    }
+
     /**
      * For reading all information requests in the TRMS. The ctx will have values
      * set to the returned information request objects. Then this method will 

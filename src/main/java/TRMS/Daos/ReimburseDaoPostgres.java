@@ -203,11 +203,12 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
             Log.info("Received request to retrieve reimbursement requests related to employee with id: " + managerId);
 
             String sql = "SELECT * FROM reimbursement r JOIN reimburse_status rs ON rs.request_id = r.request_id " 
-                        +"WHERE status = ?::app_status AND emp_id IN (SELECT emp_id FROM employee WHERE supervisor = ?);";
+                        +"WHERE status = ?::app_status AND emp_id IN (SELECT emp_id FROM employee WHERE supervisor = ? AND NOT emp_id = ?);";
             stmt = conn.prepareStatement(sql);
 
             stmt.setString(1, "PENDING");
             stmt.setInt(2, managerId);
+            stmt.setInt(3, managerId);
 
             ResultSet rs = stmt.executeQuery();
 

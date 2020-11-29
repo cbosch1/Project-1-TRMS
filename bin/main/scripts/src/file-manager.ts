@@ -6,7 +6,42 @@ export class FileManager {
         this.mimeMap = this.setMimeMap();
     }
 
-    public downloadAttach(newData, filename, newType) {
+    public retrieveDownload (attach) {
+        var xhr = new XMLHttpRequest();
+        var url = "http://localhost:2839/download-attachment/" + attach.attachId;
+        //sets up ready state handler
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState);
+            switch (xhr.readyState) {
+                case 0:
+                    console.log("Nothing, initialized not sent");
+                    break;
+                case 1:
+                    console.log("Connection established");
+                    break;
+                case 2:
+                    console.log("Request sent");
+                    break;
+                case 3:
+                    console.log("Waiting response");
+                    break;
+                case 4:
+                    console.log("Response received");
+                    //logic to add attachment to table
+                    if (xhr.status === 200) {
+                        let attachData = JSON.parse(xhr.responseText);
+                        downloadAttach(attachData[0], attachData[1].split(".")[0], "." + attachData[1].split(".")[1]);
+                    }
+                    break;
+            }
+        };
+        //opens up the request
+        xhr.open("GET", url, true);
+        //sends request
+        xhr.send();
+    }
+
+    private downloadAttach(newData, filename, newType) {
 
         var mimeType = this.getMimeType(newType);
         var data = this.base64ToArrayBuffer(newData);

@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import TRMS.enums.AppStage;
 import TRMS.enums.AppStatus;
+import TRMS.enums.AuthPriv;
 import TRMS.enums.EventType;
 import TRMS.pojos.ReimburseRequest;
 import TRMS.services.AttachmentService;
@@ -179,6 +180,38 @@ public class ReimburseRequestControl {
         }
     }
 
+    public void readManagedRequest(Context ctx){
+        int requestId = -1;
+
+        if(auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
+                ReimburseRequest request = service.readRequest(requestId);
+                AuthPriv userPriv = auth.getPrivilege(ctx);
+
+                if (userPriv == AuthPriv.BENCO ||
+                    userPriv == AuthPriv.DEPT_HEAD ||
+                    userPriv == AuthPriv.SUPERVISOR){
+
+                    ctx.json(request);
+                    ctx.status(200);
+                    Log.info("Successfully read reimbursement request");
+                } else {
+                    ctx.status(401);
+                    Log.info("Unauthorized access attempted to view reimbursement request");
+                }
+
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+            }
+        }
+    }
+
     /**
      * For reading all reimbursement requests that were sent in by the employee with
      * the given id. Parses form parameters out of the context object and passes them
@@ -299,6 +332,65 @@ public class ReimburseRequestControl {
             ctx.html("Exception thrown: " + e);
             ctx.status(500);
         }
+    }
+
+    public void reviewReimbursement(Context ctx){
+        try {
+            int requestId = Integer.parseInt(ctx.pathParam("id"));
+            boolean approved = Boolean.parseBoolean(ctx.pathParam("approval"));
+            
+            ReimburseRequest request = service.readRequest(requestId);
+
+            if (approved) {
+                switch (request.getStage()){
+
+                    case END:
+                        break;
+
+                    case EVENT:
+                        request.setStage(AppStage.END);
+                        break;
+
+                    case BENCO:
+                        request.setStage(AppStage.EVENT);
+                        break;
+
+                    case DEPT_HEAD:
+                        request.setStage(AppStage.BENCO);
+                        break;
+                        
+                    case SUPERVISOR:
+                        request.setStage(AppStage.DEPT_HEAD);
+                        break;
+
+                    case UPLOAD:
+                        request.setStage(AppStage.SUPERVISOR);
+                        break;
+                }
+
+            } else {
+                request.setStatus(AppStatus.DENIED);
+            }
+            
+            if (service.updateRequest(request)){
+                Log.info("Reimbursement request successfully updated");
+                ctx.status(200);
+            } else {
+                Log.warn("Service returned false while updating reimbursement request");
+                ctx.status(500);
+            }
+
+        } catch (NumberFormatException e){
+            Log.warn("NumberFormatException thrown while updating reimbursement request: " + e);
+            ctx.html("NumberFormatException thrown: " + e);
+            ctx.status(500);
+
+        } catch (Exception e) {
+            Log.warn("Exception thrown while updating reimbursement request: " + e);
+            ctx.html("Exception thrown: " + e);
+            ctx.status(500);
+        }
+
     }
 
     /**

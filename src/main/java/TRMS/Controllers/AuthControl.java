@@ -117,4 +117,11 @@ public class AuthControl {
         }
         return priv;
     }
+
+    public void getEmployee(Context ctx) {
+        if(checkUser(ctx)) {
+            Employee e = empService.readEmployee(Integer.parseInt(ctx.pathParam("id")));
+            ctx.json(e);
+        }
+    }
 }

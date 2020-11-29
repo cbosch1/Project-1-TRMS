@@ -1,3 +1,5 @@
+import { FileManager } from "./file-manager.js";
+
 window.onload = function () {
 
     let requestRetrieved = false;
@@ -146,8 +148,11 @@ var showAttachment = function(attachment) {
 
     idCol.innerHTML = attachment.attachId;
     fileCol.innerHTML = attachment.fileType;
-    downloadCol.innerHTML = "<form id=\"download-attachment-form\" method=\"GET\" action=\"../download-attachment/" + attachment.attachId + "\">\n                            <button id=\"download-attachment-btn\" type=\"submit\" class=\"btn table-btn\">Download</button>\n                        </form>";
-}
+    downloadCol.innerHTML = "<button id=\"download-attachment-btn\" type=\"button\" class=\"btn table-btn\">Download</button>";
+    downloadCol.firstChild.addEventListener("click", (event) => {
+        let manager = new FileManager();
+        manager.retrieveDownload(attachment);
+    });}
 
 var retrieveInfos = function() {
 

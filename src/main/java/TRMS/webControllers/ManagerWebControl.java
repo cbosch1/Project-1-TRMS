@@ -27,17 +27,49 @@ public class ManagerWebControl {
     
     public void getOverview(Context ctx){
         if (!auth.checkUser(ctx)){
-            ctx.redirect("index.html?error=failed-login-verification");
+            ctx.redirect("manager-login.html");
             Log.warn("Access denied due to login verification");
 
         } else if (!(auth.getPrivilege(ctx).equals(AuthPriv.SUPERVISOR)
                     || auth.getPrivilege(ctx).equals(AuthPriv.DEPT_HEAD)
                     || auth.getPrivilege(ctx).equals(AuthPriv.BENCO))) {
-            ctx.redirect("index.html?error=failed-login-privilege");
+            ctx.redirect("manager-login.html");
             Log.warn("Access denied due to login privilege");
         
         } else {
             servePage(ctx, "manager-overview.html");
+        }
+    }
+
+    public void getViewReimbursement(Context ctx){
+        if (!auth.checkUser(ctx)){
+            ctx.redirect("manager-login.html");
+            Log.warn("Access denied due to login verification");
+
+        } else if (!(auth.getPrivilege(ctx).equals(AuthPriv.SUPERVISOR)
+                    || auth.getPrivilege(ctx).equals(AuthPriv.DEPT_HEAD)
+                    || auth.getPrivilege(ctx).equals(AuthPriv.BENCO))) {
+            ctx.redirect("manager-login.html");
+            Log.warn("Access denied due to login privilege");
+        
+        } else {
+            servePage(ctx, "review-reimbursement.html");
+        }
+    }
+
+    public void getViewInfoRequest(Context ctx){
+        if (!auth.checkUser(ctx)){
+            ctx.redirect("manager-login.html");
+            Log.warn("Access denied due to login verification");
+
+        } else if (!(auth.getPrivilege(ctx).equals(AuthPriv.SUPERVISOR)
+                    || auth.getPrivilege(ctx).equals(AuthPriv.DEPT_HEAD)
+                    || auth.getPrivilege(ctx).equals(AuthPriv.BENCO))) {
+            ctx.redirect("manager-login.html");
+            Log.warn("Access denied due to login privilege");
+        
+        } else {
+            servePage(ctx, "review-request.html");
         }
     }
 

@@ -1,4 +1,5 @@
 import { FileManager } from "./file-manager.js";
+import { IdToName } from "./id-to-name.js";
 
 window.onload = function () {
 
@@ -49,12 +50,14 @@ var showInfo = function(info) {
     var table = document.getElementById("view-request-table");
     var tableRow = document.createElement("tr");
     var idCol = document.createElement("td");
+    var recipCol = document.createElement("td");
     var senderCol = document.createElement("td");
     var dateCol = document.createElement("td");
     var urgentCol = document.createElement("td");
     var description = document.getElementById("view-info-description");
 
     tableRow.appendChild(idCol);
+    tableRow.appendChild(recipCol);
     tableRow.appendChild(senderCol);
     tableRow.appendChild(dateCol);
     tableRow.appendChild(urgentCol);
@@ -62,6 +65,7 @@ var showInfo = function(info) {
 
 
     idCol.innerText = info.infoId;
+    recipCol.innerText = IdToName(info.destinationId);
     senderCol.innerText = info.sender;
     urgentCol.innerText = info.urgent;
     dateCol.innerText = dateTimeFormat(info.dateTime);
@@ -72,7 +76,7 @@ var showInfo = function(info) {
 var retrieveAttachments = function(info) {
 
     let xhr = new XMLHttpRequest();
-    let url = "http://localhost:2839/employee/view-reimbursement/" + info.relatedId + "/attachments";
+    let url = "http://localhost:2839/manager/view-reimbursement/" + info.relatedId + "/attachments";
     console.log(url);
     //sets up ready state handler
     xhr.onreadystatechange = function () {

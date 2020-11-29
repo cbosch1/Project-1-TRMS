@@ -74,14 +74,18 @@ public class WebDriver {
         app.get("", ctx -> ctx.redirect("index.html"));
         app.get("index", ctx -> ctx.redirect("index.html"));
         app.get("home", ctx -> ctx.redirect("index.html"));
-        app.get("/first-time-user", ctx -> ctx.redirect("first-time-user.html"));
-        app.get("/forgot-password", ctx -> ctx.redirect("forgot-password.html"));
-        app.get("/forgot-username", ctx -> ctx.redirect("forgot-username.html"));
-        app.post("/forgot-password", ctx -> userControl.forgotPassword(ctx));
-        app.post("/forgot-username", ctx -> userControl.forgotUsername(ctx));
+        app.get("first-time-user", ctx -> ctx.redirect("first-time-user.html"));
+        app.get("forgot-password", ctx -> ctx.redirect("forgot-password.html"));
+        app.get("forgot-username", ctx -> ctx.redirect("forgot-username.html"));
+        app.post("forgot-password", ctx -> userControl.forgotPassword(ctx));
+        app.post("forgot-username", ctx -> userControl.forgotUsername(ctx));
         app.get("logout", ctx -> {authControl.logout(ctx); ctx.redirect("index.html");});
 
         //Authorized only endpoints - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+        //User endpoints
+        app.get("download-attachment/:id", ctx -> attachControl.downloadAttachment(ctx));
+        app.get("employee/:id", ctx -> authControl.getEmployee(ctx));
 
         //Employee only endpoints
         app.get(EMPLOYEE_URL, ctx -> { if(authControl.checkUser(ctx)) { eWebControl.getOverview(ctx); } 
@@ -95,13 +99,12 @@ public class WebDriver {
         app.post(EMPLOYEE_URL+"/cancel-reimbursement/:id", ctx -> reimburseControl.cancelRequest(ctx));
                 
             //Javascript endpoints
-        app.post("/my-reimbursements", ctx -> { reimburseControl.readAllRequestsFor(ctx);});
-        app.post(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.readRequest(ctx);});
-        app.post(EMPLOYEE_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
-        app.post(EMPLOYEE_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoFor(ctx);});    
-        app.post(EMPLOYEE_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
-        app.post(EMPLOYEE_URL+"/view-info/:id/response", ctx -> { infoControl.createInfoResponse(ctx);});
-        app.get(EMPLOYEE_URL+"/download-attachment/:id", ctx -> attachControl.downloadAttachment(ctx));
+            app.post("/my-reimbursements", ctx -> { reimburseControl.readAllRequestsFor(ctx);});
+            app.post(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.readRequest(ctx);});
+            app.post(EMPLOYEE_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
+            app.post(EMPLOYEE_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoFor(ctx);});    
+            app.post(EMPLOYEE_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
+            app.post(EMPLOYEE_URL+"/view-info/:id/response", ctx -> { infoControl.createInfoResponse(ctx);});
 
         //Manager only endpoints
         app.get(MANAGER_URL, ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }
@@ -109,8 +112,18 @@ public class WebDriver {
         app.post(MANAGER_URL, ctx -> { if(authControl.login(ctx)) { mWebControl.getOverview(ctx); } 
                                         else ctx.redirect("manager-login.html");});
         app.get(MANAGER_URL+"/portal", ctx -> ctx.redirect("hidden/Manager/manager-overview.html"));
+        app.get(MANAGER_URL+"/view-reimbursement/:id", ctx -> mWebControl.getViewReimbursement(ctx));
+        app.get(MANAGER_URL+"/view-info/:id", ctx -> mWebControl.getViewInfoRequest(ctx));
+
             //Javascript endpoints
             app.get(MANAGER_URL+"/requests", ctx -> { reimburseControl.readManagedRequests(ctx); });
+            app.post(MANAGER_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.readManagedRequest(ctx);});
+            app.put(MANAGER_URL+"/view-reimbursement/:id/:approval", ctx -> reimburseControl.reviewReimbursement(ctx));
+            app.post(MANAGER_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
+            app.post(MANAGER_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoForManager(ctx);});    
+            app.post(MANAGER_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
+
+
         //Admin only endpoints
         app.post("/login", ctx -> authControl.login(ctx));
         app.get("/login", ctx -> authControl.checkUser(ctx));

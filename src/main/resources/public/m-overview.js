@@ -72,7 +72,7 @@ function addRowNeed(reimburse) {
     stageCol.innerHTML = reimburse.stage;
     urgentCol.innerHTML = reimburse.urgent;
     payoutCol.innerHTML = "$"+ reimburse.projected;
-    viewCol.innerHTML;
+    viewCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"GET\" action=\"manager/view-reimbursement/" + reimburse.requestId + "\">\n<button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">View</button>\n</form>";
 };
 
 function addRowOther(reimburse) {
@@ -104,5 +104,5 @@ function addRowOther(reimburse) {
     stageCol.innerHTML = reimburse.stage;
     urgentCol.innerHTML = reimburse.urgent;
     payoutCol.innerHTML = "$"+ reimburse.projected;
-    viewCol.innerHTML;
+    viewCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"GET\" action=\"manager/view-reimbursement/" + reimburse.requestId + "\">\n<button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">View</button>\n</form>";
 };

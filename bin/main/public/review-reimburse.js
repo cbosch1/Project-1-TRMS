@@ -1,8 +1,7 @@
 import { FileManager } from "./file-manager.js";
 
 window.onload = function () {
-
-    let requestRetrieved = false;
+    this.managerLevel = "DEPT_HEAD";
 
     let xhr = new XMLHttpRequest();
     let url = window.location.pathname;
@@ -45,55 +44,96 @@ window.onload = function () {
 };
 
 var showRequest = function (reimburse) {
-    var table = document.getElementById("view-request-table");
+    var table = document.getElementById("review-request-table");
     var tableRow = document.createElement("tr");
     var idCol = document.createElement("td");
     var dateCol = document.createElement("td");
     var typeCol = document.createElement("td");
     var locationCol = document.createElement("td");
-    var costCol = document.createElement("td");
-    var payoutCol = document.createElement("td");
+    var stageCol = document.createElement("td");
     var statusCol = document.createElement("td");
     var urgentCol = document.createElement("td");
-    var cancelCol = document.createElement("td");
+    var costCol = document.createElement("td");
+    var payoutCol = document.createElement("td");
     var descriptionArea = document.getElementById("view-description");
     var justificationArea = document.getElementById("view-justification");
     var gradingArea = document.getElementById("view-grading");
+    var approvalArea = document.getElementById("approval-area");
 
     tableRow.appendChild(idCol);
     tableRow.appendChild(dateCol);
     tableRow.appendChild(typeCol);
     tableRow.appendChild(locationCol);
-    tableRow.appendChild(costCol);
-    tableRow.appendChild(payoutCol);
+    tableRow.appendChild(stageCol);
     tableRow.appendChild(statusCol);
     tableRow.appendChild(urgentCol);
-    tableRow.appendChild(cancelCol);
+    tableRow.appendChild(costCol);
+    tableRow.appendChild(payoutCol);
     table.childNodes[3].appendChild(tableRow);
 
-    idCol.innerHTML = reimburse.requestId;
+    idCol.innerHTML = reimburse.employeeId;
     dateCol.innerHTML = reimburse.dateTime.monthValue +"-"+ reimburse.dateTime.dayOfMonth +"-"+ reimburse.dateTime.year;
     typeCol.innerHTML = reimburse.type;
     locationCol.innerHTML = reimburse.location;
-    costCol.innerHTML = "$"+ reimburse.cost;
-    payoutCol.innerHTML = "$"+ reimburse.projected;
+    stageCol.innerHTML = reimburse.stage;
     statusCol.innerHTML = reimburse.status;
     urgentCol.innerHTML = reimburse.urgent;
+    costCol.innerHTML = "$"+ reimburse.cost;
+    payoutCol.innerHTML = "$"+ reimburse.projected;
     descriptionArea.innerHTML = reimburse.description;
     justificationArea.innerHTML = reimburse.justification;
     gradingArea.innerHTML = reimburse.grading;
 
-    if (reimburse.status == "PENDING"){
-        cancelCol.innerHTML = "<form id=\"view-reimburse-form\" method=\"POST\" action=\"../cancel-reimbursement/" + reimburse.requestId + "\">\n                            <button id=\"view-reimburse-btn\" type=\"submit\" class=\"btn table-btn\">Cancel</button>\n                        </form>";
-        cancelCol.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            if(window.confirm("Are you sure you want to delete this request? This cannot be undone.")){
-                this.firstChild.submit();
-            }
-        });
+    if (reimburse.stage == window.managerLevel) {
+        approvalArea.innerHTML = "<button id=\"deny-btn\" type=\"button\" class=\"login-table col-md-3\">Deny</button>"
+                                +"<span class=\"col-md-6\"></span>"
+                                +"<button id=\"approve-btn\" type=\"button\" class=\"login-table col-md-3\">Approve</button>";
+    let denyBtn = document.getElementById("deny-btn");
+    let approveBtn = document.getElementById("approve-btn");
+
+    denyBtn.addEventListener("click", function() {reviewReimbursement("false")});
+
+    approveBtn.addEventListener("click", function() {reviewReimbursement("true")});
     }
 };
+
+function reviewReimbursement(approval) {
+
+    let xhr = new XMLHttpRequest();
+    let url = window.location.pathname+"/"+approval;
+    //sets up ready state handler
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        switch (xhr.readyState) {
+            case 0:
+                console.log("Nothing, initialized not sent");
+                break;
+            case 1:
+                console.log("Connection established");
+                break;
+            case 2:
+                console.log("Request sent");
+                break;
+            case 3:
+                console.log("Waiting response");
+                break;
+            case 4:
+                console.log("Response received");
+                //logic to add attachment to table
+                if (xhr.status === 200) {
+                    var approvalArea = document.getElementById("approval-area");
+                    approvalArea.innerHTML = "Review successfully completed";
+                } else {
+                    var errorArea = document.ge
+                }
+                break;
+        }
+    };
+    //opens up the request
+    xhr.open("PUT", url, true);
+    //sends request
+    xhr.send();
+}
 
 var retrieveAttachments = function() {
 
@@ -152,7 +192,8 @@ var showAttachment = function(attachment) {
     downloadCol.firstChild.addEventListener("click", (event) => {
         let manager = new FileManager();
         manager.retrieveDownload(attachment);
-    });}
+    });
+}
 
 var retrieveInfos = function() {
 

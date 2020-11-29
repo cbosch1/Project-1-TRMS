@@ -2,6 +2,8 @@ import { FileManager } from "./file-manager.js";
 
 window.onload = function () {
 
+    this.fileManager = new FileManager();
+
     retrieveInfoRequest();
 };
 
@@ -119,45 +121,9 @@ var showAttachment = function(attachment) {
     fileCol.innerHTML = attachment.fileType;
     downloadCol.innerHTML = "<button id=\"download-attachment-btn\" type=\"button\" class=\"btn table-btn\">Download</button>";
     downloadCol.firstChild.addEventListener("click", (event) => {
-        retrieveDownload(attachment);
+        let manager = new FileManager();
+        manager.retrieveDownload(attachment);
     });
-}
-
-var retrieveDownload = function(attach) {
-    let xhr = new XMLHttpRequest();
-    let url = "http://localhost:2839/employee/download-attachment/" + attach.attachId;
-    console.log(url);
-    //sets up ready state handler
-    xhr.onreadystatechange = function () {
-        console.log(xhr.readyState);
-        switch (xhr.readyState) {
-            case 0:
-                console.log("Nothing, initialized not sent");
-                break;
-            case 1:
-                console.log("Connection established");
-                break;
-            case 2:
-                console.log("Request sent");
-                break;
-            case 3:
-                console.log("Waiting response");
-                break;
-            case 4:
-                console.log("Response received");
-                //logic to add attachment to table
-                if (xhr.status === 200) {
-                    let attachData = JSON.parse(xhr.responseText);
-                    let manager = new FileManager();
-                    manager.downloadAttach(attachData[0], attachData[1].split(".")[0], "." + attachData[1].split(".")[1]);
-                }
-                break;
-        }
-    };
-    //opens up the request
-    xhr.open("GET", url, true);
-    //sends request
-    xhr.send();
 }
 
 var dateTimeFormat = function(dateTime) {

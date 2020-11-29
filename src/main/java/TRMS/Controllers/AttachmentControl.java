@@ -102,25 +102,27 @@ public class AttachmentControl {
     }
 
     public void downloadAttachment(Context ctx) {
-        try {
-            int attachId = Integer.parseInt(ctx.pathParam("id"));
-            Attachment attach = service.readAttachment(attachId);
-            List<Object> list = new LinkedList<>();
+        if (auth.checkUser(ctx)){
+            try {
+                int attachId = Integer.parseInt(ctx.pathParam("id"));
+                Attachment attach = service.readAttachment(attachId);
+                List<Object> list = new LinkedList<>();
 
-            list.add(attach.getData());
-            list.add(attach.getFileType());
-            ctx.json(list);
-            
-            ctx.status(200);
-            Log.info("Successfully read attachment");
+                list.add(attach.getData());
+                list.add(attach.getFileType());
+                ctx.json(list);
+                
+                ctx.status(200);
+                Log.info("Successfully read attachment");
 
-        } catch (NumberFormatException e){
-            Log.warn("NumberFormatException thrown while downloading attachment: " + e);
-            ctx.status(500);
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while downloading attachment: " + e);
+                ctx.status(500);
 
-        } catch (Exception e) {
-            Log.warn("Exception thrown while downloading attachment: " + e);
-            ctx.status(500);
+            } catch (Exception e) {
+                Log.warn("Exception thrown while downloading attachment: " + e);
+                ctx.status(500);
+            }
         }
     }
 
