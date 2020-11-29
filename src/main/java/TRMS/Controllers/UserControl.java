@@ -78,7 +78,7 @@ public class UserControl {
     public void readUser(Context ctx){
         if (auth.checkUser(ctx)) {
             try {
-                int userId = Integer.parseInt(ctx.formParam("userId"));
+                int userId = auth.getId(ctx);
                 ctx.json(service.readUser(userId));
 
                 ctx.status(200);
