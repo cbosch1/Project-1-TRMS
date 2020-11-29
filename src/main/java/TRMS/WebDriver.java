@@ -85,7 +85,6 @@ public class WebDriver {
 
         //User endpoints
         app.get("download-attachment/:id", ctx -> attachControl.downloadAttachment(ctx));
-        app.get("employee/:id", ctx -> authControl.getEmployee(ctx));
 
         //Employee only endpoints
         app.get(EMPLOYEE_URL, ctx -> { if(authControl.checkUser(ctx)) { eWebControl.getOverview(ctx); } 
