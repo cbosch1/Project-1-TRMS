@@ -32,7 +32,6 @@ public class AuthServiceImpl implements AuthService {
             .sign(algorithmT);
         
         } catch (JWTCreationException e) {
-            e.printStackTrace();
         }
         return token;
     }
@@ -44,10 +43,8 @@ public class AuthServiceImpl implements AuthService {
             verifier.verify(token);
             return true;
         } catch (JWTVerificationException e){
-            e.printStackTrace();
             return false;
         } catch (NullPointerException e) {
-            e.printStackTrace();
             return false;
         }
     }
@@ -60,10 +57,8 @@ public class AuthServiceImpl implements AuthService {
             name = verifier.verify(token).getClaim("name").asString();
             return name;
         } catch (JWTVerificationException e){
-            e.printStackTrace();
             return name;
         } catch (NullPointerException e) {
-            e.printStackTrace();
             return name;
         }
     }
@@ -76,10 +71,8 @@ public class AuthServiceImpl implements AuthService {
             id = verifier.verify(token).getClaim("id").asInt();
             return id;
         } catch (JWTVerificationException e){
-            e.printStackTrace();
             return id;
         } catch (NullPointerException e) {
-            e.printStackTrace();
             return id;
         }
     }
@@ -92,10 +85,8 @@ public class AuthServiceImpl implements AuthService {
             emp = verifier.verify(token).getClaim("emp").asInt();
             return emp;
         } catch (JWTVerificationException e){
-            e.printStackTrace();
             return emp;
         } catch (NullPointerException e) {
-            e.printStackTrace();
             return emp;
         }
     }
@@ -108,10 +99,8 @@ public class AuthServiceImpl implements AuthService {
             priv = verifier.verify(token).getClaim("privilege").asString();
             return priv;
         } catch (JWTVerificationException e){
-            e.printStackTrace();
             return "";
         } catch (NullPointerException e) {
-            e.printStackTrace();
             return "";
         }
     }
