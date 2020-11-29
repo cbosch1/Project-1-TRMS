@@ -11,6 +11,7 @@
                 "name": "Environment Vars",
                 "type": "java",
                 "request": "launch",
+                "mainClass": "",
                 "env": {
                     "TRMS_URL": "jdbc:postgresql://localhost:5432/TRMS?",
                     "TRMS_USERNAME": "postgres",
