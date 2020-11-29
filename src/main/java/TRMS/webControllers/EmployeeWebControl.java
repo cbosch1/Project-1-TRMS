@@ -16,7 +16,7 @@ public class EmployeeWebControl {
 
     private static Logger Log = LogManager.getLogger("Control");
 
-    private static final String HIDDEN_PATH = "src/main/resources/hidden/Employee/";
+    private static final String HIDDEN_PATH = "../resources/main/hidden/Employee/";
 
     private static AuthControl auth;
 
