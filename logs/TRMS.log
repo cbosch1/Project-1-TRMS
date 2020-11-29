@@ -20286,3 +20286,8 @@ org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps yo
 2020-11-29 17:15:46,549 [qtp51152513-32] INFO : Service - Responding to login user...
 2020-11-29 17:15:47,710 [qtp51152513-32] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
 2020-11-29 17:15:47,715 [qtp51152513-32] INFO : Dao - Received request to login user: lana
+2020-11-29 17:39:50,611 [qtp51152513-22] WARN : Control - Token's privilege was not able to be cast: java.lang.IllegalArgumentException: No enum constant TRMS.enums.AuthPriv.
+2020-11-29 17:41:00,110 [qtp51152513-21] INFO : Service - Responding to create user...
+2020-11-29 17:41:01,242 [qtp51152513-21] WARN : Util - Threw SQL Exception while attempting to get connection: org.postgresql.util.PSQLException: FATAL: Invalid Username specified. Please check the Username and retry connection. The Username should be in <username@hostname> format.
+2020-11-29 17:41:01,244 [qtp51152513-21] INFO : Dao - Received request to insert user: miniMe
+2020-11-29 17:41:01,246 [qtp51152513-21] WARN : Control - Exception thrown while creating user: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "conn" is null

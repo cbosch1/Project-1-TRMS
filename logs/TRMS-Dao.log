@@ -7655,3 +7655,4 @@ org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps yo
 2020-11-29 17:13:17,085 [qtp51152513-26] INFO : Received request to login user: lana
 2020-11-29 17:14:17,529 [qtp51152513-32] INFO : Received request to login user: lana
 2020-11-29 17:15:47,715 [qtp51152513-32] INFO : Received request to login user: lana
+2020-11-29 17:41:01,244 [qtp51152513-21] INFO : Received request to insert user: miniMe

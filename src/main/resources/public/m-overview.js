@@ -1,5 +1,5 @@
 window.onload = function () {
-    this.userInfo; 
+    window.userInfo; 
     getMyInfo();
 };
 
@@ -28,8 +28,8 @@ function getMyInfo() {
                 //logic to add requests to table
                 if (xhr.status === 200) {
                     window.userInfo = JSON.parse(xhr.responseText);
-                    this.setViewTables();
-                    this.setWelcome();
+                    setViewTables();
+                    setWelcome();
                 }
                 break;
         }
