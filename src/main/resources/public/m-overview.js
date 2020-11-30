@@ -5,7 +5,7 @@ window.onload = function () {
 
 function getMyInfo() {
     var xhr = new XMLHttpRequest();
-    var url = "http://52.149.146.226/manager/myinfo";
+    var url = "manager/myinfo";
     var user;
     //sets up ready state handler
     xhr.onreadystatechange = function () {
@@ -47,7 +47,7 @@ function setWelcome(user) {
 
 function setViewTables() {
     var xhr = new XMLHttpRequest();
-    var url = "http://52.149.146.226/manager/requests";
+    var url = "manager/requests";
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
