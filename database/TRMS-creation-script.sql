@@ -14,8 +14,6 @@ CREATE TABLE employee
 	dept_head boolean NOT NULL
 );
 
-DROP TABLE userbase;
-
 CREATE TABLE userbase
 (
 	user_id serial PRIMARY KEY,
@@ -25,7 +23,6 @@ CREATE TABLE userbase
 	privilege auth_priv NOT NULL
 );
 
-DROP TABLE benco_processing;
 CREATE TABLE benco_processing
 (
 	emp_id integer NOT NULL,
@@ -33,7 +30,6 @@ CREATE TABLE benco_processing
 	PRIMARY KEY(emp_id, request_id)
 );
 
-DROP TABLE info_request;
 CREATE TABLE info_request
 (
 	info_id serial PRIMARY KEY,
@@ -47,7 +43,6 @@ CREATE TABLE info_request
 	request_time time NOT NULL
 );
 
-DROP TABLE reimbursement;
 CREATE TABLE reimbursement
 (
 	request_id serial PRIMARY KEY,
@@ -60,7 +55,6 @@ CREATE TABLE reimbursement
 	grading_format varchar(100) NOT NULL
 );
 
-DROP TABLE reimburse_status;
 CREATE TABLE reimburse_status
 (
 	request_id integer PRIMARY KEY,
@@ -72,7 +66,6 @@ CREATE TABLE reimburse_status
 	request_time time NOT NULL
 );
 
-DROP TABLE attachment;
 CREATE TABLE attachment
 (
 	attach_id serial PRIMARY KEY,
@@ -131,3 +124,50 @@ CREATE or REPLACE FUNCTION insert_reimbursement(emp_id int4, ev_location varchar
 		RETURN reimburseId;
 	
 	END;$$
+	
+CREATE OR REPLACE FUNCTION P_assign_benco() 
+
+	RETURNS trigger
+	LANGUAGE plpgsql
+	AS $$
+	DECLARE
+		availaBen employee%rowtype;
+		mostAvail integer;
+		availCount integer;
+		runnerUp integer;
+		runCount integer;
+		isFirst boolean = true;
+	BEGIN
+		IF NEW.stage = 'BENCO'::app_stage THEN
+			FOR availaBen IN SELECT emp_id FROM employee WHERE department = 'Benco' AND NOT emp_id IN 
+						(SELECT e.emp_id FROM employee e, reimbursement r, reimburse_status rs 
+							WHERE e.emp_id = r.emp_id AND r.request_id = rs.request_id AND rs.request_id = NEW.request_id) ORDER BY emp_id
+			LOOP
+			
+				IF isFirst THEN
+					mostAvail := availaBen.emp_id;
+					SELECT count(*) INTO availCount FROM benco_processing WHERE emp_id = mostAvail;
+					isFirst := false;
+				END IF;
+			
+				IF NOT isFirst THEN
+					runnerUp := availaBen.emp_id;
+					SELECT count(*) INTO runCount FROM benco_processing WHERE emp_id = runnerUp;
+					
+					IF runCount < availCount THEN
+						availCount := runCount;
+						mostAvail := runnerUp;
+					END IF;
+				END IF;
+			END LOOP;
+			
+			INSERT INTO benco_processing VALUES (mostAvail, NEW.request_id);
+		END IF;
+		RETURN NEW;
+	END;$$
+	
+	
+CREATE TRIGGER T_assign_benco
+	AFTER UPDATE ON reimburse_status
+	FOR EACH ROW
+	EXECUTE PROCEDURE P_assign_benco();

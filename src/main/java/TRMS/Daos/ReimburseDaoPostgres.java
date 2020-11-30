@@ -233,6 +233,40 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
         return result;
     }
 
+    @Override
+    public List<ReimburseRequest> readBencoRequests(int managerId) throws SQLException {
+        List<ReimburseRequest> result = new ArrayList<>(); 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to retrieve reimbursement requests related to employee with id: " + managerId);
+
+            String sql = "SELECT * FROM reimbursement r, reimburse_status rs, benco_processing bp"
+                        +" WHERE r.request_id = rs.request_id AND rs.request_id = bp.request_id AND bp.emp_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, managerId);
+  
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()){
+                ReimburseRequest r = new ReimburseRequest(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4),
+                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs.getString(8), rs.getDouble(10),
+                                    rs.getBoolean(11), AppStatus.valueOf(rs.getString(12)), AppStage.valueOf(rs.getString(13)),
+                                    LocalDateTime.of(rs.getDate(14).toLocalDate(), rs.getTime(15).toLocalTime()));                    
+                result.add(r);
+            }
+
+            Log.info("Request completed, retrieved reimbursement requests " 
+                    +"related to benco manager with id: " +managerId+ ", count: " + result.size());
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in read all reimbursement requests related to benco manager with id: " + managerId, e);
+            throw e;
+        }
+
+        return result;
+    }
+
     /**
      * Returns a specific reimbursement request that has provided request id
      * @param requestId of the request to be returned

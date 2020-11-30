@@ -143,6 +143,21 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
         return result;
     }
 
+    @Override
+    public List<ReimburseRequest> readBencoRequests(int managerId) {
+        Log.info("Responding to read all reimbursement requests for benco manager " +managerId+ "...");
+        List<ReimburseRequest> result = null;
+
+        try {
+            result = reimburseDao.readBencoRequests(managerId);
+            Log.info("Successfully retrieved reimbursement requests");
+
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
+    }
+
     /**
      * Calls the Dao to read a specific reimbursement request
      * that corresponds to the given id.

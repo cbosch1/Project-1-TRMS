@@ -246,7 +246,11 @@ public class ReimburseRequestControl {
         if(auth.checkUser(ctx)) {
             try {
                 managerId = auth.getEmp(ctx);
-                ctx.json(service.readManagedRequests(managerId));
+                    if(auth.getPrivilege(ctx).equals(AuthPriv.BENCO)){
+                        ctx.json(service.readBencoRequests(managerId));
+                    } else {
+                        ctx.json(service.readManagedRequests(managerId));
+                    }
 
                 ctx.status(200);
                 Log.info("Successfully read all reimbursement requests for manager: " + managerId);

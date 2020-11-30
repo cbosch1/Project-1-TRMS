@@ -36,6 +36,8 @@ public interface ReimburseRequestDao {
 
     public List<ReimburseRequest> readManagedRequests(int managerId) throws SQLException;
 
+    public List<ReimburseRequest> readBencoRequests(int managerId) throws SQLException;
+
     /**
      * Returns all reimbursement requests from storage in a list
      * @return List of reimbursement request objects
