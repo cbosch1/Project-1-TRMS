@@ -45,10 +45,10 @@ var retrieveInfoRequest = function() {
     xhr.send();
 }
 
-var retrieveAttachments = function(info) {
+var retrieveAttachments = function(request) {
 
     let xhr = new XMLHttpRequest();
-    let url = "http://52.149.146.226/manager/view-reimbursement/" + info.relatedId + "/attachments";
+    let url = "http://52.149.146.226/manager/view-reimbursement/" + request.requestId + "/attachments";
     console.log(url);
     //sets up ready state handler
     xhr.onreadystatechange = function () {
@@ -130,7 +130,7 @@ var dateTimeFormat = function(dateTime) {
     return (date + " " + time);
 }
 
-var overrideResponse = function(info) {
+var overrideResponse = function(request) {
     let form = document.getElementById("info-response-form");
-    form.action = "http://52.149.146.226/manager/view-reimbursement/" + info.infoId + "/information";
+    form.action = "http://52.149.146.226/manager/view-reimbursement/" + request.requestId + "/information";
 }
