@@ -42,7 +42,14 @@ window.onload = function () {
     xhr.send();
 
     retrieveInfos();
+
+    addRequestLink();
 };
+
+
+function addRequestLink() {
+    
+}
 
 function getMyInfo() {
     var xhr = new XMLHttpRequest();

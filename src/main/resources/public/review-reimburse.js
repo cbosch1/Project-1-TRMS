@@ -42,7 +42,15 @@ window.onload = function () {
     xhr.send();
 
     retrieveInfos();
+
+    addRequestLink();
 };
+
+
+function addRequestLink() {
+    let requestInfo = document.getElementById("request-information-form");
+    requestInfo.action = window.location.pathname + "information";
+}
 
 function getMyInfo() {
     var xhr = new XMLHttpRequest();
