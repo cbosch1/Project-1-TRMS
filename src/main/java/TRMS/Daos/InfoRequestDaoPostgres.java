@@ -15,6 +15,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import TRMS.enums.AuthPriv;
 import TRMS.pojos.InfoRequest;
 import TRMS.util.ConnectionUtil;
 
@@ -66,6 +67,39 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
 
         } catch (SQLException e){
             Log.warn("SQLException thrown in create info request related to reimbursement: " + info.getRelatedId(), e);
+            throw e;
+        }
+
+        return result;
+    }
+
+    @Override
+    public int createInfoRequest(int relatedId, AuthPriv dest, int senderId,  String sender, boolean urgent, 
+                                    String description, LocalDateTime dateTime) throws SQLException {
+        int result; 
+
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to insert info request related to reimbursement: " + relatedId);
+
+            String sql = "SELECT insert_info_for(?,?,?,?,?,?,?,?::auth_priv) RETURNING info_id;";
+            stmt = conn.prepareCall(sql);
+
+            stmt.setInt(1, relatedId);;
+            stmt.setInt(2, senderId);
+            stmt.setString(3, sender);
+            stmt.setBoolean(4, urgent);
+            stmt.setString(5, description);
+            stmt.setDate(6, Date.valueOf(LocalDate.from(dateTime)));
+            stmt.setTime(7, Time.valueOf(LocalTime.from(dateTime)));
+            stmt.setString(8, dest.toString());
+
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            result = rs.getInt(1);
+            Log.info("Request completed, generated info request id: " + result);
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in create info request related to reimbursement: " + relatedId, e);
             throw e;
         }
 

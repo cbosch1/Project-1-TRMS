@@ -3,6 +3,7 @@ package TRMS.services;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import TRMS.enums.AuthPriv;
 import TRMS.pojos.InfoRequest;
 
 /**
@@ -24,6 +25,9 @@ public interface InfoRequestService {
      * @return infoId the generated Id for this object
      */
     public int createInfoRequest(int relatedId, int destinationId, int senderId, String sender, boolean urgent,
+                                    String description, LocalDateTime dateTime);
+
+    public int createInfoRequest(int relatedId, AuthPriv dest, int senderId, String sender, boolean urgent,
                                     String description, LocalDateTime dateTime);
 
     /**

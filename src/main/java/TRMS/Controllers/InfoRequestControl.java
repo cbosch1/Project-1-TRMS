@@ -8,6 +8,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import TRMS.enums.AuthPriv;
 import TRMS.pojos.InfoRequest;
 import TRMS.services.AttachmentService;
 import TRMS.services.InfoRequestService;
@@ -50,30 +51,32 @@ public class InfoRequestControl {
      * <li>dateTime - optional</li></ul>
      */
     public void createInfoRequest(Context ctx){
-        try {
-            int relatedId = Integer.parseInt(ctx.formParam("relatedId"));
-            int destinationId = Integer.parseInt(ctx.formParam("destinationId"));
-            int senderId = Integer.parseInt(ctx.formParam("senderId"));
-            String sender = ctx.formParam("sender");
-            boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
-            String description = ctx.formParam("description");
-            LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
-            
-            int returnId = service.createInfoRequest(relatedId, destinationId, senderId, sender, urgent, description, dateTime);
+        if (auth.checkUser(ctx)) {
+            try {
+                int relatedId = Integer.parseInt(ctx.pathParam("id"));
+                int senderId = auth.getEmp(ctx);
+                String sender = auth.getName(ctx);
+                boolean urgent = Boolean.parseBoolean(ctx.formParam("urgency"));
+                String description = ctx.formParam("description");
+                LocalDateTime dateTime = LocalDateTime.now();
+                AuthPriv dest = AuthPriv.valueOf(ctx.formParam("who"));
+                
+                int returnId = service.createInfoRequest(relatedId, dest, senderId, sender, urgent, description, dateTime);
 
-            ctx.json(returnId);
-            ctx.status(200);
-            Log.info("Successfully inserted info request, id returned: " + returnId);
+                ctx.json(returnId);
+                ctx.status(200);
+                Log.info("Successfully inserted info request, id returned: " + returnId);
 
-        } catch (NumberFormatException e){
-            Log.warn("NumberFormatException thrown while creating info request: " + e);
-            ctx.html("NumberFormatException thrown: " + e);
-            ctx.status(500);
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while creating info request: " + e);
+                ctx.html("NumberFormatException thrown: " + e);
+                ctx.status(500);
 
-        } catch (Exception e) {
-            Log.warn("Exception thrown while creating info request: " + e);
-            ctx.html("Exception thrown: " + e);
-            ctx.status(500);
+            } catch (Exception e) {
+                Log.warn("Exception thrown while creating info request: " + e);
+                ctx.html("Exception thrown: " + e);
+                ctx.status(500);
+            }
         }
     }
 

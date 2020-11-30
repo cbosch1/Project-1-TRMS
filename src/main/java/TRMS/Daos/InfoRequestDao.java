@@ -1,8 +1,10 @@
 package TRMS.daos;
 
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.List;
 
+import TRMS.enums.AuthPriv;
 import TRMS.pojos.InfoRequest;
 
 /**
@@ -18,6 +20,9 @@ public interface InfoRequestDao {
      * @return int - The id of the inserted information request
      */
     public int createInfoRequest(InfoRequest info) throws SQLException;
+
+    public int createInfoRequest(int relatedId, AuthPriv dest, int senderId,  String sender, boolean urgent, String description,
+                                    LocalDateTime dateTime) throws SQLException;
 
     /**
      * Returns a single information request that has provided info Id

@@ -114,6 +114,10 @@ public class ReimburseRequestControl {
                 }
             }
             
+            if (dateTime.compareTo(LocalDateTime.now().plusDays(7)) <= 0){
+                urgent = true;
+            }
+
             int returnId = service.createRequest(employeeId, location, cost, type, description, justification, 
                                                 grading, projected, urgent, status, stage, dateTime);
             

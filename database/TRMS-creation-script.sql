@@ -138,36 +138,70 @@ CREATE OR REPLACE FUNCTION P_assign_benco()
 		runCount integer;
 		isFirst boolean = true;
 	BEGIN
-		IF NEW.stage = 'BENCO'::app_stage THEN
-			FOR availaBen IN SELECT emp_id FROM employee WHERE department = 'Benco' AND NOT emp_id IN 
-						(SELECT e.emp_id FROM employee e, reimbursement r, reimburse_status rs 
-							WHERE e.emp_id = r.emp_id AND r.request_id = rs.request_id AND rs.request_id = NEW.request_id) ORDER BY emp_id
-			LOOP
-			
-				IF isFirst THEN
-					mostAvail := availaBen.emp_id;
-					SELECT count(*) INTO availCount FROM benco_processing WHERE emp_id = mostAvail;
-					isFirst := false;
+		FOR availaBen IN SELECT emp_id FROM employee WHERE department = 'Benco' AND NOT emp_id IN 
+					(SELECT e.emp_id FROM employee e, reimbursement r, reimburse_status rs 
+						WHERE e.emp_id = r.emp_id AND r.request_id = rs.request_id AND rs.request_id = NEW.request_id) ORDER BY emp_id
+		LOOP
+		
+			IF isFirst THEN
+				mostAvail := availaBen.emp_id;
+				SELECT count(*) INTO availCount FROM benco_processing WHERE emp_id = mostAvail;
+				isFirst := false;
+			END IF;
+		
+			IF NOT isFirst THEN
+				runnerUp := availaBen.emp_id;
+				SELECT count(*) INTO runCount FROM benco_processing WHERE emp_id = runnerUp;
+				
+				IF runCount < availCount THEN
+					availCount := runCount;
+					mostAvail := runnerUp;
 				END IF;
-			
-				IF NOT isFirst THEN
-					runnerUp := availaBen.emp_id;
-					SELECT count(*) INTO runCount FROM benco_processing WHERE emp_id = runnerUp;
-					
-					IF runCount < availCount THEN
-						availCount := runCount;
-						mostAvail := runnerUp;
-					END IF;
-				END IF;
-			END LOOP;
-			
-			INSERT INTO benco_processing VALUES (mostAvail, NEW.request_id);
-		END IF;
+			END IF;
+		END LOOP;
+		
+		INSERT INTO benco_processing VALUES (mostAvail, NEW.request_id);
 		RETURN NEW;
 	END;$$
 	
-	
+DROP Trigger T_assign_benco ON reimburse_status;
 CREATE TRIGGER T_assign_benco
-	AFTER UPDATE ON reimburse_status
+	AFTER INSERT ON reimburse_status
 	FOR EACH ROW
 	EXECUTE PROCEDURE P_assign_benco();
+	
+
+CREATE OR REPLACE FUNCTION insert_info_for(request_id integer, sender_id integer, sender varchar(100), 
+											urgent boolean, description text, request_date date, request_time time, destination auth_priv)
+											
+	RETURNS integer
+	LANGUAGE plpgsql 
+	AS $$
+	DECLARE
+		reimburseId integer;
+		dest_id integer;
+	BEGIN 
+		
+		IF (destination = 'EMPLOYEE') THEN
+			SELECT emp_id INTO dest_id FROM reimbursement r WHERE r.request_id = request_id;
+		
+		ELSIF (destination = 'SUPERVISOR') THEN
+			SELECT supervisor INTO dest_id FROM employee e WHERE e.emp_id = (SELECT emp_id FROM reimbursement r2 WHERE r2.request_id = request_id);
+		
+		ELSIF (destination = 'DEPT_HEAD') THEN
+			SELECT emp_id INTO dest_id FROM employee e2 WHERE e2.department = 
+				(SELECT department FROM employee e3 WHERE e3.emp_id = 
+					(SELECT emp_id FROM reimbursement r3 WHERE r3.request_id = request_id)) AND e2.dept_head = true;
+		
+		ELSIF (destination = 'BENCO') THEN
+			SELECT emp_id INTO dest_id FROM benco_processing bp WHERE bp.request_id = request_id;
+		ELSE 
+			dest_id := -1;
+		END IF;
+	
+		INSERT INTO info_request VALUES (default, request_id, dest_id, sender_id, sender, urgent, description, request_date, request_time) returning request_id into reimburseId;
+	
+		RETURN reimburseId;
+	
+	SELECT * FROM info_request;
+	END;$$

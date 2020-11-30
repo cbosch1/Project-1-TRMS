@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import TRMS.daos.InfoRequestDao;
+import TRMS.enums.AuthPriv;
 import TRMS.pojos.InfoRequest;
 
 /**
@@ -47,6 +48,21 @@ public class InfoRequestServiceImpl implements InfoRequestService {
 
         try {
             result = infoDao.createInfoRequest(info);
+            Log.info("Successfully created information request");
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
+    }
+
+    @Override
+    public int createInfoRequest(int relatedId, AuthPriv dest, int senderId,  String sender, boolean urgent, String description,
+            LocalDateTime dateTime) {
+        Log.info("Responding to create information request...");
+        int result = -1;
+
+        try {
+            result = infoDao.createInfoRequest(relatedId, dest, senderId, sender, urgent, description, dateTime);
             Log.info("Successfully created information request");
         } catch (SQLException e) {
             Log.warn("Error thrown in dao call: ", e);
