@@ -48,7 +48,8 @@ window.onload = function () {
 
 
 function addRequestLink() {
-    
+    let requestInfo = document.getElementById("request-information-form");
+    requestInfo.action = window.location.pathname + "information";
 }
 
 function getMyInfo() {
