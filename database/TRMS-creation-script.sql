@@ -170,8 +170,7 @@ CREATE TRIGGER T_assign_benco
 	FOR EACH ROW
 	EXECUTE PROCEDURE P_assign_benco();
 	
-
-CREATE OR REPLACE FUNCTION insert_info_for(request_id integer, sender_id integer, sender varchar(100), 
+CREATE OR REPLACE FUNCTION insert_info_for(req_id integer, sender_id integer, sender varchar(100), 
 											urgent boolean, description text, request_date date, request_time time, destination auth_priv)
 											
 	RETURNS integer
@@ -183,23 +182,23 @@ CREATE OR REPLACE FUNCTION insert_info_for(request_id integer, sender_id integer
 	BEGIN 
 		
 		IF (destination = 'EMPLOYEE') THEN
-			SELECT emp_id INTO dest_id FROM reimbursement r WHERE r.request_id = request_id;
+			SELECT r.emp_id INTO dest_id FROM reimbursement r WHERE r.request_id = req_id;
 		
 		ELSIF (destination = 'SUPERVISOR') THEN
-			SELECT supervisor INTO dest_id FROM employee e WHERE e.emp_id = (SELECT emp_id FROM reimbursement r2 WHERE r2.request_id = request_id);
+			SELECT e.supervisor INTO dest_id FROM employee e WHERE e.emp_id = (SELECT r2.emp_id FROM reimbursement r2 WHERE r2.request_id = req_id);
 		
 		ELSIF (destination = 'DEPT_HEAD') THEN
-			SELECT emp_id INTO dest_id FROM employee e2 WHERE e2.department = 
+			SELECT e2.emp_id INTO dest_id FROM employee e2 WHERE e2.department = 
 				(SELECT department FROM employee e3 WHERE e3.emp_id = 
-					(SELECT emp_id FROM reimbursement r3 WHERE r3.request_id = request_id)) AND e2.dept_head = true;
+					(SELECT emp_id FROM reimbursement r3 WHERE r3.request_id = req_id)) AND e2.dept_head = true;
 		
 		ELSIF (destination = 'BENCO') THEN
-			SELECT emp_id INTO dest_id FROM benco_processing bp WHERE bp.request_id = request_id;
+			SELECT bp.emp_id INTO dest_id FROM benco_processing bp WHERE bp.request_id = req_id;
 		ELSE 
 			dest_id := -1;
 		END IF;
 	
-		INSERT INTO info_request VALUES (default, request_id, dest_id, sender_id, sender, urgent, description, request_date, request_time) returning request_id into reimburseId;
+		INSERT INTO info_request VALUES (default, req_id, dest_id, sender_id, sender, urgent, description, request_date, request_time) returning info_id into reimburseId;
 	
 		RETURN reimburseId;
 	
