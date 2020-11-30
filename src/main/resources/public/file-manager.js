@@ -6,7 +6,7 @@ var FileManager = /** @class */ (function () {
     FileManager.prototype.retrieveDownload = function(attach) {
         var manager = this;
         var xhr = new XMLHttpRequest();
-        var url = "http://52.149.146.226/download-attachment/" + attach.attachId;
+        var url = "http://137.116.126.93/download-attachment/" + attach.attachId;
         //sets up ready state handler
         xhr.onreadystatechange = function () {
             console.log(xhr.readyState);
