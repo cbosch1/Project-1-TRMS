@@ -73,6 +73,22 @@ public class ManagerWebControl {
         }
     }
 
+    public void getRequestInformation(Context ctx){
+        if (!auth.checkUser(ctx)){
+            ctx.redirect("manager-login.html");
+            Log.warn("Access denied due to login verification");
+
+        } else if (!(auth.getPrivilege(ctx).equals(AuthPriv.SUPERVISOR)
+                    || auth.getPrivilege(ctx).equals(AuthPriv.DEPT_HEAD)
+                    || auth.getPrivilege(ctx).equals(AuthPriv.BENCO))) {
+            ctx.redirect("manager-login.html");
+            Log.warn("Access denied due to login privilege");
+        
+        } else {
+            servePage(ctx, "request-information.html");
+        }
+    }
+
     private void servePage(Context ctx, String path){
         try {
             Path fullPath = Paths.get(HIDDEN_PATH + path);

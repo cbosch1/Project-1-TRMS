@@ -82,7 +82,12 @@
           </div>
 
           <div class="col-md-2 column-right" style="text-align: right">
-            <h3>Information Requests</h3>
+
+            <form id="request-information-form" method="POST" action="information">
+              <button id="request-information-btn" type="submit" class="btn-block">Request Information</button>
+            </form>
+
+            <h3>Current Info Requests</h3>
             <hr class="hr-side" />
             <table id="information-requests" class="table login-table">
               <thead>
