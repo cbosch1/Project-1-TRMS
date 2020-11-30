@@ -109,7 +109,7 @@ public class WebDriver {
                                         else ctx.redirect("manager-login.html");});
         app.get(MANAGER_URL+"/portal", ctx -> ctx.redirect("hidden/Manager/manager-overview.html"));
         app.get(MANAGER_URL+"/view-reimbursement/:id", ctx -> mWebControl.getViewReimbursement(ctx));
-        app.post(MANAGER_URL+"/view-reimbursement/:id/information", ctx -> { mWebControl.getRequestInformation(ctx);});    
+        app.get(MANAGER_URL+"/view-reimbursement/:id/information", ctx -> { mWebControl.getRequestInformation(ctx);});    
         app.get(MANAGER_URL+"/view-info/:id", ctx -> mWebControl.getViewInfoRequest(ctx));
 
             //Javascript endpoints
