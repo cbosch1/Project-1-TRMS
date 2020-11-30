@@ -54,7 +54,7 @@ function addRequestLink() {
 
 function getMyInfo() {
     var xhr = new XMLHttpRequest();
-    var url = "http://52.149.146.226/manager/myinfo";
+    var url = "http://137.116.126.93/manager/myinfo";
     var user;
     //sets up ready state handler
     xhr.onreadystatechange = function () {
@@ -174,7 +174,7 @@ function reviewReimbursement(approval) {
                     var approvalArea = document.getElementById("approval-area");
                     approvalArea.innerHTML = "Review successfully completed";
                 } else {
-                    var errorArea = document.ge
+                    approvalArea.innerHTML = "Something went wrong";
                 }
                 break;
         }
