@@ -63,7 +63,7 @@ public class InfoRequestControl {
                 
                 int returnId = service.createInfoRequest(relatedId, dest, senderId, sender, urgent, description, dateTime);
 
-                ctx.redirect("../../");
+                ctx.redirect("../");
                 ctx.status(200);
                 Log.info("Successfully inserted info request, id returned: " + returnId);
 

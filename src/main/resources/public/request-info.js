@@ -34,7 +34,6 @@ var retrieveInfoRequest = function() {
                 if (xhr.status === 200) {
                     let element = JSON.parse(xhr.responseText);
                     retrieveAttachments(element);
-                    overrideResponse(element);
                 }
                 break;
         }
@@ -128,9 +127,4 @@ var dateTimeFormat = function(dateTime) {
     }
 
     return (date + " " + time);
-}
-
-var overrideResponse = function(request) {
-    let form = document.getElementById("info-response-form");
-    form.action = "http://52.149.146.226/manager/view-reimbursement/" + request.requestId + "/information";
 }
