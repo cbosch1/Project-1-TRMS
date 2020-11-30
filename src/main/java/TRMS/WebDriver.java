@@ -105,8 +105,6 @@ public class WebDriver {
         //Manager only endpoints
         app.get(MANAGER_URL, ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }
                                         else ctx.redirect("manager-login.html");});
-        app.get(MANAGER_URL+"/", ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }
-                                        else ctx.redirect("manager-login.html");});
         app.post(MANAGER_URL, ctx -> { if(authControl.login(ctx)) { mWebControl.getOverview(ctx); } 
                                         else ctx.redirect("manager-login.html");});
         app.get(MANAGER_URL+"/portal", ctx -> mWebControl.getOverview(ctx));
@@ -120,7 +118,7 @@ public class WebDriver {
             app.put(MANAGER_URL+"/view-reimbursement/:id/:approval", ctx -> reimburseControl.reviewReimbursement(ctx));
             app.post(MANAGER_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
             app.post(MANAGER_URL+"/view-reimbursement/:id/information", ctx -> { infoControl.createInfoRequest(ctx);
-                                                                                 ctx.redirect("../../");});
+                                                                                 ctx.redirect("");});
             app.post(MANAGER_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoForManager(ctx);});    
             app.post(MANAGER_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
             app.post(MANAGER_URL+"/myinfo", ctx -> { userControl.readUser(ctx);});
