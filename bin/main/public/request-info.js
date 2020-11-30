@@ -11,7 +11,7 @@ window.onload = function () {
 var retrieveInfoRequest = function() {
 
     let xhr = new XMLHttpRequest();
-    let url = window.location.pathname.substring(0, -11);
+    let url = window.location.pathname.slice(0, -11);
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
