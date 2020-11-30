@@ -81,7 +81,7 @@ public class InfoRequestDaoPostgres implements InfoRequestDao {
         try(Connection conn = connUtil.createConnection()) {
             Log.info("Received request to insert info request related to reimbursement: " + relatedId);
 
-            String sql = "SELECT insert_info_for(?,?,?,?,?,?,?,?::auth_priv) RETURNING info_id;";
+            String sql = "SELECT insert_info_for(?,?,?,?,?,?,?,?::auth_priv);";
             stmt = conn.prepareCall(sql);
 
             stmt.setInt(1, relatedId);;
