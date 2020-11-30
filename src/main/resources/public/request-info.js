@@ -11,7 +11,7 @@ window.onload = function () {
 var retrieveInfoRequest = function() {
 
     let xhr = new XMLHttpRequest();
-    let url = window.location.pathname;
+    let url = window.location.pathname.substring(0, -11);
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
@@ -132,5 +132,5 @@ var dateTimeFormat = function(dateTime) {
 
 var overrideResponse = function(info) {
     let form = document.getElementById("info-response-form");
-    form.action = info.infoId + "";
+    form.action = "http://52.149.146.226/manager/view-reimbursement/" + info.infoId + "/information";
 }
