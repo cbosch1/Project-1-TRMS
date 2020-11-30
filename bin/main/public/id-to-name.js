@@ -2,7 +2,7 @@ let IdToName = function (id) {
     let name = "";
 
     var xhr = new XMLHttpRequest();
-    var url = "http://52.149.146.226/employee/" + id;
+    var url = "http://137.116.126.93/employee/" + id;
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
