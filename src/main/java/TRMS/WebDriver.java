@@ -105,6 +105,8 @@ public class WebDriver {
         //Manager only endpoints
         app.get(MANAGER_URL, ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }
                                         else ctx.redirect("manager-login.html");});
+        app.get(MANAGER_URL+"/", ctx -> { if(authControl.checkUser(ctx)) { mWebControl.getOverview(ctx); }
+                                        else ctx.redirect("manager-login.html");});
         app.post(MANAGER_URL, ctx -> { if(authControl.login(ctx)) { mWebControl.getOverview(ctx); } 
                                         else ctx.redirect("manager-login.html");});
         app.get(MANAGER_URL+"/portal", ctx -> mWebControl.getOverview(ctx));
