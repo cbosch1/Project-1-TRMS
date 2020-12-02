@@ -96,8 +96,10 @@ public class WebDriver {
                 
             //Javascript endpoints
             app.post("/my-reimbursements", ctx -> { reimburseControl.readAllRequestsFor(ctx);});
-            app.post(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.readRequest(ctx);});
-            app.put(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.finalGradeRequest(ctx);});
+            app.post(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { if (Boolean.parseBoolean(ctx.formParam("PUT"))) {
+                                                                            reimburseControl.finalGradeRequest(ctx);
+                                                                    } else reimburseControl.readRequest(ctx);});
+            app.post(EMPLOYEE_URL+"/view-reimbursement/:id", ctx -> { });
             app.post(EMPLOYEE_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
             app.post(EMPLOYEE_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoFor(ctx);});    
             app.post(EMPLOYEE_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
