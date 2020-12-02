@@ -480,10 +480,10 @@ public class ReimburseRequestControl {
 
                 String grade = ctx.formParam("grade");
                 boolean isPresentation = Boolean.parseBoolean(ctx.formParam("isPresentation"));
-
-                UploadedFile f = ctx.uploadedFile("file");
+                
                     try {
-                    attachService.createAttachment(requestId, f.getFilename(), f.getContent().readAllBytes());
+                    attachService.createAttachment(requestId, ctx.uploadedFile("file").getFilename(), 
+                                                    ctx.uploadedFile("file").getContent().readAllBytes());
                     }  catch(IOException e) {
                         Log.warn("Exception thrown while creating attachment for request: " + e);
                         ctx.status(500);
