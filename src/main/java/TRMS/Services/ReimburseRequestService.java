@@ -71,6 +71,8 @@ public interface ReimburseRequestService {
 
     public boolean updateRequest(ReimburseRequest request);
 
+    public boolean updateRequestGrade(ReimburseRequest request);
+
     /**
      * Calls the Dao to update a reimbursement request with given id.
      * The input fields should be given the updated information.

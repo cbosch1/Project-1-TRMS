@@ -238,4 +238,23 @@ public class ReimburseServiceImpl implements ReimburseRequestService {
         }
         return result;
     }
+
+    @Override
+    public boolean updateRequestGrade(ReimburseRequest request) {
+
+        Log.info("Responding to update reimbursement request...");
+        boolean result = false;
+        try {
+            result = reimburseDao.updateRequestGrade(request);
+
+            if(result) {
+                Log.info("Successfully updated reimbursement request");
+            } else {
+                Log.warn("Something went wrong, reimbursement request not updated properly");
+            }
+        } catch (SQLException e) {
+            Log.warn("Error thrown in dao call: ", e);
+        }
+        return result;
+    }
 }

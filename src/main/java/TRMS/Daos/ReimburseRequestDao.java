@@ -52,6 +52,8 @@ public interface ReimburseRequestDao {
      */
     public boolean updateRequest(ReimburseRequest request) throws SQLException;
 
+    public boolean updateRequestGrade(ReimburseRequest request) throws SQLException;
+
     /**
      * Remove Reimbursement Request object from storage that has provided id
      * @param requestId The id that relates to the reimbursement request to delete.

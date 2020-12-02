@@ -74,6 +74,22 @@
             <h4>Grading Format:</h4>
             <div id="view-grading"></div>
             <br />
+            <span id="post-event-grade-upload">
+              <form method="PUT">
+                <div class="form-group form-inline">
+                  <label>What was your grade?</label>
+                  <p>If it was a presentation please type "Presentation" and check the box</p>
+                  <input type="text" class="form-control" name="grade" />
+                  <label>Presentation: </label>
+                  <input type="checkbox" class="form-control" name="isPresentation" value="true" />
+                </div>
+                <div class="form-group col-md-13">
+                  <label>Final Grade Files: </label>
+                  <input type="file" class="form-control" name="file" />
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </span>
             <h4>Related Attachments:</h4>
             <table id="view-attachments-table" class="table request-table">
               <thead>
@@ -98,8 +114,7 @@
                   <th>View</th>
                 </tr>
               </thead>
-              <tbody>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </div>

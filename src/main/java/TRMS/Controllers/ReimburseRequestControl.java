@@ -16,6 +16,7 @@ import TRMS.pojos.ReimburseRequest;
 import TRMS.services.AttachmentService;
 import TRMS.services.ReimburseRequestService;
 import io.javalin.http.Context;
+import io.javalin.http.UploadedFile;
 
 /**
  * ReimburseRequestControl implementation, dependency is an object that
@@ -456,6 +457,53 @@ public class ReimburseRequestControl {
                 } else {
                     Log.info("Cannot change status of event's not pending");
                     ctx.redirect("../employee");
+                }
+                
+            } catch (NumberFormatException e){
+                Log.warn("NumberFormatException thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+
+            } catch (Exception e) {
+                Log.warn("Exception thrown while reading reimbursement request: " + e);
+                ctx.status(500);
+            }
+        }
+    }
+
+    public void finalGradeRequest(Context ctx){
+        int requestId = -1;
+
+        if(auth.checkUser(ctx)) {
+            try {
+                requestId = Integer.parseInt(ctx.pathParam("id"));
+                ReimburseRequest request = service.readRequest(requestId);
+
+                String grade = ctx.formParam("grade");
+                boolean isPresentation = Boolean.parseBoolean(ctx.formParam("isPresentation"));
+
+                UploadedFile f = ctx.uploadedFile("file");
+                    try {
+                    attachService.createAttachment(requestId, f.getFilename(), f.getContent().readAllBytes());
+                    }  catch(IOException e) {
+                        Log.warn("Exception thrown while creating attachment for request: " + e);
+                        ctx.status(500);
+                    }  catch(NullPointerException e) { 
+                        Log.info("No attachment uploaded for grade");
+                    }
+
+                if (isPresentation){
+                    request.setGrade("Presentation");
+                } else {
+                    request.setGrade(grade);
+                }
+
+                if (service.updateRequestGrade(request)){
+                    Log.info("Reimbursement request successfully updated");
+                    ctx.status(200);
+                    ctx.redirect("../../../employee");
+                } else {
+                    Log.warn("Service returned false while updating reimbursement request");
+                    ctx.status(500);
                 }
                 
             } catch (NumberFormatException e){

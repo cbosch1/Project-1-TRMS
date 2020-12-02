@@ -93,6 +93,11 @@ var showRequest = function (reimburse) {
             }
         });
     }
+
+    if (reimburse.stage == "EVENT") {
+        uploadArea = document.getElementById("post-event-grade-upload");
+        
+    }
 };
 
 var retrieveAttachments = function() {

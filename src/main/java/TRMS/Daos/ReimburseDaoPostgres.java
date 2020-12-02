@@ -363,5 +363,33 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
 
         return result;
     }
+
+    @Override
+    public boolean updateRequestGrade(ReimburseRequest request) throws SQLException {
+        boolean result = false; 
+        
+        try(Connection conn = connUtil.createConnection()) {
+            Log.info("Received request to update reimbursement request with id: " + request.getRequestId());
+
+            String sql = "UPDATE reimbursement SET grade = ? WHERE request_id = ?;";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setString(1, request.getGrade());
+            stmt.setInt(2, request.getRequestId());
+
+            result = (1 == stmt.executeUpdate());
+
+            if (result){
+                Log.info("Request completed, reimbursement with id: " + request.getRequestId() + " was updated.");
+            } else
+                Log.warn("Request to update reimbursement with id: " + request.getRequestId() +" was NOT completed");
+
+        } catch (SQLException e){
+            Log.warn("SQLException thrown in updating reimbursement request with id: " + request.getRequestId(), e);
+            throw e;
+        }
+
+        return result;
+    }
     
 }

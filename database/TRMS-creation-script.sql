@@ -43,6 +43,7 @@ CREATE TABLE info_request
 	request_time time NOT NULL
 );
 
+DROP TABLE reimbursement CASCADE;
 CREATE TABLE reimbursement
 (
 	request_id serial PRIMARY KEY,
@@ -52,7 +53,8 @@ CREATE TABLE reimbursement
 	ev_type event_type NOT NULL,
 	description text NOT NULL,
 	justification text NOT NULL,
-	grading_format varchar(100) NOT NULL
+	grading_format varchar(100) NOT NULL,
+	grade varchar(100)
 );
 
 CREATE TABLE reimburse_status

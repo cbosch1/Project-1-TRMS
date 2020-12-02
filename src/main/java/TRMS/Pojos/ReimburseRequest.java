@@ -20,6 +20,7 @@ public class ReimburseRequest {
     private String description;
     private String justification;
     private String grading;
+    private String grade;
     private double projected;
     private boolean urgent;
     private AppStatus status;
@@ -57,6 +58,7 @@ public class ReimburseRequest {
         this.status = AppStatus.PENDING;
         this.stage = AppStage.UPLOAD;
         this.dateTime = LocalDateTime.now();
+        this.grade = "";
         }
 
     /**
@@ -90,7 +92,8 @@ public class ReimburseRequest {
 		this.urgent = urgent;
 		this.status = status;
 		this.stage = stage;
-		this.dateTime = dateTime;
+        this.dateTime = dateTime;
+        this.grade = "";
 	}
     
     /**
@@ -316,10 +319,18 @@ public class ReimburseRequest {
 	}
 
     public String getGrading() {
-        return grading;
+        return this.grading;
     }
 
     public void setGrading(String grading) {
         this.grading = grading;
+    }
+
+    public String getGrade(){
+        return this.grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 }
