@@ -96,7 +96,7 @@ var showRequest = function (reimburse) {
 
     if (reimburse.stage == "EVENT" && reimburse.grade == "") {
         let uploadArea = document.getElementById("post-event-grade-upload");
-        uploadArea.innerHTML = ``+
+        uploadArea.innerHTML = ``
         + `<form method="POST" enctype="multipart/form-data">`
         + `<input type="hidden" name="PUT" value="true">`
         + `<div class="form-group form-inline">`
