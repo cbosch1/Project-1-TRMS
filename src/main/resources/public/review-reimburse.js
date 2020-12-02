@@ -54,7 +54,7 @@ function addRequestLink() {
 
 function getMyInfo() {
     var xhr = new XMLHttpRequest();
-    var url = "http://137.116.126.93/manager/myinfo";
+    var url = window.location.origin + "/manager/myinfo";
     var user;
     //sets up ready state handler
     xhr.onreadystatechange = function () {
