@@ -17,7 +17,6 @@ import TRMS.pojos.ReimburseRequest;
 import TRMS.services.AttachmentService;
 import TRMS.services.ReimburseRequestService;
 import io.javalin.http.Context;
-import io.javalin.http.UploadedFile;
 
 /**
  * ReimburseRequestControl implementation, dependency is an object that
@@ -482,10 +481,17 @@ public class ReimburseRequestControl {
                 String grade = ctx.formParam("grade");
                 boolean isPresentation = Boolean.parseBoolean(ctx.formParam("isPresentation"));
 
-                if (Objects.nonNull(ctx.uploadedFile("file"))) {
-                    int attachNum = attachService.createAttachment(requestId, ctx.uploadedFile("file").getFilename(), 
-                                                                    ctx.uploadedFile("file").getContent().readAllBytes());
-                    Log.info("Attachment number: " + attachNum);
+                if (Objects.nonNull(ctx.uploadedFiles("files"))) {
+                    final int lambdaInt = requestId;
+                    ctx.uploadedFiles("files").forEach(f -> {
+                        try {
+                            int attachNum = attachService.createAttachment(lambdaInt, f.getFilename(),
+                                                                        f.getContent().readAllBytes());
+                            Log.info("Attachment number: " + attachNum);
+                        } catch (IOException e) {
+                            Log.warn("IOException while parsing files");
+                        }
+                    });
                 } else {
                     Log.info("No attachment included");
                 }
