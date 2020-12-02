@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Objects;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -480,17 +481,15 @@ public class ReimburseRequestControl {
 
                 String grade = ctx.formParam("grade");
                 boolean isPresentation = Boolean.parseBoolean(ctx.formParam("isPresentation"));
-                
-                    try {
-                    attachService.createAttachment(requestId, ctx.uploadedFile("file").getFilename(), 
-                                                    ctx.uploadedFile("file").getContent().readAllBytes());
-                    }  catch(IOException e) {
-                        Log.warn("Exception thrown while creating attachment for request: " + e);
-                        ctx.status(500);
-                    }  catch(NullPointerException e) { 
-                        Log.info("No attachment uploaded for grade");
-                    }
 
+                if (Objects.nonNull(ctx.uploadedFile("file"))) {
+                    int attachNum = attachService.createAttachment(requestId, ctx.uploadedFile("file").getFilename(), 
+                                                                    ctx.uploadedFile("file").getContent().readAllBytes());
+                    Log.info("Attachment number: " + attachNum);
+                } else {
+                    Log.info("No attachment included");
+                }
+                
                 if (isPresentation){
                     request.setGrade("Presentation");
                 } else {
