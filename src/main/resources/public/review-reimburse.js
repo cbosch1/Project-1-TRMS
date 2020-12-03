@@ -96,48 +96,6 @@ function setWelcome(user) {
     //welcome.innerHTML = "Welcome " + window.userInfo.username;
 }
 
-function sendUpdate(payout) {
-    var xhr = new XMLHttpRequest();
-    // cSpell:ignore myinfo
-    var url = window.location.pathname + "/projected";
-    var user;
-    //sets up ready state handler
-    xhr.onreadystatechange = function () {
-        console.log(xhr.readyState);
-        switch (xhr.readyState) {
-            case 0:
-                console.log("Nothing, initialized not sent");
-                break;
-            case 1:
-                console.log("Connection established");
-                break;
-            case 2:
-                console.log("Request sent");
-                break;
-            case 3:
-                console.log("Waiting response");
-                break;
-            case 4:
-                console.log("Response received");
-                //logic to add requests to table
-                if (xhr.status === 200) {
-                    let errorArea = document.getElementById("log-error");
-                    errorArea.style = "visibility: hidden";
-                    errorArea.innerHTML = "";
-                } else {
-                    let errorArea = document.getElementById("log-error");
-                    errorArea.style = "visibility: visible";
-                    errorArea.innerHTML = "There was an issue updating the payout"
-                }
-                break;
-        }
-    };
-    //opens up the request
-    xhr.open("POST", url, true);
-    //sends request
-    xhr.send();
-}
-
 var showRequest = function (reimburse) {
     var table = document.getElementById("review-request-table");
     var tableRow = document.createElement("tr");
@@ -204,14 +162,10 @@ var showRequest = function (reimburse) {
         approveBtn.addEventListener("click", function() {reviewReimbursement("true")});
 
         if (isBenco) {
-            bencoArea.innerHTML = `<div style="text-align: right;">`
+            bencoArea.innerHTML = `<form method="POST" action="${window.location.pathname}/projected" style="text-align: right;">`
                                 + `<label>New Projected Payout: </label>`
-                                + `<input type="number" name="projected" id="projected" />`
-                                + `<button type="submit" id="updateBtn">Update</button></div>`;
-            let updateBtn = document.getElementById("updateBtn");
-            let projInput = document.getElementById("projected");
-
-            updateBtn.addEventListener("click", function() {sendUpdate(projInput.value)} );
+                                + `<input type="number" name="projected" id="projected/>`
+                                + `<button type="submit">Update</button></form>`;
         }
     }
 };
