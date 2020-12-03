@@ -300,7 +300,7 @@ public class ReimburseRequestControl {
      */
     public void updateRequestProjected(Context ctx){
         try {
-            int requestId = Integer.parseInt(ctx.pathParam("requestId"));
+            int requestId = Integer.parseInt(ctx.pathParam("id"));
             Double projected = Double.parseDouble(ctx.formParam("projected"));
 
             ReimburseRequest request = service.readRequest(requestId);
