@@ -54,6 +54,7 @@ function addRequestLink() {
 
 function getMyInfo() {
     var xhr = new XMLHttpRequest();
+    // cSpell:ignore myinfo
     var url = window.location.origin + "/manager/myinfo";
     var user;
     //sets up ready state handler

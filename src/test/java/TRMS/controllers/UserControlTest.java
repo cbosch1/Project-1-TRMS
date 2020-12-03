@@ -40,6 +40,7 @@ public class UserControlTest {
 	@Before
 	public void setUp() throws Exception {
 		controlToTest = new UserControl(mockService, null);
+		// cSpell:ignore hashedpassword
 		user = new User(2010, "username", "hashedpassword123467890", 0, AuthPriv.EMPLOYEE);
 
 		when(mockCtx.formParam("userId")).thenReturn(Integer.toString(user.getUserId()));
