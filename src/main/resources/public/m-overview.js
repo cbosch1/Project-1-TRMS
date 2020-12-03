@@ -70,10 +70,27 @@ function setViewTables() {
                 if (xhr.status === 200) {
                     let reimburseList = JSON.parse(xhr.responseText);
                     reimburseList.forEach(function (element) {
-                        if(element.stage == window.userInfo.privilege){
-                            this.addRowNeed(element);
+                        
+                        if(element.stage == "END"){
+                            if(window.userInfo.privilege == "SUPERVISOR"){
+                                if(element.grading = "Presentation") {
+                                    this.addRowNeed(element);
+                                } else {
+                                    this.addRowOther(element);
+                                }
+                            } else if (window.userInfo.privilege == "BENCO"){
+                                if(element.grading = "Presentation") {
+                                    this.addRowOther(element);
+                                } else {
+                                    this.addRowNeed(element);
+                                }
+                            }
                         } else {
-                            this.addRowOther(element);
+                            if(element.stage == window.userInfo.privilege){
+                                this.addRowNeed(element);
+                            } else {
+                                this.addRowOther(element);
+                            }
                         }
                     });
                 }
