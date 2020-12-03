@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,21 +53,19 @@ public class ReimburseControlTest {
 		controlToTest = new ReimburseRequestControl(mockService, mockAuth, mockAttach);
 		// cSpell:ignore Knowhere
 		request = new ReimburseRequest(2010, 0, "Knowhere", 1000.00, EventType.OTHER, "Instruction on the retrieval of artifacts", 
-										"The boss said for me to take this", "pass/fail", 1000.00, true, AppStatus.PENDING, AppStage.EVENT,
+										"The boss said for me to take this", "pass/fail", 300.00, false, AppStatus.PENDING, AppStage.SUPERVISOR,
 										LocalDateTime.of(2301, 8, 12, 4, 0));
 
-		when(mockCtx.formParam("requestId")).thenReturn(Integer.toString(request.getRequestId()));
-		when(mockCtx.formParam("employeeId")).thenReturn(Integer.toString(request.getEmployeeId()));
-		when(mockCtx.formParam("location")).thenReturn(request.getLocation());
-		when(mockCtx.formParam("cost")).thenReturn(Double.toString(request.getCost()));
-		when(mockCtx.formParam("type")).thenReturn(request.getType().toString());
+		when(mockAuth.getEmp(mockCtx)).thenReturn(request.getEmployeeId());
+		when(mockCtx.formParam("event-location")).thenReturn(request.getLocation());
+		when(mockCtx.formParam("event-cost")).thenReturn(Double.toString(request.getCost()));
+		when(mockCtx.formParam("event-type")).thenReturn(request.getType().toString());
 		when(mockCtx.formParam("description")).thenReturn(request.getDescription());
 		when(mockCtx.formParam("justification")).thenReturn(request.getJustification());
-		when(mockCtx.formParam("projected")).thenReturn(Double.toString(request.getProjected()));
-		when(mockCtx.formParam("urgent")).thenReturn(Boolean.toString(request.isUrgent()));
-		when(mockCtx.formParam("status")).thenReturn(request.getStatus().toString());
-		when(mockCtx.formParam("stage")).thenReturn(request.getStage().toString());
-		when(mockCtx.formParam("dateTime")).thenReturn(request.getDateTime().toString());
+		when(mockCtx.formParam("grading")).thenReturn(request.getGrading());
+		when(mockCtx.formParam("urgency")).thenReturn("false");
+		when(mockCtx.formParam("event-date")).thenReturn(LocalDate.from(request.getDateTime()).toString());
+		when(mockCtx.formParam("event-time")).thenReturn(LocalTime.from(request.getDateTime()).toString());
 
 	}
 
@@ -78,17 +78,16 @@ public class ReimburseControlTest {
 		try {
 			controlToTest.createRequest(mockCtx);
 
-			verify(mockCtx).formParam("employeeId");
-			verify(mockCtx).formParam("location");
-			verify(mockCtx).formParam("cost");
-			verify(mockCtx).formParam("type");
+			verify(mockAuth).getEmp(mockCtx);
+			verify(mockCtx).formParam("event-location");
+			verify(mockCtx).formParam("event-cost");
+			verify(mockCtx).formParam("event-type");
 			verify(mockCtx).formParam("description");
 			verify(mockCtx).formParam("justification");
-			verify(mockCtx).formParam("projected");
-			verify(mockCtx).formParam("urgent");
-			verify(mockCtx).formParam("status");
-			verify(mockCtx).formParam("stage");
-			verify(mockCtx).formParam("dateTime");
+			verify(mockCtx).formParam("grading");
+			verify(mockCtx).formParam("urgency");
+			verify(mockCtx).formParam("event-date");
+			verify(mockCtx).formParam("event-time");
 
 			verify(mockService).createRequest(request.getEmployeeId(), request.getLocation(), request.getCost(), request.getType(),
 											request.getDescription(), request.getJustification(), request.getGrading(), request.getProjected(), 
