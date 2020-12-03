@@ -94,24 +94,31 @@ var showRequest = function (reimburse) {
         });
     }
 
-    if (reimburse.stage == "EVENT" && reimburse.grade == "") {
-        let uploadArea = document.getElementById("post-event-grade-upload");
-        uploadArea.innerHTML = ``
-        + `<form method="POST" enctype="multipart/form-data">`
-        + `<input type="hidden" name="PUT" value="true">`
-        + `<div class="form-group form-inline">`
-        +   `<label>What was your grade?</label>`
-        +   `<p>If it was a presentation please type "Presentation" and check the box</p>`
-        +   `<input type="text" class="form-control" name="grade" />`
-        +   `<label>Presentation: </label>`
-        +   `<input type="checkbox" class="form-control" name="isPresentation" value="true" />`
-        + `</div>`
-        + `<div class="form-group col-md-13">`
-        +   `<label>Final Grade Files: </label>`
-        +   `<input type="file" name="files" multiple/>`
-        +   `<button type="submit">Submit</button>`
-        + `</div>`
-        + `</form>`;
+    if (reimburse.stage == "EVENT") {
+        if (reimburse.grade == "") {
+            let uploadArea = document.getElementById("post-event-grade-upload");
+            uploadArea.innerHTML = ``
+            + `<form method="POST" enctype="multipart/form-data">`
+            + `<input type="hidden" name="PUT" value="true">`
+            + `<div class="form-group form-inline">`
+            +   `<label>What was your grade?</label>`
+            +   `<p>If it was a presentation please type "Presentation" and check the box</p>`
+            +   `<input type="text" class="form-control" name="grade" />`
+            +   `<label>Presentation: </label>`
+            +   `<input type="checkbox" class="form-control" name="isPresentation" value="true" />`
+            + `</div>`
+            + `<div class="form-group col-md-13">`
+            +   `<label>Final Grade Files: </label>`
+            +   `<input type="file" name="files" multiple/>`
+            +   `<button type="submit">Submit</button>`
+            + `</div></form> <br />`;
+        } else {
+            let gradeArea = document.getElementById("post-event-grade-upload");
+            uploadArea.innerHTML = ``
+            + `<h4>Final Grade: </h4>`
+            + `<p>The final grade reported was: ${reimburse.grade}</p>`
+            + `<br />`;
+        }
     }
 };
 
