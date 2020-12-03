@@ -123,8 +123,8 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
         try(Connection conn = connUtil.createConnection()) {
             Log.info("Received request to retrieve all reimbursement requests");
 
-            String sql = "SELECT * FROM reimbursement;";
-            String sql2 = "SELECT * FROM reimburse_status;";
+            String sql = "SELECT * FROM reimbursement ORDER BY request_id;";
+            String sql2 = "SELECT * FROM reimburse_status ORDER BY request_id;";
             stmt = conn.prepareStatement(sql);
             stmt2 = conn.prepareStatement(sql2);
 
@@ -164,9 +164,9 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
         try(Connection conn = connUtil.createConnection()) {
             Log.info("Received request to retrieve reimbursement requests related to employee with id: " + employeeId);
 
-            String sql = "SELECT * FROM reimbursement WHERE emp_id = ?;";
+            String sql = "SELECT * FROM reimbursement WHERE emp_id = ? ORDER BY request_id;";
             String sql2 = "SELECT * FROM reimburse_status WHERE request_id IN "
-                            + "(SELECT request_id FROM reimbursement WHERE emp_id = ?);";
+                            + "(SELECT request_id FROM reimbursement WHERE emp_id = ?) ORDER BY request_id;";
             stmt = conn.prepareStatement(sql);
             stmt2 = conn.prepareStatement(sql2);
 
@@ -285,8 +285,8 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
 
             conn.setAutoCommit(false);
 
-            String sql = "SELECT * FROM reimbursement WHERE request_id = ?;";
-            String sql2 = "SELECT * FROM reimburse_status WHERE request_id = ?;";
+            String sql = "SELECT * FROM reimbursement WHERE request_id = ? ORDER BY request_id;";
+            String sql2 = "SELECT * FROM reimburse_status WHERE request_id = ? ORDER BY request_id;";
             stmt = conn.prepareStatement(sql);
             stmt2 = conn.prepareStatement(sql2);
             stmt.setInt(1, requestId);
