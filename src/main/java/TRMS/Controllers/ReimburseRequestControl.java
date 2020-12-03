@@ -308,6 +308,8 @@ public class ReimburseRequestControl {
             
             if (service.updateRequest(request)){
                 Log.info("Reimbursement request successfully updated");
+                ctx.status(200);
+                ctx.redirect("../../../manager");
             } else {
                 Log.warn("Service returned false while updating reimbursement request");
                 ctx.status(500);
