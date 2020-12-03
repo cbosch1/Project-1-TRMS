@@ -95,7 +95,7 @@ var showRequest = function (reimburse) {
     }
 
     if (reimburse.stage == "EVENT") {
-        if (reimburse.grade == "") {
+        if (reimburse.grade == null) {
             let gradeArea = document.getElementById("post-event-grade");
             gradeArea.innerHTML = ``
             + `<form method="POST" enctype="multipart/form-data">`
