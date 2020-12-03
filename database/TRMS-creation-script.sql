@@ -134,6 +134,41 @@ CREATE or REPLACE FUNCTION insert_reimbursement(employee_id int4, ev_location va
 		RETURN reimburseId;
 	
 	END;$$
+
+CREATE OR REPLACE FUNCTION insert_info_for(req_id integer, sender_id integer, sender varchar(100), 
+											urgent boolean, description text, request_date date, request_time time, destination auth_priv)
+											
+	RETURNS integer
+	LANGUAGE plpgsql 
+	AS $$
+	DECLARE
+		reimburseId integer;
+		dest_id integer;
+	BEGIN 
+		
+		IF (destination = 'EMPLOYEE') THEN
+			SELECT r.emp_id INTO dest_id FROM reimbursement r WHERE r.request_id = req_id;
+		
+		ELSIF (destination = 'SUPERVISOR') THEN
+			SELECT e.supervisor INTO dest_id FROM employee e WHERE e.emp_id = (SELECT r2.emp_id FROM reimbursement r2 WHERE r2.request_id = req_id);
+		
+		ELSIF (destination = 'DEPT_HEAD') THEN
+			SELECT e2.emp_id INTO dest_id FROM employee e2 WHERE e2.department = 
+				(SELECT department FROM employee e3 WHERE e3.emp_id = 
+					(SELECT emp_id FROM reimbursement r3 WHERE r3.request_id = req_id)) AND e2.dept_head = true;
+		
+		ELSIF (destination = 'BENCO') THEN
+			SELECT bp.emp_id INTO dest_id FROM benco_processing bp WHERE bp.request_id = req_id;
+		ELSE 
+			dest_id := -1;
+		END IF;
+	
+		INSERT INTO info_request VALUES (default, req_id, dest_id, sender_id, sender, urgent, description, request_date, request_time) returning info_id into reimburseId;
+	
+		RETURN reimburseId;
+	
+	SELECT * FROM info_request;
+	END;$$
 	
 CREATE OR REPLACE FUNCTION P_assign_benco() 
 
@@ -179,38 +214,35 @@ CREATE TRIGGER T_assign_benco
 	AFTER INSERT ON reimburse_status
 	FOR EACH ROW
 	EXECUTE PROCEDURE P_assign_benco();
-	
-CREATE OR REPLACE FUNCTION insert_info_for(req_id integer, sender_id integer, sender varchar(100), 
-											urgent boolean, description text, request_date date, request_time time, destination auth_priv)
-											
-	RETURNS integer
-	LANGUAGE plpgsql 
+
+CREATE OR REPLACE FUNCTION P_assign_endstage() 
+
+	RETURNS trigger
+	LANGUAGE plpgsql
 	AS $$
 	DECLARE
-		reimburseId integer;
-		dest_id integer;
-	BEGIN 
+		currentStage app_stage;
+	BEGIN
+		IF NOT new.grade IS NULL THEN
 		
-		IF (destination = 'EMPLOYEE') THEN
-			SELECT r.emp_id INTO dest_id FROM reimbursement r WHERE r.request_id = req_id;
+			SELECT rs.stage INTO currentStage FROM reimburse_status rs WHERE rs.request_id = new.request_id;
+			
+			IF currentStage = 'EVENT' THEN
+				UPDATE reimburse_status SET stage = 'END'::app_stage WHERE request_id = new.request_id;
+			
+			ELSE
+				-- Do nothing, debugging -> RAISE 'currentStage evaluate to not equal EVENT, returned: %', currentStage;
+			END IF;
 		
-		ELSIF (destination = 'SUPERVISOR') THEN
-			SELECT e.supervisor INTO dest_id FROM employee e WHERE e.emp_id = (SELECT r2.emp_id FROM reimbursement r2 WHERE r2.request_id = req_id);
+		ELSE
+			-- Do nothing, debugging -> RAISE 'new.grade evaluated to null';
 		
-		ELSIF (destination = 'DEPT_HEAD') THEN
-			SELECT e2.emp_id INTO dest_id FROM employee e2 WHERE e2.department = 
-				(SELECT department FROM employee e3 WHERE e3.emp_id = 
-					(SELECT emp_id FROM reimbursement r3 WHERE r3.request_id = req_id)) AND e2.dept_head = true;
-		
-		ELSIF (destination = 'BENCO') THEN
-			SELECT bp.emp_id INTO dest_id FROM benco_processing bp WHERE bp.request_id = req_id;
-		ELSE 
-			dest_id := -1;
 		END IF;
-	
-		INSERT INTO info_request VALUES (default, req_id, dest_id, sender_id, sender, urgent, description, request_date, request_time) returning info_id into reimburseId;
-	
-		RETURN reimburseId;
-	
-	SELECT * FROM info_request;
+		RETURN NEW;
 	END;$$
+	
+DROP Trigger T_assign_endstage ON reimbursement;
+CREATE TRIGGER T_assign_endstage
+	AFTER UPDATE ON reimbursement
+	FOR EACH ROW
+	EXECUTE PROCEDURE P_assign_endstage();
