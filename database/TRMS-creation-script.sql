@@ -107,9 +107,9 @@ ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE userbase ADD CONSTRAINT FK_employee
 FOREIGN KEY (emp_id) REFERENCES employee (emp_id) 
 ON DELETE CASCADE ON UPDATE CASCADE;
-
+												
 -- Procedure used by JDBC to insert into the reimbursement and reimburse_status list properly
-CREATE or REPLACE FUNCTION insert_reimbursement(emp_id int4, ev_location varchar(100), ev_cost double precision, ev_type varchar(10), 
+CREATE or REPLACE FUNCTION insert_reimbursement(employee_id int4, ev_location varchar(100), ev_cost double precision, ev_type varchar(10), 
 												description text, justification text, grading varchar(100), projected_award double precision, urgent boolean,
 												status varchar(10), stage varchar(10), request_date varchar(15), request_time varchar(15))
 	RETURNS integer
@@ -120,14 +120,14 @@ CREATE or REPLACE FUNCTION insert_reimbursement(emp_id int4, ev_location varchar
 		directDept boolean;
 	BEGIN 
 		
-		SELECT e.dept_head INTO directDept FROM employee e WHERE e.emp_id = (SELECT e2.supervisor FROM employee e2 WHERE e2.emp_id = 9);
+		SELECT e.dept_head INTO directDept FROM employee e WHERE e.emp_id = (SELECT e2.supervisor FROM employee e2 WHERE e2.emp_id = employee_id);
 
 		IF directDept THEN
-			INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
-			INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, 'DEPT_HEAD'::app_stage, request_date::date, request_time::time);		
+			INSERT INTO reimbursement VALUES (default, employee_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
+			INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, 'DEPT_HEAD', request_date::date, request_time::time);		
 		
 		ELSE
-			INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
+			INSERT INTO reimbursement VALUES (default, employee_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
 			INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, stage::app_stage, request_date::date, request_time::time);
 		
 		END IF;
