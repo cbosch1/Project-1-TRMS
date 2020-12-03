@@ -3,7 +3,9 @@ import { FileManager } from "./file-manager.js";
 window.onload = function () {
     window.userInfo; 
     getMyInfo();
+};
 
+function windowLoad() {
     let xhr = new XMLHttpRequest();
     let url = window.location.pathname;
     //sets up ready state handler
@@ -44,8 +46,7 @@ window.onload = function () {
     retrieveInfos();
 
     addRequestLink();
-};
-
+}
 
 function addRequestLink() {
     let requestInfo = document.getElementById("request-information-form");
@@ -79,6 +80,7 @@ function getMyInfo() {
                 if (xhr.status === 200) {
                     window.userInfo = JSON.parse(xhr.responseText);
                     setWelcome();
+                    windowLoad();
                 }
                 break;
         }
@@ -160,7 +162,7 @@ var showRequest = function (reimburse) {
         approveBtn.addEventListener("click", function() {reviewReimbursement("true")});
 
         if (isBenco) {
-            bencoArea.innerHTML = `<form method="POST" action="/projected" style="text-align: right;">`
+            bencoArea.innerHTML = `<form method="POST" action="${window.location.pathname}/projected" style="text-align: right;">`
                                 + `<label>New Projected Payout: </label>`
                                 + `<input type="number" name="projected" />`
                                 + `<button type="submit">Update</button></form>`;
