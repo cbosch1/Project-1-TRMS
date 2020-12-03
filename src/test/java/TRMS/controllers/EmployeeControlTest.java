@@ -41,7 +41,7 @@ public class EmployeeControlTest {
 
 	@Before
 	public void setUp() throws Exception {
-		controlToTest = new EmployeeControl(mockService);
+		controlToTest = new EmployeeControl(mockService, null);
 		employee = new Employee(2010, "Billy Bob", "Highest of the Hunters", 1, "Hunting", false);
 
 		when(mockCtx.formParam("employeeId")).thenReturn(Integer.toString(employee.getEmployeeId()));
