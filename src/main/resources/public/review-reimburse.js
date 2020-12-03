@@ -164,7 +164,7 @@ var showRequest = function (reimburse) {
         if (isBenco) {
             bencoArea.innerHTML = `<form method="POST" action="${window.location.pathname}/projected" style="text-align: right;">`
                                 + `<label>New Projected Payout: </label>`
-                                + `<input type="number" name="projected" id="projected/>`
+                                + `<input type="number" name="projected" id="projected" />`
                                 + `<button type="submit">Update</button></form>`;
         }
     }
