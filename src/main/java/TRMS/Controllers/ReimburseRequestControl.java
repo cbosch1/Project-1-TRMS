@@ -124,7 +124,7 @@ public class ReimburseRequestControl {
             
             ctx.uploadedFiles("files").forEach(f -> {
                 try {
-                    if(f.getFilename() != "") {
+                    if(!f.getFilename().equals("")) {
                         attachService.createAttachment(returnId, f.getFilename(), f.getContent().readAllBytes());
                     }
                 }  catch(IOException e) {
