@@ -218,9 +218,9 @@ public class ReimburseDaoPostgres implements ReimburseRequestDao {
 
             while (rs.next()){
                 ReimburseRequest r = new ReimburseRequest(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getDouble(4),
-                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs.getString(8), rs.getDouble(10),
-                                    rs.getBoolean(11), AppStatus.valueOf(rs.getString(12)), AppStage.valueOf(rs.getString(13)),
-                                    LocalDateTime.of(rs.getDate(14).toLocalDate(), rs.getTime(15).toLocalTime()));
+                                    EventType.valueOf(rs.getString(5)), rs.getString(6), rs.getString(7), rs.getString(8), rs.getDouble(11),
+                                    rs.getBoolean(12), AppStatus.valueOf(rs.getString(13)), AppStage.valueOf(rs.getString(14)),
+                                    LocalDateTime.of(rs.getDate(15).toLocalDate(), rs.getTime(16).toLocalTime()));
                 r.setGrade(rs.getString(9));                    
                 result.add(r);
             }
