@@ -124,7 +124,9 @@ public class ReimburseRequestControl {
             
             ctx.uploadedFiles("files").forEach(f -> {
                 try {
-                attachService.createAttachment(returnId, f.getFilename(), f.getContent().readAllBytes());
+                    if(f.getFilename() != "") {
+                        attachService.createAttachment(returnId, f.getFilename(), f.getContent().readAllBytes());
+                    }
                 }  catch(IOException e) {
                     Log.warn("Exception thrown while creating info request: " + e);
                     ctx.status(500);
@@ -485,9 +487,11 @@ public class ReimburseRequestControl {
                     final int lambdaInt = requestId;
                     ctx.uploadedFiles("files").forEach(f -> {
                         try {
-                            int attachNum = attachService.createAttachment(lambdaInt, f.getFilename(),
-                                                                        f.getContent().readAllBytes());
-                            Log.info("Attachment number: " + attachNum);
+                            if(f.getFilename() != "") {
+                                int attachNum = attachService.createAttachment(lambdaInt, f.getFilename(),
+                                                                                f.getContent().readAllBytes());
+                                Log.info("Attachment number: " + attachNum);
+                            }
                         } catch (IOException e) {
                             Log.warn("IOException while parsing files");
                         }
