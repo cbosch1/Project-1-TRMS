@@ -93,7 +93,7 @@ function getMyInfo() {
 
 function setWelcome(user) {
     let welcome = document.getElementById("welcome");
-    welcome.innerHTML = "Welcome " + window.userInfo.username;
+    //welcome.innerHTML = "Welcome " + window.userInfo.username;
 }
 
 var showRequest = function (reimburse) {
