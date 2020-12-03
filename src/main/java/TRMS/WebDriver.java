@@ -118,6 +118,7 @@ public class WebDriver {
             app.get(MANAGER_URL+"/requests", ctx -> { reimburseControl.readManagedRequests(ctx); });
             app.post(MANAGER_URL+"/view-reimbursement/:id", ctx -> { reimburseControl.readManagedRequest(ctx);});
             app.put(MANAGER_URL+"/view-reimbursement/:id/:approval", ctx -> reimburseControl.reviewReimbursement(ctx));
+            app.post(MANAGER_URL+"/view-reimbursement/:id/projected", ctx -> reimburseControl.updateRequestProjected(ctx));
             app.post(MANAGER_URL+"/view-reimbursement/:id/attachments", ctx -> { attachControl.readRelatedReferences(ctx);});
             app.post(MANAGER_URL+"/view-reimbursement/:id/information", ctx -> { infoControl.createInfoRequest(ctx);
                                                                                 mWebControl.getRequestInformation(ctx);});

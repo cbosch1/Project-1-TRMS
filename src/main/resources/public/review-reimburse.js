@@ -110,7 +110,9 @@ var showRequest = function (reimburse) {
     var justificationArea = document.getElementById("view-justification");
     var gradingArea = document.getElementById("view-grading");
     var approvalArea = document.getElementById("approval-area");
+    var bencoArea = document.getElementById("benco-cost-mod");
     let approvalNeeded = false;
+    let isBenco = (window.userInfo.privilege == 'BENCO');
 
     if (reimburse.stage == window.userInfo.privilege) approvalNeeded = true;
 
@@ -119,7 +121,7 @@ var showRequest = function (reimburse) {
         && reimburse.grading == 'Presentation') approvalNeeded = true;
 
     if (reimburse.stage == 'END' 
-        && window.userInfo.privilege == 'BENCO'
+        && isBenco
         && reimburse.grading != 'Presentation') approvalNeeded = true;
 
     tableRow.appendChild(idCol);
@@ -150,12 +152,19 @@ var showRequest = function (reimburse) {
         approvalArea.innerHTML = "<button id=\"deny-btn\" type=\"button\" class=\"login-table col-md-3\">Deny</button>"
                                 +"<span class=\"col-md-6\"></span>"
                                 +"<button id=\"approve-btn\" type=\"button\" class=\"login-table col-md-3\">Approve</button>";
-    let denyBtn = document.getElementById("deny-btn");
-    let approveBtn = document.getElementById("approve-btn");
 
-    denyBtn.addEventListener("click", function() {reviewReimbursement("false")});
+        let denyBtn = document.getElementById("deny-btn");
+        let approveBtn = document.getElementById("approve-btn");
 
-    approveBtn.addEventListener("click", function() {reviewReimbursement("true")});
+        denyBtn.addEventListener("click", function() {reviewReimbursement("false")});
+        approveBtn.addEventListener("click", function() {reviewReimbursement("true")});
+
+        if (isBenco) {
+            bencoArea.innerHTML = `<form method="POST" action="/projected" style="text-align: right;">`
+                                + `<label>New Projected Payout: </label>`
+                                + `<input type="number" name="projected" />`
+                                + `<button type="submit">Update</button></form>`;
+        }
     }
 };
 

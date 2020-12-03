@@ -296,36 +296,17 @@ public class ReimburseRequestControl {
      * 
      * @param ctx A context object that has at least the following formParams:
      * <ul><li>requestId</li>
-     * <li>employeeId</li>
-     * <li>location</li>
-     * <li>cost</li>
-     * <li>type</li>
-     * <li>description</li>
-     * <li>justification</li>
-     * <li>projected - optional</li>
-     * <li>urgent - optional</li>
-     * <li>status - optional</li>
-     * <li>stage - optional</li>
-     * <li>dateTime - optional</li></ul>
+     * <li>projected</li>
      */
-    public void updateRequest(Context ctx){
+    public void updateRequestProjected(Context ctx){
         try {
-            int requestId = Integer.parseInt(ctx.formParam("requestId"));
-            int employeeId = Integer.parseInt(ctx.formParam("employeeId"));
-            String location = ctx.formParam("location");
-            Double cost = Double.parseDouble(ctx.formParam("cost"));
-            EventType type = EventType.valueOf(ctx.formParam("type"));
-            String description = ctx.formParam("description");
-            String justification = ctx.formParam("justification");
-            String grading = ctx.formParam("grading");
+            int requestId = Integer.parseInt(ctx.pathParam("requestId"));
             Double projected = Double.parseDouble(ctx.formParam("projected"));
-            boolean urgent = Boolean.parseBoolean(ctx.formParam("urgent"));
-            AppStatus status = AppStatus.valueOf(ctx.formParam("status"));
-            AppStage stage = AppStage.valueOf(ctx.formParam("stage"));
-            LocalDateTime dateTime = LocalDateTime.parse(ctx.formParam("dateTime"));
+
+            ReimburseRequest request = service.readRequest(requestId);
+            request.setProjected(projected);
             
-            if (service.updateRequest(requestId, employeeId, location, cost, type, description, justification, 
-                                        grading, projected, urgent, status, stage, dateTime)){
+            if (service.updateRequest(request)){
                 Log.info("Reimbursement request successfully updated");
                 ctx.status(200);
             } else {
@@ -345,6 +326,16 @@ public class ReimburseRequestControl {
         }
     }
 
+    /**
+     * For updating an already existing reimbursement request within the system.
+     * Parses form parameters out of the context object and sets the request
+     * to the next step in it's sequence. Then this method will apply the correct 
+     * status code to the ctx
+     * 
+     * @param ctx A context object that has at least the following formParams:
+     * <ul><li>requestId</li>
+     * <li>approved</li>
+     */
     public void reviewReimbursement(Context ctx){
         try {
             int requestId = Integer.parseInt(ctx.pathParam("id"));
