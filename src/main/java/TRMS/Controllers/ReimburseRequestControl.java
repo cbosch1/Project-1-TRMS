@@ -487,7 +487,7 @@ public class ReimburseRequestControl {
                     final int lambdaInt = requestId;
                     ctx.uploadedFiles("files").forEach(f -> {
                         try {
-                            if(f.getFilename() != "") {
+                            if(!f.getFilename().equals("")) {
                                 int attachNum = attachService.createAttachment(lambdaInt, f.getFilename(),
                                                                                 f.getContent().readAllBytes());
                                 Log.info("Attachment number: " + attachNum);
