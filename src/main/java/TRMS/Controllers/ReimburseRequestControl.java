@@ -356,6 +356,7 @@ public class ReimburseRequestControl {
                 switch (request.getStage()){
 
                     case END:
+                        request.setStatus(AppStatus.APPROVED);
                         break;
 
                     case EVENT:
