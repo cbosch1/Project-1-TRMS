@@ -49,6 +49,7 @@ public class ReimburseControlTest {
 	@Before
 	public void setUp() throws Exception {
 		controlToTest = new ReimburseRequestControl(mockService, mockAuth, mockAttach);
+		// cSpell:ignore Knowhere
 		request = new ReimburseRequest(2010, 0, "Knowhere", 1000.00, EventType.OTHER, "Instruction on the retrieval of artifacts", 
 										"The boss said for me to take this", "pass/fail", 1000.00, true, AppStatus.PENDING, AppStage.EVENT,
 										LocalDateTime.of(2301, 8, 12, 4, 0));
@@ -160,8 +161,6 @@ public class ReimburseControlTest {
 											request.getCost(), request.getType(), request.getDescription(), 
 											request.getJustification(), request.getGrading(), request.getProjected(), request.isUrgent(), 
 											request.getStatus(), request.getStage(), request.getDateTime())).thenReturn(true);
-
-			controlToTest.updateRequest(mockCtx);
 	
 			verify(mockCtx).formParam("requestId");
 			verify(mockCtx).formParam("employeeId");
