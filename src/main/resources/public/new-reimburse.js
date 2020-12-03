@@ -1,7 +1,7 @@
 window.onload = function () {
 
     var xhr = new XMLHttpRequest();
-    var url = window.location.pathname;
+    var url = window.location.origin + "/my-reimbursements";
     //sets up ready state handler
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
