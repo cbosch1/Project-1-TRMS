@@ -96,8 +96,8 @@ var showRequest = function (reimburse) {
 
     if (reimburse.stage == "EVENT") {
         if (reimburse.grade == "") {
-            let uploadArea = document.getElementById("post-event-grade-upload");
-            uploadArea.innerHTML = ``
+            let gradeArea = document.getElementById("post-event-grade");
+            gradeArea.innerHTML = ``
             + `<form method="POST" enctype="multipart/form-data">`
             + `<input type="hidden" name="PUT" value="true">`
             + `<div class="form-group form-inline">`
@@ -113,8 +113,8 @@ var showRequest = function (reimburse) {
             +   `<button type="submit">Submit</button>`
             + `</div></form> <br />`;
         } else {
-            let gradeArea = document.getElementById("post-event-grade-upload");
-            uploadArea.innerHTML = ``
+            let gradeArea = document.getElementById("post-event-grade");
+            gradeArea.innerHTML = ``
             + `<h4>Final Grade: </h4>`
             + `<p>The final grade reported was: ${reimburse.grade}</p>`
             + `<br />`;
