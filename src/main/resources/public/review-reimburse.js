@@ -109,6 +109,17 @@ var showRequest = function (reimburse) {
     var justificationArea = document.getElementById("view-justification");
     var gradingArea = document.getElementById("view-grading");
     var approvalArea = document.getElementById("approval-area");
+    let approvalNeeded = false;
+
+    if (reimburse.stage == window.userInfo.privilege) approvalNeeded = true;
+
+    if (reimburse.stage == 'END' 
+        && window.userInfo.privilege == 'SUPERVISOR'
+        && reimburse.grading == 'Presentation') approvalNeeded = true;
+
+    if (reimburse.stage == 'END' 
+        && window.userInfo.privilege == 'BENCO'
+        && reimburse.grading != 'Presentation') approvalNeeded = true;
 
     tableRow.appendChild(idCol);
     tableRow.appendChild(dateCol);
@@ -134,7 +145,7 @@ var showRequest = function (reimburse) {
     justificationArea.innerHTML = reimburse.justification;
     gradingArea.innerHTML = reimburse.grading;
 
-    if (reimburse.stage == window.userInfo.privilege) {
+    if (approvalNeeded) {
         approvalArea.innerHTML = "<button id=\"deny-btn\" type=\"button\" class=\"login-table col-md-3\">Deny</button>"
                                 +"<span class=\"col-md-6\"></span>"
                                 +"<button id=\"approve-btn\" type=\"button\" class=\"login-table col-md-3\">Approve</button>";
