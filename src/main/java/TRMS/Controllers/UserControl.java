@@ -171,11 +171,8 @@ public class UserControl {
     }
 
     public void forgotPassword(Context ctx){
-        //TODO: Implement forgotPassword id="requester-email"
     }
 
     public void forgotUsername(Context ctx){
-        //TODO: Implement forgotUsername id="requester-email"
-
     }
 }
