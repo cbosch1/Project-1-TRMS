@@ -123,6 +123,7 @@ public class WebDriver {
                                                                                 mWebControl.getRequestInformation(ctx);});
             app.post(MANAGER_URL+"/view-reimbursement/:id/infos", ctx -> { infoControl.readAllInfoForManager(ctx);});    
             app.post(MANAGER_URL+"/view-info/:id", ctx -> { infoControl.readInfoRequest(ctx);});
+            // cSpell:ignore myinfo
             app.post(MANAGER_URL+"/myinfo", ctx -> { userControl.readUser(ctx);});
 
         //Admin only endpoints
