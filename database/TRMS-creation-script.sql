@@ -117,12 +117,20 @@ CREATE or REPLACE FUNCTION insert_reimbursement(emp_id int4, ev_location varchar
 	AS $$
 	DECLARE
 		reimburseId integer;
+		directDept boolean;
 	BEGIN 
 		
-		INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
+		SELECT e.dept_head INTO directDept FROM employee e WHERE e.emp_id = (SELECT e2.supervisor FROM employee e2 WHERE e2.emp_id = 9);
+
+		IF directDept THEN
+			INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
+			INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, 'DEPT_HEAD'::app_stage, request_date::date, request_time::time);		
 		
-		INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, stage::app_stage, request_date::date, request_time::time);
-	
+		ELSE
+			INSERT INTO reimbursement VALUES (default, emp_id, ev_location, ev_cost, ev_type::event_type, description, justification, grading) returning request_id into reimburseId;
+			INSERT INTO reimburse_status VALUES (reimburseId, projected_award, urgent, status::app_status, stage::app_stage, request_date::date, request_time::time);
+		
+		END IF;
 		RETURN reimburseId;
 	
 	END;$$
