@@ -50,7 +50,7 @@ public class EmployeeDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		employeeDao = new EmployeeDaoPostgres(connUtil);
-		employee = new Employee(2010, "Billy Bob", "Highest of the Hunters", 1, "Hunting", false);
+		employee = new Employee(-1, "Billy Bob", "Highest of the Hunters", 1, "Hunting", false);
 	}
 
 	@After

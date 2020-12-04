@@ -55,7 +55,7 @@ public class InfoRequestDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		infoDao = new InfoRequestDaoPostgres(connUtil);
-		info = new InfoRequest(2010, 1, 0, 1, "Big Boss", true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
+		info = new InfoRequest(2010, 0, 0, 0, "Big Boss", true, "Urgent request for information needs approval!", LocalDateTime.of(2020, 11, 15, 15, 30));
 	}
 
 	@After
@@ -70,7 +70,7 @@ public class InfoRequestDaoTest {
 	public void createInfoRequestTest() {
 		try {
 			//Prep statement with proper SQL
-			String sql = "INSERT INTO info_request VALUES (Default,?,?,?,?,?,?) RETURNING info_id;";
+			String sql = "INSERT INTO info_request VALUES (Default,?,?,?,?,?,?,?,?) RETURNING info_id;";
 
 			//Call helper method to initialize mockito spy with test-unique sql
 			try {
@@ -86,10 +86,12 @@ public class InfoRequestDaoTest {
 
 				verify(spy).setInt(1, info.getRelatedId());
 				verify(spy).setInt(2, info.getDestinationId());
-				verify(spy).setBoolean(3, info.getUrgent());
-				verify(spy).setString(4, info.getDescription());
-				verify(spy).setDate(5, Date.valueOf(LocalDate.from(info.getDateTime())));
-				verify(spy).setTime(6, Time.valueOf(LocalTime.from(info.getDateTime())));
+				verify(spy).setInt(3, info.getSenderId());
+				verify(spy).setString(4, info.getSender());
+				verify(spy).setBoolean(5, info.getUrgent());
+				verify(spy).setString(6, info.getDescription());
+				verify(spy).setDate(7, Date.valueOf(LocalDate.from(info.getDateTime())));
+				verify(spy).setTime(8, Time.valueOf(LocalTime.from(info.getDateTime())));
 
 				verify(spy).executeQuery();
 
@@ -115,17 +117,19 @@ public class InfoRequestDaoTest {
 	public void readInfoRequestTest() {
 		try {
 			//Insert test info request to be read
-			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?,?,?);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
 				testStmt.setInt(1, info.getInfoId());
 				testStmt.setInt(2, info.getRelatedId());
 				testStmt.setInt(3, info.getDestinationId());
-				testStmt.setBoolean(4, info.getUrgent());
-				testStmt.setString(5, info.getDescription());
-				testStmt.setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
-				testStmt.setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+				testStmt.setInt(4, info.getSenderId());
+				testStmt.setString(5, info.getSender());
+				testStmt.setBoolean(6, info.getUrgent());
+				testStmt.setString(7, info.getDescription());
+				testStmt.setDate(8, Date.valueOf(LocalDate.from(info.getDateTime())));
+				testStmt.setTime(9, Time.valueOf(LocalTime.from(info.getDateTime())));
 				assertTrue("Error in inserting info request", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
@@ -199,11 +203,11 @@ public class InfoRequestDaoTest {
 			//Verify result set returned proper data
 			assertTrue("Returned set is not the same size as expected", numRelated == related.size());
 			for (InfoRequest i : related){
-				assertFalse("info_id returned 0 for InfoRequest with description: "+ i.getDescription(), 0 == i.getInfoId());
-				assertFalse("related_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getRelatedId());
-				assertFalse("destination_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getDestinationId());
+				assertFalse("info_id returned 0 for InfoRequest with description: "+ i.getDescription(), -1 == i.getInfoId());
+				assertFalse("related_id returned 0 for InfoRequest: "+ i.getInfoId(), -1 == i.getRelatedId());
+				assertFalse("destination_id returned 0 for InfoRequest: "+ i.getInfoId(), -1 == i.getDestinationId());
 				assertFalse("description returned empty for InfoRequest: "+ i.getInfoId(), "".equals(i.getDescription()));
-				assertFalse("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
+				assertTrue("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
 			}
 		} catch (SQLException e) {
 			fail("SQLException thrown while reading related InfoRequests");
@@ -244,9 +248,9 @@ public class InfoRequestDaoTest {
 			//Verify result set returned proper data
 			assertTrue("Returned set is not the same size as expected", numInfo == infos.size());
 			for (InfoRequest i : infos){
-				assertFalse("info_id returned 0 for InfoRequest with description: "+ i.getDescription(), 0 == i.getInfoId());
-				assertFalse("related_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getRelatedId());
-				assertFalse("destination_id returned 0 for InfoRequest: "+ i.getInfoId(), 0 == i.getDestinationId());
+				assertFalse("info_id returned 0 for InfoRequest with description: "+ i.getDescription(), -1 == i.getInfoId());
+				assertFalse("related_id returned 0 for InfoRequest: "+ i.getInfoId(), -1 == i.getRelatedId());
+				assertFalse("destination_id returned 0 for InfoRequest: "+ i.getInfoId(), -1 == i.getDestinationId());
 				assertFalse("description returned empty for InfoRequest: "+ i.getInfoId(), "".equals(i.getDescription()));
 				assertTrue("dateTime wrong type for InfoRequest: "+ i.getInfoId(), LocalDateTime.class.equals(i.getDateTime().getClass()));
 			}
@@ -259,17 +263,19 @@ public class InfoRequestDaoTest {
 	public void updateInfoRequestTest() {
 		try {
 			//Insert test info request to be updated
-			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?,?,?);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
 				testStmt.setInt(1, info.getInfoId());
 				testStmt.setInt(2, info.getRelatedId());
 				testStmt.setInt(3, info.getDestinationId());
-				testStmt.setBoolean(4, info.getUrgent());
-				testStmt.setString(5, info.getDescription());
-				testStmt.setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
-				testStmt.setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+				testStmt.setInt(4, info.getSenderId());
+				testStmt.setString(5, info.getSender());
+				testStmt.setBoolean(6, info.getUrgent());
+				testStmt.setString(7, info.getDescription());
+				testStmt.setDate(8, Date.valueOf(LocalDate.from(info.getDateTime())));
+				testStmt.setTime(9, Time.valueOf(LocalTime.from(info.getDateTime())));
 				assertTrue("Error in inserting info request", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);
@@ -331,17 +337,19 @@ public class InfoRequestDaoTest {
 	public void deleteInfoRequestTest() {
 		try {
 			//Insert test info request to be deleted
-			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?);";
+			String sql = "INSERT INTO info_request VALUES (?,?,?,?,?,?,?,?,?);";
 			
 			try {
 				testStmt = realConn.prepareStatement(sql);
 				testStmt.setInt(1, info.getInfoId());
 				testStmt.setInt(2, info.getRelatedId());
 				testStmt.setInt(3, info.getDestinationId());
-				testStmt.setBoolean(4, info.getUrgent());
-				testStmt.setString(5, info.getDescription());
-				testStmt.setDate(6, Date.valueOf(LocalDate.from(info.getDateTime())));
-				testStmt.setTime(7, Time.valueOf(LocalTime.from(info.getDateTime())));
+				testStmt.setInt(4, info.getSenderId());
+				testStmt.setString(5, info.getSender());
+				testStmt.setBoolean(6, info.getUrgent());
+				testStmt.setString(7, info.getDescription());
+				testStmt.setDate(8, Date.valueOf(LocalDate.from(info.getDateTime())));
+				testStmt.setTime(9, Time.valueOf(LocalTime.from(info.getDateTime())));
 				assertTrue("Error in inserting info request", 1 == testStmt.executeUpdate());
 			} catch (SQLException e){
 				fail("SQLException thrown in test setup: " + e);

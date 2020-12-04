@@ -51,7 +51,10 @@ public class AttachmentDaoTest {
 	public void setUp() throws Exception {
 		realConn = new ConnectionUtil().createConnection();
 		attachDao = new AttachmentDaoPostgres(connUtil);
-		attach = new Attachment(2010, 1, "College Transcripts");
+		attach = new Attachment(-1, 0, "College Transcripts");
+		byte b[] = new byte[1];
+		b[0] = 26;
+		attach.setData(b);
 	}
 
 	@After
@@ -270,7 +273,9 @@ public class AttachmentDaoTest {
 			//Test updateAttachment
 			try {
 				//Modify values
-				attach.setRequestId(7);
+				byte c[] = new byte[1];
+				c[0] = 0;
+				attach.setData(c);
 				attach.setFileType("This file sux");
 
 				assertTrue("Dao returned false", attachDao.updateAttachment(attach));

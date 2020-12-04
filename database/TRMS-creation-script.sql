@@ -43,7 +43,6 @@ CREATE TABLE info_request
 	request_time time NOT NULL
 );
 
-DROP TABLE reimbursement CASCADE;
 CREATE TABLE reimbursement
 (
 	request_id serial PRIMARY KEY,
@@ -209,7 +208,7 @@ CREATE OR REPLACE FUNCTION P_assign_benco()
 		RETURN NEW;
 	END;$$
 	
-DROP Trigger T_assign_benco ON reimburse_status;
+--DROP Trigger T_assign_benco ON reimburse_status;
 CREATE TRIGGER T_assign_benco
 	AFTER INSERT ON reimburse_status
 	FOR EACH ROW
@@ -241,7 +240,7 @@ CREATE OR REPLACE FUNCTION P_assign_endstage()
 		RETURN NEW;
 	END;$$
 	
-DROP Trigger T_assign_endstage ON reimbursement;
+--DROP Trigger T_assign_endstage ON reimbursement;
 CREATE TRIGGER T_assign_endstage
 	AFTER UPDATE ON reimbursement
 	FOR EACH ROW

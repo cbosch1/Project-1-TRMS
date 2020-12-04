@@ -81,7 +81,7 @@ public class ReimburseDaoTest {
 	public void createRequestTest() {
 		try {
 			//Call helper method to initialize mockito spy with test-unique sql
-			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 			try {
 				initCallableHelper(sql);
 			} catch (SQLException e) {
@@ -100,12 +100,13 @@ public class ReimburseDaoTest {
 				verify(callSpy).setString(4, reimburse.getType().toString());
 				verify(callSpy).setString(5, reimburse.getDescription());
 				verify(callSpy).setString(6, reimburse.getJustification());
-				verify(callSpy).setDouble(7, reimburse.getProjected());
-				verify(callSpy).setBoolean(8, reimburse.isUrgent());
-				verify(callSpy).setString(9, reimburse.getStatus().toString());
-				verify(callSpy).setString(10, reimburse.getStage().toString());
-				verify(callSpy).setDate(11, Date.valueOf(LocalDate.from(reimburse.getDateTime())));
-				verify(callSpy).setTime(12, Time.valueOf(LocalTime.from(reimburse.getDateTime())));
+				verify(callSpy).setString(7, reimburse.getGrading());
+				verify(callSpy).setDouble(8, reimburse.getProjected());
+				verify(callSpy).setBoolean(9, reimburse.isUrgent());
+				verify(callSpy).setString(10, reimburse.getStatus().toString());
+				verify(callSpy).setString(11, reimburse.getStage().toString());
+				verify(callSpy).setDate(12, Date.valueOf(LocalDate.from(reimburse.getDateTime())));
+				verify(callSpy).setTime(13, Time.valueOf(LocalTime.from(reimburse.getDateTime())));
 				verify(callSpy).executeQuery();
 
 				assertTrue("returned id does not match expected", returnId > 0);
@@ -130,7 +131,7 @@ public class ReimburseDaoTest {
 	public void readRequestTest() {
 		try {
 			// Insert test reimbursement request to be read
-			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 			try {
 				testStmt = realConn.prepareCall(sql);
 				testStmt.setInt(1, reimburse.getEmployeeId());
@@ -139,12 +140,13 @@ public class ReimburseDaoTest {
 				testStmt.setString(4, reimburse.getType().toString());
 				testStmt.setString(5, reimburse.getDescription());
 				testStmt.setString(6, reimburse.getJustification());
-				testStmt.setDouble(7, reimburse.getProjected());
-				testStmt.setBoolean(8, reimburse.isUrgent());
-				testStmt.setString(9, reimburse.getStatus().toString());
-				testStmt.setString(10, reimburse.getStage().toString());
-				testStmt.setString(11, LocalDate.from(reimburse.getDateTime()).toString());
-				testStmt.setString(12, LocalTime.from(reimburse.getDateTime()).toString());
+				testStmt.setString(7, reimburse.getGrading());
+				testStmt.setDouble(8, reimburse.getProjected());
+				testStmt.setBoolean(9, reimburse.isUrgent());
+				testStmt.setString(10, reimburse.getStatus().toString());
+				testStmt.setString(11, reimburse.getStage().toString());
+				testStmt.setDate(12, Date.valueOf(LocalDate.from(reimburse.getDateTime())));
+				testStmt.setTime(13, Time.valueOf(LocalTime.from(reimburse.getDateTime())));
 				assertTrue("Error in inserting test request", testStmt.execute());
 				ResultSet rs = testStmt.getResultSet();
 				rs.next();
@@ -154,8 +156,8 @@ public class ReimburseDaoTest {
 				fail("SQLException thrown in test setup: " + e);
 			}
 
-			sql = "SELECT * FROM reimbursement WHERE request_id = ?;";
-			String sql2 = "SELECT * FROM reimburse_status WHERE request_id = ?;";
+			sql = "SELECT * FROM reimbursement WHERE request_id = ? ORDER BY request_id;";
+			String sql2 = "SELECT * FROM reimburse_status WHERE request_id = ? ORDER BY request_id;";
 
 			// Call helper method to initialize mockito spy with test-unique sql
 			try {
@@ -227,9 +229,9 @@ public class ReimburseDaoTest {
 		}
 
 		// Call helper method to initialize mockito spy with test-unique sql
-		sql = "SELECT * FROM reimbursement WHERE emp_id = ?;";
+		sql = "SELECT * FROM reimbursement WHERE emp_id = ? ORDER BY request_id;";
 		sql2 = "SELECT * FROM reimburse_status WHERE request_id IN "
-				+ "(SELECT request_id FROM reimbursement WHERE emp_id = ?);";
+				+ "(SELECT request_id FROM reimbursement WHERE emp_id = ?) ORDER BY request_id;";
 		try {
 			initStmtHelper(sql);
 			initStmtHelper2(sql2);
@@ -252,11 +254,11 @@ public class ReimburseDaoTest {
 			assertTrue("Returned set is not the same size as expected", numRequests == requests.size());
 			for (ReimburseRequest r : requests) {
 				assertFalse("request_id returned 0 for request with description: " + r.getDescription(),
-						r.getRequestId() == 0);
-				assertFalse("emp_id returned 0 for request #" + r.getRequestId(), r.getEmployeeId() == 0);
+						r.getRequestId() == -1);
+				assertFalse("emp_id returned 0 for request #" + r.getRequestId(), r.getEmployeeId() == -1);
 				assertFalse("event location returned blank for request #" + r.getRequestId(),
 						"".equals(r.getLocation()));
-				assertFalse("event cost returned 0 for request #" + r.getRequestId(), r.getCost() == 0);
+				assertFalse("event cost returned 0 for request #" + r.getRequestId(), r.getCost() == -1);
 				assertFalse("event type returned blank for request #" + r.getRequestId(),
 						"".equals(r.getType().toString()));
 				assertFalse("description returned blank for request #" + r.getRequestId(),
@@ -267,7 +269,7 @@ public class ReimburseDaoTest {
 						"".equals(r.getStatus().toString()));
 				assertFalse("request stage returned blank for request #" + r.getRequestId(),
 						"".equals(r.getStage().toString()));
-				assertFalse("dateTime wrong type for request #" + r.getRequestId(),
+				assertTrue("dateTime wrong type for request #" + r.getRequestId(),
 						LocalDateTime.class.equals(r.getDateTime().getClass()));
 			}
 		} catch (SQLException e) {
@@ -302,8 +304,8 @@ public class ReimburseDaoTest {
 		}
 
 		// Call helper method to initialize mockito spy with test-unique sql
-		sql = "SELECT * FROM reimbursement;";
-		sql2 = "SELECT * FROM reimburse_status;";
+		sql = "SELECT * FROM reimbursement ORDER BY request_id;";
+		sql2 = "SELECT * FROM reimburse_status ORDER BY request_id;";
 		try {
 			initStmtHelper(sql);
 			initStmtHelper2(sql2);
@@ -323,11 +325,11 @@ public class ReimburseDaoTest {
 			assertTrue("Returned set is not the same size as expected", numRequests == requests.size());
 			for (ReimburseRequest r : requests) {
 				assertFalse("request_id returned 0 for request with description: " + r.getDescription(),
-						r.getRequestId() == 0);
-				assertFalse("emp_id returned 0 for request #" + r.getRequestId(), r.getEmployeeId() == 0);
+						r.getRequestId() == -1);
+				assertFalse("emp_id returned 0 for request #" + r.getRequestId(), r.getEmployeeId() == -1);
 				assertFalse("event location returned blank for request #" + r.getRequestId(),
 						"".equals(r.getLocation()));
-				assertFalse("event cost returned 0 for request #" + r.getRequestId(), r.getCost() == 0);
+				assertFalse("event cost returned 0 for request #" + r.getRequestId(), r.getCost() == -1);
 				assertFalse("event type returned blank for request #" + r.getRequestId(),
 						"".equals(r.getType().toString()));
 				assertFalse("description returned blank for request #" + r.getRequestId(),
@@ -350,7 +352,7 @@ public class ReimburseDaoTest {
 	public void updateRequestTest() {
 		try {
 			// Insert test reimbursement request to be updated
-			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 			try {
 				testStmt = realConn.prepareCall(sql);
 				testStmt.setInt(1, reimburse.getEmployeeId());
@@ -359,12 +361,13 @@ public class ReimburseDaoTest {
 				testStmt.setString(4, reimburse.getType().toString());
 				testStmt.setString(5, reimburse.getDescription());
 				testStmt.setString(6, reimburse.getJustification());
-				testStmt.setDouble(7, reimburse.getProjected());
-				testStmt.setBoolean(8, reimburse.isUrgent());
-				testStmt.setString(9, reimburse.getStatus().toString());
-				testStmt.setString(10, reimburse.getStage().toString());
-				testStmt.setString(11, LocalDate.from(reimburse.getDateTime()).toString());
-				testStmt.setString(12, LocalTime.from(reimburse.getDateTime()).toString());
+				testStmt.setString(7, reimburse.getGrading());
+				testStmt.setDouble(8, reimburse.getProjected());
+				testStmt.setBoolean(9, reimburse.isUrgent());
+				testStmt.setString(10, reimburse.getStatus().toString());
+				testStmt.setString(11, reimburse.getStage().toString());
+				testStmt.setDate(12, Date.valueOf(LocalDate.from(reimburse.getDateTime())));
+				testStmt.setTime(13, Time.valueOf(LocalTime.from(reimburse.getDateTime())));
 				ResultSet rs = testStmt.executeQuery();
 				rs.next();
 				reimburse.setRequestId(rs.getInt(1));
@@ -375,7 +378,7 @@ public class ReimburseDaoTest {
 
 			// Call helper method to initialize mockito spy with test-unique sql
 			sql = "UPDATE reimbursement SET ev_location = ?, ev_cost = ?, ev_type = ?::event_type, description = ?, "
-					+ "justification = ? WHERE request_id = ?;";
+					+ "justification = ?, grading_format = ? WHERE request_id = ?;";
 			String sql2 = "UPDATE reimburse_status SET projected_award = ?, urgent = ?, status = ?::app_status, stage = ?::app_stage, "
 					+ "request_date = ?, request_time = ? WHERE request_id = ?;";
 			try {
@@ -409,7 +412,8 @@ public class ReimburseDaoTest {
 				verify(spy).setString(3, reimburse.getType().toString());
 				verify(spy).setString(4, reimburse.getDescription());
 				verify(spy).setString(5, reimburse.getJustification());
-				verify(spy).setInt(6, reimburse.getRequestId());
+				verify(spy).setString(6, reimburse.getGrading());
+				verify(spy).setInt(7, reimburse.getRequestId());
 				verify(spy).executeUpdate();
 
 				// Verify properly updated reimburse_status table
@@ -465,7 +469,7 @@ public class ReimburseDaoTest {
 	public void deleteRequestTest() {
 		try {
 			// Insert test reimbursement request to be deleted
-			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+			String sql = "SELECT insert_reimbursement(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 			try {
 				testStmt = realConn.prepareCall(sql);
 				testStmt.setInt(1, reimburse.getEmployeeId());
@@ -474,12 +478,13 @@ public class ReimburseDaoTest {
 				testStmt.setString(4, reimburse.getType().toString());
 				testStmt.setString(5, reimburse.getDescription());
 				testStmt.setString(6, reimburse.getJustification());
-				testStmt.setDouble(7, reimburse.getProjected());
-				testStmt.setBoolean(8, reimburse.isUrgent());
-				testStmt.setString(9, reimburse.getStatus().toString());
-				testStmt.setString(10, reimburse.getStage().toString());
-				testStmt.setString(11, LocalDate.from(reimburse.getDateTime()).toString());
-				testStmt.setString(12, LocalTime.from(reimburse.getDateTime()).toString());
+				testStmt.setString(7, reimburse.getGrading());
+				testStmt.setDouble(8, reimburse.getProjected());
+				testStmt.setBoolean(9, reimburse.isUrgent());
+				testStmt.setString(10, reimburse.getStatus().toString());
+				testStmt.setString(11, reimburse.getStage().toString());
+				testStmt.setDate(12, Date.valueOf(LocalDate.from(reimburse.getDateTime())));
+				testStmt.setTime(13, Time.valueOf(LocalTime.from(reimburse.getDateTime())));
 				assertTrue("Error in inserting test request", testStmt.execute());
 				ResultSet rs = testStmt.getResultSet();
 				rs.next();

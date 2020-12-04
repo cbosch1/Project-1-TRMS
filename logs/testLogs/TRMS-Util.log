@@ -245,3 +245,274 @@
 2020-11-29 13:05:26,356 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
 2020-11-29 13:05:26,368 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
 2020-11-29 13:05:26,688 [Test worker] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:17,883 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,037 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,042 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,046 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,048 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,051 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,215 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,219 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,221 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,224 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,340 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,348 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,350 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,351 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,352 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,353 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,455 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,458 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,460 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,462 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,464 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,465 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,467 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,471 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,472 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,474 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,475 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,766 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,909 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,913 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,915 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,917 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,919 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,119 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,124 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,126 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,128 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,247 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,251 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,253 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,257 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,260 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,265 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,420 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,428 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,431 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,434 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,436 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,444 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,447 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,450 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,453 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,459 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,462 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,236 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,358 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,363 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,366 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,369 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,374 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,545 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,549 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,551 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,554 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,654 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,659 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,660 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,661 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,663 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,665 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,768 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,773 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,775 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,777 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,778 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,781 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,784 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,786 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,789 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,791 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,793 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,745 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,861 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,865 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,867 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,869 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,871 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,028 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,032 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,034 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,036 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,130 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,135 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,137 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,138 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,140 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,142 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,244 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,247 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,249 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,251 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,253 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,255 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,257 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,260 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,262 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,263 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,265 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,594 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,714 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,717 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,719 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,721 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,723 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,871 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,875 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,877 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,880 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,973 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,977 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,979 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,982 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,984 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,986 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,088 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,093 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,094 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,095 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,097 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,100 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,102 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,104 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,106 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,108 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,110 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:05:05,198 [main] WARN : Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:06:43,987 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,012 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,161 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,489 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,543 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,594 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,654 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,862 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,922 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:53,973 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,017 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,154 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,204 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,282 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,433 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,581 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,618 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,915 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:54,980 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,132 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,175 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,218 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,365 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,401 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,437 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,485 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,632 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:06:55,682 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:10:16,034 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:10:16,477 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:10:16,553 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:10:16,704 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:10:16,767 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:32,270 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:32,504 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:32,824 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:32,883 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:32,936 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:32,990 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,274 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,417 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,459 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,603 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,718 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,763 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,918 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:33,967 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,014 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,053 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,335 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,390 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,439 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,483 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,526 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,577 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,626 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,665 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,715 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,854 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:21:34,897 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:24:47,309 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:27:24,213 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:27:32,476 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:27:32,895 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:27:32,973 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:27:33,030 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:27:33,078 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:28:47,487 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:29:03,404 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:29:52,365 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:29:58,525 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:29:59,088 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:29:59,136 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:29:59,182 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:29:59,235 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:30:07,330 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:30:07,435 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:30:07,480 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:30:07,908 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:30:08,000 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:30:08,053 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:31:27,753 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:31:51,437 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:32:18,270 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:35:13,678 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:35:46,401 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:35:57,256 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:36:34,575 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:37:30,491 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:38:36,265 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:39:13,836 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:40:25,364 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:40:35,630 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:40:54,670 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:42:38,296 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:43:34,544 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:44:09,726 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:44:41,218 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:44:54,789 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:45:11,524 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:45:41,158 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:45:46,125 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:46:16,355 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:46:21,474 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:46:34,992 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:46:59,587 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:47:06,876 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:46,272 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:58,504 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:58,677 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:58,995 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,049 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,094 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,139 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,312 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,456 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,507 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,552 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,675 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,718 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,783 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,835 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:48:59,985 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,033 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,329 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,373 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,412 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,457 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,595 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,638 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,678 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,715 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,757 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,796 [main] INFO : Successfully retrieved connection to database.
+2020-12-03 20:49:00,837 [main] INFO : Successfully retrieved connection to database.

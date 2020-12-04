@@ -693,3 +693,1529 @@
 2020-11-29 13:05:26,688 [Test worker] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
 2020-11-29 13:05:26,697 [Test worker] INFO : Controller - This is an error message
 2020-11-29 13:05:26,698 [Test worker] ERROR: Controller - This is an error message
+2020-12-03 18:24:17,805 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 18:24:17,869 [main] WARN : Control - Exception thrown while creating reimbursement request: java.lang.NullPointerException: Cannot invoke "String.trim()" because "in" is null
+2020-12-03 18:24:17,883 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:17,911 [main] INFO : Service - Responding to create employee...
+2020-12-03 18:24:17,912 [main] INFO : Service - Successfully created employee
+2020-12-03 18:24:17,914 [main] INFO : Service - Responding to read employee...
+2020-12-03 18:24:17,915 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 18:24:17,917 [main] INFO : Service - Responding to delete employee...
+2020-12-03 18:24:17,917 [main] INFO : Service - Successfully deleted employee
+2020-12-03 18:24:17,919 [main] INFO : Service - Responding to update employee...
+2020-12-03 18:24:17,919 [main] INFO : Service - Successfully updated employee
+2020-12-03 18:24:17,922 [main] INFO : Service - Responding to read all employees...
+2020-12-03 18:24:17,922 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 18:24:18,037 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,042 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,046 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,048 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,051 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,091 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 18:24:18,100 [main] WARN : Control - NumberFormatException thrown while updating information request: java.lang.NumberFormatException: null
+2020-12-03 18:24:18,106 [main] INFO : Control - Successfully read all information requests
+2020-12-03 18:24:18,156 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 18:24:18,173 [main] WARN : Control - Service returned false while updating attachment
+2020-12-03 18:24:18,184 [main] INFO : Control - Successfully read attachment
+2020-12-03 18:24:18,192 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 18:24:18,210 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 18:24:18,215 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,219 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,221 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,224 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,227 [main] INFO : Controller - This is an error message
+2020-12-03 18:24:18,227 [main] ERROR: Controller - This is an error message
+2020-12-03 18:24:18,260 [main] INFO : Control - User successfully updated
+2020-12-03 18:24:18,264 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 18:24:18,267 [main] INFO : Control - User successfully deleted
+2020-12-03 18:24:18,295 [main] INFO : Service - Responding to read user...
+2020-12-03 18:24:18,295 [main] INFO : Service - Successfully retrieved user
+2020-12-03 18:24:18,296 [main] INFO : Service - Responding to update user...
+2020-12-03 18:24:18,298 [main] INFO : Service - Successfully updated user
+2020-12-03 18:24:18,300 [main] INFO : Service - Responding to create user...
+2020-12-03 18:24:18,301 [main] INFO : Service - Successfully created user
+2020-12-03 18:24:18,302 [main] INFO : Service - Responding to delete user...
+2020-12-03 18:24:18,303 [main] INFO : Service - Successfully deleted user
+2020-12-03 18:24:18,333 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 18:24:18,333 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 18:24:18,334 [main] INFO : Service - Responding to update attachment...
+2020-12-03 18:24:18,334 [main] INFO : Service - Successfully updated attachment
+2020-12-03 18:24:18,335 [main] INFO : Service - Responding to read attachment...
+2020-12-03 18:24:18,336 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 18:24:18,336 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 18:24:18,337 [main] INFO : Service - Successfully created attachment
+2020-12-03 18:24:18,338 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 18:24:18,338 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 18:24:18,340 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,348 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,350 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,351 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,352 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,353 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,381 [main] INFO : Service - Responding to read information request...
+2020-12-03 18:24:18,382 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 18:24:18,383 [main] INFO : Service - Responding to delete information request...
+2020-12-03 18:24:18,383 [main] INFO : Service - Successfully deleted information request
+2020-12-03 18:24:18,384 [main] INFO : Service - Responding to create information request...
+2020-12-03 18:24:18,384 [main] INFO : Service - Successfully created information request
+2020-12-03 18:24:18,385 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 18:24:18,386 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 18:24:18,387 [main] INFO : Service - Responding to update information request...
+2020-12-03 18:24:18,387 [main] INFO : Service - Successfully updated information request
+2020-12-03 18:24:18,388 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 18:24:18,388 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 18:24:18,407 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 18:24:18,411 [main] INFO : Control - Successfully read employee
+2020-12-03 18:24:18,414 [main] INFO : Control - Employee successfully deleted
+2020-12-03 18:24:18,418 [main] INFO : Control - Employee successfully updated
+2020-12-03 18:24:18,421 [main] INFO : Control - Successfully read all employees
+2020-12-03 18:24:18,447 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 18:24:18,447 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 18:24:18,448 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 18:24:18,449 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 18:24:18,450 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 18:24:18,451 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 18:24:18,451 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 18:24:18,452 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 18:24:18,452 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 18:24:18,452 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 18:24:18,453 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 18:24:18,453 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 18:24:18,455 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,458 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,460 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,462 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,464 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,465 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,467 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,471 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,472 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,474 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:24:18,475 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 18:28:19,303 [main] WARN : Control - Exception thrown while creating reimbursement request: java.lang.NullPointerException: Cannot invoke "String.trim()" because "in" is null
+2020-12-03 18:35:03,122 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 18:35:38,667 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 18:36:39,038 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 18:42:20,085 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:42:39,977 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:42:55,397 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:44:48,000 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 18:45:29,347 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:45:42,857 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:48:05,505 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:56:04,805 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:56:40,160 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:57:03,687 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:58:33,002 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:58:45,156 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 18:59:49,995 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 19:09:12,707 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 19:09:23,659 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 19:09:30,794 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 19:12:44,335 [main] INFO : Control - Successfully read reimbursement request
+2020-12-03 19:13:06,109 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 19:14:05,115 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 19:23:41,022 [main] WARN : Control - Exception thrown while reading reimbursement request: java.lang.NullPointerException: Cannot invoke "TRMS.pojos.ReimburseRequest.getEmployeeId()" because "request" is null
+2020-12-03 19:24:17,620 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 19:24:31,137 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 19:25:00,538 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 19:30:24,652 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:30:24,677 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 19:30:24,683 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:30:24,687 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:30:24,713 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 19:30:24,728 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 19:31:29,559 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:31:48,011 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:32:22,709 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:32:22,733 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 19:32:22,738 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:32:22,743 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 19:32:22,748 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 19:32:22,762 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 19:35:19,919 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 19:35:48,576 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 19:37:11,657 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 19:42:18,302 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 19:42:40,697 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 19:43:10,839 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 19:44:28,893 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 19:48:53,904 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 19:49:33,818 [main] INFO : Control - Attachment successfully updated
+2020-12-03 19:52:42,085 [main] INFO : Control - Successfully read user
+2020-12-03 19:55:24,475 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 19:56:45,952 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 19:57:47,873 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 19:58:51,754 [main] WARN : Control - NumberFormatException thrown while updating information request: java.lang.NumberFormatException: null
+2020-12-03 19:59:50,425 [main] WARN : Control - NumberFormatException thrown while updating information request: java.lang.NumberFormatException: null
+2020-12-03 20:01:16,646 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:01:33,692 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:01:33,721 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 20:01:33,728 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:01:33,733 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:01:33,740 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 20:01:33,755 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 20:01:33,766 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,802 [main] INFO : Service - Responding to create employee...
+2020-12-03 20:01:33,803 [main] INFO : Service - Successfully created employee
+2020-12-03 20:01:33,805 [main] INFO : Service - Responding to read employee...
+2020-12-03 20:01:33,806 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 20:01:33,808 [main] INFO : Service - Responding to delete employee...
+2020-12-03 20:01:33,808 [main] INFO : Service - Successfully deleted employee
+2020-12-03 20:01:33,809 [main] INFO : Service - Responding to update employee...
+2020-12-03 20:01:33,810 [main] INFO : Service - Successfully updated employee
+2020-12-03 20:01:33,811 [main] INFO : Service - Responding to read all employees...
+2020-12-03 20:01:33,811 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 20:01:33,909 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,913 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,915 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,917 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,919 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:33,949 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 20:01:33,953 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 20:01:33,959 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 20:01:33,963 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 20:01:33,969 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:01:33,984 [main] INFO : Control - Successfully read all information requests
+2020-12-03 20:01:34,084 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 20:01:34,093 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:01:34,098 [main] INFO : Control - Attachment successfully updated
+2020-12-03 20:01:34,102 [main] INFO : Control - Successfully read attachment
+2020-12-03 20:01:34,108 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:01:34,117 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 20:01:34,119 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,124 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,126 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,128 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,151 [main] INFO : Control - Successfully read user
+2020-12-03 20:01:34,155 [main] INFO : Control - User successfully updated
+2020-12-03 20:01:34,158 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 20:01:34,161 [main] INFO : Control - User successfully deleted
+2020-12-03 20:01:34,187 [main] INFO : Service - Responding to read user...
+2020-12-03 20:01:34,187 [main] INFO : Service - Successfully retrieved user
+2020-12-03 20:01:34,189 [main] INFO : Service - Responding to update user...
+2020-12-03 20:01:34,191 [main] INFO : Service - Successfully updated user
+2020-12-03 20:01:34,193 [main] INFO : Service - Responding to create user...
+2020-12-03 20:01:34,193 [main] INFO : Service - Successfully created user
+2020-12-03 20:01:34,194 [main] INFO : Service - Responding to delete user...
+2020-12-03 20:01:34,195 [main] INFO : Service - Successfully deleted user
+2020-12-03 20:01:34,234 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 20:01:34,235 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 20:01:34,236 [main] INFO : Service - Responding to update attachment...
+2020-12-03 20:01:34,237 [main] INFO : Service - Successfully updated attachment
+2020-12-03 20:01:34,240 [main] INFO : Service - Responding to read attachment...
+2020-12-03 20:01:34,240 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 20:01:34,241 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 20:01:34,242 [main] INFO : Service - Successfully created attachment
+2020-12-03 20:01:34,243 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 20:01:34,244 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 20:01:34,247 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,251 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,253 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,257 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,260 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,265 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,301 [main] INFO : Service - Responding to read information request...
+2020-12-03 20:01:34,301 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 20:01:34,302 [main] INFO : Service - Responding to delete information request...
+2020-12-03 20:01:34,304 [main] INFO : Service - Successfully deleted information request
+2020-12-03 20:01:34,307 [main] INFO : Service - Responding to create information request...
+2020-12-03 20:01:34,307 [main] INFO : Service - Successfully created information request
+2020-12-03 20:01:34,310 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 20:01:34,311 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:01:34,312 [main] INFO : Service - Responding to update information request...
+2020-12-03 20:01:34,313 [main] INFO : Service - Successfully updated information request
+2020-12-03 20:01:34,314 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 20:01:34,314 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:01:34,348 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 20:01:34,353 [main] INFO : Control - Successfully read employee
+2020-12-03 20:01:34,360 [main] INFO : Control - Employee successfully deleted
+2020-12-03 20:01:34,365 [main] INFO : Control - Employee successfully updated
+2020-12-03 20:01:34,369 [main] INFO : Control - Successfully read all employees
+2020-12-03 20:01:34,410 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 20:01:34,411 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:01:34,412 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 20:01:34,412 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 20:01:34,413 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 20:01:34,413 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 20:01:34,415 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 20:01:34,415 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 20:01:34,416 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 20:01:34,417 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:01:34,418 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 20:01:34,418 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 20:01:34,420 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,428 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,431 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,434 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,436 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,444 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,447 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,450 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,453 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,459 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:01:34,462 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,179 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:02:19,201 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 20:02:19,207 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:02:19,211 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:02:19,215 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 20:02:19,228 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 20:02:19,236 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,267 [main] INFO : Service - Responding to create employee...
+2020-12-03 20:02:19,268 [main] INFO : Service - Successfully created employee
+2020-12-03 20:02:19,269 [main] INFO : Service - Responding to read employee...
+2020-12-03 20:02:19,269 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 20:02:19,270 [main] INFO : Service - Responding to delete employee...
+2020-12-03 20:02:19,270 [main] INFO : Service - Successfully deleted employee
+2020-12-03 20:02:19,272 [main] INFO : Service - Responding to update employee...
+2020-12-03 20:02:19,272 [main] INFO : Service - Successfully updated employee
+2020-12-03 20:02:19,273 [main] INFO : Service - Responding to read all employees...
+2020-12-03 20:02:19,273 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 20:02:19,358 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,363 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,366 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,369 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,374 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,407 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 20:02:19,410 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 20:02:19,412 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 20:02:19,416 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 20:02:19,422 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:02:19,436 [main] INFO : Control - Successfully read all information requests
+2020-12-03 20:02:19,507 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 20:02:19,513 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:02:19,518 [main] INFO : Control - Attachment successfully updated
+2020-12-03 20:02:19,527 [main] INFO : Control - Successfully read attachment
+2020-12-03 20:02:19,531 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:02:19,540 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 20:02:19,545 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,549 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,551 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,554 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,584 [main] INFO : Control - Successfully read user
+2020-12-03 20:02:19,586 [main] INFO : Control - User successfully updated
+2020-12-03 20:02:19,590 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 20:02:19,595 [main] INFO : Control - User successfully deleted
+2020-12-03 20:02:19,619 [main] INFO : Service - Responding to read user...
+2020-12-03 20:02:19,619 [main] INFO : Service - Successfully retrieved user
+2020-12-03 20:02:19,620 [main] INFO : Service - Responding to update user...
+2020-12-03 20:02:19,621 [main] INFO : Service - Successfully updated user
+2020-12-03 20:02:19,623 [main] INFO : Service - Responding to create user...
+2020-12-03 20:02:19,623 [main] INFO : Service - Successfully created user
+2020-12-03 20:02:19,625 [main] INFO : Service - Responding to delete user...
+2020-12-03 20:02:19,625 [main] INFO : Service - Successfully deleted user
+2020-12-03 20:02:19,648 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 20:02:19,649 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 20:02:19,650 [main] INFO : Service - Responding to update attachment...
+2020-12-03 20:02:19,650 [main] INFO : Service - Successfully updated attachment
+2020-12-03 20:02:19,651 [main] INFO : Service - Responding to read attachment...
+2020-12-03 20:02:19,651 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 20:02:19,652 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 20:02:19,652 [main] INFO : Service - Successfully created attachment
+2020-12-03 20:02:19,653 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 20:02:19,653 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 20:02:19,654 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,659 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,660 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,661 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,663 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,665 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,688 [main] INFO : Service - Responding to read information request...
+2020-12-03 20:02:19,689 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 20:02:19,690 [main] INFO : Service - Responding to delete information request...
+2020-12-03 20:02:19,690 [main] INFO : Service - Successfully deleted information request
+2020-12-03 20:02:19,691 [main] INFO : Service - Responding to create information request...
+2020-12-03 20:02:19,691 [main] INFO : Service - Successfully created information request
+2020-12-03 20:02:19,693 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 20:02:19,693 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:02:19,695 [main] INFO : Service - Responding to update information request...
+2020-12-03 20:02:19,695 [main] INFO : Service - Successfully updated information request
+2020-12-03 20:02:19,696 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 20:02:19,696 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:02:19,725 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 20:02:19,727 [main] INFO : Control - Successfully read employee
+2020-12-03 20:02:19,729 [main] INFO : Control - Employee successfully deleted
+2020-12-03 20:02:19,732 [main] INFO : Control - Employee successfully updated
+2020-12-03 20:02:19,735 [main] INFO : Control - Successfully read all employees
+2020-12-03 20:02:19,759 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 20:02:19,759 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:02:19,760 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 20:02:19,761 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 20:02:19,762 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 20:02:19,762 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 20:02:19,764 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 20:02:19,764 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 20:02:19,765 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 20:02:19,765 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:02:19,766 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 20:02:19,766 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 20:02:19,768 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,773 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,775 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,777 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,778 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,781 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,784 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,786 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,789 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,791 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:02:19,793 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,682 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:03:16,703 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 20:03:16,708 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:03:16,714 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:03:16,718 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 20:03:16,734 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 20:03:16,745 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,777 [main] INFO : Service - Responding to create employee...
+2020-12-03 20:03:16,778 [main] INFO : Service - Successfully created employee
+2020-12-03 20:03:16,778 [main] INFO : Service - Responding to read employee...
+2020-12-03 20:03:16,779 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 20:03:16,780 [main] INFO : Service - Responding to delete employee...
+2020-12-03 20:03:16,780 [main] INFO : Service - Successfully deleted employee
+2020-12-03 20:03:16,781 [main] INFO : Service - Responding to update employee...
+2020-12-03 20:03:16,781 [main] INFO : Service - Successfully updated employee
+2020-12-03 20:03:16,783 [main] INFO : Service - Responding to read all employees...
+2020-12-03 20:03:16,783 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 20:03:16,861 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,865 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,867 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,869 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,871 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:16,897 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 20:03:16,901 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 20:03:16,905 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 20:03:16,909 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 20:03:16,924 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:03:16,931 [main] INFO : Control - Successfully read all information requests
+2020-12-03 20:03:16,997 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 20:03:17,004 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:03:17,009 [main] INFO : Control - Attachment successfully updated
+2020-12-03 20:03:17,016 [main] INFO : Control - Successfully read attachment
+2020-12-03 20:03:17,021 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:03:17,025 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 20:03:17,028 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,032 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,034 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,036 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,064 [main] INFO : Control - Successfully read user
+2020-12-03 20:03:17,067 [main] INFO : Control - User successfully updated
+2020-12-03 20:03:17,070 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 20:03:17,074 [main] INFO : Control - User successfully deleted
+2020-12-03 20:03:17,096 [main] INFO : Service - Responding to read user...
+2020-12-03 20:03:17,097 [main] INFO : Service - Successfully retrieved user
+2020-12-03 20:03:17,098 [main] INFO : Service - Responding to update user...
+2020-12-03 20:03:17,099 [main] INFO : Service - Successfully updated user
+2020-12-03 20:03:17,100 [main] INFO : Service - Responding to create user...
+2020-12-03 20:03:17,100 [main] INFO : Service - Successfully created user
+2020-12-03 20:03:17,102 [main] INFO : Service - Responding to delete user...
+2020-12-03 20:03:17,102 [main] INFO : Service - Successfully deleted user
+2020-12-03 20:03:17,122 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 20:03:17,122 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 20:03:17,123 [main] INFO : Service - Responding to update attachment...
+2020-12-03 20:03:17,124 [main] INFO : Service - Successfully updated attachment
+2020-12-03 20:03:17,125 [main] INFO : Service - Responding to read attachment...
+2020-12-03 20:03:17,125 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 20:03:17,126 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 20:03:17,127 [main] INFO : Service - Successfully created attachment
+2020-12-03 20:03:17,128 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 20:03:17,129 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 20:03:17,130 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,135 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,137 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,138 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,140 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,142 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,169 [main] INFO : Service - Responding to read information request...
+2020-12-03 20:03:17,169 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 20:03:17,170 [main] INFO : Service - Responding to delete information request...
+2020-12-03 20:03:17,171 [main] INFO : Service - Successfully deleted information request
+2020-12-03 20:03:17,172 [main] INFO : Service - Responding to create information request...
+2020-12-03 20:03:17,172 [main] INFO : Service - Successfully created information request
+2020-12-03 20:03:17,173 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 20:03:17,173 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:03:17,174 [main] INFO : Service - Responding to update information request...
+2020-12-03 20:03:17,174 [main] INFO : Service - Successfully updated information request
+2020-12-03 20:03:17,175 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 20:03:17,175 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:03:17,198 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 20:03:17,201 [main] INFO : Control - Successfully read employee
+2020-12-03 20:03:17,204 [main] INFO : Control - Employee successfully deleted
+2020-12-03 20:03:17,208 [main] INFO : Control - Employee successfully updated
+2020-12-03 20:03:17,213 [main] INFO : Control - Successfully read all employees
+2020-12-03 20:03:17,236 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 20:03:17,236 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:03:17,237 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 20:03:17,237 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 20:03:17,238 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 20:03:17,238 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 20:03:17,239 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 20:03:17,239 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 20:03:17,240 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 20:03:17,241 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:03:17,241 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 20:03:17,241 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 20:03:17,244 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,247 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,249 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,251 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,253 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,255 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,257 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,260 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,262 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,263 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:03:17,265 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,529 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:04:53,556 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 20:04:53,562 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:04:53,566 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:04:53,570 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 20:04:53,583 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 20:04:53,594 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,623 [main] INFO : Service - Responding to create employee...
+2020-12-03 20:04:53,624 [main] INFO : Service - Successfully created employee
+2020-12-03 20:04:53,625 [main] INFO : Service - Responding to read employee...
+2020-12-03 20:04:53,625 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 20:04:53,627 [main] INFO : Service - Responding to delete employee...
+2020-12-03 20:04:53,627 [main] INFO : Service - Successfully deleted employee
+2020-12-03 20:04:53,628 [main] INFO : Service - Responding to update employee...
+2020-12-03 20:04:53,628 [main] INFO : Service - Successfully updated employee
+2020-12-03 20:04:53,629 [main] INFO : Service - Responding to read all employees...
+2020-12-03 20:04:53,630 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 20:04:53,714 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,717 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,719 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,721 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,723 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,749 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 20:04:53,752 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 20:04:53,756 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 20:04:53,766 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 20:04:53,771 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:04:53,776 [main] INFO : Control - Successfully read all information requests
+2020-12-03 20:04:53,841 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 20:04:53,848 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:04:53,853 [main] INFO : Control - Attachment successfully updated
+2020-12-03 20:04:53,859 [main] INFO : Control - Successfully read attachment
+2020-12-03 20:04:53,863 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:04:53,869 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 20:04:53,871 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,875 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,877 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,880 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,906 [main] INFO : Control - Successfully read user
+2020-12-03 20:04:53,909 [main] INFO : Control - User successfully updated
+2020-12-03 20:04:53,915 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 20:04:53,919 [main] INFO : Control - User successfully deleted
+2020-12-03 20:04:53,938 [main] INFO : Service - Responding to read user...
+2020-12-03 20:04:53,939 [main] INFO : Service - Successfully retrieved user
+2020-12-03 20:04:53,940 [main] INFO : Service - Responding to update user...
+2020-12-03 20:04:53,940 [main] INFO : Service - Successfully updated user
+2020-12-03 20:04:53,941 [main] INFO : Service - Responding to create user...
+2020-12-03 20:04:53,941 [main] INFO : Service - Successfully created user
+2020-12-03 20:04:53,942 [main] INFO : Service - Responding to delete user...
+2020-12-03 20:04:53,943 [main] INFO : Service - Successfully deleted user
+2020-12-03 20:04:53,966 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 20:04:53,966 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 20:04:53,967 [main] INFO : Service - Responding to update attachment...
+2020-12-03 20:04:53,968 [main] INFO : Service - Successfully updated attachment
+2020-12-03 20:04:53,969 [main] INFO : Service - Responding to read attachment...
+2020-12-03 20:04:53,969 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 20:04:53,970 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 20:04:53,970 [main] INFO : Service - Successfully created attachment
+2020-12-03 20:04:53,971 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 20:04:53,971 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 20:04:53,973 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,977 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,979 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,982 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,984 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:53,986 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,012 [main] INFO : Service - Responding to read information request...
+2020-12-03 20:04:54,012 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 20:04:54,013 [main] INFO : Service - Responding to delete information request...
+2020-12-03 20:04:54,013 [main] INFO : Service - Successfully deleted information request
+2020-12-03 20:04:54,015 [main] INFO : Service - Responding to create information request...
+2020-12-03 20:04:54,016 [main] INFO : Service - Successfully created information request
+2020-12-03 20:04:54,017 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 20:04:54,017 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:04:54,018 [main] INFO : Service - Responding to update information request...
+2020-12-03 20:04:54,018 [main] INFO : Service - Successfully updated information request
+2020-12-03 20:04:54,019 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 20:04:54,020 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:04:54,042 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 20:04:54,045 [main] INFO : Control - Successfully read employee
+2020-12-03 20:04:54,048 [main] INFO : Control - Employee successfully deleted
+2020-12-03 20:04:54,052 [main] INFO : Control - Employee successfully updated
+2020-12-03 20:04:54,056 [main] INFO : Control - Successfully read all employees
+2020-12-03 20:04:54,080 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 20:04:54,080 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:04:54,081 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 20:04:54,081 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 20:04:54,082 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 20:04:54,083 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 20:04:54,084 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 20:04:54,084 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 20:04:54,085 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 20:04:54,085 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:04:54,086 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 20:04:54,087 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 20:04:54,088 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,093 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,094 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,095 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,097 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,100 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,102 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,104 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,106 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,108 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:04:54,110 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:05:05,198 [main] WARN : Util - Threw SQL Exception while attempting to get connection: java.sql.SQLException: The url cannot be null
+2020-12-03 20:06:43,987 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:52,755 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:06:52,777 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 20:06:52,781 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:06:52,785 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:06:52,790 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 20:06:52,804 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 20:06:53,012 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,039 [main] INFO : Service - Responding to create employee...
+2020-12-03 20:06:53,040 [main] INFO : Service - Successfully created employee
+2020-12-03 20:06:53,041 [main] INFO : Service - Responding to read employee...
+2020-12-03 20:06:53,041 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 20:06:53,043 [main] INFO : Service - Responding to delete employee...
+2020-12-03 20:06:53,043 [main] INFO : Service - Successfully deleted employee
+2020-12-03 20:06:53,045 [main] INFO : Service - Responding to update employee...
+2020-12-03 20:06:53,046 [main] INFO : Service - Successfully updated employee
+2020-12-03 20:06:53,047 [main] INFO : Service - Responding to read all employees...
+2020-12-03 20:06:53,047 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 20:06:53,161 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,381 [main] INFO : Dao - Received request to insert employee: Billy Bob
+2020-12-03 20:06:53,435 [main] INFO : Dao - Request completed, generated employee id: 8
+2020-12-03 20:06:53,489 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,494 [main] INFO : Dao - Received request to retrieve employee with id: 2010
+2020-12-03 20:06:53,501 [main] INFO : Dao - Request completed, retrieved employee: Billy Bob
+2020-12-03 20:06:53,543 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,548 [main] INFO : Dao - Received request to delete employee with id: 2010
+2020-12-03 20:06:53,557 [main] INFO : Dao - Request completed, employee with id: 2010 was deleted.
+2020-12-03 20:06:53,594 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,598 [main] INFO : Dao - Received request to update employee with id: 2010
+2020-12-03 20:06:53,605 [main] INFO : Dao - Request completed, employee with id: 2010 was updated.
+2020-12-03 20:06:53,654 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,663 [main] INFO : Dao - Received request to retrieve all employees
+2020-12-03 20:06:53,667 [main] INFO : Dao - Request completed, retrieved 3 employees
+2020-12-03 20:06:53,695 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 20:06:53,700 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 20:06:53,704 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 20:06:53,707 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 20:06:53,715 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:06:53,723 [main] INFO : Control - Successfully read all information requests
+2020-12-03 20:06:53,799 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 20:06:53,803 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:06:53,807 [main] INFO : Control - Attachment successfully updated
+2020-12-03 20:06:53,814 [main] INFO : Control - Successfully read attachment
+2020-12-03 20:06:53,817 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:06:53,822 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 20:06:53,862 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,873 [main] INFO : Dao - Received request to retrieve user with id: 0
+2020-12-03 20:06:53,878 [main] INFO : Dao - Request completed, retrieved user: bigbad1
+2020-12-03 20:06:53,922 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,928 [main] INFO : Dao - Received request to update user with id: 0
+2020-12-03 20:06:53,933 [main] INFO : Dao - Request completed, user with id: 0 was updated.
+2020-12-03 20:06:53,973 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:53,974 [main] INFO : Dao - Received request to insert user: bigbad1
+2020-12-03 20:06:53,983 [main] INFO : Dao - Request completed, generated user id: 11
+2020-12-03 20:06:54,017 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,023 [main] INFO : Dao - Received request to delete user with id: 0
+2020-12-03 20:06:54,027 [main] INFO : Dao - Request completed, user with id: 0 was deleted.
+2020-12-03 20:06:54,055 [main] INFO : Control - Successfully read user
+2020-12-03 20:06:54,058 [main] INFO : Control - User successfully updated
+2020-12-03 20:06:54,061 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 20:06:54,064 [main] INFO : Control - User successfully deleted
+2020-12-03 20:06:54,087 [main] INFO : Service - Responding to read user...
+2020-12-03 20:06:54,087 [main] INFO : Service - Successfully retrieved user
+2020-12-03 20:06:54,088 [main] INFO : Service - Responding to update user...
+2020-12-03 20:06:54,089 [main] INFO : Service - Successfully updated user
+2020-12-03 20:06:54,090 [main] INFO : Service - Responding to create user...
+2020-12-03 20:06:54,091 [main] INFO : Service - Successfully created user
+2020-12-03 20:06:54,091 [main] INFO : Service - Responding to delete user...
+2020-12-03 20:06:54,092 [main] INFO : Service - Successfully deleted user
+2020-12-03 20:06:54,114 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 20:06:54,114 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 20:06:54,115 [main] INFO : Service - Responding to update attachment...
+2020-12-03 20:06:54,116 [main] INFO : Service - Successfully updated attachment
+2020-12-03 20:06:54,116 [main] INFO : Service - Responding to read attachment...
+2020-12-03 20:06:54,117 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 20:06:54,118 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 20:06:54,118 [main] INFO : Service - Successfully created attachment
+2020-12-03 20:06:54,119 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 20:06:54,119 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 20:06:54,154 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,162 [main] INFO : Dao - Received request to retrieve all reimbursement requests
+2020-12-03 20:06:54,204 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,282 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,433 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,581 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,587 [main] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-12-03 20:06:54,618 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,731 [main] INFO : Dao - Received request to insert reimbursement for employee with id: 0
+2020-12-03 20:06:54,772 [main] INFO : Service - Responding to read information request...
+2020-12-03 20:06:54,773 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 20:06:54,774 [main] INFO : Service - Responding to delete information request...
+2020-12-03 20:06:54,774 [main] INFO : Service - Successfully deleted information request
+2020-12-03 20:06:54,775 [main] INFO : Service - Responding to create information request...
+2020-12-03 20:06:54,775 [main] INFO : Service - Successfully created information request
+2020-12-03 20:06:54,777 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 20:06:54,777 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:06:54,779 [main] INFO : Service - Responding to update information request...
+2020-12-03 20:06:54,780 [main] INFO : Service - Successfully updated information request
+2020-12-03 20:06:54,781 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 20:06:54,782 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:06:54,813 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 20:06:54,815 [main] INFO : Control - Successfully read employee
+2020-12-03 20:06:54,817 [main] INFO : Control - Employee successfully deleted
+2020-12-03 20:06:54,819 [main] INFO : Control - Employee successfully updated
+2020-12-03 20:06:54,822 [main] INFO : Control - Successfully read all employees
+2020-12-03 20:06:54,853 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 20:06:54,853 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:06:54,855 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 20:06:54,855 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 20:06:54,856 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 20:06:54,856 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 20:06:54,857 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 20:06:54,858 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 20:06:54,859 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 20:06:54,859 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:06:54,861 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 20:06:54,861 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 20:06:54,915 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:54,980 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,132 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,133 [main] INFO : Dao - Received request to insert info request related to reimbursement: 1
+2020-12-03 20:06:55,175 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,177 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:06:55,182 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:06:55,218 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,365 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,368 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:06:55,371 [main] INFO : Dao - Request completed, retrieved info requests, count: 8
+2020-12-03 20:06:55,401 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,405 [main] INFO : Dao - Received request to retrieve files related to request with id: 1
+2020-12-03 20:06:55,407 [main] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-12-03 20:06:55,437 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,485 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,632 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:06:55,632 [main] INFO : Dao - Received request to insert file for request: 1
+2020-12-03 20:06:55,649 [main] WARN : Dao - SQLException thrown in create for attachment related to request: 1
+org.postgresql.util.PSQLException: ERROR: insert or update on table "attachment" violates foreign key constraint "fk_reimbursement"
+  Detail: Key (request_id)=(1) is not present in table "reimbursement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:56)
+	at TRMS.daos.AttachmentDaoTest.createAttachmentTest(AttachmentDaoTest.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2020-12-03 20:06:55,682 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:10:16,034 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:10:16,391 [main] INFO : Dao - Received request to retrieve files related to request with id: 0
+2020-12-03 20:10:16,415 [main] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-12-03 20:10:16,477 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:10:16,553 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:10:16,704 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:10:16,706 [main] INFO : Dao - Received request to insert file for request: 0
+2020-12-03 20:10:16,726 [main] WARN : Dao - SQLException thrown in create for attachment related to request: 0
+org.postgresql.util.PSQLException: ERROR: insert or update on table "attachment" violates foreign key constraint "fk_reimbursement"
+  Detail: Key (request_id)=(0) is not present in table "reimbursement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.AttachmentDaoPostgres.createAttachment(AttachmentDaoPostgres.java:56)
+	at TRMS.daos.AttachmentDaoTest.createAttachmentTest(AttachmentDaoTest.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2020-12-03 20:10:16,767 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:32,058 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:21:32,081 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 20:21:32,089 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:21:32,095 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:21:32,101 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 20:21:32,120 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 20:21:32,270 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:32,307 [main] INFO : Service - Responding to create employee...
+2020-12-03 20:21:32,308 [main] INFO : Service - Successfully created employee
+2020-12-03 20:21:32,311 [main] INFO : Service - Responding to read employee...
+2020-12-03 20:21:32,312 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 20:21:32,315 [main] INFO : Service - Responding to delete employee...
+2020-12-03 20:21:32,316 [main] INFO : Service - Successfully deleted employee
+2020-12-03 20:21:32,318 [main] INFO : Service - Responding to update employee...
+2020-12-03 20:21:32,318 [main] INFO : Service - Successfully updated employee
+2020-12-03 20:21:32,320 [main] INFO : Service - Responding to read all employees...
+2020-12-03 20:21:32,320 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 20:21:32,504 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:32,729 [main] INFO : Dao - Received request to insert employee: Billy Bob
+2020-12-03 20:21:32,775 [main] WARN : Dao - SQLException thrown in create related to employee: Billy Bob
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "employee_pkey"
+  Detail: Key (emp_id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.EmployeeDaoPostgres.createEmployee(EmployeeDaoPostgres.java:56)
+	at TRMS.daos.EmployeeDaoTest.createEmployeeTest(EmployeeDaoTest.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2020-12-03 20:21:32,824 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:32,827 [main] INFO : Dao - Received request to retrieve employee with id: 2010
+2020-12-03 20:21:32,839 [main] INFO : Dao - Request completed, retrieved employee: Billy Bob
+2020-12-03 20:21:32,883 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:32,887 [main] INFO : Dao - Received request to delete employee with id: 2010
+2020-12-03 20:21:32,896 [main] INFO : Dao - Request completed, employee with id: 2010 was deleted.
+2020-12-03 20:21:32,936 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:32,940 [main] INFO : Dao - Received request to update employee with id: 2010
+2020-12-03 20:21:32,947 [main] INFO : Dao - Request completed, employee with id: 2010 was updated.
+2020-12-03 20:21:32,990 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:32,993 [main] INFO : Dao - Received request to retrieve all employees
+2020-12-03 20:21:32,997 [main] INFO : Dao - Request completed, retrieved 3 employees
+2020-12-03 20:21:33,026 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 20:21:33,031 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 20:21:33,036 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 20:21:33,039 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 20:21:33,045 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:21:33,050 [main] INFO : Control - Successfully read all information requests
+2020-12-03 20:21:33,117 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 20:21:33,120 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:21:33,124 [main] INFO : Control - Attachment successfully updated
+2020-12-03 20:21:33,130 [main] INFO : Control - Successfully read attachment
+2020-12-03 20:21:33,134 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:21:33,138 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 20:21:33,274 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:33,281 [main] INFO : Dao - Received request to retrieve user with id: 0
+2020-12-03 20:21:33,283 [main] INFO : Dao - Request completed, retrieved user: bigbad1
+2020-12-03 20:21:33,417 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:33,422 [main] INFO : Dao - Received request to update user with id: 0
+2020-12-03 20:21:33,426 [main] INFO : Dao - Request completed, user with id: 0 was updated.
+2020-12-03 20:21:33,459 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:33,460 [main] INFO : Dao - Received request to insert user: bigbad1
+2020-12-03 20:21:33,468 [main] INFO : Dao - Request completed, generated user id: 1
+2020-12-03 20:21:33,603 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:33,608 [main] INFO : Dao - Received request to delete user with id: 0
+2020-12-03 20:21:33,611 [main] INFO : Dao - Request completed, user with id: 0 was deleted.
+2020-12-03 20:21:33,632 [main] INFO : Control - Successfully read user
+2020-12-03 20:21:33,635 [main] INFO : Control - User successfully updated
+2020-12-03 20:21:33,637 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 20:21:33,638 [main] INFO : Control - User successfully deleted
+2020-12-03 20:21:33,656 [main] INFO : Service - Responding to read user...
+2020-12-03 20:21:33,657 [main] INFO : Service - Successfully retrieved user
+2020-12-03 20:21:33,657 [main] INFO : Service - Responding to update user...
+2020-12-03 20:21:33,658 [main] INFO : Service - Successfully updated user
+2020-12-03 20:21:33,659 [main] INFO : Service - Responding to create user...
+2020-12-03 20:21:33,659 [main] INFO : Service - Successfully created user
+2020-12-03 20:21:33,660 [main] INFO : Service - Responding to delete user...
+2020-12-03 20:21:33,660 [main] INFO : Service - Successfully deleted user
+2020-12-03 20:21:33,680 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 20:21:33,680 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 20:21:33,681 [main] INFO : Service - Responding to update attachment...
+2020-12-03 20:21:33,682 [main] INFO : Service - Successfully updated attachment
+2020-12-03 20:21:33,682 [main] INFO : Service - Responding to read attachment...
+2020-12-03 20:21:33,682 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 20:21:33,683 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 20:21:33,683 [main] INFO : Service - Successfully created attachment
+2020-12-03 20:21:33,684 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 20:21:33,684 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 20:21:33,718 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:33,726 [main] INFO : Dao - Received request to retrieve all reimbursement requests
+2020-12-03 20:21:33,763 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:33,918 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:33,967 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,014 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,020 [main] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-12-03 20:21:34,053 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,156 [main] INFO : Dao - Received request to insert reimbursement for employee with id: 0
+2020-12-03 20:21:34,194 [main] INFO : Service - Responding to read information request...
+2020-12-03 20:21:34,194 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 20:21:34,195 [main] INFO : Service - Responding to delete information request...
+2020-12-03 20:21:34,197 [main] INFO : Service - Successfully deleted information request
+2020-12-03 20:21:34,200 [main] INFO : Service - Responding to create information request...
+2020-12-03 20:21:34,201 [main] INFO : Service - Successfully created information request
+2020-12-03 20:21:34,202 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 20:21:34,203 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:21:34,204 [main] INFO : Service - Responding to update information request...
+2020-12-03 20:21:34,204 [main] INFO : Service - Successfully updated information request
+2020-12-03 20:21:34,205 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 20:21:34,206 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:21:34,238 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 20:21:34,240 [main] INFO : Control - Successfully read employee
+2020-12-03 20:21:34,243 [main] INFO : Control - Employee successfully deleted
+2020-12-03 20:21:34,246 [main] INFO : Control - Employee successfully updated
+2020-12-03 20:21:34,250 [main] INFO : Control - Successfully read all employees
+2020-12-03 20:21:34,278 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 20:21:34,278 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:21:34,280 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 20:21:34,281 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 20:21:34,282 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 20:21:34,283 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 20:21:34,284 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 20:21:34,284 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 20:21:34,285 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 20:21:34,286 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:21:34,287 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 20:21:34,287 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 20:21:34,335 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,390 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,439 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,440 [main] INFO : Dao - Received request to insert info request related to reimbursement: 1
+2020-12-03 20:21:34,483 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,486 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:21:34,489 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:21:34,526 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,577 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,582 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:21:34,585 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:21:34,626 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,630 [main] INFO : Dao - Received request to retrieve files related to request with id: 0
+2020-12-03 20:21:34,634 [main] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-12-03 20:21:34,665 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,670 [main] INFO : Dao - Received request to update attachment with id: -1
+2020-12-03 20:21:34,683 [main] WARN : Dao - SQLException thrown in updated related to attachment: -1
+org.postgresql.util.PSQLException: ERROR: insert or update on table "attachment" violates foreign key constraint "fk_reimbursement"
+  Detail: Key (request_id)=(7) is not present in table "reimbursement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at TRMS.daos.AttachmentDaoPostgres.updateAttachment(AttachmentDaoPostgres.java:189)
+	at TRMS.daos.AttachmentDaoTest.updateAttachmentTest(AttachmentDaoTest.java:276)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2020-12-03 20:21:34,715 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,719 [main] INFO : Dao - Received request to retrieve file with id: -1
+2020-12-03 20:21:34,854 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,855 [main] INFO : Dao - Received request to insert file for request: 0
+2020-12-03 20:21:34,863 [main] INFO : Dao - Request completed, generated attachment id: 1
+2020-12-03 20:21:34,897 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:21:34,901 [main] INFO : Dao - Received request to delete file with id: -1
+2020-12-03 20:21:34,905 [main] INFO : Dao - Request completed, attachment with id: -1 was deleted.
+2020-12-03 20:24:47,309 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:24:47,685 [main] INFO : Dao - Received request to retrieve file with id: -1
+2020-12-03 20:27:24,213 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:27:24,570 [main] INFO : Dao - Received request to retrieve file with id: -1
+2020-12-03 20:27:24,599 [main] INFO : Dao - Request completed, retrieved attachment id: -1
+2020-12-03 20:27:32,476 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:27:32,831 [main] INFO : Dao - Received request to retrieve files related to request with id: 0
+2020-12-03 20:27:32,852 [main] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-12-03 20:27:32,895 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:27:32,902 [main] INFO : Dao - Received request to update attachment with id: -1
+2020-12-03 20:27:32,924 [main] WARN : Dao - SQLException thrown in updated related to attachment: -1
+org.postgresql.util.PSQLException: ERROR: insert or update on table "attachment" violates foreign key constraint "fk_reimbursement"
+  Detail: Key (request_id)=(7) is not present in table "reimbursement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at TRMS.daos.AttachmentDaoPostgres.updateAttachment(AttachmentDaoPostgres.java:189)
+	at TRMS.daos.AttachmentDaoTest.updateAttachmentTest(AttachmentDaoTest.java:279)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2020-12-03 20:27:32,973 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:27:32,980 [main] INFO : Dao - Received request to retrieve file with id: -1
+2020-12-03 20:27:32,989 [main] INFO : Dao - Request completed, retrieved attachment id: -1
+2020-12-03 20:27:33,030 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:27:33,031 [main] INFO : Dao - Received request to insert file for request: 0
+2020-12-03 20:27:33,041 [main] INFO : Dao - Request completed, generated attachment id: 2
+2020-12-03 20:27:33,078 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:27:33,081 [main] INFO : Dao - Received request to delete file with id: -1
+2020-12-03 20:27:33,086 [main] INFO : Dao - Request completed, attachment with id: -1 was deleted.
+2020-12-03 20:28:47,487 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:28:47,848 [main] INFO : Dao - Received request to update attachment with id: -1
+2020-12-03 20:28:47,868 [main] INFO : Dao - Request completed, attachment with id: -1 was updated.
+2020-12-03 20:29:03,404 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:29:03,944 [main] INFO : Dao - Received request to insert employee: Billy Bob
+2020-12-03 20:29:04,005 [main] WARN : Dao - SQLException thrown in create related to employee: Billy Bob
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "employee_pkey"
+  Detail: Key (emp_id)=(2) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.EmployeeDaoPostgres.createEmployee(EmployeeDaoPostgres.java:56)
+	at TRMS.daos.EmployeeDaoTest.createEmployeeTest(EmployeeDaoTest.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2020-12-03 20:29:52,365 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:29:52,723 [main] INFO : Dao - Received request to insert employee: Billy Bob
+2020-12-03 20:29:52,759 [main] INFO : Dao - Request completed, generated employee id: 3
+2020-12-03 20:29:58,525 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:29:58,886 [main] INFO : Dao - Received request to insert employee: Billy Bob
+2020-12-03 20:29:58,935 [main] INFO : Dao - Request completed, generated employee id: 4
+2020-12-03 20:29:59,088 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:29:59,092 [main] INFO : Dao - Received request to retrieve employee with id: -1
+2020-12-03 20:29:59,098 [main] INFO : Dao - Request completed, retrieved employee: Billy Bob
+2020-12-03 20:29:59,136 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:29:59,139 [main] INFO : Dao - Received request to delete employee with id: -1
+2020-12-03 20:29:59,148 [main] INFO : Dao - Request completed, employee with id: -1 was deleted.
+2020-12-03 20:29:59,182 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:29:59,186 [main] INFO : Dao - Received request to update employee with id: -1
+2020-12-03 20:29:59,194 [main] INFO : Dao - Request completed, employee with id: -1 was updated.
+2020-12-03 20:29:59,235 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:29:59,238 [main] INFO : Dao - Received request to retrieve all employees
+2020-12-03 20:29:59,242 [main] INFO : Dao - Request completed, retrieved 3 employees
+2020-12-03 20:30:07,330 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:30:07,435 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:30:07,480 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:30:07,761 [main] INFO : Dao - Received request to insert info request related to reimbursement: 1
+2020-12-03 20:30:07,908 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:30:07,922 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:30:07,945 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:30:08,000 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:30:08,053 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:30:08,057 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:30:08,063 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:31:27,753 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:31:28,124 [main] INFO : Dao - Received request to insert info request related to reimbursement: 1
+2020-12-03 20:31:51,437 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:31:51,944 [main] INFO : Dao - Received request to insert info request related to reimbursement: 1
+2020-12-03 20:31:52,014 [main] WARN : Dao - SQLException thrown in create info request related to reimbursement: 1
+org.postgresql.util.PSQLException: ERROR: insert or update on table "info_request" violates foreign key constraint "fk_reimbursement"
+  Detail: Key (related_id)=(1) is not present in table "reimbursement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:114)
+	at TRMS.daos.InfoRequestDaoPostgres.createInfoRequest(InfoRequestDaoPostgres.java:63)
+	at TRMS.daos.InfoRequestDaoTest.createInfoRequestTest(InfoRequestDaoTest.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:54)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:99)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:105)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:40)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2020-12-03 20:32:18,270 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:32:18,625 [main] INFO : Dao - Received request to insert info request related to reimbursement: 0
+2020-12-03 20:32:18,670 [main] INFO : Dao - Request completed, generated info request id: 3
+2020-12-03 20:35:13,678 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:35:14,026 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:35:14,054 [main] INFO : Dao - Request completed, retrieved info request with id: 2010
+2020-12-03 20:35:46,401 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:35:46,834 [main] INFO : Dao - Received request to update info request with id: 2010
+2020-12-03 20:35:46,875 [main] INFO : Dao - Request completed, info request with id: 2010 was updated.
+2020-12-03 20:35:57,256 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:35:57,652 [main] INFO : Dao - Received request to delete info request with id: 2010
+2020-12-03 20:35:57,685 [main] INFO : Dao - Request completed, info request with id: 2010 was deleted.
+2020-12-03 20:36:34,575 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:36:34,936 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:36:34,964 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:37:30,491 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:37:30,838 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:37:30,867 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:38:36,265 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:38:36,616 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:38:36,646 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:39:13,836 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:39:14,223 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:39:14,254 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:40:25,364 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:40:25,714 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:40:25,737 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:40:35,630 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:40:35,975 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:40:35,996 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:40:54,670 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:40:55,016 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:40:55,040 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:42:38,296 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:42:38,759 [main] INFO : Dao - Received request to insert reimbursement for employee with id: 0
+2020-12-03 20:42:38,832 [main] INFO : Dao - Request completed, generated reimbursement request id: 4
+2020-12-03 20:43:34,544 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:43:34,895 [main] INFO : Dao - Received request to retrieve reimbursement request with id: 5
+2020-12-03 20:44:09,726 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:44:10,082 [main] INFO : Dao - Received request to retrieve reimbursement request with id: 6
+2020-12-03 20:44:41,218 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:44:41,616 [main] INFO : Dao - Received request to retrieve reimbursement request with id: 7
+2020-12-03 20:44:41,644 [main] INFO : Dao - Request completed, retrieved reimbursement request with id: 7
+2020-12-03 20:44:54,789 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:45:11,524 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:45:11,876 [main] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-12-03 20:45:11,902 [main] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 1
+2020-12-03 20:45:41,158 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:45:41,504 [main] INFO : Dao - Received request to retrieve all reimbursement requests
+2020-12-03 20:45:46,125 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:45:46,461 [main] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-12-03 20:45:46,506 [main] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 1
+2020-12-03 20:46:16,355 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:46:16,678 [main] INFO : Dao - Received request to retrieve all reimbursement requests
+2020-12-03 20:46:16,709 [main] INFO : Dao - Request completed, retrieved reimbursement requests, count: 1
+2020-12-03 20:46:21,474 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:46:21,953 [main] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-12-03 20:46:21,995 [main] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 1
+2020-12-03 20:46:34,992 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:46:35,439 [main] INFO : Dao - Received request to retrieve all reimbursement requests
+2020-12-03 20:46:35,469 [main] INFO : Dao - Request completed, retrieved reimbursement requests, count: 1
+2020-12-03 20:46:59,587 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:47:00,050 [main] INFO : Dao - Received request to delete reimbursement with id: 8
+2020-12-03 20:47:00,085 [main] INFO : Dao - Request completed, reimbursement with id: 8 was deleted.
+2020-12-03 20:47:06,876 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:47:07,342 [main] INFO : Dao - Received request to update reimbursement request with id: 9
+2020-12-03 20:48:46,272 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:46,632 [main] INFO : Dao - Received request to update reimbursement request with id: 10
+2020-12-03 20:48:46,663 [main] INFO : Dao - Request completed, reimbursement with id: 10 was updated.
+2020-12-03 20:48:58,339 [main] WARN : Control - NumberFormatException thrown while updating reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:48:58,362 [main] INFO : Control - Successfully read all reimbursement requests
+2020-12-03 20:48:58,367 [main] WARN : Control - NumberFormatException thrown while reading reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:48:58,370 [main] WARN : Control - NumberFormatException thrown while deleting reimbursement request: java.lang.NumberFormatException: null
+2020-12-03 20:48:58,374 [main] INFO : Control - Successfully read all reimbursement requests for employee: 0
+2020-12-03 20:48:58,387 [main] INFO : Control - Successfully inserted reimbursement request, id returned: 0
+2020-12-03 20:48:58,504 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:58,536 [main] INFO : Service - Responding to create employee...
+2020-12-03 20:48:58,536 [main] INFO : Service - Successfully created employee
+2020-12-03 20:48:58,538 [main] INFO : Service - Responding to read employee...
+2020-12-03 20:48:58,538 [main] INFO : Service - Successfully retrieved employee
+2020-12-03 20:48:58,540 [main] INFO : Service - Responding to delete employee...
+2020-12-03 20:48:58,540 [main] INFO : Service - Successfully deleted employee
+2020-12-03 20:48:58,543 [main] INFO : Service - Responding to update employee...
+2020-12-03 20:48:58,543 [main] INFO : Service - Successfully updated employee
+2020-12-03 20:48:58,545 [main] INFO : Service - Responding to read all employees...
+2020-12-03 20:48:58,546 [main] INFO : Service - Successfully retrieved employees
+2020-12-03 20:48:58,677 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:58,918 [main] INFO : Dao - Received request to insert employee: Billy Bob
+2020-12-03 20:48:58,951 [main] INFO : Dao - Request completed, generated employee id: 5
+2020-12-03 20:48:58,995 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:58,999 [main] INFO : Dao - Received request to retrieve employee with id: -1
+2020-12-03 20:48:59,008 [main] INFO : Dao - Request completed, retrieved employee: Billy Bob
+2020-12-03 20:48:59,049 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,053 [main] INFO : Dao - Received request to delete employee with id: -1
+2020-12-03 20:48:59,062 [main] INFO : Dao - Request completed, employee with id: -1 was deleted.
+2020-12-03 20:48:59,094 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,097 [main] INFO : Dao - Received request to update employee with id: -1
+2020-12-03 20:48:59,104 [main] INFO : Dao - Request completed, employee with id: -1 was updated.
+2020-12-03 20:48:59,139 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,143 [main] INFO : Dao - Received request to retrieve all employees
+2020-12-03 20:48:59,145 [main] INFO : Dao - Request completed, retrieved 3 employees
+2020-12-03 20:48:59,171 [main] WARN : Control - Exception thrown while reading info request: -1 | java.lang.NumberFormatException: null
+2020-12-03 20:48:59,174 [main] INFO : Control - Information Request successfully deleted
+2020-12-03 20:48:59,176 [main] WARN : Control - NumberFormatException thrown while creating info request: java.lang.NumberFormatException: null
+2020-12-03 20:48:59,178 [main] WARN : Control - Exception thrown while reading all info requests related to: -1java.lang.NumberFormatException: null
+2020-12-03 20:48:59,182 [main] INFO : Control - Info request successfully updated
+2020-12-03 20:48:59,185 [main] INFO : Control - Successfully read all information requests
+2020-12-03 20:48:59,245 [main] WARN : Control - NumberFormatException thrown while reading attachments related to: -1 Exception: java.lang.NumberFormatException: null
+2020-12-03 20:48:59,256 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:48:59,261 [main] INFO : Control - Attachment successfully updated
+2020-12-03 20:48:59,266 [main] INFO : Control - Successfully read attachment
+2020-12-03 20:48:59,269 [main] INFO : Control - Successfully inserted attachment, id returned: 0
+2020-12-03 20:48:59,273 [main] INFO : Control - Attachment successfully deleted
+2020-12-03 20:48:59,312 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,318 [main] INFO : Dao - Received request to retrieve user with id: 0
+2020-12-03 20:48:59,322 [main] INFO : Dao - Request completed, retrieved user: bigbad1
+2020-12-03 20:48:59,456 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,461 [main] INFO : Dao - Received request to update user with id: 0
+2020-12-03 20:48:59,466 [main] INFO : Dao - Request completed, user with id: 0 was updated.
+2020-12-03 20:48:59,507 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,508 [main] INFO : Dao - Received request to insert user: bigbad1
+2020-12-03 20:48:59,515 [main] INFO : Dao - Request completed, generated user id: 2
+2020-12-03 20:48:59,552 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,556 [main] INFO : Dao - Received request to delete user with id: 0
+2020-12-03 20:48:59,560 [main] INFO : Dao - Request completed, user with id: 0 was deleted.
+2020-12-03 20:48:59,585 [main] INFO : Control - Successfully read user
+2020-12-03 20:48:59,589 [main] INFO : Control - User successfully updated
+2020-12-03 20:48:59,592 [main] INFO : Control - Successfully inserted user, id returned: 0
+2020-12-03 20:48:59,596 [main] INFO : Control - User successfully deleted
+2020-12-03 20:48:59,616 [main] INFO : Service - Responding to read user...
+2020-12-03 20:48:59,616 [main] INFO : Service - Successfully retrieved user
+2020-12-03 20:48:59,617 [main] INFO : Service - Responding to update user...
+2020-12-03 20:48:59,618 [main] INFO : Service - Successfully updated user
+2020-12-03 20:48:59,618 [main] INFO : Service - Responding to create user...
+2020-12-03 20:48:59,619 [main] INFO : Service - Successfully created user
+2020-12-03 20:48:59,619 [main] INFO : Service - Responding to delete user...
+2020-12-03 20:48:59,620 [main] INFO : Service - Successfully deleted user
+2020-12-03 20:48:59,639 [main] INFO : Service - Responding to read related attachments...
+2020-12-03 20:48:59,639 [main] INFO : Service - Successfully retrieved attachments
+2020-12-03 20:48:59,641 [main] INFO : Service - Responding to update attachment...
+2020-12-03 20:48:59,641 [main] INFO : Service - Successfully updated attachment
+2020-12-03 20:48:59,642 [main] INFO : Service - Responding to read attachment...
+2020-12-03 20:48:59,642 [main] INFO : Service - Successfully retrieved attachment
+2020-12-03 20:48:59,643 [main] INFO : Service - Responding to create attachment with id...
+2020-12-03 20:48:59,643 [main] INFO : Service - Successfully created attachment
+2020-12-03 20:48:59,644 [main] INFO : Service - Responding to delete attachment...
+2020-12-03 20:48:59,644 [main] INFO : Service - Successfully deleted attachment
+2020-12-03 20:48:59,675 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,681 [main] INFO : Dao - Received request to retrieve all reimbursement requests
+2020-12-03 20:48:59,686 [main] INFO : Dao - Request completed, retrieved reimbursement requests, count: 1
+2020-12-03 20:48:59,718 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,733 [main] INFO : Dao - Received request to update reimbursement request with id: 11
+2020-12-03 20:48:59,740 [main] INFO : Dao - Request completed, reimbursement with id: 11 was updated.
+2020-12-03 20:48:59,783 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,795 [main] INFO : Dao - Received request to retrieve reimbursement request with id: 12
+2020-12-03 20:48:59,800 [main] INFO : Dao - Request completed, retrieved reimbursement request with id: 12
+2020-12-03 20:48:59,835 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,847 [main] INFO : Dao - Received request to delete reimbursement with id: 13
+2020-12-03 20:48:59,854 [main] INFO : Dao - Request completed, reimbursement with id: 13 was deleted.
+2020-12-03 20:48:59,985 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:48:59,991 [main] INFO : Dao - Received request to retrieve reimbursement requests related to employee with id: 0
+2020-12-03 20:48:59,996 [main] INFO : Dao - Request completed, retrieved reimbursement requests related to employee with id: 0, count: 1
+2020-12-03 20:49:00,033 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,146 [main] INFO : Dao - Received request to insert reimbursement for employee with id: 0
+2020-12-03 20:49:00,178 [main] INFO : Dao - Request completed, generated reimbursement request id: 14
+2020-12-03 20:49:00,212 [main] INFO : Service - Responding to read information request...
+2020-12-03 20:49:00,212 [main] INFO : Service - Successfully retrieved information request
+2020-12-03 20:49:00,213 [main] INFO : Service - Responding to delete information request...
+2020-12-03 20:49:00,213 [main] INFO : Service - Successfully deleted information request
+2020-12-03 20:49:00,214 [main] INFO : Service - Responding to create information request...
+2020-12-03 20:49:00,214 [main] INFO : Service - Successfully created information request
+2020-12-03 20:49:00,215 [main] INFO : Service - Responding to read all information requests for employee 2010...
+2020-12-03 20:49:00,215 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:49:00,216 [main] INFO : Service - Responding to update information request...
+2020-12-03 20:49:00,217 [main] INFO : Service - Successfully updated information request
+2020-12-03 20:49:00,218 [main] INFO : Service - Responding to read all information requests...
+2020-12-03 20:49:00,218 [main] INFO : Service - Successfully retrieved information requests
+2020-12-03 20:49:00,244 [main] INFO : Control - Successfully inserted employee, id returned: 0
+2020-12-03 20:49:00,248 [main] INFO : Control - Successfully read employee
+2020-12-03 20:49:00,250 [main] INFO : Control - Employee successfully deleted
+2020-12-03 20:49:00,253 [main] INFO : Control - Employee successfully updated
+2020-12-03 20:49:00,255 [main] INFO : Control - Successfully read all employees
+2020-12-03 20:49:00,277 [main] INFO : Service - Responding to read all reimbursement requests...
+2020-12-03 20:49:00,278 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:49:00,280 [main] INFO : Service - Responding to update reimbursement request...
+2020-12-03 20:49:00,280 [main] INFO : Service - Successfully updated reimbursement request
+2020-12-03 20:49:00,281 [main] INFO : Service - Responding to read reimbursement request...
+2020-12-03 20:49:00,282 [main] INFO : Service - Successfully retrieved reimbursement request
+2020-12-03 20:49:00,283 [main] INFO : Service - Responding to delete reimbursement request...
+2020-12-03 20:49:00,283 [main] INFO : Service - Successfully deleted reimbursement request
+2020-12-03 20:49:00,284 [main] INFO : Service - Responding to read all reimbursement requests for employee 0...
+2020-12-03 20:49:00,284 [main] INFO : Service - Successfully retrieved reimbursement requests
+2020-12-03 20:49:00,285 [main] INFO : Service - Responding to create reimbursement request...
+2020-12-03 20:49:00,285 [main] INFO : Service - Successfully created reimbursement request
+2020-12-03 20:49:00,329 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,337 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:49:00,341 [main] INFO : Dao - Request completed, retrieved info request with id: 2010
+2020-12-03 20:49:00,373 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,378 [main] INFO : Dao - Received request to delete info request with id: 2010
+2020-12-03 20:49:00,381 [main] INFO : Dao - Request completed, info request with id: 2010 was deleted.
+2020-12-03 20:49:00,412 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,413 [main] INFO : Dao - Received request to insert info request related to reimbursement: 0
+2020-12-03 20:49:00,422 [main] INFO : Dao - Request completed, generated info request id: 4
+2020-12-03 20:49:00,457 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,460 [main] INFO : Dao - Received request to retrieve info requests related to employee with id: 0
+2020-12-03 20:49:00,462 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:49:00,595 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,600 [main] INFO : Dao - Received request to update info request with id: 2010
+2020-12-03 20:49:00,604 [main] INFO : Dao - Request completed, info request with id: 2010 was updated.
+2020-12-03 20:49:00,638 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,641 [main] INFO : Dao - Received request to retrieve all info requests
+2020-12-03 20:49:00,646 [main] INFO : Dao - Request completed, retrieved info requests, count: 1
+2020-12-03 20:49:00,678 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,681 [main] INFO : Dao - Received request to retrieve files related to request with id: 0
+2020-12-03 20:49:00,684 [main] INFO : Dao - Request completed, retrieved attachments, count: 0
+2020-12-03 20:49:00,715 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,720 [main] INFO : Dao - Received request to update attachment with id: -1
+2020-12-03 20:49:00,724 [main] INFO : Dao - Request completed, attachment with id: -1 was updated.
+2020-12-03 20:49:00,757 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,762 [main] INFO : Dao - Received request to retrieve file with id: -1
+2020-12-03 20:49:00,765 [main] INFO : Dao - Request completed, retrieved attachment id: -1
+2020-12-03 20:49:00,796 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,797 [main] INFO : Dao - Received request to insert file for request: 0
+2020-12-03 20:49:00,803 [main] INFO : Dao - Request completed, generated attachment id: 3
+2020-12-03 20:49:00,837 [main] INFO : Util - Successfully retrieved connection to database.
+2020-12-03 20:49:00,842 [main] INFO : Dao - Received request to delete file with id: -1
+2020-12-03 20:49:00,845 [main] INFO : Dao - Request completed, attachment with id: -1 was deleted.
