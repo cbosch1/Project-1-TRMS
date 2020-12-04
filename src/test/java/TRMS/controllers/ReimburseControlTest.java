@@ -28,7 +28,7 @@ import io.javalin.http.Context;
 /**
  * Currently Javalin and Mockito do not play nice when it comes to
  * ctx.pathParam There are not many solutions and most of them are
- * just not work the refactoring and time that would involve. As such
+ * just not worth the refactoring and time that would involve. As such
  * any method that would utilize a mock pathParam can only verify that 
  * the method fails properly at this time. 
  */
