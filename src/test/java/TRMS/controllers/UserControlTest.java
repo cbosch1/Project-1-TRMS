@@ -25,6 +25,8 @@ public class UserControlTest {
 	private UserService mockService;
 	@Mock
 	private Context mockCtx;
+	@Mock
+	private AuthControl mockAuth;
 
 	private UserControl controlToTest;
 	private User user;
@@ -39,10 +41,13 @@ public class UserControlTest {
 
 	@Before
 	public void setUp() throws Exception {
-		controlToTest = new UserControl(mockService, null);
+		controlToTest = new UserControl(mockService, mockAuth);
 		// cSpell:ignore hashedpassword
 		user = new User(2010, "username", "hashedpassword123467890", 0, AuthPriv.EMPLOYEE);
 
+		when(mockAuth.checkUser(mockCtx)).thenReturn(true);
+		when(mockAuth.getId(mockCtx)).thenReturn(2010);
+		
 		when(mockCtx.formParam("userId")).thenReturn(Integer.toString(user.getUserId()));
 		when(mockCtx.formParam("username")).thenReturn(user.getUsername());
 		when(mockCtx.formParam("password")).thenReturn(user.getPassword());
@@ -78,7 +83,7 @@ public class UserControlTest {
 		try {
 			controlToTest.readUser(mockCtx);
 
-			verify(mockCtx).formParam("userId");
+			verify(mockAuth).getId(mockCtx);
 			verify(mockService).readUser(user.getUserId());
 
 			verify(mockCtx).status(200);
