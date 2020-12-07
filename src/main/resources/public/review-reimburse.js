@@ -126,6 +126,8 @@ var showRequest = function (reimburse) {
         && isBenco
         && reimburse.grading != 'Presentation') approvalNeeded = true;
 
+    if (reimburse.status != "PENDING") approvalNeeded = false;
+
     tableRow.appendChild(idCol);
     tableRow.appendChild(dateCol);
     tableRow.appendChild(typeCol);
