@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.io.FileInputStream;
 import java.io.InputStream;
 
 import org.junit.After;
@@ -44,7 +43,6 @@ public class AttachmentControlTest {
 
 	private AttachmentControl controlToTest;
 	private Attachment attach;
-	private FileInputStream stream;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
