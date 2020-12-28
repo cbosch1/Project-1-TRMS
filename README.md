@@ -18,41 +18,35 @@ The Tuition Reimbursement System, TRMS, allows users to submit reimbursements fo
 ## Features
 
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Tuition Reimbursement submition
+* Reimbursement approval for each user type. 
+* Additional information requests between users for a given reimbursement request.
+* Authentication through JWTs stored as cookies
+* Authorization through hashing
+* File uploads during multiple stages
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
+* Refactor server side rendering.
+* Refactor JWT storage to store as token.
 
 ## Getting Started
    
-(include git clone command)
-(include all environment setup steps)
+Utilize git bash to clone repository with the command below:
+ - git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
-
-- All the `code` required to get started
-- Images of what it should look like
-
-## Usage
-
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
-## License
-
-This project uses the following license: [<license_name>](<link>).
-
-### Set-Up
-
-- Postgres:
+Postgres:
   - Please set up a Postgres database utilizing the accompanying script in the database folder.
+  - A tutorial can be followed here: <https://www.postgresqltutorial.com/install-postgresql/>
 
-- Connection:
+Environment Variables:
   - Application expects the Postgres connection information in the form of three environment variables.
     - TRMS_URL
     - TRMS_USERNAME
     - TRMS_PASSWORD
+
+## License
+
+This project uses the following license:
+### GNU GPL v3
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)    
+`[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
